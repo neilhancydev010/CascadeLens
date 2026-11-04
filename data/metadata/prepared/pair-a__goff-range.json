@@ -1,0 +1,224 @@
+{
+ "layerId": "pair-a:goff-range",
+ "group": "pair-a",
+ "measurement": "goff-range",
+ "units": "meters",
+ "epsg": 32645,
+ "postingM": [
+  80.0,
+  80.0
+ ],
+ "polarization": [
+  "HH"
+ ],
+ "goffLayer": 3,
+ "stats": {
+  "count": 869011,
+  "min": -6.174779891967773,
+  "max": 0.030828118324279785,
+  "mean": -2.931602716445923,
+  "median": -2.9276607036590576,
+  "p2": -3.49914288520813,
+  "p98": -2.3788322448730472,
+  "displayMin": -3.49914288520813,
+  "displayMax": -2.3561785221099854,
+  "histogram": {
+   "edges": [
+    -3.49914,
+    -3.47057,
+    -3.44199,
+    -3.41342,
+    -3.38485,
+    -3.35627,
+    -3.3277,
+    -3.29912,
+    -3.27055,
+    -3.24198,
+    -3.2134,
+    -3.18483,
+    -3.15625,
+    -3.12768,
+    -3.09911,
+    -3.07053,
+    -3.04196,
+    -3.01338,
+    -2.98481,
+    -2.95623,
+    -2.92766,
+    -2.89909,
+    -2.87051,
+    -2.84194,
+    -2.81336,
+    -2.78479,
+    -2.75622,
+    -2.72764,
+    -2.69907,
+    -2.67049,
+    -2.64192,
+    -2.61335,
+    -2.58477,
+    -2.5562,
+    -2.52762,
+    -2.49905,
+    -2.47047,
+    -2.4419,
+    -2.41333,
+    -2.38475,
+    -2.35618
+   ],
+   "counts": [
+    3965,
+    4106,
+    13973,
+    8524,
+    8024,
+    9171,
+    28551,
+    12178,
+    12859,
+    34953,
+    16050,
+    15311,
+    17393,
+    42655,
+    18158,
+    19115,
+    55363,
+    22194,
+    21437,
+    33358,
+    56621,
+    22189,
+    23511,
+    66166,
+    21530,
+    20666,
+    60050,
+    19287,
+    16543,
+    17515,
+    37483,
+    11228,
+    10628,
+    21877,
+    6990,
+    5814,
+    6173,
+    8593,
+    3340,
+    3230
+   ]
+  }
+ },
+ "stops": [
+  "#2166ac",
+  "#67a9cf",
+  "#f7f7f7",
+  "#ef8a62",
+  "#b2182b"
+ ],
+ "displayDb": false,
+ "displayRelative": false,
+ "sources": [
+  {
+   "frame": 74,
+   "granule": "NISAR_L2_PR_GOFF_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001",
+   "sourceFilename": "NISAR_L2_PR_GOFF_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001.h5",
+   "sourceDataset": "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer3/slantRangeOffset",
+   "sha256": "3528961276e82118931c16b5b098604b09e8239d629d8aff90bcdc3ef6929dc5",
+   "bounds": [
+    84.53594788265075,
+    27.717578024937264,
+    85.55941176995117,
+    28.36707937156769
+   ],
+   "shape": [
+    880,
+    1244
+   ],
+   "validFraction": 0.4147069570301082,
+   "maskedFraction": 0.11334770534931307,
+   "sourceDtype": "float32",
+   "clipWindow": [
+    2616,
+    3496,
+    0,
+    1244
+   ],
+   "displayOffset": 0.0,
+   "sampling": "data/sampling/pair-a/goff-range_f074.tif",
+   "validity": "data/sampling/pair-a/goff-range_f074_validity.tif",
+   "tiles": {
+    "url": "data/tiles/pair-a/goff-range/f074/{z}/{x}/{y}.png",
+    "minzoom": 8,
+    "maxzoom": 11,
+    "count": 69
+   },
+   "maskTiles": "data/tiles/pair-a/goff-range/f074_mask/{z}/{x}/{y}.png"
+  },
+  {
+   "frame": 75,
+   "granule": "NISAR_L2_PR_GOFF_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001",
+   "sourceFilename": "NISAR_L2_PR_GOFF_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001.h5",
+   "sourceDataset": "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer3/slantRangeOffset",
+   "sha256": "64f31a0fbe011f4be6c09cd460fccf5fe73a2058a1123b95cdbea76d76d8f115",
+   "bounds": [
+    84.38475258192256,
+    27.714795075127522,
+    85.55941176995117,
+    28.280449216353468
+   ],
+   "shape": [
+    760,
+    1432
+   ],
+   "validFraction": 0.38134280358718026,
+   "maskedFraction": 0.11384611143781241,
+   "sourceDtype": "float32",
+   "clipWindow": [
+    0,
+    760,
+    604,
+    2036
+   ],
+   "displayOffset": 0.0,
+   "sampling": "data/sampling/pair-a/goff-range_f075.tif",
+   "validity": "data/sampling/pair-a/goff-range_f075_validity.tif",
+   "tiles": {
+    "url": "data/tiles/pair-a/goff-range/f075/{z}/{x}/{y}.png",
+    "minzoom": 8,
+    "maxzoom": 11,
+    "count": 55
+   },
+   "maskTiles": "data/tiles/pair-a/goff-range/f075_mask/{z}/{x}/{y}.png"
+  }
+ ],
+ "processedAt": "2026-11-01T16:12:04+00:00",
+ "parameters": {
+  "gross_outlier_mad_k": 10,
+  "snr_min": null,
+  "coherence_threshold": null,
+  "goff_layer": 3,
+  "crid": "P05023",
+  "aoi_bbox": [
+   84.3976,
+   27.732,
+   85.5508,
+   28.35
+  ]
+ },
+ "provenance": {
+  "pipelineVersion": "0.2.0",
+  "configSha256": "1da822203031c9bc5416e32c968466922bcd0b3c4785b39492469469fc31db70",
+  "outputDtype": "float32",
+  "validityClasses": {
+   "0": "no data",
+   "1": "valid",
+   "2": "masked"
+  },
+  "maskRule": "Mask as GUNW, plus gross outliers flagged at the configured MAD multiple. Raw values kept.",
+  "tileResampling": "nearest",
+  "nativeGridKept": true,
+  "displayTransform": null
+ }
+}

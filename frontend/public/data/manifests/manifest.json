@@ -1,0 +1,5441 @@
+{
+ "schemaVersion": 1,
+ "generatedAt": "2026-11-01T16:21:51+00:00",
+ "fixture": false,
+ "fixtureLabel": null,
+ "analysis": {
+  "pair-a": {
+   "group": "pair-a",
+   "note": "Descriptive only. Differences are evidence to examine, not proof of cause.",
+   "frames": {
+    "f074": {
+     "shape": [
+      880,
+      1244
+     ],
+     "crs": "EPSG:32645",
+     "zones": {
+      "gunw-coherence": {
+       "mapped extent": {
+        "pixels": 7912,
+        "validPct": 36.5,
+        "maskedPct": 19.2,
+        "p25": 0.122,
+        "median": 0.193,
+        "p75": 0.324
+       },
+       "1 km ring outside extent": {
+        "pixels": 66647,
+        "validPct": 38.1,
+        "maskedPct": 4.0,
+        "p25": 0.332,
+        "median": 0.46,
+        "p75": 0.58
+       },
+       "detachment zone": {
+        "pixels": 307,
+        "validPct": 0.0,
+        "maskedPct": 100.0,
+        "p25": null,
+        "median": null,
+        "p75": null
+       },
+       "barrier lakes": {
+        "pixels": 48,
+        "validPct": 0.0,
+        "maskedPct": 100.0,
+        "p25": null,
+        "median": null,
+        "p75": null
+       }
+      },
+      "goff-snr": {
+       "mapped extent": {
+        "pixels": 7912,
+        "validPct": 35.0,
+        "maskedPct": 19.1,
+        "p25": 3.88,
+        "median": 5.077,
+        "p75": 7.098
+       },
+       "1 km ring outside extent": {
+        "pixels": 66647,
+        "validPct": 35.1,
+        "maskedPct": 3.9,
+        "p25": 4.898,
+        "median": 8.233,
+        "p75": 14.996
+       },
+       "detachment zone": {
+        "pixels": 307,
+        "validPct": 0.0,
+        "maskedPct": 100.0,
+        "p25": null,
+        "median": null,
+        "p75": null
+       },
+       "barrier lakes": {
+        "pixels": 48,
+        "validPct": 0.0,
+        "maskedPct": 100.0,
+        "p25": null,
+        "median": null,
+        "p75": null
+       }
+      },
+      "goff-peak": {
+       "mapped extent": {
+        "pixels": 7912,
+        "validPct": 35.0,
+        "maskedPct": 19.1,
+        "p25": 0.536,
+        "median": 0.628,
+        "p75": 0.688
+       },
+       "1 km ring outside extent": {
+        "pixels": 66647,
+        "validPct": 35.1,
+        "maskedPct": 3.9,
+        "p25": 0.548,
+        "median": 0.629,
+        "p75": 0.7
+       },
+       "detachment zone": {
+        "pixels": 307,
+        "validPct": 0.0,
+        "maskedPct": 100.0,
+        "p25": null,
+        "median": null,
+        "p75": null
+       },
+       "barrier lakes": {
+        "pixels": 48,
+        "validPct": 0.0,
+        "maskedPct": 100.0,
+        "p25": null,
+        "median": null,
+        "p75": null
+       }
+      },
+      "goff-range |x - scene median|": {
+       "mapped extent": {
+        "pixels": 7912,
+        "validPct": 33.1,
+        "maskedPct": 20.9,
+        "p25": 0.074,
+        "median": 0.167,
+        "p75": 0.32
+       },
+       "1 km ring outside extent": {
+        "pixels": 66647,
+        "validPct": 35.0,
+        "maskedPct": 4.1,
+        "p25": 0.062,
+        "median": 0.134,
+        "p75": 0.226
+       },
+       "detachment zone": {
+        "pixels": 307,
+        "validPct": 0.0,
+        "maskedPct": 100.0,
+        "p25": null,
+        "median": null,
+        "p75": null
+       },
+       "barrier lakes": {
+        "pixels": 48,
+        "validPct": 0.0,
+        "maskedPct": 100.0,
+        "p25": null,
+        "median": null,
+        "p75": null
+       }
+      },
+      "goff-azimuth |x - scene median|": {
+       "mapped extent": {
+        "pixels": 7912,
+        "validPct": 27.2,
+        "maskedPct": 19.8,
+        "p25": 0.072,
+        "median": 0.159,
+        "p75": 0.261
+       },
+       "1 km ring outside extent": {
+        "pixels": 66647,
+        "validPct": 29.3,
+        "maskedPct": 3.6,
+        "p25": 0.07,
+        "median": 0.146,
+        "p75": 0.228
+       },
+       "detachment zone": {
+        "pixels": 307,
+        "validPct": 0.0,
+        "maskedPct": 91.5,
+        "p25": null,
+        "median": null,
+        "p75": null
+       },
+       "barrier lakes": {
+        "pixels": 48,
+        "validPct": 0.0,
+        "maskedPct": 97.9,
+        "p25": null,
+        "median": null,
+        "p75": null
+       }
+      }
+     },
+     "sceneMedian": {
+      "goff-range": -2.794,
+      "goff-azimuth": -3.519
+     },
+     "maskedPct": {
+      "goff-range": 11.33,
+      "goff-azimuth": 10.33
+     },
+     "phase": {
+      "mapped extent": {
+       "pixels": 7912,
+       "validPct": 15.2,
+       "maskedPct": 40.5,
+       "p25": 68.167,
+       "median": 74.694,
+       "p75": 81.962
+      },
+      "1 km ring outside extent": {
+       "pixels": 66647,
+       "validPct": 33.6,
+       "maskedPct": 8.5,
+       "p25": 68.455,
+       "median": 76.14,
+       "p75": 84.554
+      },
+      "detachment zone": {
+       "pixels": 307,
+       "validPct": 0.0,
+       "maskedPct": 100.0,
+       "p25": null,
+       "median": null,
+       "p75": null
+      },
+      "barrier lakes": {
+       "pixels": 48,
+       "validPct": 0.0,
+       "maskedPct": 100.0,
+       "p25": null,
+       "median": null,
+       "p75": null
+      }
+     },
+     "ionosphere": {
+      "pixels": 425703,
+      "pearsonR": 0.842,
+      "stdPhase": 8.87,
+      "stdIono": 7.28,
+      "stdPhaseMinusIono": 4.79,
+      "stdPhasePlusIono": 15.5
+     },
+     "components": {
+      "0": 49496,
+      "1": 425703
+     }
+    },
+    "f075": {
+     "shape": [
+      760,
+      1432
+     ],
+     "crs": "EPSG:32645",
+     "zones": {
+      "gunw-coherence": {
+       "mapped extent": {
+        "pixels": 6754,
+        "validPct": 44.0,
+        "maskedPct": 19.4,
+        "p25": 0.11,
+        "median": 0.164,
+        "p75": 0.262
+       },
+       "1 km ring outside extent": {
+        "pixels": 71261,
+        "validPct": 52.3,
+        "maskedPct": 11.3,
+        "p25": 0.409,
+        "median": 0.518,
+        "p75": 0.619
+       },
+       "detachment zone": {
+        "pixels": 0
+       },
+       "barrier lakes": {
+        "pixels": 0
+       }
+      },
+      "goff-snr": {
+       "mapped extent": {
+        "pixels": 6754,
+        "validPct": 44.0,
+        "maskedPct": 17.0,
+        "p25": 7.391,
+        "median": 10.603,
+        "p75": 15.919
+       },
+       "1 km ring outside extent": {
+        "pixels": 71261,
+        "validPct": 52.4,
+        "maskedPct": 7.2,
+        "p25": 9.025,
+        "median": 12.893,
+        "p75": 20.195
+       },
+       "detachment zone": {
+        "pixels": 0
+       },
+       "barrier lakes": {
+        "pixels": 0
+       }
+      },
+      "goff-peak": {
+       "mapped extent": {
+        "pixels": 6754,
+        "validPct": 44.0,
+        "maskedPct": 17.0,
+        "p25": 0.499,
+        "median": 0.586,
+        "p75": 0.681
+       },
+       "1 km ring outside extent": {
+        "pixels": 71261,
+        "validPct": 52.4,
+        "maskedPct": 7.2,
+        "p25": 0.543,
+        "median": 0.632,
+        "p75": 0.712
+       },
+       "detachment zone": {
+        "pixels": 0
+       },
+       "barrier lakes": {
+        "pixels": 0
+       }
+      },
+      "goff-range |x - scene median|": {
+       "mapped extent": {
+        "pixels": 6754,
+        "validPct": 43.8,
+        "maskedPct": 17.2,
+        "p25": 0.068,
+        "median": 0.165,
+        "p75": 0.323
+       },
+       "1 km ring outside extent": {
+        "pixels": 71261,
+        "validPct": 52.3,
+        "maskedPct": 7.3,
+        "p25": 0.065,
+        "median": 0.127,
+        "p75": 0.228
+       },
+       "detachment zone": {
+        "pixels": 0
+       },
+       "barrier lakes": {
+        "pixels": 0
+       }
+      },
+      "goff-azimuth |x - scene median|": {
+       "mapped extent": {
+        "pixels": 6754,
+        "validPct": 42.9,
+        "maskedPct": 16.7,
+        "p25": 0.062,
+        "median": 0.117,
+        "p75": 0.209
+       },
+       "1 km ring outside extent": {
+        "pixels": 71261,
+        "validPct": 50.9,
+        "maskedPct": 6.8,
+        "p25": 0.061,
+        "median": 0.121,
+        "p75": 0.209
+       },
+       "detachment zone": {
+        "pixels": 0
+       },
+       "barrier lakes": {
+        "pixels": 0
+       }
+      }
+     },
+     "sceneMedian": {
+      "goff-range": -3.093,
+      "goff-azimuth": -3.817
+     },
+     "maskedPct": {
+      "goff-range": 11.38,
+      "goff-azimuth": 10.82
+     },
+     "phase": {
+      "mapped extent": {
+       "pixels": 6754,
+       "validPct": 19.1,
+       "maskedPct": 45.3,
+       "p25": 21.012,
+       "median": 23.598,
+       "p75": 26.593
+      },
+      "1 km ring outside extent": {
+       "pixels": 71261,
+       "validPct": 50.9,
+       "maskedPct": 13.7,
+       "p25": 21.636,
+       "median": 24.833,
+       "p75": 27.135
+      },
+      "detachment zone": {
+       "pixels": 0
+      },
+      "barrier lakes": {
+       "pixels": 0
+      }
+     },
+     "ionosphere": {
+      "pixels": 401707,
+      "pearsonR": 0.951,
+      "stdPhase": 6.41,
+      "stdIono": 6.3,
+      "stdPhaseMinusIono": 1.98,
+      "stdPhasePlusIono": 12.56
+     },
+     "components": {
+      "0": 14462,
+      "1": 401707
+     }
+    }
+   }
+  },
+  "pair-b": {
+   "group": "pair-b",
+   "note": "Descriptive only. Differences are evidence to examine, not proof of cause.",
+   "frames": {
+    "f015": {
+     "shape": [
+      733,
+      1432
+     ],
+     "crs": "EPSG:32645",
+     "zones": {
+      "goff-snr": {
+       "mapped extent": {
+        "pixels": 6642,
+        "validPct": 0.0,
+        "maskedPct": 0.0,
+        "p25": null,
+        "median": null,
+        "p75": null
+       },
+       "1 km ring outside extent": {
+        "pixels": 70119,
+        "validPct": 0.0,
+        "maskedPct": 0.0,
+        "p25": null,
+        "median": null,
+        "p75": null
+       },
+       "detachment zone": {
+        "pixels": 0
+       },
+       "barrier lakes": {
+        "pixels": 0
+       }
+      },
+      "goff-peak": {
+       "mapped extent": {
+        "pixels": 6642,
+        "validPct": 0.0,
+        "maskedPct": 0.0,
+        "p25": null,
+        "median": null,
+        "p75": null
+       },
+       "1 km ring outside extent": {
+        "pixels": 70119,
+        "validPct": 0.0,
+        "maskedPct": 0.0,
+        "p25": null,
+        "median": null,
+        "p75": null
+       },
+       "detachment zone": {
+        "pixels": 0
+       },
+       "barrier lakes": {
+        "pixels": 0
+       }
+      },
+      "goff-range |x - scene median|": {
+       "mapped extent": {
+        "pixels": 6642,
+        "validPct": 0.0,
+        "maskedPct": 0.0,
+        "p25": null,
+        "median": null,
+        "p75": null
+       },
+       "1 km ring outside extent": {
+        "pixels": 70119,
+        "validPct": 0.0,
+        "maskedPct": 0.0,
+        "p25": null,
+        "median": null,
+        "p75": null
+       },
+       "detachment zone": {
+        "pixels": 0
+       },
+       "barrier lakes": {
+        "pixels": 0
+       }
+      },
+      "goff-azimuth |x - scene median|": {
+       "mapped extent": {
+        "pixels": 6642,
+        "validPct": 0.0,
+        "maskedPct": 0.0,
+        "p25": null,
+        "median": null,
+        "p75": null
+       },
+       "1 km ring outside extent": {
+        "pixels": 70119,
+        "validPct": 0.0,
+        "maskedPct": 0.0,
+        "p25": null,
+        "median": null,
+        "p75": null
+       },
+       "detachment zone": {
+        "pixels": 0
+       },
+       "barrier lakes": {
+        "pixels": 0
+       }
+      }
+     },
+     "sceneMedian": {
+      "goff-range": -0.398,
+      "goff-azimuth": 0.069
+     },
+     "maskedPct": {
+      "goff-range": 0.0,
+      "goff-azimuth": 0.0
+     }
+    },
+    "f016": {
+     "shape": [
+      880,
+      1432
+     ],
+     "crs": "EPSG:32645",
+     "zones": {
+      "goff-snr": {
+       "mapped extent": {
+        "pixels": 9227,
+        "validPct": 81.2,
+        "maskedPct": 18.8,
+        "p25": 4.58,
+        "median": 7.813,
+        "p75": 13.581
+       },
+       "1 km ring outside extent": {
+        "pixels": 80232,
+        "validPct": 99.9,
+        "maskedPct": 0.1,
+        "p25": 5.947,
+        "median": 9.768,
+        "p75": 18.362
+       },
+       "detachment zone": {
+        "pixels": 307,
+        "validPct": 100.0,
+        "maskedPct": 0.0,
+        "p25": 2.338,
+        "median": 3.25,
+        "p75": 4.777
+       },
+       "barrier lakes": {
+        "pixels": 48,
+        "validPct": 100.0,
+        "maskedPct": 0.0,
+        "p25": 2.15,
+        "median": 2.611,
+        "p75": 3.693
+       }
+      },
+      "goff-peak": {
+       "mapped extent": {
+        "pixels": 9227,
+        "validPct": 81.2,
+        "maskedPct": 18.8,
+        "p25": 0.487,
+        "median": 0.596,
+        "p75": 0.689
+       },
+       "1 km ring outside extent": {
+        "pixels": 80232,
+        "validPct": 99.9,
+        "maskedPct": 0.1,
+        "p25": 0.54,
+        "median": 0.631,
+        "p75": 0.707
+       },
+       "detachment zone": {
+        "pixels": 307,
+        "validPct": 100.0,
+        "maskedPct": 0.0,
+        "p25": 0.113,
+        "median": 0.177,
+        "p75": 0.254
+       },
+       "barrier lakes": {
+        "pixels": 48,
+        "validPct": 100.0,
+        "maskedPct": 0.0,
+        "p25": 0.192,
+        "median": 0.543,
+        "p75": 0.571
+       }
+      },
+      "goff-range |x - scene median|": {
+       "mapped extent": {
+        "pixels": 9227,
+        "validPct": 72.3,
+        "maskedPct": 27.7,
+        "p25": 0.02,
+        "median": 0.046,
+        "p75": 0.089
+       },
+       "1 km ring outside extent": {
+        "pixels": 80232,
+        "validPct": 99.4,
+        "maskedPct": 0.6,
+        "p25": 0.017,
+        "median": 0.037,
+        "p75": 0.074
+       },
+       "detachment zone": {
+        "pixels": 307,
+        "validPct": 40.1,
+        "maskedPct": 59.9,
+        "p25": 0.06,
+        "median": 0.148,
+        "p75": 0.294
+       },
+       "barrier lakes": {
+        "pixels": 48,
+        "validPct": 27.1,
+        "maskedPct": 72.9,
+        "p25": 0.29,
+        "median": 0.313,
+        "p75": 0.413
+       }
+      },
+      "goff-azimuth |x - scene median|": {
+       "mapped extent": {
+        "pixels": 9227,
+        "validPct": 70.9,
+        "maskedPct": 25.2,
+        "p25": 0.044,
+        "median": 0.075,
+        "p75": 0.141
+       },
+       "1 km ring outside extent": {
+        "pixels": 80232,
+        "validPct": 95.7,
+        "maskedPct": 0.4,
+        "p25": 0.035,
+        "median": 0.065,
+        "p75": 0.128
+       },
+       "detachment zone": {
+        "pixels": 307,
+        "validPct": 37.1,
+        "maskedPct": 50.2,
+        "p25": 0.063,
+        "median": 0.163,
+        "p75": 0.473
+       },
+       "barrier lakes": {
+        "pixels": 48,
+        "validPct": 47.9,
+        "maskedPct": 47.9,
+        "p25": 0.042,
+        "median": 0.169,
+        "p75": 0.324
+       }
+      }
+     },
+     "sceneMedian": {
+      "goff-range": -0.477,
+      "goff-azimuth": -0.063
+     },
+     "maskedPct": {
+      "goff-range": 0.47,
+      "goff-azimuth": 0.38
+     }
+    }
+   }
+  }
+ },
+ "caseStudy": {
+  "id": "rasuwa-2026",
+  "name": "Rasuwa\u2013Bhote Koshi\u2013Trishuli, Nepal",
+  "eventDate": "2026-08-26",
+  "searchEnvelope": [
+   84.3976,
+   27.732,
+   85.5508,
+   28.35
+  ]
+ },
+ "bookmarks": [
+  {
+   "id": "source",
+   "name": "Mountain source area",
+   "bounds": [
+    85.4467,
+    28.2522,
+    85.5599,
+    28.3642
+   ],
+   "anchor": {
+    "lng": 85.5217,
+    "lat": 28.28895,
+    "label": "UNOSAT detachment zone"
+   },
+   "basis": "UNOSAT detachment zone and barrier lakes polygons, padded 0.03\u00b0. Approximate navigation frame."
+  },
+  {
+   "id": "bhote-koshi",
+   "name": "Bhote Koshi corridor",
+   "bounds": [
+    85.3213,
+    28.1444,
+    85.3977,
+    28.2981
+   ],
+   "anchor": {
+    "lng": 85.34274,
+    "lat": 28.16457,
+    "label": "Shyaphru Bensi"
+   },
+   "basis": "OSM waterways named Bhote Koshi, padded 0.02\u00b0. Approximate navigation frame."
+  },
+  {
+   "id": "trishuli",
+   "name": "Trishuli downstream corridor",
+   "bounds": [
+    84.402,
+    27.7213,
+    85.2044,
+    27.9931
+   ],
+   "anchor": {
+    "lng": 85.18595,
+    "lat": 27.97311,
+    "label": "Betrawati"
+   },
+   "basis": "OSM Trishuli waterways south of Betrawati, inside the search envelope, padded 0.02\u00b0. Approximate navigation frame."
+  }
+ ],
+ "groups": [
+  {
+   "id": "pair-a",
+   "kind": "pair",
+   "label": "16\u201328 August 2026",
+   "role": "Primary interferometric investigation",
+   "direction": "DESCENDING",
+   "track": 48,
+   "frames": [
+    74,
+    75
+   ],
+   "reference": "2026-08-16",
+   "secondary": "2026-08-28",
+   "products": [
+    "GUNW",
+    "GOFF"
+   ],
+   "available": true,
+   "statusReason": null
+  },
+  {
+   "id": "pair-b",
+   "kind": "pair",
+   "label": "19\u201331 August 2026",
+   "role": "Secondary pixel-offset investigation",
+   "direction": "ASCENDING",
+   "track": 98,
+   "frames": [
+    15,
+    16
+   ],
+   "reference": "2026-08-19",
+   "secondary": "2026-08-31",
+   "products": [
+    "GOFF"
+   ],
+   "available": true,
+   "statusReason": null
+  },
+  {
+   "id": "gcov-0828",
+   "kind": "snapshot",
+   "label": "28 August 2026",
+   "role": "Post-event radar backscatter snapshot",
+   "direction": "DESCENDING",
+   "track": 48,
+   "frames": [
+    74,
+    75
+   ],
+   "reference": "2026-08-28",
+   "secondary": null,
+   "products": [
+    "GCOV"
+   ],
+   "available": false,
+   "statusReason": "Listed in the ASF catalogue, not retrieved. NASA Earthdata Login required to download it."
+  },
+  {
+   "id": "gcov-0831",
+   "kind": "snapshot",
+   "label": "31 August 2026",
+   "role": "Post-event radar backscatter snapshot",
+   "direction": "ASCENDING",
+   "track": 98,
+   "frames": [
+    15,
+    16
+   ],
+   "reference": "2026-08-31",
+   "secondary": null,
+   "products": [
+    "GCOV"
+   ],
+   "available": false,
+   "statusReason": "Listed in the ASF catalogue, not retrieved. NASA Earthdata Login required to download it."
+  }
+ ],
+ "layers": [
+  {
+   "id": "pair-a:gunw-phase",
+   "groupId": "pair-a",
+   "name": "Unwrapped phase",
+   "category": "gunw",
+   "mission": "NISAR",
+   "instrument": "L-SAR",
+   "productType": "GUNW",
+   "measurementClass": "measurement",
+   "measurementType": "gunw-phase",
+   "kind": "continuous",
+   "units": "radians",
+   "unitsNote": "Radians, per product attribute. Not a displacement. Colours show each value relative to its frame's median; the inspector shows the stored value.",
+   "acquisition": {
+    "reference": "2026-08-16",
+    "secondary": "2026-08-28"
+   },
+   "orbitDirection": "DESCENDING",
+   "track": 48,
+   "frames": [
+    74,
+    75
+   ],
+   "qualityLayerIds": [
+    "pair-a:gunw-coherence",
+    "pair-a:gunw-cc",
+    "pair-a:gunw-iono"
+   ],
+   "status": "sampleable",
+   "statusReason": null,
+   "sources": [
+    {
+     "frame": 74,
+     "granule": "NISAR_L2_PR_GUNW_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001",
+     "sourceFilename": "NISAR_L2_PR_GUNW_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001.h5",
+     "sourceDataset": "/science/LSAR/GUNW/grids/frequencyA/unwrappedInterferogram/HH/unwrappedPhase",
+     "sha256": "aa18c396262052814a9901275cd88aee8a99c4425c83be3168aa4b6e24d5568a",
+     "bounds": [
+      84.53594788265075,
+      27.717578024937264,
+      85.55941176995117,
+      28.36707937156769
+     ],
+     "shape": [
+      880,
+      1244
+     ],
+     "validFraction": 0.38886929991230634,
+     "maskedFraction": 0.17829581993569132,
+     "sourceDtype": "float32",
+     "clipWindow": [
+      2616,
+      3496,
+      0,
+      1244
+     ],
+     "displayOffset": 75.9971694946289,
+     "sampling": "data/sampling/pair-a/gunw-phase_f074.tif",
+     "validity": "data/sampling/pair-a/gunw-phase_f074_validity.tif",
+     "tiles": {
+      "url": "data/tiles/pair-a/gunw-phase/f074/{z}/{x}/{y}.png",
+      "minzoom": 8,
+      "maxzoom": 11,
+      "count": 76
+     },
+     "maskTiles": "data/tiles/pair-a/gunw-phase/f074_mask/{z}/{x}/{y}.png"
+    },
+    {
+     "frame": 75,
+     "granule": "NISAR_L2_PR_GUNW_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001",
+     "sourceFilename": "NISAR_L2_PR_GUNW_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001.h5",
+     "sourceDataset": "/science/LSAR/GUNW/grids/frequencyA/unwrappedInterferogram/HH/unwrappedPhase",
+     "sha256": "933b71fa40b14cc2e61b0996ed04cacfde0be2c9d62a17168f63f39312f78e67",
+     "bounds": [
+      84.38475258192256,
+      27.714795075127522,
+      85.55941176995117,
+      28.280449216353468
+     ],
+     "shape": [
+      760,
+      1432
+     ],
+     "validFraction": 0.3691074316377536,
+     "maskedFraction": 0.17708762128785652,
+     "sourceDtype": "float32",
+     "clipWindow": [
+      0,
+      760,
+      604,
+      2036
+     ],
+     "displayOffset": 22.311063766479492,
+     "sampling": "data/sampling/pair-a/gunw-phase_f075.tif",
+     "validity": "data/sampling/pair-a/gunw-phase_f075_validity.tif",
+     "tiles": {
+      "url": "data/tiles/pair-a/gunw-phase/f075/{z}/{x}/{y}.png",
+      "minzoom": 8,
+      "maxzoom": 11,
+      "count": 58
+     },
+     "maskTiles": "data/tiles/pair-a/gunw-phase/f075_mask/{z}/{x}/{y}.png"
+    }
+   ],
+   "productMaturity": "Provisional (P05023)",
+   "sourceGranules": [
+    "NISAR_L2_PR_GUNW_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001",
+    "NISAR_L2_PR_GUNW_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001"
+   ],
+   "attribution": "NASA/JPL-Caltech/ISRO, NISAR; distributed by ASF DAAC",
+   "limitations": [
+    "Phase is not displacement. No LOS conversion is applied: neither the specification nor the ATBD states the phase sign convention.",
+    "Pixels with component label 0 are masked: the ATBD says they could not be reliably unwrapped.",
+    "The estimated ionospheric phase screen is included in GUNW but not applied.",
+    "Frames 74 and 75 are unwrapped separately and are not mosaicked.",
+    "The 12-day interval cannot date a change or attribute its cause."
+   ],
+   "postingM": [
+    80.0,
+    80.0
+   ],
+   "crs": "EPSG:32645",
+   "stats": {
+    "count": 827410,
+    "min": -75.9971694946289,
+    "max": 22.56273651123047,
+    "mean": 0.0018539025913923979,
+    "median": 0.0,
+    "p2": -12.66257553100586,
+    "p98": 14.451961364746088,
+    "displayMin": -14.451961517333984,
+    "displayMax": 14.451961517333984,
+    "histogram": {
+     "edges": [
+      -14.45196,
+      -13.72936,
+      -13.00677,
+      -12.28417,
+      -11.56157,
+      -10.83897,
+      -10.11637,
+      -9.39377,
+      -8.67118,
+      -7.94858,
+      -7.22598,
+      -6.50338,
+      -5.78078,
+      -5.05819,
+      -4.33559,
+      -3.61299,
+      -2.89039,
+      -2.16779,
+      -1.4452,
+      -0.7226,
+      0.0,
+      0.7226,
+      1.4452,
+      2.16779,
+      2.89039,
+      3.61299,
+      4.33559,
+      5.05819,
+      5.78078,
+      6.50338,
+      7.22598,
+      7.94858,
+      8.67118,
+      9.39377,
+      10.11637,
+      10.83897,
+      11.56157,
+      12.28417,
+      13.00677,
+      13.72936,
+      14.45196
+     ],
+     "counts": [
+      2614,
+      3150,
+      5806,
+      11638,
+      15142,
+      16845,
+      19197,
+      20596,
+      21501,
+      20716,
+      20942,
+      22604,
+      23152,
+      27099,
+      27955,
+      28784,
+      28978,
+      30804,
+      29573,
+      27999,
+      27266,
+      27637,
+      29436,
+      26747,
+      28916,
+      25439,
+      26360,
+      27149,
+      27179,
+      23964,
+      21845,
+      21067,
+      19743,
+      17096,
+      14892,
+      10972,
+      7813,
+      5537,
+      4498,
+      3601
+     ]
+    }
+   },
+   "polarization": [
+    "HH"
+   ],
+   "displayDb": false,
+   "goffLayer": null,
+   "displayRelative": true,
+   "legend": {
+    "type": "continuous",
+    "stops": [
+     "#2166ac",
+     "#67a9cf",
+     "#f7f7f7",
+     "#ef8a62",
+     "#b2182b"
+    ],
+    "min": -14.451961517333984,
+    "max": 14.451961517333984,
+    "labels": null,
+    "unit": "radians, relative to frame median"
+   },
+   "processingHistory": {
+    "processedAt": "2026-11-01T16:11:52+00:00",
+    "parameters": {
+     "gross_outlier_mad_k": 10,
+     "snr_min": null,
+     "coherence_threshold": null,
+     "goff_layer": 3,
+     "crid": "P05023",
+     "aoi_bbox": [
+      84.3976,
+      27.732,
+      85.5508,
+      28.35
+     ]
+    },
+    "provenance": {
+     "pipelineVersion": "0.2.0",
+     "configSha256": "1da822203031c9bc5416e32c968466922bcd0b3c4785b39492469469fc31db70",
+     "outputDtype": "float32",
+     "validityClasses": {
+      "0": "no data",
+      "1": "valid",
+      "2": "masked"
+     },
+     "maskRule": "Mask: water or invalid subswath masked, 255 no data. Phase only: component label 0 masked, 65535 no data.",
+     "tileResampling": "nearest",
+     "nativeGridKept": true,
+     "displayTransform": "value minus frame median"
+    }
+   }
+  },
+  {
+   "id": "pair-a:gunw-coherence",
+   "groupId": "pair-a",
+   "name": "Coherence magnitude",
+   "category": "gunw",
+   "mission": "NISAR",
+   "instrument": "L-SAR",
+   "productType": "GUNW",
+   "measurementClass": "measurement",
+   "measurementType": "gunw-coherence",
+   "kind": "continuous",
+   "units": "1",
+   "unitsNote": "Dimensionless, 0\u20131.",
+   "acquisition": {
+    "reference": "2026-08-16",
+    "secondary": "2026-08-28"
+   },
+   "orbitDirection": "DESCENDING",
+   "track": 48,
+   "frames": [
+    74,
+    75
+   ],
+   "qualityLayerIds": [],
+   "status": "sampleable",
+   "statusReason": null,
+   "sources": [
+    {
+     "frame": 74,
+     "granule": "NISAR_L2_PR_GUNW_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001",
+     "sourceFilename": "NISAR_L2_PR_GUNW_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001.h5",
+     "sourceDataset": "/science/LSAR/GUNW/grids/frequencyA/unwrappedInterferogram/HH/coherenceMagnitude",
+     "sha256": "aa18c396262052814a9901275cd88aee8a99c4425c83be3168aa4b6e24d5568a",
+     "bounds": [
+      84.53594788265075,
+      27.717578024937264,
+      85.55941176995117,
+      28.36707937156769
+     ],
+     "shape": [
+      880,
+      1244
+     ],
+     "validFraction": 0.4340826878105817,
+     "maskedFraction": 0.13308243203741596,
+     "sourceDtype": "float32",
+     "clipWindow": [
+      2616,
+      3496,
+      0,
+      1244
+     ],
+     "displayOffset": 0.0,
+     "sampling": "data/sampling/pair-a/gunw-coherence_f074.tif",
+     "validity": "data/sampling/pair-a/gunw-coherence_f074_validity.tif",
+     "tiles": {
+      "url": "data/tiles/pair-a/gunw-coherence/f074/{z}/{x}/{y}.png",
+      "minzoom": 8,
+      "maxzoom": 11,
+      "count": 70
+     },
+     "maskTiles": "data/tiles/pair-a/gunw-coherence/f074_mask/{z}/{x}/{y}.png"
+    },
+    {
+     "frame": 75,
+     "granule": "NISAR_L2_PR_GUNW_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001",
+     "sourceFilename": "NISAR_L2_PR_GUNW_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001.h5",
+     "sourceDataset": "/science/LSAR/GUNW/grids/frequencyA/unwrappedInterferogram/HH/coherenceMagnitude",
+     "sha256": "933b71fa40b14cc2e61b0996ed04cacfde0be2c9d62a17168f63f39312f78e67",
+     "bounds": [
+      84.38475258192256,
+      27.714795075127522,
+      85.55941176995117,
+      28.280449216353468
+     ],
+     "shape": [
+      760,
+      1432
+     ],
+     "validFraction": 0.38203928991473096,
+     "maskedFraction": 0.13892329461922964,
+     "sourceDtype": "float32",
+     "clipWindow": [
+      0,
+      760,
+      604,
+      2036
+     ],
+     "displayOffset": 0.0,
+     "sampling": "data/sampling/pair-a/gunw-coherence_f075.tif",
+     "validity": "data/sampling/pair-a/gunw-coherence_f075_validity.tif",
+     "tiles": {
+      "url": "data/tiles/pair-a/gunw-coherence/f075/{z}/{x}/{y}.png",
+      "minzoom": 8,
+      "maxzoom": 11,
+      "count": 54
+     },
+     "maskTiles": "data/tiles/pair-a/gunw-coherence/f075_mask/{z}/{x}/{y}.png"
+    }
+   ],
+   "productMaturity": "Provisional (P05023)",
+   "sourceGranules": [
+    "NISAR_L2_PR_GUNW_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001",
+    "NISAR_L2_PR_GUNW_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001"
+   ],
+   "attribution": "NASA/JPL-Caltech/ISRO, NISAR; distributed by ASF DAAC",
+   "limitations": [
+    "Low coherence limits phase interpretation. It is not evidence of a landslide or its extent."
+   ],
+   "postingM": [
+    80.0,
+    80.0
+   ],
+   "crs": "EPSG:32645",
+   "stats": {
+    "count": 890980,
+    "min": 0.0069569917395710945,
+    "max": 0.9655233025550842,
+    "mean": 0.5220693349838257,
+    "median": 0.5365778207778931,
+    "p2": 0.13203868567943575,
+    "p98": 0.8530290281772613,
+    "displayMin": 0.0,
+    "displayMax": 1.0,
+    "histogram": {
+     "edges": [
+      0.0,
+      0.025,
+      0.05,
+      0.075,
+      0.1,
+      0.125,
+      0.15,
+      0.175,
+      0.2,
+      0.225,
+      0.25,
+      0.275,
+      0.3,
+      0.325,
+      0.35,
+      0.375,
+      0.4,
+      0.425,
+      0.45,
+      0.475,
+      0.5,
+      0.525,
+      0.55,
+      0.575,
+      0.6,
+      0.625,
+      0.65,
+      0.675,
+      0.7,
+      0.725,
+      0.75,
+      0.775,
+      0.8,
+      0.825,
+      0.85,
+      0.875,
+      0.9,
+      0.925,
+      0.95,
+      0.975,
+      1.0
+     ],
+     "counts": [
+      36,
+      576,
+      2379,
+      4975,
+      7392,
+      9381,
+      10817,
+      12459,
+      13874,
+      15963,
+      17905,
+      20231,
+      22718,
+      25516,
+      28448,
+      31305,
+      34615,
+      37417,
+      40624,
+      42318,
+      45376,
+      46528,
+      47589,
+      47614,
+      46844,
+      45078,
+      42261,
+      38814,
+      34628,
+      29783,
+      24424,
+      19240,
+      14271,
+      10729,
+      7630,
+      5409,
+      3746,
+      1843,
+      224,
+      0
+     ]
+    }
+   },
+   "polarization": [
+    "HH"
+   ],
+   "displayDb": false,
+   "goffLayer": null,
+   "displayRelative": false,
+   "legend": {
+    "type": "continuous",
+    "stops": [
+     "#000004",
+     "#51127c",
+     "#b73779",
+     "#fc8961",
+     "#fcfdbf"
+    ],
+    "min": 0.0,
+    "max": 1.0,
+    "labels": null,
+    "unit": "1"
+   },
+   "processingHistory": {
+    "processedAt": "2026-11-01T16:11:54+00:00",
+    "parameters": {
+     "gross_outlier_mad_k": 10,
+     "snr_min": null,
+     "coherence_threshold": null,
+     "goff_layer": 3,
+     "crid": "P05023",
+     "aoi_bbox": [
+      84.3976,
+      27.732,
+      85.5508,
+      28.35
+     ]
+    },
+    "provenance": {
+     "pipelineVersion": "0.2.0",
+     "configSha256": "1da822203031c9bc5416e32c968466922bcd0b3c4785b39492469469fc31db70",
+     "outputDtype": "float32",
+     "validityClasses": {
+      "0": "no data",
+      "1": "valid",
+      "2": "masked"
+     },
+     "maskRule": "Mask: water or invalid subswath masked, 255 no data. Phase only: component label 0 masked, 65535 no data.",
+     "tileResampling": "nearest",
+     "nativeGridKept": true,
+     "displayTransform": null
+    }
+   }
+  },
+  {
+   "id": "pair-a:gunw-cc",
+   "groupId": "pair-a",
+   "name": "Connected components",
+   "category": "gunw",
+   "mission": "NISAR",
+   "instrument": "L-SAR",
+   "productType": "GUNW",
+   "measurementClass": "measurement",
+   "measurementType": "gunw-cc",
+   "kind": "categorical",
+   "units": "1",
+   "unitsNote": null,
+   "acquisition": {
+    "reference": "2026-08-16",
+    "secondary": "2026-08-28"
+   },
+   "orbitDirection": "DESCENDING",
+   "track": 48,
+   "frames": [
+    74,
+    75
+   ],
+   "qualityLayerIds": [],
+   "status": "sampleable",
+   "statusReason": null,
+   "sources": [
+    {
+     "frame": 74,
+     "granule": "NISAR_L2_PR_GUNW_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001",
+     "sourceFilename": "NISAR_L2_PR_GUNW_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001.h5",
+     "sourceDataset": "/science/LSAR/GUNW/grids/frequencyA/unwrappedInterferogram/HH/connectedComponents",
+     "sha256": "aa18c396262052814a9901275cd88aee8a99c4425c83be3168aa4b6e24d5568a",
+     "bounds": [
+      84.53594788265075,
+      27.717578024937264,
+      85.55941176995117,
+      28.36707937156769
+     ],
+     "shape": [
+      880,
+      1244
+     ],
+     "validFraction": 0.4340826878105817,
+     "maskedFraction": 0.5659173121894183,
+     "sourceDtype": "uint16",
+     "clipWindow": [
+      2616,
+      3496,
+      0,
+      1244
+     ],
+     "displayOffset": 0.0,
+     "sampling": "data/sampling/pair-a/gunw-cc_f074.tif",
+     "validity": "data/sampling/pair-a/gunw-cc_f074_validity.tif",
+     "tiles": {
+      "url": "data/tiles/pair-a/gunw-cc/f074/{z}/{x}/{y}.png",
+      "minzoom": 8,
+      "maxzoom": 11,
+      "count": 86
+     },
+     "maskTiles": "data/tiles/pair-a/gunw-cc/f074_mask/{z}/{x}/{y}.png"
+    },
+    {
+     "frame": 75,
+     "granule": "NISAR_L2_PR_GUNW_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001",
+     "sourceFilename": "NISAR_L2_PR_GUNW_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001.h5",
+     "sourceDataset": "/science/LSAR/GUNW/grids/frequencyA/unwrappedInterferogram/HH/connectedComponents",
+     "sha256": "933b71fa40b14cc2e61b0996ed04cacfde0be2c9d62a17168f63f39312f78e67",
+     "bounds": [
+      84.38475258192256,
+      27.714795075127522,
+      85.55941176995117,
+      28.280449216353468
+     ],
+     "shape": [
+      760,
+      1432
+     ],
+     "validFraction": 0.3823958027050867,
+     "maskedFraction": 0.6176041972949132,
+     "sourceDtype": "uint16",
+     "clipWindow": [
+      0,
+      760,
+      604,
+      2036
+     ],
+     "displayOffset": 0.0,
+     "sampling": "data/sampling/pair-a/gunw-cc_f075.tif",
+     "validity": "data/sampling/pair-a/gunw-cc_f075_validity.tif",
+     "tiles": {
+      "url": "data/tiles/pair-a/gunw-cc/f075/{z}/{x}/{y}.png",
+      "minzoom": 8,
+      "maxzoom": 11,
+      "count": 64
+     },
+     "maskTiles": "data/tiles/pair-a/gunw-cc/f075_mask/{z}/{x}/{y}.png"
+    }
+   ],
+   "productMaturity": "Provisional (P05023)",
+   "sourceGranules": [
+    "NISAR_L2_PR_GUNW_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001",
+    "NISAR_L2_PR_GUNW_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001"
+   ],
+   "attribution": "NASA/JPL-Caltech/ISRO, NISAR; distributed by ASF DAAC",
+   "limitations": [
+    "Label numbers are arbitrary identifiers. Label 0 means not reliably unwrapped and belongs to no component."
+   ],
+   "postingM": [
+    80.0,
+    80.0
+   ],
+   "crs": "EPSG:32645",
+   "stats": {
+    "count": 891368,
+    "labels": [
+     0,
+     1
+    ]
+   },
+   "polarization": [
+    "HH"
+   ],
+   "displayDb": false,
+   "goffLayer": null,
+   "displayRelative": false,
+   "legend": {
+    "type": "categorical",
+    "stops": [
+     "#4e79a7",
+     "#f28e2b",
+     "#59a14f",
+     "#b07aa1",
+     "#edc948",
+     "#76b7b2",
+     "#e15759",
+     "#9c755f"
+    ],
+    "min": null,
+    "max": null,
+    "labels": [
+     0,
+     1
+    ],
+    "unit": "1"
+   },
+   "processingHistory": {
+    "processedAt": "2026-11-01T16:11:56+00:00",
+    "parameters": {
+     "gross_outlier_mad_k": 10,
+     "snr_min": null,
+     "coherence_threshold": null,
+     "goff_layer": 3,
+     "crid": "P05023",
+     "aoi_bbox": [
+      84.3976,
+      27.732,
+      85.5508,
+      28.35
+     ]
+    },
+    "provenance": {
+     "pipelineVersion": "0.2.0",
+     "configSha256": "1da822203031c9bc5416e32c968466922bcd0b3c4785b39492469469fc31db70",
+     "outputDtype": "float32",
+     "validityClasses": {
+      "0": "no data",
+      "1": "valid",
+      "2": "masked"
+     },
+     "maskRule": "Mask: water or invalid subswath masked, 255 no data. Phase only: component label 0 masked, 65535 no data.",
+     "tileResampling": "nearest",
+     "nativeGridKept": true,
+     "displayTransform": null
+    }
+   }
+  },
+  {
+   "id": "pair-a:gunw-iono",
+   "groupId": "pair-a",
+   "name": "Ionosphere phase screen",
+   "category": "gunw",
+   "mission": "NISAR",
+   "instrument": "L-SAR",
+   "productType": "GUNW",
+   "measurementClass": "measurement",
+   "measurementType": "gunw-iono",
+   "kind": "continuous",
+   "units": "radians",
+   "unitsNote": "Radians. Colours are relative to each frame's median.",
+   "acquisition": {
+    "reference": "2026-08-16",
+    "secondary": "2026-08-28"
+   },
+   "orbitDirection": "DESCENDING",
+   "track": 48,
+   "frames": [
+    74,
+    75
+   ],
+   "qualityLayerIds": [],
+   "status": "sampleable",
+   "statusReason": null,
+   "sources": [
+    {
+     "frame": 74,
+     "granule": "NISAR_L2_PR_GUNW_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001",
+     "sourceFilename": "NISAR_L2_PR_GUNW_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001.h5",
+     "sourceDataset": "/science/LSAR/GUNW/grids/frequencyA/unwrappedInterferogram/HH/ionospherePhaseScreen",
+     "sha256": "aa18c396262052814a9901275cd88aee8a99c4425c83be3168aa4b6e24d5568a",
+     "bounds": [
+      84.53594788265075,
+      27.717578024937264,
+      85.55941176995117,
+      28.36707937156769
+     ],
+     "shape": [
+      880,
+      1244
+     ],
+     "validFraction": 0.4340826878105817,
+     "maskedFraction": 0.1326092516807951,
+     "sourceDtype": "float32",
+     "clipWindow": [
+      2616,
+      3496,
+      0,
+      1244
+     ],
+     "displayOffset": 71.26673126220703,
+     "sampling": "data/sampling/pair-a/gunw-iono_f074.tif",
+     "validity": "data/sampling/pair-a/gunw-iono_f074_validity.tif",
+     "tiles": {
+      "url": "data/tiles/pair-a/gunw-iono/f074/{z}/{x}/{y}.png",
+      "minzoom": 8,
+      "maxzoom": 11,
+      "count": 70
+     },
+     "maskTiles": "data/tiles/pair-a/gunw-iono/f074_mask/{z}/{x}/{y}.png"
+    },
+    {
+     "frame": 75,
+     "granule": "NISAR_L2_PR_GUNW_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001",
+     "sourceFilename": "NISAR_L2_PR_GUNW_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001.h5",
+     "sourceDataset": "/science/LSAR/GUNW/grids/frequencyA/unwrappedInterferogram/HH/ionospherePhaseScreen",
+     "sha256": "933b71fa40b14cc2e61b0996ed04cacfde0be2c9d62a17168f63f39312f78e67",
+     "bounds": [
+      84.38475258192256,
+      27.714795075127522,
+      85.55941176995117,
+      28.280449216353468
+     ],
+     "shape": [
+      760,
+      1432
+     ],
+     "validFraction": 0.3823958027050867,
+     "maskedFraction": 0.1629594236989121,
+     "sourceDtype": "float32",
+     "clipWindow": [
+      0,
+      760,
+      604,
+      2036
+     ],
+     "displayOffset": -10.451828956604004,
+     "sampling": "data/sampling/pair-a/gunw-iono_f075.tif",
+     "validity": "data/sampling/pair-a/gunw-iono_f075_validity.tif",
+     "tiles": {
+      "url": "data/tiles/pair-a/gunw-iono/f075/{z}/{x}/{y}.png",
+      "minzoom": 8,
+      "maxzoom": 11,
+      "count": 56
+     },
+     "maskTiles": "data/tiles/pair-a/gunw-iono/f075_mask/{z}/{x}/{y}.png"
+    }
+   ],
+   "productMaturity": "Provisional (P05023)",
+   "sourceGranules": [
+    "NISAR_L2_PR_GUNW_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001",
+    "NISAR_L2_PR_GUNW_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001"
+   ],
+   "attribution": "NASA/JPL-Caltech/ISRO, NISAR; distributed by ASF DAAC",
+   "limitations": [
+    "An estimate published in the product. It is shown for comparison and is not applied to the phase here.",
+    "Low-frequency only, per the ATBD: small-scale ionospheric effects are not captured."
+   ],
+   "postingM": [
+    80.0,
+    80.0
+   ],
+   "crs": "EPSG:32645",
+   "stats": {
+    "count": 891368,
+    "min": -13.20195484161377,
+    "max": 18.940879821777344,
+    "mean": 0.0015774910571053624,
+    "median": 0.0,
+    "p2": -11.869435195922852,
+    "p98": 13.590352325439454,
+    "displayMin": -13.590352058410645,
+    "displayMax": 13.590352058410645,
+    "histogram": {
+     "edges": [
+      -13.59035,
+      -12.91083,
+      -12.23132,
+      -11.5518,
+      -10.87228,
+      -10.19276,
+      -9.51325,
+      -8.83373,
+      -8.15421,
+      -7.47469,
+      -6.79518,
+      -6.11566,
+      -5.43614,
+      -4.75662,
+      -4.07711,
+      -3.39759,
+      -2.71807,
+      -2.03855,
+      -1.35904,
+      -0.67952,
+      0.0,
+      0.67952,
+      1.35904,
+      2.03855,
+      2.71807,
+      3.39759,
+      4.07711,
+      4.75662,
+      5.43614,
+      6.11566,
+      6.79518,
+      7.47469,
+      8.15421,
+      8.83373,
+      9.51325,
+      10.19276,
+      10.87228,
+      11.5518,
+      12.23132,
+      12.91083,
+      13.59035
+     ],
+     "counts": [
+      1427,
+      8315,
+      16351,
+      20102,
+      20133,
+      21192,
+      21364,
+      22266,
+      24969,
+      23756,
+      25197,
+      25417,
+      25824,
+      25834,
+      28799,
+      27360,
+      26264,
+      27391,
+      27211,
+      26511,
+      27409,
+      29573,
+      27891,
+      25641,
+      26699,
+      27371,
+      27313,
+      29670,
+      28891,
+      28062,
+      27874,
+      25872,
+      21091,
+      19118,
+      17619,
+      12017,
+      9791,
+      7453,
+      4781,
+      3721
+     ]
+    }
+   },
+   "polarization": [
+    "HH"
+   ],
+   "displayDb": false,
+   "goffLayer": null,
+   "displayRelative": true,
+   "legend": {
+    "type": "continuous",
+    "stops": [
+     "#2166ac",
+     "#67a9cf",
+     "#f7f7f7",
+     "#ef8a62",
+     "#b2182b"
+    ],
+    "min": -13.590352058410645,
+    "max": 13.590352058410645,
+    "labels": null,
+    "unit": "radians, relative to frame median"
+   },
+   "processingHistory": {
+    "processedAt": "2026-11-01T16:11:59+00:00",
+    "parameters": {
+     "gross_outlier_mad_k": 10,
+     "snr_min": null,
+     "coherence_threshold": null,
+     "goff_layer": 3,
+     "crid": "P05023",
+     "aoi_bbox": [
+      84.3976,
+      27.732,
+      85.5508,
+      28.35
+     ]
+    },
+    "provenance": {
+     "pipelineVersion": "0.2.0",
+     "configSha256": "1da822203031c9bc5416e32c968466922bcd0b3c4785b39492469469fc31db70",
+     "outputDtype": "float32",
+     "validityClasses": {
+      "0": "no data",
+      "1": "valid",
+      "2": "masked"
+     },
+     "maskRule": "Mask: water or invalid subswath masked, 255 no data. Phase only: component label 0 masked, 65535 no data.",
+     "tileResampling": "nearest",
+     "nativeGridKept": true,
+     "displayTransform": "value minus frame median"
+    }
+   }
+  },
+  {
+   "id": "pair-a:gunw-phase-iono",
+   "groupId": "pair-a",
+   "name": "Phase with ionosphere screen removed",
+   "category": "gunw",
+   "mission": "NISAR",
+   "instrument": "L-SAR",
+   "productType": "GUNW",
+   "measurementClass": "derived",
+   "measurementType": "gunw-phase-iono",
+   "kind": "continuous",
+   "units": "radians",
+   "unitsNote": "Radians. Not a displacement. Colours are relative to each frame's median.",
+   "acquisition": {
+    "reference": "2026-08-16",
+    "secondary": "2026-08-28"
+   },
+   "orbitDirection": "DESCENDING",
+   "track": 48,
+   "frames": [
+    74,
+    75
+   ],
+   "qualityLayerIds": [
+    "pair-a:gunw-coherence",
+    "pair-a:gunw-cc"
+   ],
+   "status": "sampleable",
+   "statusReason": null,
+   "sources": [
+    {
+     "frame": 74,
+     "granule": "NISAR_L2_PR_GUNW_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001",
+     "sourceFilename": "NISAR_L2_PR_GUNW_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001.h5",
+     "sourceDataset": "/science/LSAR/GUNW/grids/frequencyA/unwrappedInterferogram/HH/unwrappedPhase minus ionospherePhaseScreen",
+     "sha256": "aa18c396262052814a9901275cd88aee8a99c4425c83be3168aa4b6e24d5568a",
+     "bounds": [
+      84.53594788265075,
+      27.717578024937264,
+      85.55941176995117,
+      28.36707937156769
+     ],
+     "shape": [
+      880,
+      1244
+     ],
+     "validFraction": 0.38886929991230634,
+     "maskedFraction": 0.17782263957907044,
+     "sourceDtype": "float32",
+     "clipWindow": [
+      2616,
+      3496,
+      0,
+      1244
+     ],
+     "displayOffset": 4.804374694824219,
+     "sampling": "data/sampling/pair-a/gunw-phase-iono_f074.tif",
+     "validity": "data/sampling/pair-a/gunw-phase-iono_f074_validity.tif",
+     "tiles": {
+      "url": "data/tiles/pair-a/gunw-phase-iono/f074/{z}/{x}/{y}.png",
+      "minzoom": 8,
+      "maxzoom": 11,
+      "count": 76
+     },
+     "maskTiles": "data/tiles/pair-a/gunw-phase-iono/f074_mask/{z}/{x}/{y}.png"
+    },
+    {
+     "frame": 75,
+     "granule": "NISAR_L2_PR_GUNW_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001",
+     "sourceFilename": "NISAR_L2_PR_GUNW_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001.h5",
+     "sourceDataset": "/science/LSAR/GUNW/grids/frequencyA/unwrappedInterferogram/HH/unwrappedPhase minus ionospherePhaseScreen",
+     "sha256": "933b71fa40b14cc2e61b0996ed04cacfde0be2c9d62a17168f63f39312f78e67",
+     "bounds": [
+      84.38475258192256,
+      27.714795075127522,
+      85.55941176995117,
+      28.280449216353468
+     ],
+     "shape": [
+      760,
+      1432
+     ],
+     "validFraction": 0.3691074316377536,
+     "maskedFraction": 0.17624779476624522,
+     "sourceDtype": "float32",
+     "clipWindow": [
+      0,
+      760,
+      604,
+      2036
+     ],
+     "displayOffset": 32.84978103637695,
+     "sampling": "data/sampling/pair-a/gunw-phase-iono_f075.tif",
+     "validity": "data/sampling/pair-a/gunw-phase-iono_f075_validity.tif",
+     "tiles": {
+      "url": "data/tiles/pair-a/gunw-phase-iono/f075/{z}/{x}/{y}.png",
+      "minzoom": 8,
+      "maxzoom": 11,
+      "count": 58
+     },
+     "maskTiles": "data/tiles/pair-a/gunw-phase-iono/f075_mask/{z}/{x}/{y}.png"
+    }
+   ],
+   "productMaturity": "Provisional (P05023)",
+   "sourceGranules": [
+    "NISAR_L2_PR_GUNW_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001",
+    "NISAR_L2_PR_GUNW_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001"
+   ],
+   "attribution": "NASA/JPL-Caltech/ISRO, NISAR; distributed by ASF DAAC",
+   "limitations": [
+    "Derived here: phase minus the published ionosphere screen. Not a product of the NISAR project.",
+    "The sign was chosen from the ATBD equation and confirmed by scatter on these frames, not from a stated convention.",
+    "The screen is low-frequency only, so smaller ionospheric effects remain. Troposphere and terrain effects also remain.",
+    "Still phase, not displacement."
+   ],
+   "postingM": [
+    80.0,
+    80.0
+   ],
+   "crs": "EPSG:32645",
+   "stats": {
+    "count": 827410,
+    "min": -92.87545013427734,
+    "max": 7.4850311279296875,
+    "mean": -0.3265171945095062,
+    "median": 0.0,
+    "p2": -4.134209480285644,
+    "p98": 2.1581681060791014,
+    "displayMin": -4.134209632873535,
+    "displayMax": 4.134209632873535,
+    "histogram": {
+     "edges": [
+      -4.13421,
+      -3.9275,
+      -3.72079,
+      -3.51408,
+      -3.30737,
+      -3.10066,
+      -2.89395,
+      -2.68724,
+      -2.48053,
+      -2.27382,
+      -2.0671,
+      -1.86039,
+      -1.65368,
+      -1.44697,
+      -1.24026,
+      -1.03355,
+      -0.82684,
+      -0.62013,
+      -0.41342,
+      -0.20671,
+      0.0,
+      0.20671,
+      0.41342,
+      0.62013,
+      0.82684,
+      1.03355,
+      1.24026,
+      1.44697,
+      1.65368,
+      1.86039,
+      2.0671,
+      2.27382,
+      2.48053,
+      2.68724,
+      2.89395,
+      3.10066,
+      3.30737,
+      3.51408,
+      3.72079,
+      3.9275,
+      4.13421
+     ],
+     "counts": [
+      3933,
+      2833,
+      2706,
+      3212,
+      3976,
+      4866,
+      5765,
+      5904,
+      5823,
+      6544,
+      8334,
+      11256,
+      15207,
+      20969,
+      27716,
+      35291,
+      44725,
+      55340,
+      63878,
+      68875,
+      71532,
+      70420,
+      64138,
+      54099,
+      42873,
+      32451,
+      24128,
+      16854,
+      10961,
+      7246,
+      4979,
+      3495,
+      2590,
+      1959,
+      1404,
+      1194,
+      878,
+      720,
+      559,
+      413
+     ]
+    }
+   },
+   "polarization": [
+    "HH"
+   ],
+   "displayDb": false,
+   "goffLayer": null,
+   "displayRelative": true,
+   "legend": {
+    "type": "continuous",
+    "stops": [
+     "#2166ac",
+     "#67a9cf",
+     "#f7f7f7",
+     "#ef8a62",
+     "#b2182b"
+    ],
+    "min": -4.134209632873535,
+    "max": 4.134209632873535,
+    "labels": null,
+    "unit": "radians, relative to frame median"
+   },
+   "processingHistory": {
+    "processedAt": "2026-11-01T16:12:02+00:00",
+    "parameters": {
+     "gross_outlier_mad_k": 10,
+     "snr_min": null,
+     "coherence_threshold": null,
+     "goff_layer": 3,
+     "crid": "P05023",
+     "aoi_bbox": [
+      84.3976,
+      27.732,
+      85.5508,
+      28.35
+     ]
+    },
+    "provenance": {
+     "pipelineVersion": "0.2.0",
+     "configSha256": "1da822203031c9bc5416e32c968466922bcd0b3c4785b39492469469fc31db70",
+     "outputDtype": "float32",
+     "validityClasses": {
+      "0": "no data",
+      "1": "valid",
+      "2": "masked"
+     },
+     "maskRule": "Mask: water or invalid subswath masked, 255 no data. Phase only: component label 0 masked, 65535 no data.",
+     "tileResampling": "nearest",
+     "nativeGridKept": true,
+     "displayTransform": "value minus frame median"
+    }
+   }
+  },
+  {
+   "id": "pair-a:goff-range",
+   "groupId": "pair-a",
+   "name": "Slant-range offset",
+   "category": "goff",
+   "mission": "NISAR",
+   "instrument": "L-SAR",
+   "productType": "GOFF",
+   "measurementClass": "measurement",
+   "measurementType": "goff-range",
+   "kind": "continuous",
+   "units": "meters",
+   "unitsNote": "Metres in radar slant range, not east/west.",
+   "acquisition": {
+    "reference": "2026-08-16",
+    "secondary": "2026-08-28"
+   },
+   "orbitDirection": "DESCENDING",
+   "track": 48,
+   "frames": [
+    74,
+    75
+   ],
+   "qualityLayerIds": [
+    "pair-a:goff-snr",
+    "pair-a:goff-peak"
+   ],
+   "status": "sampleable",
+   "statusReason": null,
+   "sources": [
+    {
+     "frame": 74,
+     "granule": "NISAR_L2_PR_GOFF_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001",
+     "sourceFilename": "NISAR_L2_PR_GOFF_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001.h5",
+     "sourceDataset": "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer3/slantRangeOffset",
+     "sha256": "3528961276e82118931c16b5b098604b09e8239d629d8aff90bcdc3ef6929dc5",
+     "bounds": [
+      84.53594788265075,
+      27.717578024937264,
+      85.55941176995117,
+      28.36707937156769
+     ],
+     "shape": [
+      880,
+      1244
+     ],
+     "validFraction": 0.4147069570301082,
+     "maskedFraction": 0.11334770534931307,
+     "sourceDtype": "float32",
+     "clipWindow": [
+      2616,
+      3496,
+      0,
+      1244
+     ],
+     "displayOffset": 0.0,
+     "sampling": "data/sampling/pair-a/goff-range_f074.tif",
+     "validity": "data/sampling/pair-a/goff-range_f074_validity.tif",
+     "tiles": {
+      "url": "data/tiles/pair-a/goff-range/f074/{z}/{x}/{y}.png",
+      "minzoom": 8,
+      "maxzoom": 11,
+      "count": 69
+     },
+     "maskTiles": "data/tiles/pair-a/goff-range/f074_mask/{z}/{x}/{y}.png"
+    },
+    {
+     "frame": 75,
+     "granule": "NISAR_L2_PR_GOFF_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001",
+     "sourceFilename": "NISAR_L2_PR_GOFF_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001.h5",
+     "sourceDataset": "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer3/slantRangeOffset",
+     "sha256": "64f31a0fbe011f4be6c09cd460fccf5fe73a2058a1123b95cdbea76d76d8f115",
+     "bounds": [
+      84.38475258192256,
+      27.714795075127522,
+      85.55941176995117,
+      28.280449216353468
+     ],
+     "shape": [
+      760,
+      1432
+     ],
+     "validFraction": 0.38134280358718026,
+     "maskedFraction": 0.11384611143781241,
+     "sourceDtype": "float32",
+     "clipWindow": [
+      0,
+      760,
+      604,
+      2036
+     ],
+     "displayOffset": 0.0,
+     "sampling": "data/sampling/pair-a/goff-range_f075.tif",
+     "validity": "data/sampling/pair-a/goff-range_f075_validity.tif",
+     "tiles": {
+      "url": "data/tiles/pair-a/goff-range/f075/{z}/{x}/{y}.png",
+      "minzoom": 8,
+      "maxzoom": 11,
+      "count": 55
+     },
+     "maskTiles": "data/tiles/pair-a/goff-range/f075_mask/{z}/{x}/{y}.png"
+    }
+   ],
+   "productMaturity": "Provisional (P05023)",
+   "sourceGranules": [
+    "NISAR_L2_PR_GOFF_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001",
+    "NISAR_L2_PR_GOFF_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001"
+   ],
+   "attribution": "NASA/JPL-Caltech/ISRO, NISAR; distributed by ASF DAAC",
+   "limitations": [
+    "Raw, unculled and unfiltered: expect outliers.",
+    "A radar-geometry component, not a geographic vector.",
+    "Layer 3 uses the smallest search window, so a very large shift may not be found."
+   ],
+   "postingM": [
+    80.0,
+    80.0
+   ],
+   "crs": "EPSG:32645",
+   "stats": {
+    "count": 869011,
+    "min": -6.174779891967773,
+    "max": 0.030828118324279785,
+    "mean": -2.931602716445923,
+    "median": -2.9276607036590576,
+    "p2": -3.49914288520813,
+    "p98": -2.3788322448730472,
+    "displayMin": -3.49914288520813,
+    "displayMax": -2.3561785221099854,
+    "histogram": {
+     "edges": [
+      -3.49914,
+      -3.47057,
+      -3.44199,
+      -3.41342,
+      -3.38485,
+      -3.35627,
+      -3.3277,
+      -3.29912,
+      -3.27055,
+      -3.24198,
+      -3.2134,
+      -3.18483,
+      -3.15625,
+      -3.12768,
+      -3.09911,
+      -3.07053,
+      -3.04196,
+      -3.01338,
+      -2.98481,
+      -2.95623,
+      -2.92766,
+      -2.89909,
+      -2.87051,
+      -2.84194,
+      -2.81336,
+      -2.78479,
+      -2.75622,
+      -2.72764,
+      -2.69907,
+      -2.67049,
+      -2.64192,
+      -2.61335,
+      -2.58477,
+      -2.5562,
+      -2.52762,
+      -2.49905,
+      -2.47047,
+      -2.4419,
+      -2.41333,
+      -2.38475,
+      -2.35618
+     ],
+     "counts": [
+      3965,
+      4106,
+      13973,
+      8524,
+      8024,
+      9171,
+      28551,
+      12178,
+      12859,
+      34953,
+      16050,
+      15311,
+      17393,
+      42655,
+      18158,
+      19115,
+      55363,
+      22194,
+      21437,
+      33358,
+      56621,
+      22189,
+      23511,
+      66166,
+      21530,
+      20666,
+      60050,
+      19287,
+      16543,
+      17515,
+      37483,
+      11228,
+      10628,
+      21877,
+      6990,
+      5814,
+      6173,
+      8593,
+      3340,
+      3230
+     ]
+    }
+   },
+   "polarization": [
+    "HH"
+   ],
+   "displayDb": false,
+   "goffLayer": 3,
+   "displayRelative": false,
+   "legend": {
+    "type": "continuous",
+    "stops": [
+     "#2166ac",
+     "#67a9cf",
+     "#f7f7f7",
+     "#ef8a62",
+     "#b2182b"
+    ],
+    "min": -3.49914288520813,
+    "max": -2.3561785221099854,
+    "labels": null,
+    "unit": "meters"
+   },
+   "processingHistory": {
+    "processedAt": "2026-11-01T16:12:04+00:00",
+    "parameters": {
+     "gross_outlier_mad_k": 10,
+     "snr_min": null,
+     "coherence_threshold": null,
+     "goff_layer": 3,
+     "crid": "P05023",
+     "aoi_bbox": [
+      84.3976,
+      27.732,
+      85.5508,
+      28.35
+     ]
+    },
+    "provenance": {
+     "pipelineVersion": "0.2.0",
+     "configSha256": "1da822203031c9bc5416e32c968466922bcd0b3c4785b39492469469fc31db70",
+     "outputDtype": "float32",
+     "validityClasses": {
+      "0": "no data",
+      "1": "valid",
+      "2": "masked"
+     },
+     "maskRule": "Mask as GUNW, plus gross outliers flagged at the configured MAD multiple. Raw values kept.",
+     "tileResampling": "nearest",
+     "nativeGridKept": true,
+     "displayTransform": null
+    }
+   }
+  },
+  {
+   "id": "pair-a:goff-azimuth",
+   "groupId": "pair-a",
+   "name": "Along-track offset",
+   "category": "goff",
+   "mission": "NISAR",
+   "instrument": "L-SAR",
+   "productType": "GOFF",
+   "measurementClass": "measurement",
+   "measurementType": "goff-azimuth",
+   "kind": "continuous",
+   "units": "meters",
+   "unitsNote": "Metres along the satellite track, not north/south.",
+   "acquisition": {
+    "reference": "2026-08-16",
+    "secondary": "2026-08-28"
+   },
+   "orbitDirection": "DESCENDING",
+   "track": 48,
+   "frames": [
+    74,
+    75
+   ],
+   "qualityLayerIds": [
+    "pair-a:goff-snr",
+    "pair-a:goff-peak"
+   ],
+   "status": "sampleable",
+   "statusReason": null,
+   "sources": [
+    {
+     "frame": 74,
+     "granule": "NISAR_L2_PR_GOFF_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001",
+     "sourceFilename": "NISAR_L2_PR_GOFF_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001.h5",
+     "sourceDataset": "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer3/alongTrackOffset",
+     "sha256": "3528961276e82118931c16b5b098604b09e8239d629d8aff90bcdc3ef6929dc5",
+     "bounds": [
+      84.53594788265075,
+      27.717578024937264,
+      85.55941176995117,
+      28.36707937156769
+     ],
+     "shape": [
+      880,
+      1244
+     ],
+     "validFraction": 0.3675633952060801,
+     "maskedFraction": 0.10332505115463315,
+     "sourceDtype": "float32",
+     "clipWindow": [
+      2616,
+      3496,
+      0,
+      1244
+     ],
+     "displayOffset": 0.0,
+     "sampling": "data/sampling/pair-a/goff-azimuth_f074.tif",
+     "validity": "data/sampling/pair-a/goff-azimuth_f074_validity.tif",
+     "tiles": {
+      "url": "data/tiles/pair-a/goff-azimuth/f074/{z}/{x}/{y}.png",
+      "minzoom": 8,
+      "maxzoom": 11,
+      "count": 69
+     },
+     "maskTiles": "data/tiles/pair-a/goff-azimuth/f074_mask/{z}/{x}/{y}.png"
+    },
+    {
+     "frame": 75,
+     "granule": "NISAR_L2_PR_GOFF_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001",
+     "sourceFilename": "NISAR_L2_PR_GOFF_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001.h5",
+     "sourceDataset": "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer3/alongTrackOffset",
+     "sha256": "64f31a0fbe011f4be6c09cd460fccf5fe73a2058a1123b95cdbea76d76d8f115",
+     "bounds": [
+      84.38475258192256,
+      27.714795075127522,
+      85.55941176995117,
+      28.280449216353468
+     ],
+     "shape": [
+      760,
+      1432
+     ],
+     "validFraction": 0.36856531167303735,
+     "maskedFraction": 0.10822092766833284,
+     "sourceDtype": "float32",
+     "clipWindow": [
+      0,
+      760,
+      604,
+      2036
+     ],
+     "displayOffset": 0.0,
+     "sampling": "data/sampling/pair-a/goff-azimuth_f075.tif",
+     "validity": "data/sampling/pair-a/goff-azimuth_f075_validity.tif",
+     "tiles": {
+      "url": "data/tiles/pair-a/goff-azimuth/f075/{z}/{x}/{y}.png",
+      "minzoom": 8,
+      "maxzoom": 11,
+      "count": 55
+     },
+     "maskTiles": "data/tiles/pair-a/goff-azimuth/f075_mask/{z}/{x}/{y}.png"
+    }
+   ],
+   "productMaturity": "Provisional (P05023)",
+   "sourceGranules": [
+    "NISAR_L2_PR_GOFF_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001",
+    "NISAR_L2_PR_GOFF_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001"
+   ],
+   "attribution": "NASA/JPL-Caltech/ISRO, NISAR; distributed by ASF DAAC",
+   "limitations": [
+    "Raw, unculled and unfiltered: expect outliers.",
+    "A radar-geometry component, not a geographic vector.",
+    "Layer 3 uses the smallest search window, so a very large shift may not be found."
+   ],
+   "postingM": [
+    80.0,
+    80.0
+   ],
+   "crs": "EPSG:32645",
+   "stats": {
+    "count": 803496,
+    "min": -6.236456394195557,
+    "max": -1.0385034084320068,
+    "mean": -3.666252851486206,
+    "median": -3.666116714477539,
+    "p2": -4.233063697814941,
+    "p98": -3.124726390838623,
+    "displayMin": -4.233063697814941,
+    "displayMax": -3.0991697311401367,
+    "histogram": {
+     "edges": [
+      -4.23306,
+      -4.20472,
+      -4.17637,
+      -4.14802,
+      -4.11967,
+      -4.09133,
+      -4.06298,
+      -4.03463,
+      -4.00628,
+      -3.97794,
+      -3.94959,
+      -3.92124,
+      -3.8929,
+      -3.86455,
+      -3.8362,
+      -3.80785,
+      -3.77951,
+      -3.75116,
+      -3.72281,
+      -3.69446,
+      -3.66612,
+      -3.63777,
+      -3.60942,
+      -3.58107,
+      -3.55273,
+      -3.52438,
+      -3.49603,
+      -3.46769,
+      -3.43934,
+      -3.41099,
+      -3.38264,
+      -3.3543,
+      -3.32595,
+      -3.2976,
+      -3.26925,
+      -3.24091,
+      -3.21256,
+      -3.18421,
+      -3.15586,
+      -3.12752,
+      -3.09917
+     ],
+     "counts": [
+      5525,
+      4601,
+      11393,
+      5630,
+      12861,
+      7646,
+      7909,
+      18912,
+      10688,
+      26339,
+      14687,
+      15451,
+      32741,
+      17057,
+      37666,
+      19516,
+      21001,
+      44649,
+      21642,
+      49767,
+      23048,
+      42688,
+      29801,
+      21617,
+      44324,
+      19760,
+      43695,
+      18164,
+      16265,
+      32009,
+      11988,
+      24377,
+      9018,
+      8544,
+      14743,
+      5994,
+      9959,
+      4093,
+      3832,
+      4692
+     ]
+    }
+   },
+   "polarization": [
+    "HH"
+   ],
+   "displayDb": false,
+   "goffLayer": 3,
+   "displayRelative": false,
+   "legend": {
+    "type": "continuous",
+    "stops": [
+     "#2166ac",
+     "#67a9cf",
+     "#f7f7f7",
+     "#ef8a62",
+     "#b2182b"
+    ],
+    "min": -4.233063697814941,
+    "max": -3.0991697311401367,
+    "labels": null,
+    "unit": "meters"
+   },
+   "processingHistory": {
+    "processedAt": "2026-11-01T16:12:07+00:00",
+    "parameters": {
+     "gross_outlier_mad_k": 10,
+     "snr_min": null,
+     "coherence_threshold": null,
+     "goff_layer": 3,
+     "crid": "P05023",
+     "aoi_bbox": [
+      84.3976,
+      27.732,
+      85.5508,
+      28.35
+     ]
+    },
+    "provenance": {
+     "pipelineVersion": "0.2.0",
+     "configSha256": "1da822203031c9bc5416e32c968466922bcd0b3c4785b39492469469fc31db70",
+     "outputDtype": "float32",
+     "validityClasses": {
+      "0": "no data",
+      "1": "valid",
+      "2": "masked"
+     },
+     "maskRule": "Mask as GUNW, plus gross outliers flagged at the configured MAD multiple. Raw values kept.",
+     "tileResampling": "nearest",
+     "nativeGridKept": true,
+     "displayTransform": null
+    }
+   }
+  },
+  {
+   "id": "pair-a:goff-snr",
+   "groupId": "pair-a",
+   "name": "Offset SNR",
+   "category": "goff",
+   "mission": "NISAR",
+   "instrument": "L-SAR",
+   "productType": "GOFF",
+   "measurementClass": "measurement",
+   "measurementType": "goff-snr",
+   "kind": "continuous",
+   "units": "1",
+   "unitsNote": null,
+   "acquisition": {
+    "reference": "2026-08-16",
+    "secondary": "2026-08-28"
+   },
+   "orbitDirection": "DESCENDING",
+   "track": 48,
+   "frames": [
+    74,
+    75
+   ],
+   "qualityLayerIds": [],
+   "status": "sampleable",
+   "statusReason": null,
+   "sources": [
+    {
+     "frame": 74,
+     "granule": "NISAR_L2_PR_GOFF_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001",
+     "sourceFilename": "NISAR_L2_PR_GOFF_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001.h5",
+     "sourceDataset": "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer3/snr",
+     "sha256": "3528961276e82118931c16b5b098604b09e8239d629d8aff90bcdc3ef6929dc5",
+     "bounds": [
+      84.53594788265075,
+      27.717578024937264,
+      85.55941176995117,
+      28.36707937156769
+     ],
+     "shape": [
+      880,
+      1244
+     ],
+     "validFraction": 0.41522672464191757,
+     "maskedFraction": 0.11282793773750366,
+     "sourceDtype": "float32",
+     "clipWindow": [
+      2616,
+      3496,
+      0,
+      1244
+     ],
+     "displayOffset": 0.0,
+     "sampling": "data/sampling/pair-a/goff-snr_f074.tif",
+     "validity": "data/sampling/pair-a/goff-snr_f074_validity.tif",
+     "tiles": {
+      "url": "data/tiles/pair-a/goff-snr/f074/{z}/{x}/{y}.png",
+      "minzoom": 8,
+      "maxzoom": 11,
+      "count": 65
+     },
+     "maskTiles": "data/tiles/pair-a/goff-snr/f074_mask/{z}/{x}/{y}.png"
+    },
+    {
+     "frame": 75,
+     "granule": "NISAR_L2_PR_GOFF_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001",
+     "sourceFilename": "NISAR_L2_PR_GOFF_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001.h5",
+     "sourceDataset": "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer3/snr",
+     "sha256": "64f31a0fbe011f4be6c09cd460fccf5fe73a2058a1123b95cdbea76d76d8f115",
+     "bounds": [
+      84.38475258192256,
+      27.714795075127522,
+      85.55941176995117,
+      28.280449216353468
+     ],
+     "shape": [
+      760,
+      1432
+     ],
+     "validFraction": 0.3814337694795648,
+     "maskedFraction": 0.11375514554542782,
+     "sourceDtype": "float32",
+     "clipWindow": [
+      0,
+      760,
+      604,
+      2036
+     ],
+     "displayOffset": 0.0,
+     "sampling": "data/sampling/pair-a/goff-snr_f075.tif",
+     "validity": "data/sampling/pair-a/goff-snr_f075_validity.tif",
+     "tiles": {
+      "url": "data/tiles/pair-a/goff-snr/f075/{z}/{x}/{y}.png",
+      "minzoom": 8,
+      "maxzoom": 11,
+      "count": 55
+     },
+     "maskTiles": "data/tiles/pair-a/goff-snr/f075_mask/{z}/{x}/{y}.png"
+    }
+   ],
+   "productMaturity": "Provisional (P05023)",
+   "sourceGranules": [
+    "NISAR_L2_PR_GOFF_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001",
+    "NISAR_L2_PR_GOFF_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001"
+   ],
+   "attribution": "NASA/JPL-Caltech/ISRO, NISAR; distributed by ASF DAAC",
+   "limitations": [
+    "No SNR threshold is applied yet: it needs the real data distribution."
+   ],
+   "postingM": [
+    80.0,
+    80.0
+   ],
+   "crs": "EPSG:32645",
+   "stats": {
+    "count": 869679,
+    "min": 1.3505496978759766,
+    "max": 231.77978515625,
+    "mean": 15.124069213867188,
+    "median": 11.032083511352539,
+    "p2": 3.095007076263428,
+    "p98": 58.78813766479488,
+    "displayMin": 3.095007076263428,
+    "displayMax": 58.78813766479488,
+    "histogram": {
+     "edges": [
+      3.09501,
+      4.48734,
+      5.87966,
+      7.27199,
+      8.66432,
+      10.05665,
+      11.44898,
+      12.8413,
+      14.23363,
+      15.62596,
+      17.01829,
+      18.41062,
+      19.80295,
+      21.19527,
+      22.5876,
+      23.97993,
+      25.37226,
+      26.76459,
+      28.15692,
+      29.54924,
+      30.94157,
+      32.3339,
+      33.72623,
+      35.11856,
+      36.51089,
+      37.90321,
+      39.29554,
+      40.68787,
+      42.0802,
+      43.47253,
+      44.86486,
+      46.25718,
+      47.64951,
+      49.04184,
+      50.43417,
+      51.8265,
+      53.21883,
+      54.61115,
+      56.00348,
+      57.39581,
+      58.78814
+     ],
+     "counts": [
+      58393,
+      76198,
+      81895,
+      80575,
+      73831,
+      65360,
+      56538,
+      47823,
+      40298,
+      33803,
+      28867,
+      24261,
+      20840,
+      17712,
+      15157,
+      12884,
+      11043,
+      9605,
+      8548,
+      7593,
+      6926,
+      6328,
+      5532,
+      4971,
+      4353,
+      4044,
+      3722,
+      3416,
+      3069,
+      2784,
+      2589,
+      2444,
+      2234,
+      2029,
+      1851,
+      1740,
+      1582,
+      1444,
+      1337,
+      1272
+     ]
+    }
+   },
+   "polarization": [
+    "HH"
+   ],
+   "displayDb": false,
+   "goffLayer": 3,
+   "displayRelative": false,
+   "legend": {
+    "type": "continuous",
+    "stops": [
+     "#000004",
+     "#51127c",
+     "#b73779",
+     "#fc8961",
+     "#fcfdbf"
+    ],
+    "min": 3.095007076263428,
+    "max": 58.78813766479488,
+    "labels": null,
+    "unit": "1"
+   },
+   "processingHistory": {
+    "processedAt": "2026-11-01T16:12:09+00:00",
+    "parameters": {
+     "gross_outlier_mad_k": 10,
+     "snr_min": null,
+     "coherence_threshold": null,
+     "goff_layer": 3,
+     "crid": "P05023",
+     "aoi_bbox": [
+      84.3976,
+      27.732,
+      85.5508,
+      28.35
+     ]
+    },
+    "provenance": {
+     "pipelineVersion": "0.2.0",
+     "configSha256": "1da822203031c9bc5416e32c968466922bcd0b3c4785b39492469469fc31db70",
+     "outputDtype": "float32",
+     "validityClasses": {
+      "0": "no data",
+      "1": "valid",
+      "2": "masked"
+     },
+     "maskRule": "Mask as GUNW, plus gross outliers flagged at the configured MAD multiple. Raw values kept.",
+     "tileResampling": "nearest",
+     "nativeGridKept": true,
+     "displayTransform": null
+    }
+   }
+  },
+  {
+   "id": "pair-a:goff-peak",
+   "groupId": "pair-a",
+   "name": "Correlation surface peak",
+   "category": "goff",
+   "mission": "NISAR",
+   "instrument": "L-SAR",
+   "productType": "GOFF",
+   "measurementClass": "measurement",
+   "measurementType": "goff-peak",
+   "kind": "continuous",
+   "units": "1",
+   "unitsNote": null,
+   "acquisition": {
+    "reference": "2026-08-16",
+    "secondary": "2026-08-28"
+   },
+   "orbitDirection": "DESCENDING",
+   "track": 48,
+   "frames": [
+    74,
+    75
+   ],
+   "qualityLayerIds": [],
+   "status": "sampleable",
+   "statusReason": null,
+   "sources": [
+    {
+     "frame": 74,
+     "granule": "NISAR_L2_PR_GOFF_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001",
+     "sourceFilename": "NISAR_L2_PR_GOFF_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001.h5",
+     "sourceDataset": "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer3/correlationSurfacePeak",
+     "sha256": "3528961276e82118931c16b5b098604b09e8239d629d8aff90bcdc3ef6929dc5",
+     "bounds": [
+      84.53594788265075,
+      27.717578024937264,
+      85.55941176995117,
+      28.36707937156769
+     ],
+     "shape": [
+      880,
+      1244
+     ],
+     "validFraction": 0.41522672464191757,
+     "maskedFraction": 0.11282793773750366,
+     "sourceDtype": "float32",
+     "clipWindow": [
+      2616,
+      3496,
+      0,
+      1244
+     ],
+     "displayOffset": 0.0,
+     "sampling": "data/sampling/pair-a/goff-peak_f074.tif",
+     "validity": "data/sampling/pair-a/goff-peak_f074_validity.tif",
+     "tiles": {
+      "url": "data/tiles/pair-a/goff-peak/f074/{z}/{x}/{y}.png",
+      "minzoom": 8,
+      "maxzoom": 11,
+      "count": 65
+     },
+     "maskTiles": "data/tiles/pair-a/goff-peak/f074_mask/{z}/{x}/{y}.png"
+    },
+    {
+     "frame": 75,
+     "granule": "NISAR_L2_PR_GOFF_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001",
+     "sourceFilename": "NISAR_L2_PR_GOFF_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001.h5",
+     "sourceDataset": "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer3/correlationSurfacePeak",
+     "sha256": "64f31a0fbe011f4be6c09cd460fccf5fe73a2058a1123b95cdbea76d76d8f115",
+     "bounds": [
+      84.38475258192256,
+      27.714795075127522,
+      85.55941176995117,
+      28.280449216353468
+     ],
+     "shape": [
+      760,
+      1432
+     ],
+     "validFraction": 0.3814337694795648,
+     "maskedFraction": 0.11375514554542782,
+     "sourceDtype": "float32",
+     "clipWindow": [
+      0,
+      760,
+      604,
+      2036
+     ],
+     "displayOffset": 0.0,
+     "sampling": "data/sampling/pair-a/goff-peak_f075.tif",
+     "validity": "data/sampling/pair-a/goff-peak_f075_validity.tif",
+     "tiles": {
+      "url": "data/tiles/pair-a/goff-peak/f075/{z}/{x}/{y}.png",
+      "minzoom": 8,
+      "maxzoom": 11,
+      "count": 55
+     },
+     "maskTiles": "data/tiles/pair-a/goff-peak/f075_mask/{z}/{x}/{y}.png"
+    }
+   ],
+   "productMaturity": "Provisional (P05023)",
+   "sourceGranules": [
+    "NISAR_L2_PR_GOFF_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001",
+    "NISAR_L2_PR_GOFF_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001"
+   ],
+   "attribution": "NASA/JPL-Caltech/ISRO, NISAR; distributed by ASF DAAC",
+   "limitations": [
+    "A matching-quality indicator, not a movement measurement."
+   ],
+   "postingM": [
+    80.0,
+    80.0
+   ],
+   "crs": "EPSG:32645",
+   "stats": {
+    "count": 869679,
+    "min": 0.04032023623585701,
+    "max": 0.9796243906021118,
+    "mean": 0.6384557485580444,
+    "median": 0.6496645212173462,
+    "p2": 0.37213277101516723,
+    "p98": 0.8635934591293335,
+    "displayMin": 0.0,
+    "displayMax": 1.0,
+    "histogram": {
+     "edges": [
+      0.0,
+      0.025,
+      0.05,
+      0.075,
+      0.1,
+      0.125,
+      0.15,
+      0.175,
+      0.2,
+      0.225,
+      0.25,
+      0.275,
+      0.3,
+      0.325,
+      0.35,
+      0.375,
+      0.4,
+      0.425,
+      0.45,
+      0.475,
+      0.5,
+      0.525,
+      0.55,
+      0.575,
+      0.6,
+      0.625,
+      0.65,
+      0.675,
+      0.7,
+      0.725,
+      0.75,
+      0.775,
+      0.8,
+      0.825,
+      0.85,
+      0.875,
+      0.9,
+      0.925,
+      0.95,
+      0.975,
+      1.0
+     ],
+     "counts": [
+      0,
+      2,
+      12,
+      8,
+      32,
+      59,
+      113,
+      185,
+      275,
+      461,
+      812,
+      1502,
+      2692,
+      4824,
+      7468,
+      10702,
+      15013,
+      19934,
+      25406,
+      31727,
+      37787,
+      43884,
+      48847,
+      55786,
+      61186,
+      67065,
+      71961,
+      72975,
+      69624,
+      63265,
+      50507,
+      38404,
+      26694,
+      16461,
+      11639,
+      8451,
+      3381,
+      468,
+      16,
+      51
+     ]
+    }
+   },
+   "polarization": [
+    "HH"
+   ],
+   "displayDb": false,
+   "goffLayer": 3,
+   "displayRelative": false,
+   "legend": {
+    "type": "continuous",
+    "stops": [
+     "#000004",
+     "#51127c",
+     "#b73779",
+     "#fc8961",
+     "#fcfdbf"
+    ],
+    "min": 0.0,
+    "max": 1.0,
+    "labels": null,
+    "unit": "1"
+   },
+   "processingHistory": {
+    "processedAt": "2026-11-01T16:12:12+00:00",
+    "parameters": {
+     "gross_outlier_mad_k": 10,
+     "snr_min": null,
+     "coherence_threshold": null,
+     "goff_layer": 3,
+     "crid": "P05023",
+     "aoi_bbox": [
+      84.3976,
+      27.732,
+      85.5508,
+      28.35
+     ]
+    },
+    "provenance": {
+     "pipelineVersion": "0.2.0",
+     "configSha256": "1da822203031c9bc5416e32c968466922bcd0b3c4785b39492469469fc31db70",
+     "outputDtype": "float32",
+     "validityClasses": {
+      "0": "no data",
+      "1": "valid",
+      "2": "masked"
+     },
+     "maskRule": "Mask as GUNW, plus gross outliers flagged at the configured MAD multiple. Raw values kept.",
+     "tileResampling": "nearest",
+     "nativeGridKept": true,
+     "displayTransform": null
+    }
+   }
+  },
+  {
+   "id": "pair-b:goff-range",
+   "groupId": "pair-b",
+   "name": "Slant-range offset",
+   "category": "goff",
+   "mission": "NISAR",
+   "instrument": "L-SAR",
+   "productType": "GOFF",
+   "measurementClass": "measurement",
+   "measurementType": "goff-range",
+   "kind": "continuous",
+   "units": "meters",
+   "unitsNote": "Metres in radar slant range, not east/west.",
+   "acquisition": {
+    "reference": "2026-08-19",
+    "secondary": "2026-08-31"
+   },
+   "orbitDirection": "ASCENDING",
+   "track": 98,
+   "frames": [
+    15,
+    16
+   ],
+   "qualityLayerIds": [
+    "pair-b:goff-snr",
+    "pair-b:goff-peak"
+   ],
+   "status": "sampleable",
+   "statusReason": null,
+   "sources": [
+    {
+     "frame": 15,
+     "granule": "NISAR_L2_PR_GOFF_028_098_A_015_029_4000_SH_20260819T233844_20260819T233919_20260831T233844_20260831T233919_P05023_N_F_J_001",
+     "sourceFilename": "NISAR_L2_PR_GOFF_028_098_A_015_029_4000_SH_20260819T233844_20260819T233919_20260831T233844_20260831T233919_P05023_N_F_J_001.h5",
+     "sourceDataset": "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer3/slantRangeOffset",
+     "sha256": "29d60d0b8e9523f2625089f309b138a551a3b88654f7f2a0fd1bab738e0a5ce3",
+     "bounds": [
+      84.38522816387227,
+      27.714795075127522,
+      85.55941176995117,
+      28.260957273710105
+     ],
+     "shape": [
+      733,
+      1432
+     ],
+     "validFraction": 0.03707024015486979,
+     "maskedFraction": 2.858079218334388e-06,
+     "sourceDtype": "float32",
+     "clipWindow": [
+      0,
+      733,
+      721,
+      2153
+     ],
+     "displayOffset": 0.0,
+     "sampling": "data/sampling/pair-b/goff-range_f015.tif",
+     "validity": "data/sampling/pair-b/goff-range_f015_validity.tif",
+     "tiles": {
+      "url": "data/tiles/pair-b/goff-range/f015/{z}/{x}/{y}.png",
+      "minzoom": 8,
+      "maxzoom": 11,
+      "count": 9
+     },
+     "maskTiles": "data/tiles/pair-b/goff-range/f015_mask/{z}/{x}/{y}.png"
+    },
+    {
+     "frame": 16,
+     "granule": "NISAR_L2_PR_GOFF_028_098_A_016_029_4000_SH_20260819T233918_20260819T233953_20260831T233918_20260831T233952_P05023_N_F_J_001",
+     "sourceFilename": "NISAR_L2_PR_GOFF_028_098_A_016_029_4000_SH_20260819T233918_20260819T233953_20260831T233918_20260831T233952_P05023_N_F_J_001.h5",
+     "sourceDataset": "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer3/slantRangeOffset",
+     "sha256": "4dbe3d82c2e03422abf9fc3ead2ad70c0734a80ec52cad87cd6659716fce5371",
+     "bounds": [
+      84.38263314570466,
+      27.714795075127522,
+      85.55941176995117,
+      28.36707937156769
+     ],
+     "shape": [
+      880,
+      1432
+     ],
+     "validFraction": 0.9950014283900457,
+     "maskedFraction": 0.004734319451498222,
+     "sourceDtype": "float32",
+     "clipWindow": [
+      2607,
+      3487,
+      1459,
+      2891
+     ],
+     "displayOffset": 0.0,
+     "sampling": "data/sampling/pair-b/goff-range_f016.tif",
+     "validity": "data/sampling/pair-b/goff-range_f016_validity.tif",
+     "tiles": {
+      "url": "data/tiles/pair-b/goff-range/f016/{z}/{x}/{y}.png",
+      "minzoom": 8,
+      "maxzoom": 11,
+      "count": 102
+     },
+     "maskTiles": "data/tiles/pair-b/goff-range/f016_mask/{z}/{x}/{y}.png"
+    }
+   ],
+   "productMaturity": "Provisional (P05023)",
+   "sourceGranules": [
+    "NISAR_L2_PR_GOFF_028_098_A_015_029_4000_SH_20260819T233844_20260819T233919_20260831T233844_20260831T233919_P05023_N_F_J_001",
+    "NISAR_L2_PR_GOFF_028_098_A_016_029_4000_SH_20260819T233918_20260819T233953_20260831T233918_20260831T233952_P05023_N_F_J_001"
+   ],
+   "attribution": "NASA/JPL-Caltech/ISRO, NISAR; distributed by ASF DAAC",
+   "limitations": [
+    "Raw, unculled and unfiltered: expect outliers.",
+    "A radar-geometry component, not a geographic vector.",
+    "Layer 3 uses the smallest search window, so a very large shift may not be found."
+   ],
+   "postingM": [
+    80.0,
+    80.0
+   ],
+   "crs": "EPSG:32645",
+   "stats": {
+    "count": 1292772,
+    "min": -1.0295627117156982,
+    "max": 0.07889944314956665,
+    "mean": -0.4648464620113373,
+    "median": -0.4733741879463196,
+    "p2": -0.5855321288108826,
+    "p98": -0.341560423374176,
+    "displayMin": -0.6051879525184631,
+    "displayMax": -0.341560423374176,
+    "histogram": {
+     "edges": [
+      -0.60519,
+      -0.5986,
+      -0.59201,
+      -0.58542,
+      -0.57883,
+      -0.57223,
+      -0.56564,
+      -0.55905,
+      -0.55246,
+      -0.54587,
+      -0.53928,
+      -0.53269,
+      -0.5261,
+      -0.51951,
+      -0.51292,
+      -0.50633,
+      -0.49974,
+      -0.49315,
+      -0.48656,
+      -0.47996,
+      -0.47337,
+      -0.46678,
+      -0.46019,
+      -0.4536,
+      -0.44701,
+      -0.44042,
+      -0.43383,
+      -0.42724,
+      -0.42065,
+      -0.41406,
+      -0.40747,
+      -0.40088,
+      -0.39429,
+      -0.3877,
+      -0.3811,
+      -0.37451,
+      -0.36792,
+      -0.36133,
+      -0.35474,
+      -0.34815,
+      -0.34156
+     ],
+     "counts": [
+      1681,
+      1980,
+      8401,
+      5887,
+      5253,
+      5329,
+      5619,
+      6089,
+      6690,
+      8358,
+      70953,
+      21290,
+      19758,
+      20084,
+      21388,
+      22472,
+      26236,
+      295114,
+      43078,
+      35550,
+      32671,
+      32063,
+      32173,
+      34414,
+      41402,
+      202327,
+      22886,
+      20239,
+      18836,
+      18312,
+      18214,
+      19786,
+      75854,
+      8985,
+      7323,
+      6686,
+      6035,
+      5827,
+      5820,
+      14052
+     ]
+    }
+   },
+   "polarization": [
+    "HH"
+   ],
+   "displayDb": false,
+   "goffLayer": 3,
+   "displayRelative": false,
+   "legend": {
+    "type": "continuous",
+    "stops": [
+     "#2166ac",
+     "#67a9cf",
+     "#f7f7f7",
+     "#ef8a62",
+     "#b2182b"
+    ],
+    "min": -0.6051879525184631,
+    "max": -0.341560423374176,
+    "labels": null,
+    "unit": "meters"
+   },
+   "processingHistory": {
+    "processedAt": "2026-11-01T16:12:15+00:00",
+    "parameters": {
+     "gross_outlier_mad_k": 10,
+     "snr_min": null,
+     "coherence_threshold": null,
+     "goff_layer": 3,
+     "crid": "P05023",
+     "aoi_bbox": [
+      84.3976,
+      27.732,
+      85.5508,
+      28.35
+     ]
+    },
+    "provenance": {
+     "pipelineVersion": "0.2.0",
+     "configSha256": "1da822203031c9bc5416e32c968466922bcd0b3c4785b39492469469fc31db70",
+     "outputDtype": "float32",
+     "validityClasses": {
+      "0": "no data",
+      "1": "valid",
+      "2": "masked"
+     },
+     "maskRule": "Mask as GUNW, plus gross outliers flagged at the configured MAD multiple. Raw values kept.",
+     "tileResampling": "nearest",
+     "nativeGridKept": true,
+     "displayTransform": null
+    }
+   }
+  },
+  {
+   "id": "pair-b:goff-azimuth",
+   "groupId": "pair-b",
+   "name": "Along-track offset",
+   "category": "goff",
+   "mission": "NISAR",
+   "instrument": "L-SAR",
+   "productType": "GOFF",
+   "measurementClass": "measurement",
+   "measurementType": "goff-azimuth",
+   "kind": "continuous",
+   "units": "meters",
+   "unitsNote": "Metres along the satellite track, not north/south.",
+   "acquisition": {
+    "reference": "2026-08-19",
+    "secondary": "2026-08-31"
+   },
+   "orbitDirection": "ASCENDING",
+   "track": 98,
+   "frames": [
+    15,
+    16
+   ],
+   "qualityLayerIds": [
+    "pair-b:goff-snr",
+    "pair-b:goff-peak"
+   ],
+   "status": "sampleable",
+   "statusReason": null,
+   "sources": [
+    {
+     "frame": 15,
+     "granule": "NISAR_L2_PR_GOFF_028_098_A_015_029_4000_SH_20260819T233844_20260819T233919_20260831T233844_20260831T233919_P05023_N_F_J_001",
+     "sourceFilename": "NISAR_L2_PR_GOFF_028_098_A_015_029_4000_SH_20260819T233844_20260819T233919_20260831T233844_20260831T233919_P05023_N_F_J_001.h5",
+     "sourceDataset": "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer3/alongTrackOffset",
+     "sha256": "29d60d0b8e9523f2625089f309b138a551a3b88654f7f2a0fd1bab738e0a5ce3",
+     "bounds": [
+      84.38522816387227,
+      27.714795075127522,
+      85.55941176995117,
+      28.260957273710105
+     ],
+     "shape": [
+      733,
+      1432
+     ],
+     "validFraction": 0.036678683301957976,
+     "maskedFraction": 0.0,
+     "sourceDtype": "float32",
+     "clipWindow": [
+      0,
+      733,
+      721,
+      2153
+     ],
+     "displayOffset": 0.0,
+     "sampling": "data/sampling/pair-b/goff-azimuth_f015.tif",
+     "validity": "data/sampling/pair-b/goff-azimuth_f015_validity.tif",
+     "tiles": {
+      "url": "data/tiles/pair-b/goff-azimuth/f015/{z}/{x}/{y}.png",
+      "minzoom": 8,
+      "maxzoom": 11,
+      "count": 7
+     },
+     "maskTiles": "data/tiles/pair-b/goff-azimuth/f015_mask/{z}/{x}/{y}.png"
+    },
+    {
+     "frame": 16,
+     "granule": "NISAR_L2_PR_GOFF_028_098_A_016_029_4000_SH_20260819T233918_20260819T233953_20260831T233918_20260831T233952_P05023_N_F_J_001",
+     "sourceFilename": "NISAR_L2_PR_GOFF_028_098_A_016_029_4000_SH_20260819T233918_20260819T233953_20260831T233918_20260831T233952_P05023_N_F_J_001.h5",
+     "sourceDataset": "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer3/alongTrackOffset",
+     "sha256": "4dbe3d82c2e03422abf9fc3ead2ad70c0734a80ec52cad87cd6659716fce5371",
+     "bounds": [
+      84.38263314570466,
+      27.714795075127522,
+      85.55941176995117,
+      28.36707937156769
+     ],
+     "shape": [
+      880,
+      1432
+     ],
+     "validFraction": 0.9590472638395124,
+     "maskedFraction": 0.0037860271711528696,
+     "sourceDtype": "float32",
+     "clipWindow": [
+      2607,
+      3487,
+      1459,
+      2891
+     ],
+     "displayOffset": 0.0,
+     "sampling": "data/sampling/pair-b/goff-azimuth_f016.tif",
+     "validity": "data/sampling/pair-b/goff-azimuth_f016_validity.tif",
+     "tiles": {
+      "url": "data/tiles/pair-b/goff-azimuth/f016/{z}/{x}/{y}.png",
+      "minzoom": 8,
+      "maxzoom": 11,
+      "count": 103
+     },
+     "maskTiles": "data/tiles/pair-b/goff-azimuth/f016_mask/{z}/{x}/{y}.png"
+    }
+   ],
+   "productMaturity": "Provisional (P05023)",
+   "sourceGranules": [
+    "NISAR_L2_PR_GOFF_028_098_A_015_029_4000_SH_20260819T233844_20260819T233919_20260831T233844_20260831T233919_P05023_N_F_J_001",
+    "NISAR_L2_PR_GOFF_028_098_A_016_029_4000_SH_20260819T233918_20260819T233953_20260831T233918_20260831T233952_P05023_N_F_J_001"
+   ],
+   "attribution": "NASA/JPL-Caltech/ISRO, NISAR; distributed by ASF DAAC",
+   "limitations": [
+    "Raw, unculled and unfiltered: expect outliers.",
+    "A radar-geometry component, not a geographic vector.",
+    "Layer 3 uses the smallest search window, so a very large shift may not be found."
+   ],
+   "postingM": [
+    80.0,
+    80.0
+   ],
+   "crs": "EPSG:32645",
+   "stats": {
+    "count": 1247053,
+    "min": -1.0008463859558105,
+    "max": 0.8883312940597534,
+    "mean": -0.04406803101301193,
+    "median": -0.058610644191503525,
+    "p2": -0.25374480962753293,
+    "p98": 0.1719732499122618,
+    "displayMin": -0.2891945242881775,
+    "displayMax": 0.17197324335575104,
+    "histogram": {
+     "edges": [
+      -0.28919,
+      -0.27767,
+      -0.26614,
+      -0.25461,
+      -0.24308,
+      -0.23155,
+      -0.22002,
+      -0.20849,
+      -0.19696,
+      -0.18543,
+      -0.1739,
+      -0.16237,
+      -0.15084,
+      -0.13931,
+      -0.12779,
+      -0.11626,
+      -0.10473,
+      -0.0932,
+      -0.08167,
+      -0.07014,
+      -0.05861,
+      -0.04708,
+      -0.03555,
+      -0.02402,
+      -0.01249,
+      -0.00096,
+      0.01056,
+      0.02209,
+      0.03362,
+      0.04515,
+      0.05668,
+      0.06821,
+      0.07974,
+      0.09127,
+      0.1028,
+      0.11433,
+      0.12586,
+      0.13739,
+      0.14891,
+      0.16044,
+      0.17197
+     ],
+     "counts": [
+      1851,
+      6247,
+      3489,
+      3778,
+      3885,
+      4560,
+      5788,
+      26636,
+      11647,
+      11707,
+      12800,
+      14236,
+      18842,
+      116107,
+      30069,
+      29020,
+      29595,
+      32148,
+      41442,
+      206580,
+      35139,
+      32095,
+      31841,
+      32950,
+      40403,
+      169310,
+      23409,
+      21379,
+      20426,
+      20731,
+      24302,
+      68897,
+      11251,
+      9969,
+      9101,
+      9000,
+      10149,
+      20645,
+      4046,
+      3541
+     ]
+    }
+   },
+   "polarization": [
+    "HH"
+   ],
+   "displayDb": false,
+   "goffLayer": 3,
+   "displayRelative": false,
+   "legend": {
+    "type": "continuous",
+    "stops": [
+     "#2166ac",
+     "#67a9cf",
+     "#f7f7f7",
+     "#ef8a62",
+     "#b2182b"
+    ],
+    "min": -0.2891945242881775,
+    "max": 0.17197324335575104,
+    "labels": null,
+    "unit": "meters"
+   },
+   "processingHistory": {
+    "processedAt": "2026-11-01T16:12:18+00:00",
+    "parameters": {
+     "gross_outlier_mad_k": 10,
+     "snr_min": null,
+     "coherence_threshold": null,
+     "goff_layer": 3,
+     "crid": "P05023",
+     "aoi_bbox": [
+      84.3976,
+      27.732,
+      85.5508,
+      28.35
+     ]
+    },
+    "provenance": {
+     "pipelineVersion": "0.2.0",
+     "configSha256": "1da822203031c9bc5416e32c968466922bcd0b3c4785b39492469469fc31db70",
+     "outputDtype": "float32",
+     "validityClasses": {
+      "0": "no data",
+      "1": "valid",
+      "2": "masked"
+     },
+     "maskRule": "Mask as GUNW, plus gross outliers flagged at the configured MAD multiple. Raw values kept.",
+     "tileResampling": "nearest",
+     "nativeGridKept": true,
+     "displayTransform": null
+    }
+   }
+  },
+  {
+   "id": "pair-b:goff-snr",
+   "groupId": "pair-b",
+   "name": "Offset SNR",
+   "category": "goff",
+   "mission": "NISAR",
+   "instrument": "L-SAR",
+   "productType": "GOFF",
+   "measurementClass": "measurement",
+   "measurementType": "goff-snr",
+   "kind": "continuous",
+   "units": "1",
+   "unitsNote": null,
+   "acquisition": {
+    "reference": "2026-08-19",
+    "secondary": "2026-08-31"
+   },
+   "orbitDirection": "ASCENDING",
+   "track": 98,
+   "frames": [
+    15,
+    16
+   ],
+   "qualityLayerIds": [],
+   "status": "sampleable",
+   "statusReason": null,
+   "sources": [
+    {
+     "frame": 15,
+     "granule": "NISAR_L2_PR_GOFF_028_098_A_015_029_4000_SH_20260819T233844_20260819T233919_20260831T233844_20260831T233919_P05023_N_F_J_001",
+     "sourceFilename": "NISAR_L2_PR_GOFF_028_098_A_015_029_4000_SH_20260819T233844_20260819T233919_20260831T233844_20260831T233919_P05023_N_F_J_001.h5",
+     "sourceDataset": "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer3/snr",
+     "sha256": "29d60d0b8e9523f2625089f309b138a551a3b88654f7f2a0fd1bab738e0a5ce3",
+     "bounds": [
+      84.38522816387227,
+      27.714795075127522,
+      85.55941176995117,
+      28.260957273710105
+     ],
+     "shape": [
+      733,
+      1432
+     ],
+     "validFraction": 0.03707309823408812,
+     "maskedFraction": 0.0,
+     "sourceDtype": "float32",
+     "clipWindow": [
+      0,
+      733,
+      721,
+      2153
+     ],
+     "displayOffset": 0.0,
+     "sampling": "data/sampling/pair-b/goff-snr_f015.tif",
+     "validity": "data/sampling/pair-b/goff-snr_f015_validity.tif",
+     "tiles": {
+      "url": "data/tiles/pair-b/goff-snr/f015/{z}/{x}/{y}.png",
+      "minzoom": 8,
+      "maxzoom": 11,
+      "count": 7
+     },
+     "maskTiles": "data/tiles/pair-b/goff-snr/f015_mask/{z}/{x}/{y}.png"
+    },
+    {
+     "frame": 16,
+     "granule": "NISAR_L2_PR_GOFF_028_098_A_016_029_4000_SH_20260819T233918_20260819T233953_20260831T233918_20260831T233952_P05023_N_F_J_001",
+     "sourceFilename": "NISAR_L2_PR_GOFF_028_098_A_016_029_4000_SH_20260819T233918_20260819T233953_20260831T233918_20260831T233952_P05023_N_F_J_001.h5",
+     "sourceDataset": "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer3/snr",
+     "sha256": "4dbe3d82c2e03422abf9fc3ead2ad70c0734a80ec52cad87cd6659716fce5371",
+     "bounds": [
+      84.38263314570466,
+      27.714795075127522,
+      85.55941176995117,
+      28.36707937156769
+     ],
+     "shape": [
+      880,
+      1432
+     ],
+     "validFraction": 0.9976376015744033,
+     "maskedFraction": 0.0020981462671406806,
+     "sourceDtype": "float32",
+     "clipWindow": [
+      2607,
+      3487,
+      1459,
+      2891
+     ],
+     "displayOffset": 0.0,
+     "sampling": "data/sampling/pair-b/goff-snr_f016.tif",
+     "validity": "data/sampling/pair-b/goff-snr_f016_validity.tif",
+     "tiles": {
+      "url": "data/tiles/pair-b/goff-snr/f016/{z}/{x}/{y}.png",
+      "minzoom": 8,
+      "maxzoom": 11,
+      "count": 95
+     },
+     "maskTiles": "data/tiles/pair-b/goff-snr/f016_mask/{z}/{x}/{y}.png"
+    }
+   ],
+   "productMaturity": "Provisional (P05023)",
+   "sourceGranules": [
+    "NISAR_L2_PR_GOFF_028_098_A_015_029_4000_SH_20260819T233844_20260819T233919_20260831T233844_20260831T233919_P05023_N_F_J_001",
+    "NISAR_L2_PR_GOFF_028_098_A_016_029_4000_SH_20260819T233918_20260819T233953_20260831T233918_20260831T233952_P05023_N_F_J_001"
+   ],
+   "attribution": "NASA/JPL-Caltech/ISRO, NISAR; distributed by ASF DAAC",
+   "limitations": [
+    "No SNR threshold is applied yet: it needs the real data distribution."
+   ],
+   "postingM": [
+    80.0,
+    80.0
+   ],
+   "crs": "EPSG:32645",
+   "stats": {
+    "count": 1296097,
+    "min": 1.1869019269943237,
+    "max": 591.5753784179688,
+    "mean": 18.314884185791016,
+    "median": 11.190650939941406,
+    "p2": 3.26309663772583,
+    "p98": 88.97388916015628,
+    "displayMin": 3.26309663772583,
+    "displayMax": 88.97388916015628,
+    "histogram": {
+     "edges": [
+      3.2631,
+      5.40587,
+      7.54864,
+      9.69141,
+      11.83418,
+      13.97695,
+      16.11971,
+      18.26249,
+      20.40525,
+      22.54803,
+      24.69079,
+      26.83356,
+      28.97633,
+      31.1191,
+      33.26188,
+      35.40464,
+      37.54741,
+      39.69018,
+      41.83295,
+      43.97572,
+      46.11849,
+      48.26126,
+      50.40403,
+      52.5468,
+      54.68957,
+      56.83234,
+      58.97511,
+      61.11788,
+      63.26065,
+      65.40342,
+      67.54619,
+      69.68896,
+      71.83173,
+      73.9745,
+      76.11727,
+      78.26004,
+      80.40281,
+      82.54558,
+      84.68835,
+      86.83112,
+      88.97389
+     ],
+     "counts": [
+      158480,
+      197082,
+      169936,
+      133166,
+      102053,
+      79582,
+      62237,
+      49389,
+      39316,
+      32049,
+      26468,
+      22269,
+      19051,
+      16228,
+      14040,
+      12214,
+      10827,
+      9747,
+      8796,
+      7680,
+      6971,
+      6295,
+      5907,
+      5297,
+      4892,
+      4401,
+      4188,
+      3995,
+      3816,
+      3451,
+      3295,
+      2954,
+      2816,
+      2653,
+      2405,
+      2302,
+      2232,
+      1999,
+      1926,
+      1848
+     ]
+    }
+   },
+   "polarization": [
+    "HH"
+   ],
+   "displayDb": false,
+   "goffLayer": 3,
+   "displayRelative": false,
+   "legend": {
+    "type": "continuous",
+    "stops": [
+     "#000004",
+     "#51127c",
+     "#b73779",
+     "#fc8961",
+     "#fcfdbf"
+    ],
+    "min": 3.26309663772583,
+    "max": 88.97388916015628,
+    "labels": null,
+    "unit": "1"
+   },
+   "processingHistory": {
+    "processedAt": "2026-11-01T16:12:21+00:00",
+    "parameters": {
+     "gross_outlier_mad_k": 10,
+     "snr_min": null,
+     "coherence_threshold": null,
+     "goff_layer": 3,
+     "crid": "P05023",
+     "aoi_bbox": [
+      84.3976,
+      27.732,
+      85.5508,
+      28.35
+     ]
+    },
+    "provenance": {
+     "pipelineVersion": "0.2.0",
+     "configSha256": "1da822203031c9bc5416e32c968466922bcd0b3c4785b39492469469fc31db70",
+     "outputDtype": "float32",
+     "validityClasses": {
+      "0": "no data",
+      "1": "valid",
+      "2": "masked"
+     },
+     "maskRule": "Mask as GUNW, plus gross outliers flagged at the configured MAD multiple. Raw values kept.",
+     "tileResampling": "nearest",
+     "nativeGridKept": true,
+     "displayTransform": null
+    }
+   }
+  },
+  {
+   "id": "pair-b:goff-peak",
+   "groupId": "pair-b",
+   "name": "Correlation surface peak",
+   "category": "goff",
+   "mission": "NISAR",
+   "instrument": "L-SAR",
+   "productType": "GOFF",
+   "measurementClass": "measurement",
+   "measurementType": "goff-peak",
+   "kind": "continuous",
+   "units": "1",
+   "unitsNote": null,
+   "acquisition": {
+    "reference": "2026-08-19",
+    "secondary": "2026-08-31"
+   },
+   "orbitDirection": "ASCENDING",
+   "track": 98,
+   "frames": [
+    15,
+    16
+   ],
+   "qualityLayerIds": [],
+   "status": "sampleable",
+   "statusReason": null,
+   "sources": [
+    {
+     "frame": 15,
+     "granule": "NISAR_L2_PR_GOFF_028_098_A_015_029_4000_SH_20260819T233844_20260819T233919_20260831T233844_20260831T233919_P05023_N_F_J_001",
+     "sourceFilename": "NISAR_L2_PR_GOFF_028_098_A_015_029_4000_SH_20260819T233844_20260819T233919_20260831T233844_20260831T233919_P05023_N_F_J_001.h5",
+     "sourceDataset": "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer3/correlationSurfacePeak",
+     "sha256": "29d60d0b8e9523f2625089f309b138a551a3b88654f7f2a0fd1bab738e0a5ce3",
+     "bounds": [
+      84.38522816387227,
+      27.714795075127522,
+      85.55941176995117,
+      28.260957273710105
+     ],
+     "shape": [
+      733,
+      1432
+     ],
+     "validFraction": 0.03707309823408812,
+     "maskedFraction": 0.0,
+     "sourceDtype": "float32",
+     "clipWindow": [
+      0,
+      733,
+      721,
+      2153
+     ],
+     "displayOffset": 0.0,
+     "sampling": "data/sampling/pair-b/goff-peak_f015.tif",
+     "validity": "data/sampling/pair-b/goff-peak_f015_validity.tif",
+     "tiles": {
+      "url": "data/tiles/pair-b/goff-peak/f015/{z}/{x}/{y}.png",
+      "minzoom": 8,
+      "maxzoom": 11,
+      "count": 7
+     },
+     "maskTiles": "data/tiles/pair-b/goff-peak/f015_mask/{z}/{x}/{y}.png"
+    },
+    {
+     "frame": 16,
+     "granule": "NISAR_L2_PR_GOFF_028_098_A_016_029_4000_SH_20260819T233918_20260819T233953_20260831T233918_20260831T233952_P05023_N_F_J_001",
+     "sourceFilename": "NISAR_L2_PR_GOFF_028_098_A_016_029_4000_SH_20260819T233918_20260819T233953_20260831T233918_20260831T233952_P05023_N_F_J_001.h5",
+     "sourceDataset": "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer3/correlationSurfacePeak",
+     "sha256": "4dbe3d82c2e03422abf9fc3ead2ad70c0734a80ec52cad87cd6659716fce5371",
+     "bounds": [
+      84.38263314570466,
+      27.714795075127522,
+      85.55941176995117,
+      28.36707937156769
+     ],
+     "shape": [
+      880,
+      1432
+     ],
+     "validFraction": 0.9976376015744033,
+     "maskedFraction": 0.0020981462671406806,
+     "sourceDtype": "float32",
+     "clipWindow": [
+      2607,
+      3487,
+      1459,
+      2891
+     ],
+     "displayOffset": 0.0,
+     "sampling": "data/sampling/pair-b/goff-peak_f016.tif",
+     "validity": "data/sampling/pair-b/goff-peak_f016_validity.tif",
+     "tiles": {
+      "url": "data/tiles/pair-b/goff-peak/f016/{z}/{x}/{y}.png",
+      "minzoom": 8,
+      "maxzoom": 11,
+      "count": 95
+     },
+     "maskTiles": "data/tiles/pair-b/goff-peak/f016_mask/{z}/{x}/{y}.png"
+    }
+   ],
+   "productMaturity": "Provisional (P05023)",
+   "sourceGranules": [
+    "NISAR_L2_PR_GOFF_028_098_A_015_029_4000_SH_20260819T233844_20260819T233919_20260831T233844_20260831T233919_P05023_N_F_J_001",
+    "NISAR_L2_PR_GOFF_028_098_A_016_029_4000_SH_20260819T233918_20260819T233953_20260831T233918_20260831T233952_P05023_N_F_J_001"
+   ],
+   "attribution": "NASA/JPL-Caltech/ISRO, NISAR; distributed by ASF DAAC",
+   "limitations": [
+    "A matching-quality indicator, not a movement measurement."
+   ],
+   "postingM": [
+    80.0,
+    80.0
+   ],
+   "crs": "EPSG:32645",
+   "stats": {
+    "count": 1296097,
+    "min": 0.01136029977351427,
+    "max": 0.9765052199363708,
+    "mean": 0.6579284071922302,
+    "median": 0.6581155061721802,
+    "p2": 0.37561268210411075,
+    "p98": 0.9270713615417481,
+    "displayMin": 0.0,
+    "displayMax": 1.0,
+    "histogram": {
+     "edges": [
+      0.0,
+      0.025,
+      0.05,
+      0.075,
+      0.1,
+      0.125,
+      0.15,
+      0.175,
+      0.2,
+      0.225,
+      0.25,
+      0.275,
+      0.3,
+      0.325,
+      0.35,
+      0.375,
+      0.4,
+      0.425,
+      0.45,
+      0.475,
+      0.5,
+      0.525,
+      0.55,
+      0.575,
+      0.6,
+      0.625,
+      0.65,
+      0.675,
+      0.7,
+      0.725,
+      0.75,
+      0.775,
+      0.8,
+      0.825,
+      0.85,
+      0.875,
+      0.9,
+      0.925,
+      0.95,
+      0.975,
+      1.0
+     ],
+     "counts": [
+      35,
+      299,
+      241,
+      263,
+      316,
+      330,
+      406,
+      586,
+      852,
+      1049,
+      1674,
+      2555,
+      3851,
+      5483,
+      7736,
+      11423,
+      16774,
+      24455,
+      33155,
+      42702,
+      52697,
+      62486,
+      72758,
+      82939,
+      91888,
+      98305,
+      100462,
+      97298,
+      87115,
+      77593,
+      66655,
+      55588,
+      46275,
+      36382,
+      30280,
+      28003,
+      27018,
+      22932,
+      5228,
+      10
+     ]
+    }
+   },
+   "polarization": [
+    "HH"
+   ],
+   "displayDb": false,
+   "goffLayer": 3,
+   "displayRelative": false,
+   "legend": {
+    "type": "continuous",
+    "stops": [
+     "#000004",
+     "#51127c",
+     "#b73779",
+     "#fc8961",
+     "#fcfdbf"
+    ],
+    "min": 0.0,
+    "max": 1.0,
+    "labels": null,
+    "unit": "1"
+   },
+   "processingHistory": {
+    "processedAt": "2026-11-01T16:12:24+00:00",
+    "parameters": {
+     "gross_outlier_mad_k": 10,
+     "snr_min": null,
+     "coherence_threshold": null,
+     "goff_layer": 3,
+     "crid": "P05023",
+     "aoi_bbox": [
+      84.3976,
+      27.732,
+      85.5508,
+      28.35
+     ]
+    },
+    "provenance": {
+     "pipelineVersion": "0.2.0",
+     "configSha256": "1da822203031c9bc5416e32c968466922bcd0b3c4785b39492469469fc31db70",
+     "outputDtype": "float32",
+     "validityClasses": {
+      "0": "no data",
+      "1": "valid",
+      "2": "masked"
+     },
+     "maskRule": "Mask as GUNW, plus gross outliers flagged at the configured MAD multiple. Raw values kept.",
+     "tileResampling": "nearest",
+     "nativeGridKept": true,
+     "displayTransform": null
+    }
+   }
+  },
+  {
+   "id": "gcov-0828:gcov-backscatter",
+   "groupId": "gcov-0828",
+   "name": "Gamma-0 backscatter",
+   "category": "gcov",
+   "mission": "NISAR",
+   "instrument": "L-SAR",
+   "productType": "GCOV",
+   "measurementClass": "measurement",
+   "measurementType": "gcov-backscatter",
+   "kind": "continuous",
+   "units": "1",
+   "unitsNote": "Displayed in dB (10\u00b7log10) from the linear gamma-0 term; the inspector reports both.",
+   "acquisition": {
+    "reference": "2026-08-28",
+    "secondary": null
+   },
+   "orbitDirection": "DESCENDING",
+   "track": 48,
+   "frames": [
+    74,
+    75
+   ],
+   "qualityLayerIds": [],
+   "status": "catalogued",
+   "statusReason": "Listed in the ASF catalogue, not retrieved. NASA Earthdata Login required to download it.",
+   "sources": [],
+   "productMaturity": "Provisional per catalogue (P05023); confirm from file",
+   "sourceGranules": [
+    "NISAR_L2_PR_GCOV_029_048_D_074_2005_QPDH_A_20260828T125812_20260828T125846_P05023_N_F_J_001",
+    "NISAR_L2_PR_GCOV_029_048_D_075_2005_QPDH_A_20260828T125845_20260828T125920_P05023_N_F_J_001"
+   ],
+   "attribution": "NASA/JPL-Caltech/ISRO, NISAR; distributed by ASF DAAC",
+   "limitations": [
+    "A single-date snapshot, not a damage or flood classification.",
+    "Do not difference 28 and 31 August: their orbit geometries differ."
+   ]
+  },
+  {
+   "id": "gcov-0831:gcov-backscatter",
+   "groupId": "gcov-0831",
+   "name": "Gamma-0 backscatter",
+   "category": "gcov",
+   "mission": "NISAR",
+   "instrument": "L-SAR",
+   "productType": "GCOV",
+   "measurementClass": "measurement",
+   "measurementType": "gcov-backscatter",
+   "kind": "continuous",
+   "units": "1",
+   "unitsNote": "Displayed in dB (10\u00b7log10) from the linear gamma-0 term; the inspector reports both.",
+   "acquisition": {
+    "reference": "2026-08-31",
+    "secondary": null
+   },
+   "orbitDirection": "ASCENDING",
+   "track": 98,
+   "frames": [
+    15,
+    16
+   ],
+   "qualityLayerIds": [],
+   "status": "catalogued",
+   "statusReason": "Listed in the ASF catalogue, not retrieved. NASA Earthdata Login required to download it.",
+   "sources": [],
+   "productMaturity": "Provisional per catalogue (P05023); confirm from file",
+   "sourceGranules": [
+    "NISAR_L2_PR_GCOV_029_098_A_015_4005_DHDH_A_20260831T233844_20260831T233919_P05023_N_F_J_001",
+    "NISAR_L2_PR_GCOV_029_098_A_016_4005_DHDH_A_20260831T233918_20260831T233952_P05023_N_F_J_001"
+   ],
+   "attribution": "NASA/JPL-Caltech/ISRO, NISAR; distributed by ASF DAAC",
+   "limitations": [
+    "A single-date snapshot, not a damage or flood classification.",
+    "Do not difference 28 and 31 August: their orbit geometries differ."
+   ]
+  },
+  {
+   "id": "context:terrain",
+   "groupId": null,
+   "name": "Terrain elevation",
+   "category": "terrain",
+   "mission": "Copernicus DEM",
+   "instrument": "TanDEM-X derived",
+   "productType": "GLO-30",
+   "measurementClass": "reference map",
+   "measurementType": "elevation",
+   "kind": "continuous",
+   "units": "m",
+   "unitsNote": "Metres above the EGM2008 geoid.",
+   "acquisition": {
+    "reference": "2011-2015 (source campaign)",
+    "secondary": null
+   },
+   "postingM": [
+    30,
+    30
+   ],
+   "crs": "EPSG:4326",
+   "status": "sampleable",
+   "statusReason": null,
+   "stats": {
+    "count": 9234048,
+    "min": 181.0,
+    "max": 7216.1572265625,
+    "mean": 1907.4765625,
+    "median": 1476.20458984375,
+    "p2": 391.4280725097656,
+    "p98": 5106.575224609375,
+    "displayMin": 300.0,
+    "displayMax": 6500.0,
+    "histogram": {
+     "edges": [
+      300.0,
+      455.0,
+      610.0,
+      765.0,
+      920.0,
+      1075.0,
+      1230.0,
+      1385.0,
+      1540.0,
+      1695.0,
+      1850.0,
+      2005.0,
+      2160.0,
+      2315.0,
+      2470.0,
+      2625.0,
+      2780.0,
+      2935.0,
+      3090.0,
+      3245.0,
+      3400.0,
+      3555.0,
+      3710.0,
+      3865.0,
+      4020.0,
+      4175.0,
+      4330.0,
+      4485.0,
+      4640.0,
+      4795.0,
+      4950.0,
+      5105.0,
+      5260.0,
+      5415.0,
+      5570.0,
+      5725.0,
+      5880.0,
+      6035.0,
+      6190.0,
+      6345.0,
+      6500.0
+     ],
+     "counts": [
+      255068,
+      585757,
+      718021,
+      772302,
+      735461,
+      621310,
+      574922,
+      455764,
+      377051,
+      338062,
+      305454,
+      281395,
+      263586,
+      244178,
+      226629,
+      222843,
+      214000,
+      204606,
+      198008,
+      179640,
+      161391,
+      147451,
+      131731,
+      125515,
+      116783,
+      109663,
+      100585,
+      94944,
+      83849,
+      70361,
+      59595,
+      48598,
+      38431,
+      28105,
+      18476,
+      12847,
+      9798,
+      7865,
+      6822,
+      5198
+     ]
+    }
+   },
+   "qualityLayerIds": [],
+   "orbitDirection": null,
+   "track": null,
+   "frames": [],
+   "legend": {
+    "type": "continuous",
+    "stops": [
+     "#31543b",
+     "#6f8a4f",
+     "#c9b98a",
+     "#a08570",
+     "#ffffff"
+    ],
+    "min": 300,
+    "max": 6500,
+    "unit": "m"
+   },
+   "sources": [
+    {
+     "frame": null,
+     "granule": "Copernicus DEM GLO-30",
+     "sourceFilename": "Copernicus_DSM_COG_10_N27_00_E084_00_DEM.tif, Copernicus_DSM_COG_10_N27_00_E085_00_DEM.tif, Copernicus_DSM_COG_10_N28_00_E084_00_DEM.tif, Copernicus_DSM_COG_10_N28_00_E085_00_DEM.tif",
+     "bounds": [
+      84.3976,
+      27.731944444444444,
+      85.55093333333333,
+      28.35
+     ],
+     "validFraction": 0.9995505617977528,
+     "sampling": "data/sampling/context/copdem_glo30.tif",
+     "validity": "data/sampling/context/copdem_glo30_validity.tif",
+     "tiles": {
+      "url": "data/tiles/context/terrain/{z}/{x}/{y}.png",
+      "minzoom": 7,
+      "maxzoom": 12,
+      "count": 180
+     }
+    }
+   ],
+   "attribution": "\u00a9 DLR e.V. 2010-2014 and \u00a9 Airbus Defence and Space GmbH 2014-2018, provided under COPERNICUS by the European Union and ESA",
+   "limitations": [
+    "A pre-event surface model: it does not show changes from the 2026 event."
+   ],
+   "sourceGranules": [],
+   "productMaturity": "Released product"
+  },
+  {
+   "id": "ref:unosat-extent",
+   "groupId": null,
+   "name": "UNOSAT mudflow/rockflow extent (64.91 km\u00b2)",
+   "category": "reference",
+   "mission": "UNOSAT",
+   "instrument": "Multi-sensor optical/satellite analysis",
+   "productType": "Vector",
+   "measurementClass": "reference map",
+   "measurementType": "reference",
+   "kind": "vector",
+   "units": null,
+   "acquisition": {
+    "reference": "26\u201328 August 2026",
+    "secondary": null
+   },
+   "crs": "EPSG:4326",
+   "status": "prepared",
+   "statusReason": null,
+   "qualityLayerIds": [],
+   "orbitDirection": null,
+   "track": null,
+   "frames": [],
+   "sources": [],
+   "vector": {
+    "url": "data/vectors/unosat_mudflow_extent.geojson",
+    "type": "fill",
+    "color": "#e8590c",
+    "opacity": 0.45,
+    "bounds": [
+     84.35580189000007,
+     27.67761842500005,
+     85.52992941500008,
+     28.340450630000078
+    ]
+   },
+   "attribution": "UNOSAT/UNITAR, event FL20260826NPL, CC BY-SA",
+   "limitations": [
+    "UNOSAT records this layer as 'Not yet field validated'. Preliminary satellite-based mapping, not ground truth.",
+    "Independent of NISAR. Area computed here in UTM 45N from the polygon, because the source's Area_ha attribute duplicates Area_m2."
+   ],
+   "sourceGranules": [],
+   "productMaturity": "Preliminary",
+   "page": "https://data.humdata.org/dataset/mudflow-rockflow-impact-assessment-in-rasuwa-nuwakot-districts-bagmati-province-nepal-as-o"
+  },
+  {
+   "id": "ref:unosat-analysis",
+   "groupId": null,
+   "name": "UNOSAT analysis extent",
+   "category": "reference",
+   "mission": "UNOSAT",
+   "instrument": "Analysis boundary",
+   "productType": "Vector",
+   "measurementClass": "reference map",
+   "measurementType": "reference",
+   "kind": "vector",
+   "units": null,
+   "acquisition": {
+    "reference": "26\u201328 August 2026",
+    "secondary": null
+   },
+   "crs": "EPSG:4326",
+   "status": "prepared",
+   "statusReason": null,
+   "qualityLayerIds": [],
+   "orbitDirection": null,
+   "track": null,
+   "frames": [],
+   "sources": [],
+   "vector": {
+    "url": "data/vectors/unosat_analysis_extent.geojson",
+    "type": "line",
+    "color": "#f5f5f5",
+    "opacity": 0.8,
+    "dash": true,
+    "bounds": [
+     84.34876337900005,
+     27.666659908000042,
+     85.53477648700004,
+     28.34607860400007
+    ]
+   },
+   "attribution": "UNOSAT/UNITAR, event FL20260826NPL, CC BY-SA",
+   "limitations": [
+    "Absence of mapped impact outside this boundary says nothing: it was not analysed."
+   ],
+   "sourceGranules": [],
+   "productMaturity": "Preliminary",
+   "page": "https://data.humdata.org/dataset/mudflow-rockflow-impact-assessment-in-rasuwa-nuwakot-districts-bagmati-province-nepal-as-o"
+  },
+  {
+   "id": "ref:unosat-lakes",
+   "groupId": null,
+   "name": "UNOSAT barrier lakes (0.31 km\u00b2)",
+   "category": "reference",
+   "mission": "UNOSAT",
+   "instrument": "Cartosat-3",
+   "productType": "Vector",
+   "measurementClass": "reference map",
+   "measurementType": "reference",
+   "kind": "vector",
+   "units": null,
+   "acquisition": {
+    "reference": "28 August 2026",
+    "secondary": null
+   },
+   "crs": "EPSG:4326",
+   "status": "prepared",
+   "statusReason": null,
+   "qualityLayerIds": [],
+   "orbitDirection": null,
+   "track": null,
+   "frames": [],
+   "sources": [],
+   "vector": {
+    "url": "data/vectors/unosat_barrier_lakes.geojson",
+    "type": "fill",
+    "color": "#1c7ed6",
+    "opacity": 0.75,
+    "bounds": [
+     85.47667158900003,
+     28.289752570000076,
+     85.51333890700005,
+     28.33416307600004
+    ]
+   },
+   "attribution": "UNOSAT/UNITAR, event FL20260826NPL, CC BY-SA",
+   "limitations": [
+    "UNOSAT records this layer as 'Not yet field validated'. Preliminary satellite-based mapping, not ground truth."
+   ],
+   "sourceGranules": [],
+   "productMaturity": "Preliminary",
+   "page": "https://data.humdata.org/dataset/mudflow-rockflow-impact-assessment-in-rasuwa-nuwakot-districts-bagmati-province-nepal-as-o"
+  },
+  {
+   "id": "ref:unosat-detachment",
+   "groupId": null,
+   "name": "UNOSAT detachment zone (1.96 km\u00b2)",
+   "category": "reference",
+   "mission": "UNOSAT",
+   "instrument": "Landsat-9",
+   "productType": "Vector",
+   "measurementClass": "reference map",
+   "measurementType": "reference",
+   "kind": "vector",
+   "units": null,
+   "acquisition": {
+    "reference": "26 August 2026 (see limitations)",
+    "secondary": null
+   },
+   "crs": "EPSG:4326",
+   "status": "prepared",
+   "statusReason": null,
+   "qualityLayerIds": [],
+   "orbitDirection": null,
+   "track": null,
+   "frames": [],
+   "sources": [],
+   "vector": {
+    "url": "data/vectors/unosat_detachment_zone.geojson",
+    "type": "fill",
+    "color": "#fa5252",
+    "opacity": 0.55,
+    "bounds": [
+     85.51087808100004,
+     28.282191411000042,
+     85.52993214900005,
+     28.29579750700009
+    ]
+   },
+   "attribution": "UNOSAT/UNITAR, event FL20260826NPL, CC BY-SA",
+   "limitations": [
+    "UNOSAT records this layer as 'Not yet field validated'. Preliminary satellite-based mapping, not ground truth.",
+    "Source inconsistency: layer name says 26 August 2026 but its SensorDate attribute says 26 September 2026. Treat the date as unresolved."
+   ],
+   "sourceGranules": [],
+   "productMaturity": "Preliminary",
+   "page": "https://data.humdata.org/dataset/mudflow-rockflow-impact-assessment-in-rasuwa-nuwakot-districts-bagmati-province-nepal-as-o"
+  },
+  {
+   "id": "ref:unosat-roads",
+   "groupId": null,
+   "name": "UNOSAT affected roads",
+   "category": "reference",
+   "mission": "UNOSAT",
+   "instrument": "Multi-sensor analysis",
+   "productType": "Vector",
+   "measurementClass": "reference map",
+   "measurementType": "reference",
+   "kind": "vector",
+   "units": null,
+   "acquisition": {
+    "reference": "26\u201328 August 2026",
+    "secondary": null
+   },
+   "crs": "EPSG:4326",
+   "status": "prepared",
+   "statusReason": null,
+   "qualityLayerIds": [],
+   "orbitDirection": null,
+   "track": null,
+   "frames": [],
+   "sources": [],
+   "vector": {
+    "url": "data/vectors/unosat_affected_roads.geojson",
+    "type": "line",
+    "color": "#ffd43b",
+    "opacity": 0.95,
+    "bounds": [
+     84.37061429100004,
+     27.678270868000027,
+     85.37862930000006,
+     28.279147900000055
+    ]
+   },
+   "attribution": "UNOSAT/UNITAR, event FL20260826NPL, CC BY-SA",
+   "limitations": [
+    "UNOSAT records this layer as 'Not yet field validated'. Preliminary satellite-based mapping, not ground truth.",
+    "Clipped to the UNOSAT analysis extent because the source contains stray vertices outside Nepal."
+   ],
+   "sourceGranules": [],
+   "productMaturity": "Preliminary",
+   "page": "https://data.humdata.org/dataset/mudflow-rockflow-impact-assessment-in-rasuwa-nuwakot-districts-bagmati-province-nepal-as-o"
+  },
+  {
+   "id": "ref:unosat-buildings",
+   "groupId": null,
+   "name": "UNOSAT affected structures (5,048 points)",
+   "category": "reference",
+   "mission": "UNOSAT",
+   "instrument": "Multi-sensor analysis",
+   "productType": "Vector",
+   "measurementClass": "reference map",
+   "measurementType": "reference",
+   "kind": "vector",
+   "units": null,
+   "acquisition": {
+    "reference": "26\u201328 August 2026",
+    "secondary": null
+   },
+   "crs": "EPSG:4326",
+   "status": "prepared",
+   "statusReason": null,
+   "qualityLayerIds": [],
+   "orbitDirection": null,
+   "track": null,
+   "frames": [],
+   "sources": [],
+   "vector": {
+    "url": "data/vectors/unosat_affected_buildings.geojson",
+    "type": "circle",
+    "color": "#ffa94d",
+    "opacity": 0.9,
+    "radius": 2,
+    "bounds": [
+     84.39963138800005,
+     27.74260229400005,
+     85.38403350100003,
+     28.304887655000073
+    ]
+   },
+   "attribution": "UNOSAT/UNITAR, event FL20260826NPL, CC BY-SA",
+   "limitations": [
+    "UNOSAT records this layer as 'Not yet field validated'. Preliminary satellite-based mapping, not ground truth."
+   ],
+   "sourceGranules": [],
+   "productMaturity": "Preliminary",
+   "page": "https://data.humdata.org/dataset/mudflow-rockflow-impact-assessment-in-rasuwa-nuwakot-districts-bagmati-province-nepal-as-o"
+  },
+  {
+   "id": "ref:eos-dpm",
+   "groupId": null,
+   "name": "Sentinel-1 damage proxy map (EOS-RS)",
+   "category": "reference",
+   "mission": "Sentinel-1",
+   "instrument": "C-band SAR",
+   "productType": "Damage proxy map v0.9",
+   "measurementClass": "derived",
+   "measurementType": "reference",
+   "kind": "continuous",
+   "units": null,
+   "acquisition": {
+    "reference": "Before 5 May\u201316 Aug 2026; during 28 Aug 2026",
+    "secondary": null
+   },
+   "orbitDirection": null,
+   "track": null,
+   "frames": [],
+   "postingM": [
+    30,
+    30
+   ],
+   "crs": "EPSG:4326",
+   "qualityLayerIds": [],
+   "status": "renderable",
+   "statusReason": null,
+   "legend": {
+    "type": "continuous",
+    "stops": [
+     "#ffff00",
+     "#ff0000"
+    ],
+    "lowLabel": "Less change",
+    "highLabel": "More change",
+    "unit": null
+   },
+   "sources": [
+    {
+     "frame": null,
+     "granule": "EOSRS_2026_014_NPL_FL_20260828_DPM_S1_Glacial_v0.9",
+     "sourceFilename": "EOSRS_2026_014_NPL_FL_20260828_DPM_S1_Glacial_v0.9.tif",
+     "bounds": [
+      84.3976,
+      27.732,
+      85.5508,
+      28.35
+     ],
+     "tiles": {
+      "url": "data/tiles/context/eos_dpm/{z}/{x}/{y}.png",
+      "minzoom": 8,
+      "maxzoom": 12,
+      "count": 179
+     }
+    }
+   ],
+   "attribution": "Earth Observatory of Singapore - Remote Sensing Lab (EOS-RS). Contains modified Copernicus Sentinel data (2026), processed by ESA. CC BY",
+   "page": "https://data.humdata.org/dataset/nepal-damage-proxy-map-glacial-flood-aug-2026",
+   "limitations": [
+    "Not NISAR. Sentinel-1 is a separate C-band mission.",
+    "A coloured picture with no measurement values, so the inspector cannot sample it.",
+    "EOS-RS calls it preliminary guidance. It may be less reliable over vegetated or mountainous areas, and scattered pixels there may be false positives.",
+    "A lack of coloured pixels does not necessarily mean an absence of damage."
+   ],
+   "sourceGranules": [],
+   "productMaturity": "Preliminary v0.9"
+  },
+  {
+   "id": "ref:impact-change",
+   "groupId": null,
+   "name": "Sentinel-1 change screening (249 ha, REACH)",
+   "category": "reference",
+   "mission": "Sentinel-1",
+   "instrument": "Sentinel-1 backscatter change",
+   "productType": "Vector",
+   "measurementClass": "derived",
+   "measurementType": "reference",
+   "kind": "vector",
+   "units": null,
+   "acquisition": {
+    "reference": "Baseline Aug 2025\u2013Aug 2026; post-event 28 Aug 2026",
+    "secondary": null
+   },
+   "crs": "EPSG:4326",
+   "status": "prepared",
+   "statusReason": null,
+   "qualityLayerIds": [],
+   "orbitDirection": null,
+   "track": null,
+   "frames": [],
+   "sources": [],
+   "vector": {
+    "url": "data/vectors/impact_s1_change.geojson",
+    "type": "fill",
+    "color": "#e599f7",
+    "opacity": 0.8,
+    "bounds": [
+     84.53720134774717,
+     27.794630811210347,
+     85.38030587339748,
+     28.28104567047512
+    ]
+   },
+   "attribution": "IMPACT Initiatives / REACH, using Copernicus Sentinel-1 data. CC BY",
+   "limitations": [
+    "Not NISAR. Sentinel-1 is a separate C-band mission.",
+    "Measures radar backscatter change, not structural damage. Debris, water, moisture, vegetation or clearance can all produce the signal, and damaged structures may show none.",
+    "Only assessed around pre-event built areas, so it says nothing about open ground."
+   ],
+   "sourceGranules": [],
+   "productMaturity": "Community-maintained",
+   "page": "https://data.humdata.org/dataset/nepal-flash-flood-damage-assessment-using-sentinel-1-radar-data"
+  },
+  {
+   "id": "ref:impact-area",
+   "groupId": null,
+   "name": "REACH analysed area",
+   "category": "reference",
+   "mission": "Sentinel-1",
+   "instrument": "Analysis boundary",
+   "productType": "Vector",
+   "measurementClass": "reference map",
+   "measurementType": "reference",
+   "kind": "vector",
+   "units": null,
+   "acquisition": {
+    "reference": "2 September 2026",
+    "secondary": null
+   },
+   "crs": "EPSG:4326",
+   "status": "prepared",
+   "statusReason": null,
+   "qualityLayerIds": [],
+   "orbitDirection": null,
+   "track": null,
+   "frames": [],
+   "sources": [],
+   "vector": {
+    "url": "data/vectors/impact_analyzed_area.geojson",
+    "type": "line",
+    "color": "#e599f7",
+    "opacity": 0.6,
+    "dash": true,
+    "bounds": [
+     84.52791320970925,
+     27.782868140673372,
+     85.56596468134063,
+     28.346078604787465
+    ]
+   },
+   "attribution": "IMPACT Initiatives / REACH, using Copernicus Sentinel-1 data. CC BY",
+   "limitations": [
+    "Absence of mapped change outside this boundary says nothing: it was not analysed."
+   ],
+   "sourceGranules": [],
+   "productMaturity": "Community-maintained",
+   "page": "https://data.humdata.org/dataset/nepal-flash-flood-damage-assessment-using-sentinel-1-radar-data"
+  },
+  {
+   "id": "ref:rivers",
+   "groupId": null,
+   "name": "Rivers (OSM)",
+   "category": "reference",
+   "mission": "OpenStreetMap",
+   "instrument": "OpenStreetMap",
+   "productType": "Vector",
+   "measurementClass": "contextual",
+   "measurementType": "reference",
+   "kind": "vector",
+   "units": null,
+   "acquisition": {
+    "reference": "HDX export, 2026",
+    "secondary": null
+   },
+   "crs": "EPSG:4326",
+   "status": "prepared",
+   "statusReason": null,
+   "qualityLayerIds": [],
+   "orbitDirection": null,
+   "track": null,
+   "frames": [],
+   "sources": [],
+   "vector": {
+    "url": "data/vectors/osm_rivers.geojson",
+    "type": "line",
+    "color": "#74c0fc",
+    "opacity": 0.85,
+    "bounds": [
+     84.4219815,
+     27.7214388,
+     85.4306907,
+     28.3305113
+    ]
+   },
+   "attribution": "\u00a9 OpenStreetMap contributors (ODbL), via HOT export on HDX",
+   "limitations": [
+    "Community mapping exported after the event; features may predate or postdate the disaster."
+   ],
+   "sourceGranules": [],
+   "productMaturity": "Community-maintained",
+   "page": "https://data.humdata.org/dataset/hot_flood_npl"
+  },
+  {
+   "id": "ref:roads",
+   "groupId": null,
+   "name": "Roads (OSM)",
+   "category": "reference",
+   "mission": "OpenStreetMap",
+   "instrument": "OpenStreetMap",
+   "productType": "Vector",
+   "measurementClass": "contextual",
+   "measurementType": "reference",
+   "kind": "vector",
+   "units": null,
+   "acquisition": {
+    "reference": "HDX export, 2026",
+    "secondary": null
+   },
+   "crs": "EPSG:4326",
+   "status": "prepared",
+   "statusReason": null,
+   "qualityLayerIds": [],
+   "orbitDirection": null,
+   "track": null,
+   "frames": [],
+   "sources": [],
+   "vector": {
+    "url": "data/vectors/osm_roads.geojson",
+    "type": "line",
+    "color": "#adb5bd",
+    "opacity": 0.7,
+    "bounds": [
+     84.5514228,
+     27.7681061,
+     85.4078909,
+     28.3064407
+    ]
+   },
+   "attribution": "\u00a9 OpenStreetMap contributors (ODbL), via HOT export on HDX",
+   "limitations": [
+    "Community mapping exported after the event; features may predate or postdate the disaster."
+   ],
+   "sourceGranules": [],
+   "productMaturity": "Community-maintained",
+   "page": "https://data.humdata.org/dataset/hot_flood_npl"
+  },
+  {
+   "id": "ref:places",
+   "groupId": null,
+   "name": "Settlements (OSM)",
+   "category": "reference",
+   "mission": "OpenStreetMap",
+   "instrument": "OpenStreetMap",
+   "productType": "Vector",
+   "measurementClass": "contextual",
+   "measurementType": "reference",
+   "kind": "vector",
+   "units": null,
+   "acquisition": {
+    "reference": "HDX export, 2026",
+    "secondary": null
+   },
+   "crs": "EPSG:4326",
+   "status": "prepared",
+   "statusReason": null,
+   "qualityLayerIds": [],
+   "orbitDirection": null,
+   "track": null,
+   "frames": [],
+   "sources": [],
+   "vector": {
+    "url": "data/vectors/osm_places.geojson",
+    "type": "label",
+    "bounds": [
+     84.560951,
+     27.8010451,
+     85.3777789,
+     28.2777749
+    ]
+   },
+   "attribution": "\u00a9 OpenStreetMap contributors (ODbL), via HOT export on HDX",
+   "limitations": [
+    "Community mapping exported after the event; features may predate or postdate the disaster."
+   ],
+   "sourceGranules": [],
+   "productMaturity": "Community-maintained",
+   "page": "https://data.humdata.org/dataset/hot_flood_npl"
+  },
+  {
+   "id": "ref:districts",
+   "groupId": null,
+   "name": "District boundaries (COD-AB)",
+   "category": "reference",
+   "mission": "COD-AB",
+   "instrument": "Survey Department of Nepal",
+   "productType": "Vector",
+   "measurementClass": "contextual",
+   "measurementType": "reference",
+   "kind": "vector",
+   "units": null,
+   "acquisition": {
+    "reference": "Valid from March 2024",
+    "secondary": null
+   },
+   "crs": "EPSG:4326",
+   "status": "prepared",
+   "statusReason": null,
+   "qualityLayerIds": [],
+   "orbitDirection": null,
+   "track": null,
+   "frames": [],
+   "sources": [],
+   "vector": {
+    "url": "data/vectors/districts.geojson",
+    "type": "line",
+    "color": "#c0b6f2",
+    "opacity": 0.7,
+    "dash": true,
+    "bounds": [
+     84.3976,
+     27.732,
+     85.5508,
+     28.35
+    ]
+   },
+   "attribution": "Survey Department of Nepal and UN RCO, via OCHA COD-AB. CC BY-IGO",
+   "limitations": [
+    "Administrative reference only."
+   ],
+   "sourceGranules": [],
+   "productMaturity": "Community-maintained",
+   "page": "https://data.humdata.org/dataset/cod-ab-npl"
+  }
+ ],
+ "granules": [
+  {
+   "file_id": "NISAR_L2_PR_GUNW_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001",
+   "group": "pair-a",
+   "product": "GUNW",
+   "frame": 74,
+   "direction": "DESCENDING",
+   "track": 48,
+   "ref_date": "2026-08-16",
+   "sec_date": "2026-08-28",
+   "size_mb": 2336.2,
+   "geometry": {
+    "coordinates": [
+     [
+      [
+       85.32632,
+       30.11524
+      ],
+      [
+       84.62017,
+       28.06358
+      ],
+      [
+       87.14489,
+       27.4357
+      ],
+      [
+       87.85933,
+       29.48172
+      ],
+      [
+       85.32632,
+       30.11524
+      ]
+     ]
+    ],
+    "type": "Polygon"
+   },
+   "status": "qa_passed"
+  },
+  {
+   "file_id": "NISAR_L2_PR_GUNW_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001",
+   "group": "pair-a",
+   "product": "GUNW",
+   "frame": 75,
+   "direction": "DESCENDING",
+   "track": 48,
+   "ref_date": "2026-08-16",
+   "sec_date": "2026-08-28",
+   "size_mb": 2432.7,
+   "geometry": {
+    "coordinates": [
+     [
+      [
+       84.66506,
+       28.17962
+      ],
+      [
+       84.00847,
+       26.05527
+      ],
+      [
+       86.52118,
+       25.43309
+      ],
+      [
+       87.20639,
+       27.54712
+      ],
+      [
+       84.66506,
+       28.17962
+      ]
+     ]
+    ],
+    "type": "Polygon"
+   },
+   "status": "qa_passed"
+  },
+  {
+   "file_id": "NISAR_L2_PR_GOFF_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001",
+   "group": "pair-a",
+   "product": "GOFF",
+   "frame": 74,
+   "direction": "DESCENDING",
+   "track": 48,
+   "ref_date": "2026-08-16",
+   "sec_date": "2026-08-28",
+   "size_mb": 1077.9,
+   "geometry": {
+    "coordinates": [
+     [
+      [
+       85.32632,
+       30.11524
+      ],
+      [
+       84.62017,
+       28.06358
+      ],
+      [
+       87.14489,
+       27.4357
+      ],
+      [
+       87.85933,
+       29.48172
+      ],
+      [
+       85.32632,
+       30.11524
+      ]
+     ]
+    ],
+    "type": "Polygon"
+   },
+   "status": "qa_passed"
+  },
+  {
+   "file_id": "NISAR_L2_PR_GOFF_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001",
+   "group": "pair-a",
+   "product": "GOFF",
+   "frame": 75,
+   "direction": "DESCENDING",
+   "track": 48,
+   "ref_date": "2026-08-16",
+   "sec_date": "2026-08-28",
+   "size_mb": 1109.4,
+   "geometry": {
+    "coordinates": [
+     [
+      [
+       84.66506,
+       28.17962
+      ],
+      [
+       84.00847,
+       26.05527
+      ],
+      [
+       86.52118,
+       25.43309
+      ],
+      [
+       87.20639,
+       27.54712
+      ],
+      [
+       84.66506,
+       28.17962
+      ]
+     ]
+    ],
+    "type": "Polygon"
+   },
+   "status": "qa_passed"
+  },
+  {
+   "file_id": "NISAR_L2_PR_GOFF_028_098_A_015_029_4000_SH_20260819T233844_20260819T233919_20260831T233844_20260831T233919_P05023_N_F_J_001",
+   "group": "pair-b",
+   "product": "GOFF",
+   "frame": 15,
+   "direction": "ASCENDING",
+   "track": 98,
+   "ref_date": "2026-08-19",
+   "sec_date": "2026-08-31",
+   "size_mb": 1126.2,
+   "geometry": {
+    "coordinates": [
+     [
+      [
+       87.27096,
+       25.98384
+      ],
+      [
+       86.5588,
+       28.09478
+      ],
+      [
+       84.08018,
+       27.47754
+      ],
+      [
+       84.75543,
+       25.36107
+      ],
+      [
+       87.27096,
+       25.98384
+      ]
+     ]
+    ],
+    "type": "Polygon"
+   },
+   "status": "qa_passed"
+  },
+  {
+   "file_id": "NISAR_L2_PR_GOFF_028_098_A_016_029_4000_SH_20260819T233918_20260819T233953_20260831T233918_20260831T233952_P05023_N_F_J_001",
+   "group": "pair-b",
+   "product": "GOFF",
+   "frame": 16,
+   "direction": "ASCENDING",
+   "track": 98,
+   "ref_date": "2026-08-19",
+   "sec_date": "2026-08-31",
+   "size_mb": 1098.9,
+   "geometry": {
+    "coordinates": [
+     [
+      [
+       86.60648,
+       27.97942
+      ],
+      [
+       85.94647,
+       30.10547
+      ],
+      [
+       83.37345,
+       29.46177
+      ],
+      [
+       84.11993,
+       27.36049
+      ],
+      [
+       86.60648,
+       27.97942
+      ]
+     ]
+    ],
+    "type": "Polygon"
+   },
+   "status": "qa_passed"
+  },
+  {
+   "file_id": "NISAR_L2_PR_GCOV_029_048_D_074_2005_QPDH_A_20260828T125812_20260828T125846_P05023_N_F_J_001",
+   "group": "gcov-0828",
+   "product": "GCOV",
+   "frame": 74,
+   "direction": "DESCENDING",
+   "track": 48,
+   "ref_date": "2026-08-28",
+   "sec_date": null,
+   "size_mb": 7969.2,
+   "geometry": {
+    "coordinates": [
+     [
+      [
+       85.35164,
+       30.09112
+      ],
+      [
+       84.639,
+       28.04106
+      ],
+      [
+       87.16077,
+       27.41348
+      ],
+      [
+       87.8719,
+       29.46029
+      ],
+      [
+       85.35164,
+       30.09112
+      ]
+     ]
+    ],
+    "type": "Polygon"
+   },
+   "status": "catalogued"
+  },
+  {
+   "file_id": "NISAR_L2_PR_GCOV_029_048_D_075_2005_QPDH_A_20260828T125845_20260828T125920_P05023_N_F_J_001",
+   "group": "gcov-0828",
+   "product": "GCOV",
+   "frame": 75,
+   "direction": "DESCENDING",
+   "track": 48,
+   "ref_date": "2026-08-28",
+   "sec_date": null,
+   "size_mb": 8946.5,
+   "geometry": {
+    "coordinates": [
+     [
+      [
+       84.68336,
+       28.15723
+      ],
+      [
+       84.0367,
+       26.03054
+      ],
+      [
+       86.51746,
+       25.41599
+      ],
+      [
+       87.20139,
+       27.53031
+      ],
+      [
+       84.68336,
+       28.15723
+      ]
+     ]
+    ],
+    "type": "Polygon"
+   },
+   "status": "catalogued"
+  },
+  {
+   "file_id": "NISAR_L2_PR_GCOV_029_098_A_015_4005_DHDH_A_20260831T233844_20260831T233919_P05023_N_F_J_001",
+   "group": "gcov-0831",
+   "product": "GCOV",
+   "frame": 15,
+   "direction": "ASCENDING",
+   "track": 98,
+   "ref_date": "2026-08-31",
+   "sec_date": null,
+   "size_mb": 7126.1,
+   "geometry": {
+    "coordinates": [
+     [
+      [
+       87.26718,
+       25.99642
+      ],
+      [
+       86.55307,
+       28.10691
+      ],
+      [
+       84.07674,
+       27.49025
+      ],
+      [
+       84.75153,
+       25.37364
+      ],
+      [
+       87.26718,
+       25.99642
+      ]
+     ]
+    ],
+    "type": "Polygon"
+   },
+   "status": "catalogued"
+  },
+  {
+   "file_id": "NISAR_L2_PR_GCOV_029_098_A_016_4005_DHDH_A_20260831T233918_20260831T233952_P05023_N_F_J_001",
+   "group": "gcov-0831",
+   "product": "GCOV",
+   "frame": 16,
+   "direction": "ASCENDING",
+   "track": 98,
+   "ref_date": "2026-08-31",
+   "sec_date": null,
+   "size_mb": 7050.6,
+   "geometry": {
+    "coordinates": [
+     [
+      [
+       86.60121,
+       27.99165
+      ],
+      [
+       85.95595,
+       30.05776
+      ],
+      [
+       83.38562,
+       29.41472
+      ],
+      [
+       84.11588,
+       27.37303
+      ],
+      [
+       86.60121,
+       27.99165
+      ]
+     ]
+    ],
+    "type": "Polygon"
+   },
+   "status": "catalogued"
+  }
+ ]
+}

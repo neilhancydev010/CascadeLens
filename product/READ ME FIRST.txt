@@ -1,0 +1,52 @@
+GAIA CascadeLens
+Following Earth's movement, one radar observation at a time.
+
+TO START
+  1. Unzip this folder somewhere with a short path, such as C:\CascadeLens.
+  2. Double-click "Start CascadeLens.bat".
+  3. The app opens in your default browser. Keep the black window open while you
+     use it.
+
+To use Brave or another browser, paste the address from the black window into
+it. It is usually http://localhost:8765
+
+Do NOT open app\index.html directly. Browsers block a page opened that way from
+loading its scripts and data, so it cannot start.
+
+On macOS or Linux, run:  python3 serve.py
+
+It needs Python 3, and nothing else. It needs no internet connection, no login,
+and no installing.
+
+
+WHAT IS INSIDE
+
+  Rasuwa 2026 (NISAR)
+    The main case: real NISAR radar measurements of the 26 August 2026 disaster
+    in Nepal, with independent UNOSAT, Sentinel-1 and OpenStreetMap layers.
+
+  LANDMET test, 31 Dec 2007
+    A test case, chosen from the Case study menu at the top left. It is global
+    land weather data from 2007. It is NOT NISAR data, and it says nothing about
+    Rasuwa. It shows that the product can load a completely different dataset.
+
+
+HOW TO USE IT
+  - Pick a place under "Go to", or click the map.
+  - Open the Inspector tab to read the stored value at that point.
+  - Open the Interpretation tab to see what a layer means and what it cannot show.
+  - Start the guided story for a walk through the Rasuwa evidence.
+
+
+IMPORTANT LIMITS
+  CascadeLens is a retrospective evidence explorer. It is not a warning system.
+  NISAR products here are Provisional. No displacement is calculated.
+  Low coherence is evidence to examine, not proof of what happened.
+  Details are in source\docs\LIMITATIONS.md.
+
+
+WHAT IS IN THIS FOLDER
+  Start CascadeLens.bat   Starts the app on Windows
+  serve.py                The small local server it runs
+  app\                    The finished app and its prepared data
+  source\                 Code, tests and documentation

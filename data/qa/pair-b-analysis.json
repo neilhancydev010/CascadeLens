@@ -1,0 +1,272 @@
+{
+ "group": "pair-b",
+ "note": "Descriptive only. Differences are evidence to examine, not proof of cause.",
+ "frames": {
+  "f015": {
+   "shape": [
+    733,
+    1432
+   ],
+   "crs": "EPSG:32645",
+   "zones": {
+    "goff-snr": {
+     "mapped extent": {
+      "pixels": 6642,
+      "validPct": 0.0,
+      "maskedPct": 0.0,
+      "p25": null,
+      "median": null,
+      "p75": null
+     },
+     "1 km ring outside extent": {
+      "pixels": 70119,
+      "validPct": 0.0,
+      "maskedPct": 0.0,
+      "p25": null,
+      "median": null,
+      "p75": null
+     },
+     "detachment zone": {
+      "pixels": 0
+     },
+     "barrier lakes": {
+      "pixels": 0
+     }
+    },
+    "goff-peak": {
+     "mapped extent": {
+      "pixels": 6642,
+      "validPct": 0.0,
+      "maskedPct": 0.0,
+      "p25": null,
+      "median": null,
+      "p75": null
+     },
+     "1 km ring outside extent": {
+      "pixels": 70119,
+      "validPct": 0.0,
+      "maskedPct": 0.0,
+      "p25": null,
+      "median": null,
+      "p75": null
+     },
+     "detachment zone": {
+      "pixels": 0
+     },
+     "barrier lakes": {
+      "pixels": 0
+     }
+    },
+    "goff-range |x - scene median|": {
+     "mapped extent": {
+      "pixels": 6642,
+      "validPct": 0.0,
+      "maskedPct": 0.0,
+      "p25": null,
+      "median": null,
+      "p75": null
+     },
+     "1 km ring outside extent": {
+      "pixels": 70119,
+      "validPct": 0.0,
+      "maskedPct": 0.0,
+      "p25": null,
+      "median": null,
+      "p75": null
+     },
+     "detachment zone": {
+      "pixels": 0
+     },
+     "barrier lakes": {
+      "pixels": 0
+     }
+    },
+    "goff-azimuth |x - scene median|": {
+     "mapped extent": {
+      "pixels": 6642,
+      "validPct": 0.0,
+      "maskedPct": 0.0,
+      "p25": null,
+      "median": null,
+      "p75": null
+     },
+     "1 km ring outside extent": {
+      "pixels": 70119,
+      "validPct": 0.0,
+      "maskedPct": 0.0,
+      "p25": null,
+      "median": null,
+      "p75": null
+     },
+     "detachment zone": {
+      "pixels": 0
+     },
+     "barrier lakes": {
+      "pixels": 0
+     }
+    }
+   },
+   "sceneMedian": {
+    "goff-range": -0.398,
+    "goff-azimuth": 0.069
+   },
+   "maskedPct": {
+    "goff-range": 0.0,
+    "goff-azimuth": 0.0
+   }
+  },
+  "f016": {
+   "shape": [
+    880,
+    1432
+   ],
+   "crs": "EPSG:32645",
+   "zones": {
+    "goff-snr": {
+     "mapped extent": {
+      "pixels": 9227,
+      "validPct": 81.2,
+      "maskedPct": 18.8,
+      "p25": 4.58,
+      "median": 7.813,
+      "p75": 13.581
+     },
+     "1 km ring outside extent": {
+      "pixels": 80232,
+      "validPct": 99.9,
+      "maskedPct": 0.1,
+      "p25": 5.947,
+      "median": 9.768,
+      "p75": 18.362
+     },
+     "detachment zone": {
+      "pixels": 307,
+      "validPct": 100.0,
+      "maskedPct": 0.0,
+      "p25": 2.338,
+      "median": 3.25,
+      "p75": 4.777
+     },
+     "barrier lakes": {
+      "pixels": 48,
+      "validPct": 100.0,
+      "maskedPct": 0.0,
+      "p25": 2.15,
+      "median": 2.611,
+      "p75": 3.693
+     }
+    },
+    "goff-peak": {
+     "mapped extent": {
+      "pixels": 9227,
+      "validPct": 81.2,
+      "maskedPct": 18.8,
+      "p25": 0.487,
+      "median": 0.596,
+      "p75": 0.689
+     },
+     "1 km ring outside extent": {
+      "pixels": 80232,
+      "validPct": 99.9,
+      "maskedPct": 0.1,
+      "p25": 0.54,
+      "median": 0.631,
+      "p75": 0.707
+     },
+     "detachment zone": {
+      "pixels": 307,
+      "validPct": 100.0,
+      "maskedPct": 0.0,
+      "p25": 0.113,
+      "median": 0.177,
+      "p75": 0.254
+     },
+     "barrier lakes": {
+      "pixels": 48,
+      "validPct": 100.0,
+      "maskedPct": 0.0,
+      "p25": 0.192,
+      "median": 0.543,
+      "p75": 0.571
+     }
+    },
+    "goff-range |x - scene median|": {
+     "mapped extent": {
+      "pixels": 9227,
+      "validPct": 72.3,
+      "maskedPct": 27.7,
+      "p25": 0.02,
+      "median": 0.046,
+      "p75": 0.089
+     },
+     "1 km ring outside extent": {
+      "pixels": 80232,
+      "validPct": 99.4,
+      "maskedPct": 0.6,
+      "p25": 0.017,
+      "median": 0.037,
+      "p75": 0.074
+     },
+     "detachment zone": {
+      "pixels": 307,
+      "validPct": 40.1,
+      "maskedPct": 59.9,
+      "p25": 0.06,
+      "median": 0.148,
+      "p75": 0.294
+     },
+     "barrier lakes": {
+      "pixels": 48,
+      "validPct": 27.1,
+      "maskedPct": 72.9,
+      "p25": 0.29,
+      "median": 0.313,
+      "p75": 0.413
+     }
+    },
+    "goff-azimuth |x - scene median|": {
+     "mapped extent": {
+      "pixels": 9227,
+      "validPct": 70.9,
+      "maskedPct": 25.2,
+      "p25": 0.044,
+      "median": 0.075,
+      "p75": 0.141
+     },
+     "1 km ring outside extent": {
+      "pixels": 80232,
+      "validPct": 95.7,
+      "maskedPct": 0.4,
+      "p25": 0.035,
+      "median": 0.065,
+      "p75": 0.128
+     },
+     "detachment zone": {
+      "pixels": 307,
+      "validPct": 37.1,
+      "maskedPct": 50.2,
+      "p25": 0.063,
+      "median": 0.163,
+      "p75": 0.473
+     },
+     "barrier lakes": {
+      "pixels": 48,
+      "validPct": 47.9,
+      "maskedPct": 47.9,
+      "p25": 0.042,
+      "median": 0.169,
+      "p75": 0.324
+     }
+    }
+   },
+   "sceneMedian": {
+    "goff-range": -0.477,
+    "goff-azimuth": -0.063
+   },
+   "maskedPct": {
+    "goff-range": 0.47,
+    "goff-azimuth": 0.38
+   }
+  }
+ }
+}

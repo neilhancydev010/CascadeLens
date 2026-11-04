@@ -1,0 +1,47 @@
+{
+  "unosat_extent": {
+    "url": "https://unosat.org/static/unosat_filesystem/4259/FL20260826NPL.gdb.zip",
+    "page": "https://data.humdata.org/dataset/mudflow-rockflow-impact-assessment-in-rasuwa-nuwakot-districts-bagmati-province-nepal-as-o",
+    "licence": "CC BY-SA"
+  },
+  "unosat_lakes": {
+    "url": "https://unosat.org/static/unosat_filesystem/4260/FL20260826NPL.gdb.zip",
+    "page": "https://data.humdata.org/dataset/newly-formed-barrier-lakes-following-an-ice-rock-avalanche-in-rasuwa-district-nepal-as-of-",
+    "licence": "CC BY-SA"
+  },
+  "osm_waterways": {
+    "url": "https://production-raw-data-api.s3.amazonaws.com/ISO3/NPL_FLOOD/waterways/hot_flood_npl_waterways_osm.geojson",
+    "page": "https://data.humdata.org/dataset/hot_flood_npl",
+    "licence": "ODbL"
+  },
+  "osm_places": {
+    "url": "https://production-raw-data-api.s3.amazonaws.com/ISO3/NPL_FLOOD/populated_places/hot_flood_npl_populated_places_osm.geojson",
+    "page": "https://data.humdata.org/dataset/hot_flood_npl",
+    "licence": "ODbL"
+  },
+  "osm_roads": {
+    "url": "https://production-raw-data-api.s3.amazonaws.com/ISO3/NPL_FLOOD/roads/hot_flood_npl_roads_osm_gpkg.zip",
+    "page": "https://data.humdata.org/dataset/hot_flood_npl",
+    "licence": "ODbL"
+  },
+  "eos_dpm": {
+    "url": "https://data.humdata.org/dataset/68b0b289-f2fc-4a9c-bf55-052006049a5c/resource/73e60b8c-e380-4ebe-96b2-77dbd4750b8a/download/eosrs_2026_014_npl_fl_20260828_dpm_s1_glacial_v0.9.zip",
+    "page": "https://data.humdata.org/dataset/nepal-damage-proxy-map-glacial-flood-aug-2026",
+    "licence": "CC BY"
+  },
+  "impact_screening": {
+    "url": "https://data.humdata.org/dataset/57723eed-8f89-4bec-8ab4-1acd12a34df1/resource/6f5c06d2-446f-4ae8-b02f-813f9b8c10c5/download/impact_npl_20260828_s1_k50_absz_ge160_high_confidence_v3.zip",
+    "page": "https://data.humdata.org/dataset/nepal-flash-flood-damage-assessment-using-sentinel-1-radar-data",
+    "licence": "CC BY"
+  },
+  "impact_area": {
+    "url": "https://data.humdata.org/dataset/57723eed-8f89-4bec-8ab4-1acd12a34df1/resource/ed73e7f7-78e9-4f79-9604-ede27bf174a1/download/impact_npl_flash_flood_analyzed_area_20260902.zip",
+    "page": "https://data.humdata.org/dataset/nepal-flash-flood-damage-assessment-using-sentinel-1-radar-data",
+    "licence": "CC BY"
+  },
+  "admin_boundaries": {
+    "url": "https://data.humdata.org/dataset/07db728a-4f0f-4e98-8eb0-8fa9df61f01c/resource/37775d96-2b6a-47b4-8465-2b3238368567/download/npl_admin_boundaries.gdb.zip",
+    "page": "https://data.humdata.org/dataset/cod-ab-npl",
+    "licence": "CC BY-IGO"
+  }
+}

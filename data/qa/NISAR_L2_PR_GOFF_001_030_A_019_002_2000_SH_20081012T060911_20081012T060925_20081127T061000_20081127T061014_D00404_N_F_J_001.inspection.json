@@ -1,0 +1,1270 @@
+{
+ "file": "NISAR_L2_PR_GOFF_001_030_A_019_002_2000_SH_20081012T060911_20081012T060925_20081127T061000_20081127T061014_D00404_N_F_J_001.h5",
+ "product": "GOFF",
+ "identification": {
+  "productType": "GOFF",
+  "missionId": "ALOS",
+  "trackNumber": 30,
+  "frameNumber": 19,
+  "orbitPassDirection": "Ascending",
+  "lookDirection": "Right",
+  "compositeReleaseId": "D00404",
+  "productVersion": "0.0.4",
+  "productSpecificationVersion": "1.2.1",
+  "granuleId": "NISAR_L2_PR_GOFF_001_030_A_019_002_2000_SH_20081012T060911_20081012T060925_20081127T061000_20081127T061014_D00404_N_F_J_001",
+  "productDoi": "10.5067/NIL2GOFF-B1",
+  "referenceZeroDopplerStartTime": "2008-10-12T06:09:11.567105263",
+  "secondaryZeroDopplerStartTime": "2008-11-27T06:10:00.442763158",
+  "zeroDopplerStartTime": null,
+  "isFullFrame": "True",
+  "isUrgentObservation": "False",
+  "processingDateTime": "2025-01-29T05:41:37",
+  "processingType": "Nominal",
+  "boundingPolygon": "POLYGON ((-118.229299403331 34.3206258749987 1320.76281740076,-118.151534082954 34.3338786942818 1120.77187097282,-118.060028397752 34.3493955091373 1531.91638195187,-117.976604049868 34.363480146242 1720.85009707367,-117.894336528714 34.377308729912 1947.04321289366,-117.828082792363 34.3884100475657 1571.26008907924,-117.751376286448 34.4012063858746 1700.71484374996,-117.682481635952 34.4126591077 1550.66247528041,-117.617191706658 34.4234756780746 1290.07617187468,-117.550087310057 34.4345517270133 1161.1295173484,-117.482689576526 34.4456353398644 1096.66674743904,-117.506925922058 34.530435428607 931.641174041696,-117.528585579219 34.6156581392602 890.22561553607,-117.54671314656 34.7014580589525 1017.096679687,-117.570873525277 34.7862757772161 859.747863768964,-117.59207159806 34.871577676553 843.694519042567,-117.614159877774 34.9567361289629 786.888650710025,-117.635755241316 35.0419761919112 754.54467675034,-117.654709143162 35.1276462689462 847.498962401925,-117.67611782335 35.2129190040495 826.187012163991,-117.69209300021 35.2990728805964 1061.01232910061,-117.761271710933 35.2878040112528 1079.31604004034,-117.837732068655 35.2753034563456 823.23358153982,-117.914455776572 35.2627066418266 623.560240434715,-117.98831638316 35.2505276402536 614.783080267012,-118.060926865139 35.2385056743659 720.585631671674,-118.129360986055 35.2271286636835 1056.71936120458,-118.196381648979 35.2159444422866 1501.11876151622,-118.271931041301 35.2032938532624 1662.3077392721,-118.361230591937 35.188282127991 1370.13891601216,-118.446685787183 35.1738466336016 1315.51849485977,-118.424647404981 35.0885678968307 1322.42089843815,-118.395551489289 35.0044838241846 1588.78906205368,-118.392016505786 34.9160782858475 921.418579101411,-118.374951636001 34.82996022556 749.714538578139,-118.353005353527 34.7446704215085 756.640014648254,-118.328030889496 34.6598963574499 875.14739990388,-118.294714210138 34.5765413984109 1301.26330583215,-118.285687354598 34.4890625828729 837.687561035157,-118.255150667391 34.4052412272057 1164.24100365106,-118.229299403331 34.3206258749987 1320.76281740076))",
+  "radarBand": "L"
+ },
+ "polarizations": [
+  "HH"
+ ],
+ "datasets": {
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer3/slantRangeOffset": {
+   "shape": [
+    1555,
+    1136
+   ],
+   "dtype": "float32",
+   "attrs": {
+    "units": "meters",
+    "_FillValue": "nan",
+    "description": "Raw (unculled, unfiltered) slant range pixel offsets",
+    "grid_mapping": "projection"
+   },
+   "measurement": "goff-range",
+   "epsg": 32611,
+   "posting_m": [
+    80.0,
+    -80.0
+   ],
+   "bounds": [
+    365520.0,
+    3789260.0,
+    456320.0,
+    3913580.0
+   ]
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer3/alongTrackOffset": {
+   "shape": [
+    1555,
+    1136
+   ],
+   "dtype": "float32",
+   "attrs": {
+    "units": "meters",
+    "_FillValue": "nan",
+    "description": "Raw (unculled, unfiltered) along-track pixel offsets",
+    "grid_mapping": "projection"
+   },
+   "measurement": "goff-azimuth",
+   "epsg": 32611,
+   "posting_m": [
+    80.0,
+    -80.0
+   ],
+   "bounds": [
+    365520.0,
+    3789260.0,
+    456320.0,
+    3913580.0
+   ]
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer3/snr": {
+   "shape": [
+    1555,
+    1136
+   ],
+   "dtype": "float32",
+   "attrs": {
+    "units": "1",
+    "_FillValue": "nan",
+    "description": "Pixel offsets signal-to-noise ratio",
+    "grid_mapping": "projection"
+   },
+   "measurement": "goff-snr",
+   "epsg": 32611,
+   "posting_m": [
+    80.0,
+    -80.0
+   ],
+   "bounds": [
+    365520.0,
+    3789260.0,
+    456320.0,
+    3913580.0
+   ]
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer3/correlationSurfacePeak": {
+   "shape": [
+    1555,
+    1136
+   ],
+   "dtype": "float32",
+   "attrs": {
+    "units": "1",
+    "_FillValue": "nan",
+    "description": "Normalized correlation surface peak",
+    "grid_mapping": "projection"
+   },
+   "measurement": "goff-peak",
+   "epsg": 32611,
+   "posting_m": [
+    80.0,
+    -80.0
+   ],
+   "bounds": [
+    365520.0,
+    3789260.0,
+    456320.0,
+    3913580.0
+   ]
+  }
+ },
+ "missing": [],
+ "unit_mismatch": [],
+ "mask_present": true,
+ "group_count": 30,
+ "dataset_count": 186,
+ "all_datasets": {
+  "/science/LSAR/GOFF/grids/frequencyA/centerFrequency": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "hertz"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/listOfLayers": {
+   "shape": [
+    3
+   ],
+   "dtype": "|S6",
+   "units": null
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/listOfPolarizations": {
+   "shape": [
+    1
+   ],
+   "dtype": "|S2",
+   "units": null
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer1/alongTrackOffset": {
+   "shape": [
+    1555,
+    1136
+   ],
+   "dtype": "float32",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer1/alongTrackOffsetVariance": {
+   "shape": [
+    1555,
+    1136
+   ],
+   "dtype": "float32",
+   "units": "meters^2"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer1/correlationSurfacePeak": {
+   "shape": [
+    1555,
+    1136
+   ],
+   "dtype": "float32",
+   "units": "1"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer1/crossOffsetVariance": {
+   "shape": [
+    1555,
+    1136
+   ],
+   "dtype": "float32",
+   "units": "meters^2"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer1/projection": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": null
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer1/slantRangeOffset": {
+   "shape": [
+    1555,
+    1136
+   ],
+   "dtype": "float32",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer1/slantRangeOffsetVariance": {
+   "shape": [
+    1555,
+    1136
+   ],
+   "dtype": "float32",
+   "units": "meters^2"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer1/snr": {
+   "shape": [
+    1555,
+    1136
+   ],
+   "dtype": "float32",
+   "units": "1"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer1/xCoordinateSpacing": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer1/xCoordinates": {
+   "shape": [
+    1136
+   ],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer1/yCoordinateSpacing": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer1/yCoordinates": {
+   "shape": [
+    1555
+   ],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer2/alongTrackOffset": {
+   "shape": [
+    1555,
+    1136
+   ],
+   "dtype": "float32",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer2/alongTrackOffsetVariance": {
+   "shape": [
+    1555,
+    1136
+   ],
+   "dtype": "float32",
+   "units": "meters^2"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer2/correlationSurfacePeak": {
+   "shape": [
+    1555,
+    1136
+   ],
+   "dtype": "float32",
+   "units": "1"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer2/crossOffsetVariance": {
+   "shape": [
+    1555,
+    1136
+   ],
+   "dtype": "float32",
+   "units": "meters^2"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer2/projection": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": null
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer2/slantRangeOffset": {
+   "shape": [
+    1555,
+    1136
+   ],
+   "dtype": "float32",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer2/slantRangeOffsetVariance": {
+   "shape": [
+    1555,
+    1136
+   ],
+   "dtype": "float32",
+   "units": "meters^2"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer2/snr": {
+   "shape": [
+    1555,
+    1136
+   ],
+   "dtype": "float32",
+   "units": "1"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer2/xCoordinateSpacing": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer2/xCoordinates": {
+   "shape": [
+    1136
+   ],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer2/yCoordinateSpacing": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer2/yCoordinates": {
+   "shape": [
+    1555
+   ],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer3/alongTrackOffset": {
+   "shape": [
+    1555,
+    1136
+   ],
+   "dtype": "float32",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer3/alongTrackOffsetVariance": {
+   "shape": [
+    1555,
+    1136
+   ],
+   "dtype": "float32",
+   "units": "meters^2"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer3/correlationSurfacePeak": {
+   "shape": [
+    1555,
+    1136
+   ],
+   "dtype": "float32",
+   "units": "1"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer3/crossOffsetVariance": {
+   "shape": [
+    1555,
+    1136
+   ],
+   "dtype": "float32",
+   "units": "meters^2"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer3/projection": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": null
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer3/slantRangeOffset": {
+   "shape": [
+    1555,
+    1136
+   ],
+   "dtype": "float32",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer3/slantRangeOffsetVariance": {
+   "shape": [
+    1555,
+    1136
+   ],
+   "dtype": "float32",
+   "units": "meters^2"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer3/snr": {
+   "shape": [
+    1555,
+    1136
+   ],
+   "dtype": "float32",
+   "units": "1"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer3/xCoordinateSpacing": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer3/xCoordinates": {
+   "shape": [
+    1136
+   ],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer3/yCoordinateSpacing": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/HH/layer3/yCoordinates": {
+   "shape": [
+    1555
+   ],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/mask": {
+   "shape": [
+    1555,
+    1136
+   ],
+   "dtype": "uint8",
+   "units": null
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/projection": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": null
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/xCoordinateSpacing": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/xCoordinates": {
+   "shape": [
+    1136
+   ],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/yCoordinateSpacing": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/grids/frequencyA/pixelOffsets/yCoordinates": {
+   "shape": [
+    1555
+   ],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/metadata/attitude/reference/attitudeType": {
+   "shape": [],
+   "dtype": "|S10",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/attitude/reference/eulerAngles": {
+   "shape": [
+    22,
+    3
+   ],
+   "dtype": "float64",
+   "units": "degrees"
+  },
+  "/science/LSAR/GOFF/metadata/attitude/reference/quaternions": {
+   "shape": [
+    22,
+    4
+   ],
+   "dtype": "float64",
+   "units": "1"
+  },
+  "/science/LSAR/GOFF/metadata/attitude/reference/time": {
+   "shape": [
+    22
+   ],
+   "dtype": "float64",
+   "units": "seconds since 2008-10-12T00:00:00"
+  },
+  "/science/LSAR/GOFF/metadata/attitude/secondary/attitudeType": {
+   "shape": [],
+   "dtype": "|S10",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/attitude/secondary/eulerAngles": {
+   "shape": [
+    22,
+    3
+   ],
+   "dtype": "float64",
+   "units": "degrees"
+  },
+  "/science/LSAR/GOFF/metadata/attitude/secondary/quaternions": {
+   "shape": [
+    22,
+    4
+   ],
+   "dtype": "float64",
+   "units": "1"
+  },
+  "/science/LSAR/GOFF/metadata/attitude/secondary/time": {
+   "shape": [
+    22
+   ],
+   "dtype": "float64",
+   "units": "seconds since 2008-11-27T00:00:00"
+  },
+  "/science/LSAR/GOFF/metadata/orbit/reference/interpMethod": {
+   "shape": [],
+   "dtype": "|S7",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/orbit/reference/orbitType": {
+   "shape": [],
+   "dtype": "|S3",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/orbit/reference/position": {
+   "shape": [
+    8,
+    3
+   ],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/metadata/orbit/reference/time": {
+   "shape": [
+    8
+   ],
+   "dtype": "float64",
+   "units": "seconds since 2008-10-12T00:00:00"
+  },
+  "/science/LSAR/GOFF/metadata/orbit/reference/velocity": {
+   "shape": [
+    8,
+    3
+   ],
+   "dtype": "float64",
+   "units": "meters / second"
+  },
+  "/science/LSAR/GOFF/metadata/orbit/secondary/interpMethod": {
+   "shape": [],
+   "dtype": "|S7",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/orbit/secondary/orbitType": {
+   "shape": [],
+   "dtype": "|S3",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/orbit/secondary/position": {
+   "shape": [
+    9,
+    3
+   ],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/metadata/orbit/secondary/time": {
+   "shape": [
+    9
+   ],
+   "dtype": "float64",
+   "units": "seconds since 2008-11-27T00:00:00"
+  },
+  "/science/LSAR/GOFF/metadata/orbit/secondary/velocity": {
+   "shape": [
+    9,
+    3
+   ],
+   "dtype": "float64",
+   "units": "meters / second"
+  },
+  "/science/LSAR/GOFF/metadata/orbit/temporalBaseline": {
+   "shape": [],
+   "dtype": "uint16",
+   "units": "days"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/algorithms/coregistration/coregistrationMethod": {
+   "shape": [],
+   "dtype": "|S59",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/algorithms/coregistration/geometryCoregistration": {
+   "shape": [],
+   "dtype": "|S54",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/algorithms/coregistration/resampling": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/algorithms/crossCorrelation/layer1/crossCorrelationAlgorithm": {
+   "shape": [],
+   "dtype": "|S9",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/algorithms/crossCorrelation/layer2/crossCorrelationAlgorithm": {
+   "shape": [],
+   "dtype": "|S9",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/algorithms/crossCorrelation/layer3/crossCorrelationAlgorithm": {
+   "shape": [],
+   "dtype": "|S9",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/algorithms/geocoding/complexGeocodingInterpolation": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/algorithms/geocoding/demInterpolation": {
+   "shape": [],
+   "dtype": "|S9",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/algorithms/geocoding/floatingGeocodingInterpolation": {
+   "shape": [],
+   "dtype": "|S8",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/algorithms/geocoding/integerGeocodingInterpolation": {
+   "shape": [],
+   "dtype": "|S7",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/algorithms/softwareVersion": {
+   "shape": [],
+   "dtype": "|S6",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/inputs/configFiles": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/inputs/demSource": {
+   "shape": [],
+   "dtype": "|S167",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/inputs/l1ReferenceSlcGranules": {
+   "shape": [
+    1
+   ],
+   "dtype": "|S94",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/inputs/l1SecondarySlcGranules": {
+   "shape": [
+    1
+   ],
+   "dtype": "|S94",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/inputs/orbitFiles": {
+   "shape": [
+    1,
+    2
+   ],
+   "dtype": "|S39",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/common/frequencyA/dopplerBandwidth": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "hertz"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/common/frequencyA/dopplerCentroid": {
+   "shape": [
+    17,
+    17
+   ],
+   "dtype": "float64",
+   "units": "hertz"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/geocoding/azimuthIonosphericCorrectionApplied": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/geocoding/hydrostaticTroposphericCorrectionApplied": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/geocoding/rangeIonosphericCorrectionApplied": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/geocoding/wetTroposphericCorrectionApplied": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/pixelOffsets/frequencyA/alongTrackSkipWindowSize": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": "1"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/pixelOffsets/frequencyA/alongTrackStartPixel": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": "1"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/pixelOffsets/frequencyA/azimuthBandwidth": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "hertz"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/pixelOffsets/frequencyA/correlationSurfaceOversampling": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": "1"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/pixelOffsets/frequencyA/layer1/alongTrackSearchWindowSize": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": "1"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/pixelOffsets/frequencyA/layer1/alongTrackWindowSize": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": "1"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/pixelOffsets/frequencyA/layer1/slantRangeSearchWindowSize": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": "1"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/pixelOffsets/frequencyA/layer1/slantRangeWindowSize": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": "1"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/pixelOffsets/frequencyA/layer2/alongTrackSearchWindowSize": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": "1"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/pixelOffsets/frequencyA/layer2/alongTrackWindowSize": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": "1"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/pixelOffsets/frequencyA/layer2/slantRangeSearchWindowSize": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": "1"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/pixelOffsets/frequencyA/layer2/slantRangeWindowSize": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": "1"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/pixelOffsets/frequencyA/layer3/alongTrackSearchWindowSize": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": "1"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/pixelOffsets/frequencyA/layer3/alongTrackWindowSize": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": "1"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/pixelOffsets/frequencyA/layer3/slantRangeSearchWindowSize": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": "1"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/pixelOffsets/frequencyA/layer3/slantRangeWindowSize": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": "1"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/pixelOffsets/frequencyA/margin": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": "1"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/pixelOffsets/frequencyA/rangeBandwidth": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "hertz"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/pixelOffsets/frequencyA/slantRangeSkipWindowSize": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": "1"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/pixelOffsets/frequencyA/slantRangeStartPixel": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": "1"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/reference/frequencyA/azimuthBandwidth": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "hertz"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/reference/frequencyA/dopplerCentroid": {
+   "shape": [
+    17,
+    17
+   ],
+   "dtype": "float64",
+   "units": "hertz"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/reference/frequencyA/numberOfAzimuthLines": {
+   "shape": [],
+   "dtype": "uint64",
+   "units": "1"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/reference/frequencyA/numberOfRangeSamples": {
+   "shape": [],
+   "dtype": "uint64",
+   "units": "1"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/reference/frequencyA/rangeBandwidth": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "hertz"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/reference/frequencyA/slantRangeSpacing": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/reference/frequencyA/slantRangeStart": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/reference/frequencyA/zeroDopplerEndTime": {
+   "shape": [],
+   "dtype": "|S29",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/reference/frequencyA/zeroDopplerStartTime": {
+   "shape": [],
+   "dtype": "|S29",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/reference/frequencyA/zeroDopplerTimeSpacing": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "seconds"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/reference/isMixedMode": {
+   "shape": [],
+   "dtype": "|S5",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/reference/referenceTerrainHeight": {
+   "shape": [
+    17
+   ],
+   "dtype": "float32",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/reference/rfiMitigationApplied": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/runConfigurationContents": {
+   "shape": [],
+   "dtype": "|S17600",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/secondary/frequencyA/azimuthBandwidth": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "hertz"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/secondary/frequencyA/dopplerCentroid": {
+   "shape": [
+    17,
+    17
+   ],
+   "dtype": "float64",
+   "units": "hertz"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/secondary/frequencyA/numberOfAzimuthLines": {
+   "shape": [],
+   "dtype": "uint64",
+   "units": "1"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/secondary/frequencyA/numberOfRangeSamples": {
+   "shape": [],
+   "dtype": "uint64",
+   "units": "1"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/secondary/frequencyA/rangeBandwidth": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "hertz"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/secondary/frequencyA/slantRangeSpacing": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/secondary/frequencyA/slantRangeStart": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/secondary/frequencyA/zeroDopplerEndTime": {
+   "shape": [],
+   "dtype": "|S29",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/secondary/frequencyA/zeroDopplerStartTime": {
+   "shape": [],
+   "dtype": "|S29",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/secondary/frequencyA/zeroDopplerTimeSpacing": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "seconds"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/secondary/isMixedMode": {
+   "shape": [],
+   "dtype": "|S5",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/secondary/referenceTerrainHeight": {
+   "shape": [
+    17
+   ],
+   "dtype": "float32",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/metadata/processingInformation/parameters/secondary/rfiMitigationApplied": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/radarGrid/alongTrackUnitVectorX": {
+   "shape": [
+    20,
+    261,
+    194
+   ],
+   "dtype": "float32",
+   "units": "1"
+  },
+  "/science/LSAR/GOFF/metadata/radarGrid/alongTrackUnitVectorY": {
+   "shape": [
+    20,
+    261,
+    194
+   ],
+   "dtype": "float32",
+   "units": "1"
+  },
+  "/science/LSAR/GOFF/metadata/radarGrid/elevationAngle": {
+   "shape": [
+    20,
+    261,
+    194
+   ],
+   "dtype": "float32",
+   "units": "degrees"
+  },
+  "/science/LSAR/GOFF/metadata/radarGrid/groundTrackVelocity": {
+   "shape": [
+    20,
+    261,
+    194
+   ],
+   "dtype": "float64",
+   "units": "meters / second"
+  },
+  "/science/LSAR/GOFF/metadata/radarGrid/heightAboveEllipsoid": {
+   "shape": [
+    20
+   ],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/metadata/radarGrid/incidenceAngle": {
+   "shape": [
+    20,
+    261,
+    194
+   ],
+   "dtype": "float32",
+   "units": "degrees"
+  },
+  "/science/LSAR/GOFF/metadata/radarGrid/losUnitVectorX": {
+   "shape": [
+    20,
+    261,
+    194
+   ],
+   "dtype": "float32",
+   "units": "1"
+  },
+  "/science/LSAR/GOFF/metadata/radarGrid/losUnitVectorY": {
+   "shape": [
+    20,
+    261,
+    194
+   ],
+   "dtype": "float32",
+   "units": "1"
+  },
+  "/science/LSAR/GOFF/metadata/radarGrid/parallelBaseline": {
+   "shape": [
+    2,
+    261,
+    194
+   ],
+   "dtype": "float32",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/metadata/radarGrid/perpendicularBaseline": {
+   "shape": [
+    2,
+    261,
+    194
+   ],
+   "dtype": "float32",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/metadata/radarGrid/projection": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": null
+  },
+  "/science/LSAR/GOFF/metadata/radarGrid/referenceSlantRange": {
+   "shape": [
+    20,
+    261,
+    194
+   ],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/metadata/radarGrid/referenceZeroDopplerAzimuthTime": {
+   "shape": [
+    20,
+    261,
+    194
+   ],
+   "dtype": "float64",
+   "units": "seconds since 2008-10-12T00:00:00"
+  },
+  "/science/LSAR/GOFF/metadata/radarGrid/secondarySlantRange": {
+   "shape": [
+    20,
+    261,
+    194
+   ],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/metadata/radarGrid/secondaryZeroDopplerAzimuthTime": {
+   "shape": [
+    20,
+    261,
+    194
+   ],
+   "dtype": "float64",
+   "units": "seconds since 2008-11-27T00:00:00"
+  },
+  "/science/LSAR/GOFF/metadata/radarGrid/xCoordinates": {
+   "shape": [
+    194
+   ],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GOFF/metadata/radarGrid/yCoordinates": {
+   "shape": [
+    261
+   ],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/identification/boundingPolygon": {
+   "shape": [],
+   "dtype": "|S2120",
+   "units": null
+  },
+  "/science/LSAR/identification/compositeReleaseId": {
+   "shape": [],
+   "dtype": "|S6",
+   "units": null
+  },
+  "/science/LSAR/identification/diagnosticModeFlag": {
+   "shape": [],
+   "dtype": "uint8",
+   "units": null
+  },
+  "/science/LSAR/identification/frameNumber": {
+   "shape": [],
+   "dtype": "uint16",
+   "units": null
+  },
+  "/science/LSAR/identification/granuleId": {
+   "shape": [],
+   "dtype": "|S123",
+   "units": null
+  },
+  "/science/LSAR/identification/instrumentName": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/identification/isDithered": {
+   "shape": [],
+   "dtype": "|S5",
+   "units": null
+  },
+  "/science/LSAR/identification/isFullFrame": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/identification/isGeocoded": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/identification/isMixedMode": {
+   "shape": [],
+   "dtype": "|S5",
+   "units": null
+  },
+  "/science/LSAR/identification/isUrgentObservation": {
+   "shape": [],
+   "dtype": "|S5",
+   "units": null
+  },
+  "/science/LSAR/identification/listOfFrequencies": {
+   "shape": [
+    1
+   ],
+   "dtype": "|S1",
+   "units": null
+  },
+  "/science/LSAR/identification/lookDirection": {
+   "shape": [],
+   "dtype": "|S5",
+   "units": null
+  },
+  "/science/LSAR/identification/missionId": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/identification/orbitPassDirection": {
+   "shape": [],
+   "dtype": "|S9",
+   "units": null
+  },
+  "/science/LSAR/identification/plannedDatatakeId": {
+   "shape": [
+    1
+   ],
+   "dtype": "|S1",
+   "units": null
+  },
+  "/science/LSAR/identification/plannedObservationId": {
+   "shape": [
+    1
+   ],
+   "dtype": "|S1",
+   "units": null
+  },
+  "/science/LSAR/identification/platformName": {
+   "shape": [],
+   "dtype": "|S15",
+   "units": null
+  },
+  "/science/LSAR/identification/processingCenter": {
+   "shape": [],
+   "dtype": "|S3",
+   "units": null
+  },
+  "/science/LSAR/identification/processingDateTime": {
+   "shape": [],
+   "dtype": "|S19",
+   "units": null
+  },
+  "/science/LSAR/identification/processingType": {
+   "shape": [],
+   "dtype": "|S7",
+   "units": null
+  },
+  "/science/LSAR/identification/productDoi": {
+   "shape": [],
+   "dtype": "|S19",
+   "units": null
+  },
+  "/science/LSAR/identification/productLevel": {
+   "shape": [],
+   "dtype": "|S2",
+   "units": null
+  },
+  "/science/LSAR/identification/productSpecificationVersion": {
+   "shape": [],
+   "dtype": "|S5",
+   "units": null
+  },
+  "/science/LSAR/identification/productType": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/identification/productVersion": {
+   "shape": [],
+   "dtype": "|S5",
+   "units": null
+  },
+  "/science/LSAR/identification/radarBand": {
+   "shape": [],
+   "dtype": "|S1",
+   "units": null
+  },
+  "/science/LSAR/identification/referenceAbsoluteOrbitNumber": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": null
+  },
+  "/science/LSAR/identification/referenceIsJointObservation": {
+   "shape": [],
+   "dtype": "|S5",
+   "units": null
+  },
+  "/science/LSAR/identification/referenceZeroDopplerEndTime": {
+   "shape": [],
+   "dtype": "|S29",
+   "units": null
+  },
+  "/science/LSAR/identification/referenceZeroDopplerStartTime": {
+   "shape": [],
+   "dtype": "|S29",
+   "units": null
+  },
+  "/science/LSAR/identification/secondaryAbsoluteOrbitNumber": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": null
+  },
+  "/science/LSAR/identification/secondaryIsJointObservation": {
+   "shape": [],
+   "dtype": "|S5",
+   "units": null
+  },
+  "/science/LSAR/identification/secondaryZeroDopplerEndTime": {
+   "shape": [],
+   "dtype": "|S29",
+   "units": null
+  },
+  "/science/LSAR/identification/secondaryZeroDopplerStartTime": {
+   "shape": [],
+   "dtype": "|S29",
+   "units": null
+  },
+  "/science/LSAR/identification/trackNumber": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": null
+  }
+ }
+}

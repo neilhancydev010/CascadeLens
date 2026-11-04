@@ -1,0 +1,38 @@
+{
+  "aoi_bbox": [84.3976, 27.7320, 85.5508, 28.3500],
+  "crid": "P05023",
+  "goff_layer": 3,
+  "gross_outlier_mad_k": 10,
+  "snr_min": null,
+  "coherence_threshold": null,
+  "min_valid_fraction": 0.01,
+  "tile_zoom": [8, 12],
+  "pairs": [
+    {
+      "id": "pair-a",
+      "label": "16\u201328 August 2026",
+      "role": "Primary interferometric investigation",
+      "direction": "DESCENDING",
+      "track": 48,
+      "frames": [74, 75],
+      "ref_date": "2026-08-16",
+      "sec_date": "2026-08-28",
+      "products": ["GUNW", "GOFF"]
+    },
+    {
+      "id": "pair-b",
+      "label": "19\u201331 August 2026",
+      "role": "Secondary pixel-offset investigation",
+      "direction": "ASCENDING",
+      "track": 98,
+      "frames": [15, 16],
+      "ref_date": "2026-08-19",
+      "sec_date": "2026-08-31",
+      "products": ["GOFF"]
+    }
+  ],
+  "snapshots": [
+    {"id": "gcov-0828", "label": "28 August 2026", "direction": "DESCENDING", "track": 48, "frames": [74, 75], "date": "2026-08-28"},
+    {"id": "gcov-0831", "label": "31 August 2026", "direction": "ASCENDING", "track": 98, "frames": [15, 16], "date": "2026-08-31"}
+  ]
+}

@@ -1,0 +1,824 @@
+{
+ "layers": [
+  {
+   "id": "context:terrain",
+   "groupId": null,
+   "name": "Terrain elevation",
+   "category": "terrain",
+   "mission": "Copernicus DEM",
+   "instrument": "TanDEM-X derived",
+   "productType": "GLO-30",
+   "measurementClass": "reference map",
+   "measurementType": "elevation",
+   "kind": "continuous",
+   "units": "m",
+   "unitsNote": "Metres above the EGM2008 geoid.",
+   "acquisition": {
+    "reference": "2011-2015 (source campaign)",
+    "secondary": null
+   },
+   "postingM": [
+    30,
+    30
+   ],
+   "crs": "EPSG:4326",
+   "status": "sampleable",
+   "statusReason": null,
+   "stats": {
+    "count": 9234048,
+    "min": 181.0,
+    "max": 7216.1572265625,
+    "mean": 1907.4765625,
+    "median": 1476.20458984375,
+    "p2": 391.4280725097656,
+    "p98": 5106.575224609375,
+    "displayMin": 300.0,
+    "displayMax": 6500.0,
+    "histogram": {
+     "edges": [
+      300.0,
+      455.0,
+      610.0,
+      765.0,
+      920.0,
+      1075.0,
+      1230.0,
+      1385.0,
+      1540.0,
+      1695.0,
+      1850.0,
+      2005.0,
+      2160.0,
+      2315.0,
+      2470.0,
+      2625.0,
+      2780.0,
+      2935.0,
+      3090.0,
+      3245.0,
+      3400.0,
+      3555.0,
+      3710.0,
+      3865.0,
+      4020.0,
+      4175.0,
+      4330.0,
+      4485.0,
+      4640.0,
+      4795.0,
+      4950.0,
+      5105.0,
+      5260.0,
+      5415.0,
+      5570.0,
+      5725.0,
+      5880.0,
+      6035.0,
+      6190.0,
+      6345.0,
+      6500.0
+     ],
+     "counts": [
+      255068,
+      585757,
+      718021,
+      772302,
+      735461,
+      621310,
+      574922,
+      455764,
+      377051,
+      338062,
+      305454,
+      281395,
+      263586,
+      244178,
+      226629,
+      222843,
+      214000,
+      204606,
+      198008,
+      179640,
+      161391,
+      147451,
+      131731,
+      125515,
+      116783,
+      109663,
+      100585,
+      94944,
+      83849,
+      70361,
+      59595,
+      48598,
+      38431,
+      28105,
+      18476,
+      12847,
+      9798,
+      7865,
+      6822,
+      5198
+     ]
+    }
+   },
+   "qualityLayerIds": [],
+   "orbitDirection": null,
+   "track": null,
+   "frames": [],
+   "legend": {
+    "type": "continuous",
+    "stops": [
+     "#31543b",
+     "#6f8a4f",
+     "#c9b98a",
+     "#a08570",
+     "#ffffff"
+    ],
+    "min": 300,
+    "max": 6500,
+    "unit": "m"
+   },
+   "sources": [
+    {
+     "frame": null,
+     "granule": "Copernicus DEM GLO-30",
+     "sourceFilename": "Copernicus_DSM_COG_10_N27_00_E084_00_DEM.tif, Copernicus_DSM_COG_10_N27_00_E085_00_DEM.tif, Copernicus_DSM_COG_10_N28_00_E084_00_DEM.tif, Copernicus_DSM_COG_10_N28_00_E085_00_DEM.tif",
+     "bounds": [
+      84.3976,
+      27.731944444444444,
+      85.55093333333333,
+      28.35
+     ],
+     "validFraction": 0.9995505617977528,
+     "sampling": "data/sampling/context/copdem_glo30.tif",
+     "validity": "data/sampling/context/copdem_glo30_validity.tif",
+     "tiles": {
+      "url": "data/tiles/context/terrain/{z}/{x}/{y}.png",
+      "minzoom": 7,
+      "maxzoom": 12,
+      "count": 180
+     }
+    }
+   ],
+   "attribution": "\u00a9 DLR e.V. 2010-2014 and \u00a9 Airbus Defence and Space GmbH 2014-2018, provided under COPERNICUS by the European Union and ESA",
+   "limitations": [
+    "A pre-event surface model: it does not show changes from the 2026 event."
+   ],
+   "sourceGranules": [],
+   "productMaturity": "Released product"
+  },
+  {
+   "id": "ref:unosat-extent",
+   "groupId": null,
+   "name": "UNOSAT mudflow/rockflow extent (64.91 km\u00b2)",
+   "category": "reference",
+   "mission": "UNOSAT",
+   "instrument": "Multi-sensor optical/satellite analysis",
+   "productType": "Vector",
+   "measurementClass": "reference map",
+   "measurementType": "reference",
+   "kind": "vector",
+   "units": null,
+   "acquisition": {
+    "reference": "26\u201328 August 2026",
+    "secondary": null
+   },
+   "crs": "EPSG:4326",
+   "status": "prepared",
+   "statusReason": null,
+   "qualityLayerIds": [],
+   "orbitDirection": null,
+   "track": null,
+   "frames": [],
+   "sources": [],
+   "vector": {
+    "url": "data/vectors/unosat_mudflow_extent.geojson",
+    "type": "fill",
+    "color": "#e8590c",
+    "opacity": 0.45,
+    "bounds": [
+     84.35580189000007,
+     27.67761842500005,
+     85.52992941500008,
+     28.340450630000078
+    ]
+   },
+   "attribution": "UNOSAT/UNITAR, event FL20260826NPL, CC BY-SA",
+   "limitations": [
+    "UNOSAT records this layer as 'Not yet field validated'. Preliminary satellite-based mapping, not ground truth.",
+    "Independent of NISAR. Area computed here in UTM 45N from the polygon, because the source's Area_ha attribute duplicates Area_m2."
+   ],
+   "sourceGranules": [],
+   "productMaturity": "Preliminary",
+   "page": "https://data.humdata.org/dataset/mudflow-rockflow-impact-assessment-in-rasuwa-nuwakot-districts-bagmati-province-nepal-as-o"
+  },
+  {
+   "id": "ref:unosat-analysis",
+   "groupId": null,
+   "name": "UNOSAT analysis extent",
+   "category": "reference",
+   "mission": "UNOSAT",
+   "instrument": "Analysis boundary",
+   "productType": "Vector",
+   "measurementClass": "reference map",
+   "measurementType": "reference",
+   "kind": "vector",
+   "units": null,
+   "acquisition": {
+    "reference": "26\u201328 August 2026",
+    "secondary": null
+   },
+   "crs": "EPSG:4326",
+   "status": "prepared",
+   "statusReason": null,
+   "qualityLayerIds": [],
+   "orbitDirection": null,
+   "track": null,
+   "frames": [],
+   "sources": [],
+   "vector": {
+    "url": "data/vectors/unosat_analysis_extent.geojson",
+    "type": "line",
+    "color": "#f5f5f5",
+    "opacity": 0.8,
+    "dash": true,
+    "bounds": [
+     84.34876337900005,
+     27.666659908000042,
+     85.53477648700004,
+     28.34607860400007
+    ]
+   },
+   "attribution": "UNOSAT/UNITAR, event FL20260826NPL, CC BY-SA",
+   "limitations": [
+    "Absence of mapped impact outside this boundary says nothing: it was not analysed."
+   ],
+   "sourceGranules": [],
+   "productMaturity": "Preliminary",
+   "page": "https://data.humdata.org/dataset/mudflow-rockflow-impact-assessment-in-rasuwa-nuwakot-districts-bagmati-province-nepal-as-o"
+  },
+  {
+   "id": "ref:unosat-lakes",
+   "groupId": null,
+   "name": "UNOSAT barrier lakes (0.31 km\u00b2)",
+   "category": "reference",
+   "mission": "UNOSAT",
+   "instrument": "Cartosat-3",
+   "productType": "Vector",
+   "measurementClass": "reference map",
+   "measurementType": "reference",
+   "kind": "vector",
+   "units": null,
+   "acquisition": {
+    "reference": "28 August 2026",
+    "secondary": null
+   },
+   "crs": "EPSG:4326",
+   "status": "prepared",
+   "statusReason": null,
+   "qualityLayerIds": [],
+   "orbitDirection": null,
+   "track": null,
+   "frames": [],
+   "sources": [],
+   "vector": {
+    "url": "data/vectors/unosat_barrier_lakes.geojson",
+    "type": "fill",
+    "color": "#1c7ed6",
+    "opacity": 0.75,
+    "bounds": [
+     85.47667158900003,
+     28.289752570000076,
+     85.51333890700005,
+     28.33416307600004
+    ]
+   },
+   "attribution": "UNOSAT/UNITAR, event FL20260826NPL, CC BY-SA",
+   "limitations": [
+    "UNOSAT records this layer as 'Not yet field validated'. Preliminary satellite-based mapping, not ground truth."
+   ],
+   "sourceGranules": [],
+   "productMaturity": "Preliminary",
+   "page": "https://data.humdata.org/dataset/mudflow-rockflow-impact-assessment-in-rasuwa-nuwakot-districts-bagmati-province-nepal-as-o"
+  },
+  {
+   "id": "ref:unosat-detachment",
+   "groupId": null,
+   "name": "UNOSAT detachment zone (1.96 km\u00b2)",
+   "category": "reference",
+   "mission": "UNOSAT",
+   "instrument": "Landsat-9",
+   "productType": "Vector",
+   "measurementClass": "reference map",
+   "measurementType": "reference",
+   "kind": "vector",
+   "units": null,
+   "acquisition": {
+    "reference": "26 August 2026 (see limitations)",
+    "secondary": null
+   },
+   "crs": "EPSG:4326",
+   "status": "prepared",
+   "statusReason": null,
+   "qualityLayerIds": [],
+   "orbitDirection": null,
+   "track": null,
+   "frames": [],
+   "sources": [],
+   "vector": {
+    "url": "data/vectors/unosat_detachment_zone.geojson",
+    "type": "fill",
+    "color": "#fa5252",
+    "opacity": 0.55,
+    "bounds": [
+     85.51087808100004,
+     28.282191411000042,
+     85.52993214900005,
+     28.29579750700009
+    ]
+   },
+   "attribution": "UNOSAT/UNITAR, event FL20260826NPL, CC BY-SA",
+   "limitations": [
+    "UNOSAT records this layer as 'Not yet field validated'. Preliminary satellite-based mapping, not ground truth.",
+    "Source inconsistency: layer name says 26 August 2026 but its SensorDate attribute says 26 September 2026. Treat the date as unresolved."
+   ],
+   "sourceGranules": [],
+   "productMaturity": "Preliminary",
+   "page": "https://data.humdata.org/dataset/mudflow-rockflow-impact-assessment-in-rasuwa-nuwakot-districts-bagmati-province-nepal-as-o"
+  },
+  {
+   "id": "ref:unosat-roads",
+   "groupId": null,
+   "name": "UNOSAT affected roads",
+   "category": "reference",
+   "mission": "UNOSAT",
+   "instrument": "Multi-sensor analysis",
+   "productType": "Vector",
+   "measurementClass": "reference map",
+   "measurementType": "reference",
+   "kind": "vector",
+   "units": null,
+   "acquisition": {
+    "reference": "26\u201328 August 2026",
+    "secondary": null
+   },
+   "crs": "EPSG:4326",
+   "status": "prepared",
+   "statusReason": null,
+   "qualityLayerIds": [],
+   "orbitDirection": null,
+   "track": null,
+   "frames": [],
+   "sources": [],
+   "vector": {
+    "url": "data/vectors/unosat_affected_roads.geojson",
+    "type": "line",
+    "color": "#ffd43b",
+    "opacity": 0.95,
+    "bounds": [
+     84.37061429100004,
+     27.678270868000027,
+     85.37862930000006,
+     28.279147900000055
+    ]
+   },
+   "attribution": "UNOSAT/UNITAR, event FL20260826NPL, CC BY-SA",
+   "limitations": [
+    "UNOSAT records this layer as 'Not yet field validated'. Preliminary satellite-based mapping, not ground truth.",
+    "Clipped to the UNOSAT analysis extent because the source contains stray vertices outside Nepal."
+   ],
+   "sourceGranules": [],
+   "productMaturity": "Preliminary",
+   "page": "https://data.humdata.org/dataset/mudflow-rockflow-impact-assessment-in-rasuwa-nuwakot-districts-bagmati-province-nepal-as-o"
+  },
+  {
+   "id": "ref:unosat-buildings",
+   "groupId": null,
+   "name": "UNOSAT affected structures (5,048 points)",
+   "category": "reference",
+   "mission": "UNOSAT",
+   "instrument": "Multi-sensor analysis",
+   "productType": "Vector",
+   "measurementClass": "reference map",
+   "measurementType": "reference",
+   "kind": "vector",
+   "units": null,
+   "acquisition": {
+    "reference": "26\u201328 August 2026",
+    "secondary": null
+   },
+   "crs": "EPSG:4326",
+   "status": "prepared",
+   "statusReason": null,
+   "qualityLayerIds": [],
+   "orbitDirection": null,
+   "track": null,
+   "frames": [],
+   "sources": [],
+   "vector": {
+    "url": "data/vectors/unosat_affected_buildings.geojson",
+    "type": "circle",
+    "color": "#ffa94d",
+    "opacity": 0.9,
+    "radius": 2,
+    "bounds": [
+     84.39963138800005,
+     27.74260229400005,
+     85.38403350100003,
+     28.304887655000073
+    ]
+   },
+   "attribution": "UNOSAT/UNITAR, event FL20260826NPL, CC BY-SA",
+   "limitations": [
+    "UNOSAT records this layer as 'Not yet field validated'. Preliminary satellite-based mapping, not ground truth."
+   ],
+   "sourceGranules": [],
+   "productMaturity": "Preliminary",
+   "page": "https://data.humdata.org/dataset/mudflow-rockflow-impact-assessment-in-rasuwa-nuwakot-districts-bagmati-province-nepal-as-o"
+  },
+  {
+   "id": "ref:eos-dpm",
+   "groupId": null,
+   "name": "Sentinel-1 damage proxy map (EOS-RS)",
+   "category": "reference",
+   "mission": "Sentinel-1",
+   "instrument": "C-band SAR",
+   "productType": "Damage proxy map v0.9",
+   "measurementClass": "derived",
+   "measurementType": "reference",
+   "kind": "continuous",
+   "units": null,
+   "acquisition": {
+    "reference": "Before 5 May\u201316 Aug 2026; during 28 Aug 2026",
+    "secondary": null
+   },
+   "orbitDirection": null,
+   "track": null,
+   "frames": [],
+   "postingM": [
+    30,
+    30
+   ],
+   "crs": "EPSG:4326",
+   "qualityLayerIds": [],
+   "status": "renderable",
+   "statusReason": null,
+   "legend": {
+    "type": "continuous",
+    "stops": [
+     "#ffff00",
+     "#ff0000"
+    ],
+    "lowLabel": "Less change",
+    "highLabel": "More change",
+    "unit": null
+   },
+   "sources": [
+    {
+     "frame": null,
+     "granule": "EOSRS_2026_014_NPL_FL_20260828_DPM_S1_Glacial_v0.9",
+     "sourceFilename": "EOSRS_2026_014_NPL_FL_20260828_DPM_S1_Glacial_v0.9.tif",
+     "bounds": [
+      84.3976,
+      27.732,
+      85.5508,
+      28.35
+     ],
+     "tiles": {
+      "url": "data/tiles/context/eos_dpm/{z}/{x}/{y}.png",
+      "minzoom": 8,
+      "maxzoom": 12,
+      "count": 179
+     }
+    }
+   ],
+   "attribution": "Earth Observatory of Singapore - Remote Sensing Lab (EOS-RS). Contains modified Copernicus Sentinel data (2026), processed by ESA. CC BY",
+   "page": "https://data.humdata.org/dataset/nepal-damage-proxy-map-glacial-flood-aug-2026",
+   "limitations": [
+    "Not NISAR. Sentinel-1 is a separate C-band mission.",
+    "A coloured picture with no measurement values, so the inspector cannot sample it.",
+    "EOS-RS calls it preliminary guidance. It may be less reliable over vegetated or mountainous areas, and scattered pixels there may be false positives.",
+    "A lack of coloured pixels does not necessarily mean an absence of damage."
+   ],
+   "sourceGranules": [],
+   "productMaturity": "Preliminary v0.9"
+  },
+  {
+   "id": "ref:impact-change",
+   "groupId": null,
+   "name": "Sentinel-1 change screening (249 ha, REACH)",
+   "category": "reference",
+   "mission": "Sentinel-1",
+   "instrument": "Sentinel-1 backscatter change",
+   "productType": "Vector",
+   "measurementClass": "derived",
+   "measurementType": "reference",
+   "kind": "vector",
+   "units": null,
+   "acquisition": {
+    "reference": "Baseline Aug 2025\u2013Aug 2026; post-event 28 Aug 2026",
+    "secondary": null
+   },
+   "crs": "EPSG:4326",
+   "status": "prepared",
+   "statusReason": null,
+   "qualityLayerIds": [],
+   "orbitDirection": null,
+   "track": null,
+   "frames": [],
+   "sources": [],
+   "vector": {
+    "url": "data/vectors/impact_s1_change.geojson",
+    "type": "fill",
+    "color": "#e599f7",
+    "opacity": 0.8,
+    "bounds": [
+     84.53720134774717,
+     27.794630811210347,
+     85.38030587339748,
+     28.28104567047512
+    ]
+   },
+   "attribution": "IMPACT Initiatives / REACH, using Copernicus Sentinel-1 data. CC BY",
+   "limitations": [
+    "Not NISAR. Sentinel-1 is a separate C-band mission.",
+    "Measures radar backscatter change, not structural damage. Debris, water, moisture, vegetation or clearance can all produce the signal, and damaged structures may show none.",
+    "Only assessed around pre-event built areas, so it says nothing about open ground."
+   ],
+   "sourceGranules": [],
+   "productMaturity": "Community-maintained",
+   "page": "https://data.humdata.org/dataset/nepal-flash-flood-damage-assessment-using-sentinel-1-radar-data"
+  },
+  {
+   "id": "ref:impact-area",
+   "groupId": null,
+   "name": "REACH analysed area",
+   "category": "reference",
+   "mission": "Sentinel-1",
+   "instrument": "Analysis boundary",
+   "productType": "Vector",
+   "measurementClass": "reference map",
+   "measurementType": "reference",
+   "kind": "vector",
+   "units": null,
+   "acquisition": {
+    "reference": "2 September 2026",
+    "secondary": null
+   },
+   "crs": "EPSG:4326",
+   "status": "prepared",
+   "statusReason": null,
+   "qualityLayerIds": [],
+   "orbitDirection": null,
+   "track": null,
+   "frames": [],
+   "sources": [],
+   "vector": {
+    "url": "data/vectors/impact_analyzed_area.geojson",
+    "type": "line",
+    "color": "#e599f7",
+    "opacity": 0.6,
+    "dash": true,
+    "bounds": [
+     84.52791320970925,
+     27.782868140673372,
+     85.56596468134063,
+     28.346078604787465
+    ]
+   },
+   "attribution": "IMPACT Initiatives / REACH, using Copernicus Sentinel-1 data. CC BY",
+   "limitations": [
+    "Absence of mapped change outside this boundary says nothing: it was not analysed."
+   ],
+   "sourceGranules": [],
+   "productMaturity": "Community-maintained",
+   "page": "https://data.humdata.org/dataset/nepal-flash-flood-damage-assessment-using-sentinel-1-radar-data"
+  },
+  {
+   "id": "ref:rivers",
+   "groupId": null,
+   "name": "Rivers (OSM)",
+   "category": "reference",
+   "mission": "OpenStreetMap",
+   "instrument": "OpenStreetMap",
+   "productType": "Vector",
+   "measurementClass": "contextual",
+   "measurementType": "reference",
+   "kind": "vector",
+   "units": null,
+   "acquisition": {
+    "reference": "HDX export, 2026",
+    "secondary": null
+   },
+   "crs": "EPSG:4326",
+   "status": "prepared",
+   "statusReason": null,
+   "qualityLayerIds": [],
+   "orbitDirection": null,
+   "track": null,
+   "frames": [],
+   "sources": [],
+   "vector": {
+    "url": "data/vectors/osm_rivers.geojson",
+    "type": "line",
+    "color": "#74c0fc",
+    "opacity": 0.85,
+    "bounds": [
+     84.4219815,
+     27.7214388,
+     85.4306907,
+     28.3305113
+    ]
+   },
+   "attribution": "\u00a9 OpenStreetMap contributors (ODbL), via HOT export on HDX",
+   "limitations": [
+    "Community mapping exported after the event; features may predate or postdate the disaster."
+   ],
+   "sourceGranules": [],
+   "productMaturity": "Community-maintained",
+   "page": "https://data.humdata.org/dataset/hot_flood_npl"
+  },
+  {
+   "id": "ref:roads",
+   "groupId": null,
+   "name": "Roads (OSM)",
+   "category": "reference",
+   "mission": "OpenStreetMap",
+   "instrument": "OpenStreetMap",
+   "productType": "Vector",
+   "measurementClass": "contextual",
+   "measurementType": "reference",
+   "kind": "vector",
+   "units": null,
+   "acquisition": {
+    "reference": "HDX export, 2026",
+    "secondary": null
+   },
+   "crs": "EPSG:4326",
+   "status": "prepared",
+   "statusReason": null,
+   "qualityLayerIds": [],
+   "orbitDirection": null,
+   "track": null,
+   "frames": [],
+   "sources": [],
+   "vector": {
+    "url": "data/vectors/osm_roads.geojson",
+    "type": "line",
+    "color": "#adb5bd",
+    "opacity": 0.7,
+    "bounds": [
+     84.5514228,
+     27.7681061,
+     85.4078909,
+     28.3064407
+    ]
+   },
+   "attribution": "\u00a9 OpenStreetMap contributors (ODbL), via HOT export on HDX",
+   "limitations": [
+    "Community mapping exported after the event; features may predate or postdate the disaster."
+   ],
+   "sourceGranules": [],
+   "productMaturity": "Community-maintained",
+   "page": "https://data.humdata.org/dataset/hot_flood_npl"
+  },
+  {
+   "id": "ref:places",
+   "groupId": null,
+   "name": "Settlements (OSM)",
+   "category": "reference",
+   "mission": "OpenStreetMap",
+   "instrument": "OpenStreetMap",
+   "productType": "Vector",
+   "measurementClass": "contextual",
+   "measurementType": "reference",
+   "kind": "vector",
+   "units": null,
+   "acquisition": {
+    "reference": "HDX export, 2026",
+    "secondary": null
+   },
+   "crs": "EPSG:4326",
+   "status": "prepared",
+   "statusReason": null,
+   "qualityLayerIds": [],
+   "orbitDirection": null,
+   "track": null,
+   "frames": [],
+   "sources": [],
+   "vector": {
+    "url": "data/vectors/osm_places.geojson",
+    "type": "label",
+    "bounds": [
+     84.560951,
+     27.8010451,
+     85.3777789,
+     28.2777749
+    ]
+   },
+   "attribution": "\u00a9 OpenStreetMap contributors (ODbL), via HOT export on HDX",
+   "limitations": [
+    "Community mapping exported after the event; features may predate or postdate the disaster."
+   ],
+   "sourceGranules": [],
+   "productMaturity": "Community-maintained",
+   "page": "https://data.humdata.org/dataset/hot_flood_npl"
+  },
+  {
+   "id": "ref:districts",
+   "groupId": null,
+   "name": "District boundaries (COD-AB)",
+   "category": "reference",
+   "mission": "COD-AB",
+   "instrument": "Survey Department of Nepal",
+   "productType": "Vector",
+   "measurementClass": "contextual",
+   "measurementType": "reference",
+   "kind": "vector",
+   "units": null,
+   "acquisition": {
+    "reference": "Valid from March 2024",
+    "secondary": null
+   },
+   "crs": "EPSG:4326",
+   "status": "prepared",
+   "statusReason": null,
+   "qualityLayerIds": [],
+   "orbitDirection": null,
+   "track": null,
+   "frames": [],
+   "sources": [],
+   "vector": {
+    "url": "data/vectors/districts.geojson",
+    "type": "line",
+    "color": "#c0b6f2",
+    "opacity": 0.7,
+    "dash": true,
+    "bounds": [
+     84.3976,
+     27.732,
+     85.5508,
+     28.35
+    ]
+   },
+   "attribution": "Survey Department of Nepal and UN RCO, via OCHA COD-AB. CC BY-IGO",
+   "limitations": [
+    "Administrative reference only."
+   ],
+   "sourceGranules": [],
+   "productMaturity": "Community-maintained",
+   "page": "https://data.humdata.org/dataset/cod-ab-npl"
+  }
+ ],
+ "bookmarks": [
+  {
+   "id": "source",
+   "name": "Mountain source area",
+   "bounds": [
+    85.4467,
+    28.2522,
+    85.5599,
+    28.3642
+   ],
+   "anchor": {
+    "lng": 85.5217,
+    "lat": 28.28895,
+    "label": "UNOSAT detachment zone"
+   },
+   "basis": "UNOSAT detachment zone and barrier lakes polygons, padded 0.03\u00b0. Approximate navigation frame."
+  },
+  {
+   "id": "bhote-koshi",
+   "name": "Bhote Koshi corridor",
+   "bounds": [
+    85.3213,
+    28.1444,
+    85.3977,
+    28.2981
+   ],
+   "anchor": {
+    "lng": 85.34274,
+    "lat": 28.16457,
+    "label": "Shyaphru Bensi"
+   },
+   "basis": "OSM waterways named Bhote Koshi, padded 0.02\u00b0. Approximate navigation frame."
+  },
+  {
+   "id": "trishuli",
+   "name": "Trishuli downstream corridor",
+   "bounds": [
+    84.402,
+    27.7213,
+    85.2044,
+    27.9931
+   ],
+   "anchor": {
+    "lng": 85.18595,
+    "lat": 27.97311,
+    "label": "Betrawati"
+   },
+   "basis": "OSM Trishuli waterways south of Betrawati, inside the search envelope, padded 0.02\u00b0. Approximate navigation frame."
+  }
+ ]
+}

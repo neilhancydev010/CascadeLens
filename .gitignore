@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+.netrc
+__pycache__/
+.pytest_cache/
+.venv/
+node_modules/
+dist/
+data/raw/**
+!data/raw/.gitkeep
+data/interim/**
+data/processed/**
+tests/fixtures/
+frontend/test-results/
+frontend/e2e/performance.json

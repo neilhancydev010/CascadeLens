@@ -1,0 +1,112 @@
+{
+ "file": "landmet_L3_20071231_v1.nc",
+ "variables": {
+  "FDtemps": {
+   "name": "Land surface skin temperature",
+   "validCells": 90696,
+   "maskedCells": 0,
+   "min": 225.6999969482422,
+   "max": 346.5
+  },
+  "NNta": {
+   "name": "Near-surface air temperature",
+   "validCells": 90696,
+   "maskedCells": 0,
+   "min": 216.6999969482422,
+   "max": 314.1000061035156
+  },
+  "ISDta": {
+   "name": "Station air temperature",
+   "validCells": 83240,
+   "maskedCells": 0,
+   "min": 213.1999969482422,
+   "max": 317.8000183105469
+  },
+  "psurf": {
+   "name": "Surface pressure",
+   "validCells": 90696,
+   "maskedCells": 0,
+   "min": 468.0,
+   "max": 1019.0
+  },
+  "NNrha": {
+   "name": "Near-surface relative humidity",
+   "validCells": 86807,
+   "maskedCells": 3889,
+   "min": 0.5,
+   "max": 150.0
+  },
+  "ISDwspeed": {
+   "name": "Station wind speed",
+   "validCells": 78911,
+   "maskedCells": 4329,
+   "min": 0.0,
+   "max": 118.5999984741211
+  },
+  "preciprate": {
+   "name": "Precipitation rate",
+   "validCells": 90696,
+   "maskedCells": 0,
+   "min": 0.0,
+   "max": 30.689998626708984
+  },
+  "snowfrac": {
+   "name": "Snow cover fraction",
+   "validCells": 11337,
+   "maskedCells": 0,
+   "min": 0.0,
+   "max": 1.0
+  },
+  "vsm": {
+   "name": "Soil moisture",
+   "validCells": 7044,
+   "maskedCells": 0,
+   "min": 0.0,
+   "max": 0.6600000262260437
+  },
+  "floodfrac": {
+   "name": "Temporary flood fraction",
+   "validCells": 7612,
+   "maskedCells": 0,
+   "min": 0.0,
+   "max": 0.9799999594688416
+  },
+  "height": {
+   "name": "Mean terrain height",
+   "validCells": 41252,
+   "maskedCells": 0,
+   "min": -48.0,
+   "max": 5417.0
+  },
+  "FDta": {
+   "name": "Air temperature (ISCCP FD)",
+   "empty": true
+  },
+  "totclfrac": {
+   "name": "Total cloud fraction",
+   "empty": true
+  },
+  "dccfrac": {
+   "name": "Deep convective cloud fraction",
+   "empty": true
+  },
+  "swsurfflux": {
+   "name": "Net shortwave surface flux",
+   "empty": true
+  },
+  "lwsurfflux": {
+   "name": "Net longwave surface flux",
+   "empty": true
+  },
+  "ET_tran_liquid": {
+   "name": "Transpiration",
+   "empty": true
+  },
+  "ET_soil_liquid": {
+   "name": "Soil evaporation",
+   "empty": true
+  }
+ },
+ "sha256": "09460fc6b2bc0a6649c43f4ef4cfdd465eec7ed2da45554356872f162cd9b452",
+ "diurnalPeakLocalHour": 12.92
+}

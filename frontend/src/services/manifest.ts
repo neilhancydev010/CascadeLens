@@ -9,8 +9,8 @@ export const isUsable = (l: Layer) => USABLE.includes(l.status) && Boolean(l.sou
 
 // `simulation` is the file from prepare_simulation.py. Simulate offers only what a case's data can support, see docs/ADDING_DATA.md.
 export const CASES: { id: string; label: string; file: string; simulation?: string }[] = [
-  { id: 'rasuwa-2026', label: 'Rasuwa 2026 (NISAR)', file: 'manifest.json', simulation: 'data/vectors/simulation.json' },
-  { id: 'landmet-2007', label: 'LANDMET test, 31 Dec 2007', file: 'landmet.json' },
+  { id: 'tsho-rolpa-2026', label: 'Tsho Rolpa glacial lake 2026 (NISAR)', file: 'tsho-rolpa-2026.json' },
+  { id: 'rasuwa-2026', label: 'Rasuwa disaster, 26 Aug 2026 (NISAR)', file: 'manifest.json' },
 ]
 
 export function currentCase(search = window.location.search) {

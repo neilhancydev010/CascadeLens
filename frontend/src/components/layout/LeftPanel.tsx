@@ -1,5 +1,7 @@
 import type { Bookmark, Layer, Manifest, ObservationGroup } from '../../types/manifest'
+import type { CSSProperties } from 'react'
 import { formatDate, isUsable, STATUS_LABEL } from '../../services/manifest'
+import { missionStyle, splitName } from '../explanations/AboutSource'
 
 export type EvidenceView = 'gunw' | 'goff' | 'gcov'
 
@@ -17,6 +19,7 @@ interface Props {
   step: number
   onStep: (i: number) => void
   hasStory: boolean
+  storySteps?: number
   layerVisible: boolean
   bookmarkId: string | null
   opacity: number
@@ -28,6 +31,11 @@ interface Props {
   simActive: boolean
   canSimulate: boolean
   onSimulate: () => void
+  canCompare?: boolean
+  compareActive?: boolean
+  onCompare?: () => void
+  can3d?: boolean
+  on3d?: () => void
   onBookmark: (b: Bookmark) => void
   onGroup: (id: string) => void
   onView: (v: EvidenceView) => void
@@ -85,16 +93,20 @@ export function LeftPanel(p: Props) {
   const overlays = (active?.qualityLayerIds ?? []).map((id) => m.layers.find((l) => l.id === id)).filter((l): l is Layer => Boolean(l && isUsable(l)))
   const canMask = Boolean(active?.sources.some((s) => s.maskTiles))
   const steps = active?.timeSteps
+  const stepName = steps?.every((s) => /^\d{4}-\d{2}-\d{2}$/.test(s.label)) ? 'Radar date' : 'Time of day'
   return (
     <div className="panel-body">
       <section className="case-head">
         <p className="label">Case study</p>
         <h2 className="case">{m.caseStudy.name}</h2>
-        <p className="muted small">{p.hasStory ? 'Reported event' : 'Data date'}: {formatDate(m.caseStudy.eventDate)}. A retrospective evidence explorer, not a warning service.</p>
-        {(p.hasStory || p.canSimulate) && (
+        <p className="muted small">{p.hasStory && !m.lake ? 'Reported event' : 'Data date'}: {formatDate(m.caseStudy.eventDate)}. A retrospective evidence explorer, not a warning service.</p>
+        {(p.hasStory || p.canSimulate || p.canCompare) && (
           <div className="story-cta">
-            {p.hasStory && <p><strong>New here?</strong> Walk through the event in 4 steps.</p>}
+            {p.hasStory && <p><strong>New here?</strong> {m.lake ? `Follow the lake's story in ${p.storySteps ?? 4} short steps.` : 'Walk through the event in 4 steps.'}</p>}
             {p.hasStory && <button className="primary" onClick={p.onStory} disabled={p.storyActive}><Play />Start the guided story</button>}
+            {!p.hasStory && p.canCompare && <p><strong>New here?</strong> Compare the lake on two radar dates.</p>}
+            {p.canCompare && <button className={p.hasStory ? '' : 'primary'} onClick={p.onCompare} disabled={p.compareActive}>{!p.hasStory && <Play />}Compare two dates</button>}
+            {p.can3d && <button onClick={p.on3d}>See it in 3D</button>}
             {p.canSimulate && <button onClick={p.onSimulate} disabled={p.simActive}>Try the simulations</button>}
           </div>
         )}
@@ -141,8 +153,8 @@ export function LeftPanel(p: Props) {
           </label>
         )}
         {steps && steps.length > 1 && (
-          <label className="slider">Time of day <span>{steps[Math.min(p.step, steps.length - 1)].label}</span>
-            <input type="range" aria-label="Time of day" min={0} max={steps.length - 1} step={1} value={p.step} onChange={(e) => p.onStep(Number(e.target.value))} />
+          <label className="slider">{stepName} <span>{steps[Math.min(p.step, steps.length - 1)].label}</span>
+            <input type="range" aria-label={stepName} min={0} max={steps.length - 1} step={1} value={p.step} onChange={(e) => p.onStep(Number(e.target.value))} />
           </label>
         )}
         {canMask && <label className="check"><input type="checkbox" checked={p.showMask} onChange={(e) => p.onMask(e.target.checked)} />Show masked pixels</label>}
@@ -160,17 +172,29 @@ export function LeftPanel(p: Props) {
         <details className="refs" open>
         <summary><span className="label">Reference layers</span><span className="count">{p.referenceIds.filter((id) => refs.some((r) => r.id === id)).length} of {refs.length} on</span></summary>
         <p className="muted small">Independent sources, not NISAR measurements. Each keeps its own source and limits.</p>
-        {missions.map((mission) => (
-          <div key={mission}>
-            <h4>{mission}</h4>
-            {refs.filter((r) => r.mission === mission).map((r) => (
-              <div className="ref-row" key={r.id}>
-                <label className="check"><input type="checkbox" checked={p.referenceIds.includes(r.id)} onChange={(e) => p.onReference(r.id, e.target.checked)} />{r.name}</label>
-                <button className="link" aria-label={`About ${r.name}`} onClick={() => p.onAbout(r.id)}>About</button>
-              </div>
-            ))}
-          </div>
-        ))}
+        {missions.map((mission) => {
+          const ms = missionStyle(mission)
+          const list = refs.filter((r) => r.mission === mission)
+          return (
+            <div className="ref-group" key={mission} style={{ '--mission': ms.color } as CSSProperties}>
+              <h4 className="ref-group-head"><span className="avatar sm" aria-hidden="true">{ms.short}</span>{mission}<span className="count">{list.filter((r) => p.referenceIds.includes(r.id)).length}/{list.length}</span></h4>
+              {list.map((r) => {
+                const { title, figure } = splitName(r)
+                const on = p.referenceIds.includes(r.id)
+                return (
+                  <div className={`ref-row ${on ? 'on' : ''}`} key={r.id}>
+                    <label className="ref-check">
+                      <input type="checkbox" aria-label={r.name} checked={on} onChange={(e) => p.onReference(r.id, e.target.checked)} />
+                      <i className="ref-key" style={r.vector?.color ? { background: r.vector.color } : undefined} />
+                      <span className="ref-name">{title}{figure && <em>{figure}</em>}</span>
+                    </label>
+                    <button className="info" aria-label={`About ${r.name}`} title="About this source" onClick={() => p.onAbout(r.id)}>i</button>
+                  </div>
+                )
+              })}
+            </div>
+          )
+        })}
         </details>
       </section>}
     </div>

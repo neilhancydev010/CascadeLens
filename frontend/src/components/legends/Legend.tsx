@@ -29,7 +29,9 @@ export function Legend({ layer, references }: { layer: Layer | undefined; refere
       {layer && l && (
         <div>
           <p className="legend-title">{layer.name}{unit ? ` (${unit})` : ''}</p>
-          {l.type === 'continuous' ? <Ramp stops={l.stops} low={l.lowLabel ?? fmt(l.min)} high={l.highLabel ?? fmt(l.max)} /> : (
+          {l.keys ? (
+            <ul className="swatches">{l.keys.map((k) => <li key={k.label}><i style={{ background: k.color }} />{k.label}</li>)}</ul>
+          ) : l.type === 'continuous' ? <Ramp stops={l.stops} low={l.lowLabel ?? fmt(l.min)} high={l.highLabel ?? fmt(l.max)} /> : (
             <ul className="swatches">
               {labels.slice(0, CATEGORY_LIMIT).map((c) => (
                 <li key={c}><i style={{ background: l.stops[c % l.stops.length] }} />{c === 0 ? 'Not reliably unwrapped' : `Component ${c}`}</li>

@@ -25,7 +25,7 @@ const RADAR = ['gunw', 'goff', 'gcov']
 function AtAGlance({ layer, layers }: { layer: Layer; layers: Layer[] }) {
   const pct = (x: number) => Math.round(x * 100)
   const frames = layer.sources.filter((s) => s.validFraction !== undefined)
-  const radar = layers.filter((l) => l.mission === 'NISAR' && RADAR.includes(l.category))
+  const radar = layer.mission !== 'NISAR' ? [] : layers.filter((l) => l.mission === 'NISAR' && RADAR.includes(l.category))
   const ready = radar.filter(isUsable).length
   const notDownloaded = radar.filter((l) => l.status === 'catalogued').length
   const other = radar.length - ready - notDownloaded

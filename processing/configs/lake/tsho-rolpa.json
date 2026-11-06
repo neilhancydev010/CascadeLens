@@ -1,0 +1,35 @@
+{
+  "id": "tsho-rolpa-2026",
+  "name": "Tsho Rolpa glacial lake, Rolwaling, Nepal",
+  "epsg": 32645,
+  "grid_offset": 10,
+  "track": 48,
+  "frame": 74,
+  "direction": "DESCENDING",
+  "box_rows": 450,
+  "box_cols": 600,
+  "zoom": [
+    10,
+    14
+  ],
+  "lake": {
+    "name": "Tsho Rolpa",
+    "lng": 86.475,
+    "lat": 27.865,
+    "seed_radius_m": 1500,
+    "basin": "Rolwaling Khola, then Tamakoshi and Sun Koshi, in the Koshi Basin",
+    "published": "Published surveys give about 1.5 to 1.6 km\u00b2 for Tsho Rolpa in the 2010s and 2020s."
+  },
+  "bookmarks": [
+    {
+      "id": "lake",
+      "name": "Tsho Rolpa lake",
+      "basis": "Around the lake edge measured from the radar, padded 0.01\u00b0."
+    },
+    {
+      "id": "valley",
+      "name": "Rolwaling valley",
+      "basis": "The whole radar clip, about 12 by 9 km."
+    }
+  ]
+}

@@ -274,11 +274,14 @@ export function MapView({ envelope, terrain, showTerrain, active, overlay, showM
     const calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     // On a phone the story is a bottom sheet over the map, so frame the bookmark in the part still visible.
     const phone = window.matchMedia('(max-width: 980px)').matches
-    const sheet = phone ? document.querySelector('.story')?.getBoundingClientRect() : undefined
+    // On a large screen the story card floats over the bottom of the map, and the left panel over its left side.
+    const sheet = document.querySelector('.story')?.getBoundingClientRect()
     const covered = sheet && sheet.top > 100 ? window.innerHeight - sheet.top : 0
+    const left = !phone && document.querySelector('.app:not(.hide-left) .left') ? 350 : 0
+    const dock = !phone && document.querySelector('.app:not(.hide-right) .compare-dock') ? 450 : 0
     const panels = !phone && document.querySelector('.sim-panel') // The whole path should clear the side panels and the top bar
-    mapRef.current?.fitBounds(focus.bounds as LngLatBoundsLike, { padding: panels ? { top: 100, left: 360, right: 400, bottom: 40 } : { top: 40, left: 40, right: 40, bottom: 40 + covered }, duration: calm ? 0 : 900 })
+    mapRef.current?.fitBounds(focus.bounds as LngLatBoundsLike, { padding: panels ? { top: 100, left: 360, right: 400, bottom: 40 } : { top: 90, left: 40 + left, right: 60 + dock, bottom: 30 + covered }, duration: calm ? 0 : 900 })
   }, [focus, ready])
 
-  return <div ref={host} className="map" role="application" aria-label="Rasuwa study area map. Click to inspect a location." data-testid="map" />
+  return <div ref={host} className="map" role="application" aria-label="Study area map. Click to inspect a location." data-testid="map" />
 }

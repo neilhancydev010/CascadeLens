@@ -37,6 +37,7 @@ export interface Legend {
   unit?: string | null
   lowLabel?: string
   highLabel?: string
+  keys?: { color: string; label: string }[]
 }
 
 export interface Stats {
@@ -140,6 +141,92 @@ export interface GranuleRecord {
   geometry: { type: string; coordinates: unknown } | null
 }
 
+export interface LakePoint {
+  date: string
+  areaKm2: number
+  lowKm2: number
+  highKm2: number
+  validPct: number
+  polarization: 'dual' | 'quad'
+  nativePostingM: number
+  outline: string
+  image: string
+  drape?: { rgb: string; hh: string }
+  outlineFull?: string
+}
+
+export interface LakeTerrain {
+  heights: string
+  width: number
+  height: number
+  spacingM: number
+  minM: number
+  maxM: number
+  lakeLevelM: number | null
+  drapeSize: [number, number]
+  source: string
+  attribution: string
+  note: string
+  flowPath?: [number, number, number][]
+  lakeSeed?: [number, number]
+  outlet?: [number, number]
+  drapeCoherence?: string
+}
+
+// Glacial lake cases only, written by processing/src/cascade_lens/lake.py.
+export interface LakeSeries {
+  name: string
+  basin: string
+  published?: string | null
+  series: LakePoint[]
+  imageSize: [number, number]
+  imageMetres?: [number, number]
+  terrain?: LakeTerrain | null
+  changeKm2: number
+  methodHalfRangeKm2: number
+  method: string
+  motion?: LakeMotion
+  scenario?: LakeScenario
+}
+
+// Written by processing/src/cascade_lens/scenario.py: what would happen IF the dam breached. Ranges, not predictions.
+export interface LakeScenarioCase {
+  breachM: number
+  volumeM3: number
+  peakM3s: Record<string, number>
+  peakRange: [number, number]
+  worstM3s: number
+  arrival: [number, number, number][] // km, fastest minutes, slowest minutes
+  depthM: [number, number, number][] // km, shallowest m, deepest m
+}
+export interface LakeScenario {
+  routeKm: number
+  routeEnd: [number, number]
+  lakeAreaKm2: number
+  profile: [number, number][]
+  marks: { km: number; lngLat: [number, number] }[]
+  scenarios: LakeScenarioCase[]
+  routeVector: string
+  extentVector: string
+  formulas: Record<string, string>
+  roughness: [number, number]
+  sectionEveryM: number
+  bounds: [number, number, number, number]
+  dem: string
+}
+
+// Written by processing/src/cascade_lens/motion.py. Limits are "less than" values: movement smaller than this is hidden in noise.
+export interface LakeMotion {
+  wavelengthCm: number
+  zonesNote: string
+  pair?: [string, string]
+  coherenceLake?: number
+  coherenceLand?: number
+  dam?: { ok: boolean; reason?: string; pixels?: number; coherence?: number; differenceCm?: number; noiseCm?: number; limitCm?: number; detected?: boolean }
+  damPairs?: ({ pair: [string, string] } & NonNullable<LakeMotion['dam']>)[]
+  glacier: { track: number; frame: number; direction: string; dates: [string, string]; days: number; pixels: number; limitM: number; perYearM: number; detected: boolean }[]
+}
+
 export interface Manifest {
   schemaVersion: number
   generatedAt: string
@@ -151,4 +238,17 @@ export interface Manifest {
   groups: ObservationGroup[]
   layers: Layer[]
   granules: GranuleRecord[]
+  lake?: LakeSeries
+  controlSeries?: ControlSeries
+}
+
+// Coherence inside an affected zone against nearby control ground, one entry per real GUNW pair (did.py).
+export interface ControlSeries {
+  zone: string
+  control: string
+  track: number
+  frame: number
+  direction: string
+  eventDate: string
+  pairs: { pair: [string, string]; days: number; inside: number; outside: number; insideCi95: [number, number]; validPct: number; granule: string }[]
 }

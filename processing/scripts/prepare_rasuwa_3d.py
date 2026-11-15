@@ -24,7 +24,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[2]
 PUBLIC = ROOT / "frontend/public/data"
 OUT = PUBLIC / "terrain/rasuwa-2026"
 CRS = "EPSG:32645"  # UTM 45N, the same grid the NISAR products use
-GRID_M = 120  # spacing of the 3D mesh
+GRID_M = 150  # spacing of the 3D mesh: fine enough for a 110 km valley, small enough for slow connections
 IMG_M = 50  # pixel size of the draped pictures: sharp enough at this scale, and small enough for slow connections
 
 m = json.loads((PUBLIC / "manifests/manifest.json").read_text(encoding="utf-8"))
@@ -56,7 +56,15 @@ dem_path = PUBLIC / "sampling/context/nasadem.tif"  # NASADEM, from prepare_nasa
 grid_tf = from_origin(x0 - GRID_M / 2, y1 + GRID_M / 2, GRID_M, GRID_M)
 z = warp(dem_path, (ny, nx), grid_tf, Resampling.average)
 z = np.where(np.isfinite(z), z, np.nanmin(z))
-z.round().astype("<i2").tofile(OUT / "heights.bin")
+z = z.round().astype("<i2")
+z.tofile(OUT / "heights.bin")  # plain copy, for browsers that cannot unzip
+# Packed copy for the web, about a third of the size: each row stored as steps from the previous point, high bytes
+# then low bytes, gzipped. The browser undoes the three steps (see frontend/src/components/terrain/heights.ts).
+steps = z.copy()
+steps[:, 1:] = np.diff(z, axis=1)
+raw = steps.astype("<i2").view(np.uint8).reshape(-1, 2)
+import gzip
+(OUT / "heights.bin.gz").write_bytes(gzip.compress(np.concatenate([raw[:, 1], raw[:, 0]]).tobytes(), 9, mtime=0))
 
 # Base picture: hillshade tinted by height, made from the same DEM at picture resolution (Reference, like the map's terrain)
 d = warp(dem_path, (ih, iw), img_tf)
@@ -70,7 +78,7 @@ stops = np.array([300, 900, 1600, 2600, 3600, 4600, 5400, 6500])
 cols = np.array([[96, 128, 76], [120, 146, 86], [150, 156, 104], [160, 146, 112], [146, 128, 108], [150, 144, 140], [214, 218, 224], [246, 248, 252]], float)
 tint = np.stack([np.interp(d, stops, cols[:, k]) for k in range(3)], -1)
 base = np.clip(tint * (0.35 + 0.75 * shade[..., None]), 0, 255).astype("uint8")
-Image.fromarray(base).save(OUT / "base.jpg", quality=80, optimize=True, progressive=True)
+Image.fromarray(base).save(OUT / "base.jpg", quality=74, optimize=True, progressive=True)
 
 
 def vector_png(layer_id, name, color, opacity, line_px=0):
@@ -213,12 +221,14 @@ for layer_id, label in (("ref:unosat-detachment", "Landslide source (UNOSAT deta
 
 model = {
     "case": "rasuwa-2026", "name": "Rasuwa–Bhote Koshi–Trishuli corridor",
-    "heights": "data/terrain/rasuwa-2026/heights.bin", "heightsType": "int16",
+    "heights": "data/terrain/rasuwa-2026/heights.bin", "heightsType": "int16", "heightsPacked": "data/terrain/rasuwa-2026/heights.bin.gz",
     "width": nx, "height": ny, "spacingM": GRID_M, "minM": float(z.min()), "maxM": float(z.max()),
     "crs": CRS, "originM": [float(x0), float(y1)], "drapeSize": [iw, ih], "base": "data/terrain/rasuwa-2026/base.jpg",
     "baseLayer": ref("context:terrain", evidence="reference"),
     "layers": [{**l, "file": f"data/terrain/rasuwa-2026/{l['file']}"} for l in layers],
     "tracks": tracks, "places": places, "markers": markers, "placesLayer": ref("ref:places", evidence="reference"),
 }
+start = ["heights.bin.gz", "base.jpg"] + [l["file"] for l in layers if l["on"] and l.get("group") != "radar"]
+model["startBytes"] = sum((OUT / f).stat().st_size for f in start)
 (OUT / "model.json").write_text(json.dumps(model, indent=1, ensure_ascii=False), encoding="utf-8")
 print(f"Grid {nx}x{ny} at {GRID_M} m, pictures {iw}x{ih}, heights {z.min():.0f} to {z.max():.0f} m, {len(layers)} layers, {len(places)} places")

@@ -3,19 +3,20 @@
  "name": "Rasuwa–Bhote Koshi–Trishuli corridor",
  "heights": "data/terrain/rasuwa-2026/heights.bin",
  "heightsType": "int16",
- "width": 936,
- "height": 555,
- "spacingM": 120,
+ "heightsPacked": "data/terrain/rasuwa-2026/heights.bin.gz",
+ "width": 749,
+ "height": 444,
+ "spacingM": 150,
  "minM": 184.0,
- "maxM": 7155.83447265625,
+ "maxM": 7145.0,
  "crs": "EPSG:32645",
  "originM": [
-  244920.0,
+  244950.0,
   3136800.0
  ],
  "drapeSize": [
   2244,
-  1330
+  1329
  ],
  "base": "data/terrain/rasuwa-2026/base.jpg",
  "baseLayer": {
@@ -419,35 +420,35 @@
  "places": [
   {
    "name": "Silintar",
-   "xM": 17905,
+   "xM": 17875,
    "yM": 50333
   },
   {
    "name": "Shyaphru",
-   "xM": 91829,
+   "xM": 91799,
    "yM": 20349
   },
   {
    "name": "Ghyalchok",
-   "xM": 35650,
+   "xM": 35620,
    "yM": 58582
   },
   {
    "name": "Trishuli",
-   "xM": 72839,
+   "xM": 72809,
    "yM": 46730
   }
  ],
  "markers": [
   {
    "name": "Landslide source (UNOSAT detachment zone)",
-   "xM": 110073,
+   "xM": 110043,
    "yM": 6682,
    "evidence": "reference"
   },
   {
    "name": "Barrier lakes (UNOSAT)",
-   "xM": 108003,
+   "xM": 107973,
    "yM": 4561,
    "evidence": "reference"
   }
@@ -459,5 +460,6 @@
    "Community mapping exported after the event; features may predate or postdate the disaster."
   ],
   "evidence": "reference"
- }
+ },
+ "startBytes": 860346
 }

@@ -7,6 +7,7 @@ import { COLOUR_KEY, LakeChart } from '../compare/ComparePanel'
 import { CountUp } from '../motion/CountUp'
 import { buildRadarPass, buildRoute, LAKE_WATER_FILL, makeGrid, type Frame } from './sims3d'
 import { elapsedMs } from '../../services/simulation'
+import { drawRatio, lite } from '../../services/performance'
 import { buildBlock, strataTexture, type Built } from './block3d'
 
 // A block model of the lake valley: Copernicus DEM heights, with a NISAR radar image draped on top and layered earth on the sides.
@@ -76,12 +77,12 @@ export function Terrain3D({ lake, onExit }: { lake: LakeSeries; onExit: () => vo
     const el = host.current!
     let renderer: THREE.WebGLRenderer
     try {
-      renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
+      renderer = new THREE.WebGLRenderer({ antialias: !lite.on, alpha: true, powerPreference: lite.on ? 'low-power' : 'default' })
     } catch {
       setFailure('This browser could not start 3D graphics (WebGL).')
       return
     }
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+    renderer.setPixelRatio(drawRatio())
     renderer.outputColorSpace = THREE.SRGBColorSpace
     el.appendChild(renderer.domElement)
     const s = new THREE.Scene()
@@ -99,9 +100,14 @@ export function Terrain3D({ lake, onExit }: { lake: LakeSeries; onExit: () => vo
     s.add(sun)
     const strata = strataTexture()
     scene.current = { renderer, scene: s, camera, controls, strata }
+    // Drawn when something moves. While nothing does, the picture is refreshed only a few times a second, which catches
+    // pictures that arrive later and saves a weak laptop from redrawing the same frame sixty times a second.
+    let dirty = true
+    let drawn = 0
     const resize = () => {
       const { clientWidth: w, clientHeight: h } = el
       renderer.setSize(w, h)
+      dirty = true // A resized canvas is blank until drawn again
       camera.aspect = w / Math.max(1, h)
       if (camera.view) camera.setViewOffset(w, h, camera.view.offsetX, 0, w, h)
       camera.updateProjectionMatrix()
@@ -125,10 +131,16 @@ export function Terrain3D({ lake, onExit }: { lake: LakeSeries; onExit: () => vo
         const { clientWidth: w, clientHeight: h } = el
         if (shift > 0) camera.setViewOffset(w, h, shift, 0, w, h)
         else camera.clearViewOffset()
+        dirty = true
       }
       frames.current.forEach((f) => f(dt, now))
-      controls.update()
-      renderer.render(s, camera)
+      if (frames.current.size) dirty = true // A flood or flow is playing
+      if (controls.update()) dirty = true
+      if (dirty || elapsedMs(now, drawn) > (lite.on ? 500 : 250)) {
+        renderer.render(s, camera)
+        dirty = false
+        drawn = now
+      }
       frame = requestAnimationFrame(loop)
     })
     return () => {

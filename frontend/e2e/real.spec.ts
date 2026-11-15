@@ -88,9 +88,11 @@ test('every product has an honest status', async ({ page }) => {
   await open(page)
   await expect(page.getByRole('radio', { name: /19–31 August 2026/ })).toBeEnabled()
   await page.getByRole('tab', { name: 'Snapshots' }).click()
-  await expect(page.getByRole('radio', { name: /28 August 2026/ })).toBeChecked()
-  await expect(page.getByRole('radio', { name: /Gamma-0 backscatter/ })).toBeDisabled()
-  await expect(page.getByText('Download required').first()).toBeVisible()
+  // Four GCOV snapshots are downloaded and readable; 31 August is only listed in the catalogue, so it cannot be picked
+  await expect(page.getByRole('radio', { name: /16 August 2026/ })).toBeChecked()
+  await expect(page.getByRole('radio', { name: /Gamma-0 backscatter/ })).toBeEnabled()
+  await expect(page.getByRole('radio', { name: /31 August 2026/ })).toBeDisabled()
+  await expect(page.locator('label', { has: page.getByRole('radio', { name: /31 August 2026/ }) })).toContainText('Not validated yet')
 })
 
 test('the inspector reads real NISAR values and refuses the swath gap', async ({ page }) => {
@@ -207,7 +209,7 @@ test('a bookmark selects a named place and reads its real elevation', async ({ p
   await page.getByRole('radio', { name: /Terrain elevation/ }).check()
   await inspect(page, 'Bhote Koshi corridor')
   await expect(page.locator('.place-chip')).toHaveText('Bhote Koshi corridor')
-  await expect(page.locator('.value')).toHaveText('1445.8 m') // rasterio reads 1445.7694 at this pixel
+  await expect(page.locator('.value')).toHaveText('1446 m') // NASADEM heights are whole metres; rasterio reads 1446 at this pixel
 })
 
 test('Sentinel-1 layers stay separate from NISAR and cannot be sampled', async ({ page }) => {
@@ -695,4 +697,32 @@ test('a spot the radar cannot use gets rule-based next steps that only promise d
   await expect(next).toContainText('[R-MASK]')
   await expect(next).toContainText(/Already in CascadeLens|Not found in the data here/)
   await expect(next).toContainText('Needs a person to collect it')
+})
+
+test('a slow connection is warned about, with its speed and an estimate, and goes away when the map is ready', async ({ page }) => {
+  test.setTimeout(240_000)
+  const cdp = await page.context().newCDPSession(page)
+  await cdp.send('Network.emulateNetworkConditions', { offline: false, latency: 150, downloadThroughput: 60_000, uploadThroughput: 50_000 })
+  await page.goto('/')
+  const notice = page.locator('.slow-notice')
+  await expect(notice).toContainText('Slow connection', { timeout: 60_000 })
+  await expect(notice).toContainText(/about \d+ KB\/s/)
+  await expect(notice).toContainText(/may need about .* more to load/)
+  await expect(notice.getByRole('button', { name: 'Use light mode' })).toBeVisible()
+  await cdp.send('Network.emulateNetworkConditions', { offline: false, latency: 0, downloadThroughput: -1, uploadThroughput: -1 })
+  await expect(page.locator('.map-state')).toHaveText('Map ready', { timeout: 120_000 })
+  await expect(notice).toHaveCount(0)
+})
+
+test('light mode draws more lightly and can be switched off again, with the same data on screen', async ({ page }) => {
+  await open(page, '/?lite=1')
+  await expect(page.locator('html')).toHaveClass(/\blite\b/)
+  const toggle = page.getByRole('button', { name: 'Light mode: on' })
+  await expect(toggle).toHaveAttribute('aria-pressed', 'true')
+  expect(await page.evaluate(() => window.__clMap.getPixelRatio())).toBe(1)
+  await expect(page.locator('.legend-title').first()).toContainText('relative to frame median')
+  await toggle.click()
+  await expect(page.getByRole('button', { name: 'Light mode: off' })).toBeVisible()
+  await expect(page.locator('html')).not.toHaveClass(/\blite\b/)
+  expect(await page.evaluate(() => localStorage.getItem('cascadelens.lite'))).toBe('off')
 })

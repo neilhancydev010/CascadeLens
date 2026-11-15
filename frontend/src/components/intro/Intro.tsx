@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { elapsedMs } from '../../services/simulation'
+import { lite } from '../../services/performance'
 
 // The opening screen: the mark, a counter that follows the real loading, then "Ready" and a fade into the map.
 // It never holds the reader back: a click or a key skips it, it is shown once per browser tab, and it stays away
@@ -19,6 +20,7 @@ export function introWanted(): boolean {
     if (asked === '0') return false
     if (navigator.webdriver) return false // Automated browsers test the app, not its opening
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return false
+    if (lite.on) return false // A weak device gets to the map sooner
     return sessionStorage.getItem(KEY) !== '1'
   } catch {
     return false

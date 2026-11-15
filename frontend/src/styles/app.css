@@ -896,3 +896,23 @@ pre { font: 10.5px/1.4 var(--code); white-space: pre-wrap; color: var(--muted); 
 .about-steps { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
 .signature button.link { font-size: inherit; font-weight: 700; letter-spacing: inherit; text-transform: inherit; color: var(--accent); }
 @media (max-width: 760px) { .about-project { top: 70px; max-height: calc(100% - 82px); padding: 18px 16px; z-index: 8; } }
+
+/* Slow-connection and light-mode notices: a slim strip just under the topbar, so the finding card's headline stays readable */
+.notices { position: absolute; z-index: 6; top: 86px; left: 50%; transform: translateX(-50%); width: max-content; max-width: min(680px, calc(100% - 760px)); display: flex; flex-direction: column; align-items: center; gap: 6px; pointer-events: none; }
+.notices:empty { display: none; }
+.slow-notice { pointer-events: auto; display: flex; gap: 10px; align-items: center; background: var(--panel-solid); border: 1px solid rgba(220, 181, 108, .75); border-radius: 18px; padding: 6px 14px 6px 8px; font-size: 12px; line-height: 1.4; color: var(--soft); box-shadow: var(--shadow); }
+.slow-notice p { margin: 0; }
+.slow-notice strong { color: var(--amber); }
+.slow-icon { flex: none; width: 20px; height: 20px; border-radius: 50%; background: var(--amber); color: var(--accent-ink); font-weight: 800; display: grid; place-items: center; font-size: 12px; }
+.lite-notice { border-color: var(--outline); }
+.lite-notice strong { color: var(--text); }
+.lite-notice .slow-icon { background: var(--accent); }
+.slow-actions { flex: none; display: flex; gap: 12px; }
+.slow-actions .link { font-weight: 700; font-size: 12px; }
+.lite-toggle { text-transform: inherit; letter-spacing: inherit; font: inherit; }
+@media (max-width: 1180px) { .notices { max-width: calc(100% - 32px); } }
+@media (max-width: 980px) { .notices { top: 110px; left: 8px; right: 8px; transform: none; width: auto; max-width: none; } .slow-notice { flex-wrap: wrap; } }
+
+/* Light mode (services/performance.ts): no decorative motion, no costly shadows or blur. What is shown stays the same. */
+.lite *, .lite *::before, .lite *::after { animation-duration: 0s !important; animation-delay: 0s !important; transition-duration: 0s !important; transition-delay: 0s !important; backdrop-filter: none !important; }
+.lite :is(.left, .right, .story-card, .finding, .status-panel, .terrain-panel, .compare-dock, .sim-dock, .slow-notice) { box-shadow: none !important; }

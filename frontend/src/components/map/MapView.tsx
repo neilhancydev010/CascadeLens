@@ -4,6 +4,7 @@ import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?url'
 import type { Bounds, GranuleRecord, Layer } from '../../types/manifest'
 import { assetUrl } from '../../services/manifest'
 import { IMPACT_COLOURS, type SimView } from '../../services/simulation'
+import { drawRatio, lite, useLite } from '../../services/performance'
 
 // MapLibre derives the worker path from its own module URL, which Vite's bundling moves.
 setWorkerUrl(new URL(workerUrl, document.baseURI).href)
@@ -90,6 +91,8 @@ export function MapView({ envelope, terrain, showTerrain, active, overlay, showM
   const simHead = useRef<Marker | null>(null)
   const labels = useRef<Marker[]>([])
   const [ready, setReady] = useState(false)
+  const liteOn = useLite()
+  useEffect(() => { mapRef.current?.setPixelRatio(drawRatio()) }, [liteOn]) // Light mode switched while the map is open
   const envelopeRef = useRef(envelope) // The map lives for the whole session: rebuilding it mid-render races its effects
   const onPointRef = useRef(onPoint)
   const onStatusRef = useRef(onStatus)
@@ -122,7 +125,9 @@ export function MapView({ envelope, terrain, showTerrain, active, overlay, showM
     // It stays flat and north-up: no rotation or tilt. A click still inspects a spot. maxBounds and minZoom below keep the study
     // area from being lost or shrunk to a speck.
     const map = new MlMap({ container: host.current, style: STYLE, bounds: envelope as LngLatBoundsLike, fitBoundsOptions: { padding: 30 }, attributionControl: false, renderWorldCopies: false,
-      dragRotate: false, pitchWithRotate: false, touchPitch: false, boxZoom: false, maxZoom: 18 })
+      dragRotate: false, pitchWithRotate: false, touchPitch: false, boxZoom: false, maxZoom: 18,
+      // Light mode draws at one pixel per screen pixel, skips the tile fade-in and keeps fewer tiles in memory
+      pixelRatio: drawRatio(), fadeDuration: lite.on ? 0 : 300, ...(lite.on ? { maxTileCacheSize: 60 } : {}) })
     mapRef.current = map
     map.touchZoomRotate.disableRotation()
     map.keyboard.disableRotation()
@@ -164,8 +169,11 @@ export function MapView({ envelope, terrain, showTerrain, active, overlay, showM
     const map = mapRef.current
     if (!ready || !map) return
     clear(map, 'base-')
-    if (terrain && showTerrain) addRaster(map, 'base-', terrain, 1, 'anchor-base')
-  }, [ready, terrain, showTerrain])
+    // The terrain backdrop is the heaviest download of the first view. Light mode takes it two zoom levels coarser,
+    // about a quarter of the tiles at the opening view. It is only the shaded picture under the data: the inspector still reads heights from the full file.
+    const backdrop = terrain && liteOn ? { ...terrain, sources: terrain.sources.map((s) => ({ ...s, tiles: { ...s.tiles, maxzoom: Math.max(s.tiles.minzoom, s.tiles.maxzoom - 2) } })) } : terrain
+    if (backdrop && showTerrain) addRaster(map, 'base-', backdrop, 1, 'anchor-base')
+  }, [ready, terrain, showTerrain, liteOn])
 
   const activeIsBase = active?.id === terrain?.id
   useEffect(() => {

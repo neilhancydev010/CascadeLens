@@ -38,11 +38,16 @@
         if (!n) return
         n.className = 'boot-note boot-loading'
         n.setAttribute('role', 'status')
-        n.innerHTML = '<h1>Loading GAIA CascadeLens…</h1><p>The map and its satellite data are downloading. On a slow connection this can take a little while.</p>'
+        // Chrome, Edge and Android say how fast the link is, so a slow one is said at once, before any app file arrives
+        var c = navigator.connection
+        var slow = c && (c.saveData || c.effectiveType === 'slow-2g' || c.effectiveType === '2g' || (c.downlink > 0 && c.downlink < 0.7))
+        n.innerHTML = slow
+          ? '<h1>Loading GAIA CascadeLens…</h1><p><strong>Your connection looks slow.</strong> Loading will take longer than usual, possibly a minute or more. Please keep this page open.</p>'
+          : '<h1>Loading GAIA CascadeLens…</h1><p>The map and its satellite data are downloading. On a slow connection this can take a little while.</p>'
         setTimeout(function () {
           var m = document.querySelector('.boot-loading')
-          if (m) m.innerHTML = '<h1>GAIA CascadeLens is taking longer than usual</h1><p>The app has not finished loading. Check the internet connection, then reload the page. It needs a recent browser with WebGL, such as Chrome, Edge, Firefox or Safari.</p>'
-        }, 30000)
+          if (m) m.innerHTML = '<h1>GAIA CascadeLens is taking longer than usual</h1><p>The app is still downloading, which usually means a slow connection. You can keep waiting, or check the internet connection and reload the page. It needs a recent browser with WebGL, such as Chrome, Edge, Firefox or Safari.</p>'
+        }, 20000)
       })()
     </script>
     </div>

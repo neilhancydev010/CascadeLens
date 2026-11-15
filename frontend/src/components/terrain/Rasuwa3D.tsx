@@ -3,9 +3,11 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
 import { assetUrl, formatDate } from '../../services/manifest'
 import { elapsedMs } from '../../services/simulation'
+import { drawRatio, lite } from '../../services/performance'
 import type { EvidenceClass } from '../../services/evidence'
 import { EvidenceTag } from '../explanations/EvidenceTag'
 import { buildBlock, strataTexture, type Built } from './block3d'
+import { unpackHeights } from './heights'
 
 // A block model of the whole Rasuwa–Bhote Koshi–Trishuli corridor: NASADEM heights with UNOSAT maps, OSM rivers and NASA
 // radar layers (NISAR stability and backscatter, OPERA Sentinel-1 change) draped on top, and arrows for the way each NISAR
@@ -22,6 +24,8 @@ interface ModelSource { name: string; attribution?: string; limitations: string[
 export interface Model3D {
   name: string
   heights: string
+  heightsPacked?: string
+  startBytes?: number // what the model needs before it can show, with the packed heights
   width: number
   height: number
   spacingM: number
@@ -151,9 +155,11 @@ export function Rasuwa3D({ url, onExit }: { url: string; onExit: () => void }) {
         if (!live) return
         setModel(md)
         setOn(Object.fromEntries(md.layers.filter((l) => l.group !== 'radar').map((l) => [l.id, l.on])))
-        const heightsBytes = md.width * md.height * 2
-        twice(() => fetchBytes(assetUrl(md.heights), heightsBytes, track('heights')))
-          .then((b) => { if (live) setHeights(Float32Array.from(new Int16Array(b))) }).catch(fail)
+        // The packed heights are about a third of the plain file; browsers without DecompressionStream get the plain one
+        const packed = md.heightsPacked && typeof DecompressionStream !== 'undefined'
+        twice(() => fetchBytes(assetUrl(packed ? md.heightsPacked! : md.heights), packed ? 0 : md.width * md.height * 2, track('heights')))
+          .then((b) => (packed ? unpackHeights(b, md.width, md.height) : Float32Array.from(new Int16Array(b))))
+          .then((z) => { if (live) setHeights(z) }).catch(fail)
         ;[['base', md.base], ...md.layers.filter((l) => l.group !== 'radar').map((l) => [l.id, l.file])].forEach(([id, f]) => {
           twice(() => fetchImage(assetUrl(f), track(id)))
             .then((i) => { if (live) setImages((all) => ({ ...all, [id]: i })) })
@@ -179,12 +185,12 @@ export function Rasuwa3D({ url, onExit }: { url: string; onExit: () => void }) {
     const el = host.current!
     let renderer: THREE.WebGLRenderer
     try {
-      renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
+      renderer = new THREE.WebGLRenderer({ antialias: !lite.on, alpha: true, powerPreference: lite.on ? 'low-power' : 'default' })
     } catch {
       setFailure('This browser could not start 3D graphics (WebGL).')
       return
     }
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+    renderer.setPixelRatio(drawRatio())
     renderer.outputColorSpace = THREE.SRGBColorSpace
     el.appendChild(renderer.domElement)
     const s = new THREE.Scene()
@@ -201,9 +207,14 @@ export function Rasuwa3D({ url, onExit }: { url: string; onExit: () => void }) {
     sun.position.set(-60, 80, 40)
     s.add(sun)
     scene.current = { scene: s, camera, controls, strata: strataTexture() }
+    // Drawn when something moves. While nothing does, the picture is refreshed only a few times a second, which catches
+    // pictures that arrive later and saves a weak laptop from redrawing the same frame sixty times a second.
+    let dirty = true
+    let drawn = 0
     const resize = () => {
       const { clientWidth: w, clientHeight: h } = el
       renderer.setSize(w, h)
+      dirty = true // A resized canvas is blank until drawn again
       camera.aspect = w / Math.max(1, h)
       camera.updateProjectionMatrix()
     }
@@ -225,9 +236,14 @@ export function Rasuwa3D({ url, onExit }: { url: string; onExit: () => void }) {
         const { clientWidth: w, clientHeight: h } = el
         if (shift > 0) camera.setViewOffset(w, h, shift, 0, w, h)
         else camera.clearViewOffset()
+        dirty = true
       }
-      controls.update()
-      renderer.render(s, camera)
+      if (controls.update()) dirty = true
+      if (dirty || elapsedMs(now, drawn) > (lite.on ? 500 : 250)) {
+        renderer.render(s, camera)
+        dirty = false
+        drawn = now
+      }
       frame = requestAnimationFrame(loop)
     })
     return () => {
@@ -342,7 +358,7 @@ export function Rasuwa3D({ url, onExit }: { url: string; onExit: () => void }) {
   // Progress counts only what the model needs before it can show: heights, terrain picture and the layers that start switched on
   const startIds = ['heights', 'base', ...(model?.layers.filter((l) => l.group !== 'radar' && l.on).map((l) => l.id) ?? [])]
   const loadedMb = startIds.reduce((t, id) => t + (got[id]?.[0] ?? 0), 0) / 1e6
-  const totalMb = Math.max(loadedMb, startIds.reduce((t, id) => t + (got[id]?.[1] ?? 0), 0) / 1e6, model ? (model.width * model.height * 2) / 1e6 : 0)
+  const totalMb = Math.max(loadedMb, startIds.reduce((t, id) => t + (got[id]?.[1] ?? 0), 0) / 1e6, (model?.startBytes ?? 0) / 1e6)
   const refs = model?.layers.filter((l) => l.group !== 'radar') ?? []
   const radars = model?.layers.filter((l) => l.group === 'radar') ?? []
   const shownRadar = radars.find((l) => l.id === radar)

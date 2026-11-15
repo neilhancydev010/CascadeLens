@@ -20,7 +20,7 @@ if (-not (Test-Path (Join-Path $app 'index.html'))) {
 }
 $app = (Resolve-Path $app).Path
 
-$csp = "default-src 'self'; connect-src 'self'; img-src 'self' data: blob:; worker-src 'self' blob:; style-src 'self' 'unsafe-inline'; script-src 'self' 'sha256-9RhnX3H62x9JK7C4XaHxPW59jwPE4LvvXZKk4OLX7dI=' 'wasm-unsafe-eval'"
+$csp = "default-src 'self'; connect-src 'self'; img-src 'self' data: blob:; worker-src 'self' blob:; style-src 'self' 'unsafe-inline'; script-src 'self' 'sha256-CIN9TmB8AQkNCIf/cEAUqgdyYnFycAPMnEdhSTvaAJ8=' 'wasm-unsafe-eval'"
 $types = @{
     '.html' = 'text/html'; '.js' = 'text/javascript'; '.mjs' = 'text/javascript'; '.css' = 'text/css'
     '.json' = 'application/json'; '.geojson' = 'application/json'; '.tif' = 'image/tiff'; '.png' = 'image/png'

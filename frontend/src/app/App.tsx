@@ -24,6 +24,7 @@ import { FieldChecksPanel } from '../components/fieldchecks/FieldChecksPanel'
 import { useChecks } from '../services/fieldCheckStore'
 import type { FieldCheck } from '../services/fieldChecks'
 import { useAutoHidePanels } from './useAutoHidePanels'
+import { LiteNotice, LiteToggle, SlowNotice } from '../components/layout/SlowNotice'
 import type { SimData, SimView } from '../services/simulation'
 
 const TERRAIN = 'context:terrain'
@@ -310,11 +311,12 @@ function Explorer({ manifest: m, onMapReady }: { manifest: Manifest; onMapReady?
         {projectOpen && <AboutProject onClose={() => setProjectOpen(false)} />}
         {bookmark && <p className="place-chip">{bookmark.name}</p>}
         {mapStatus.state === 'error' && <p className="map-alert" role="alert">{mapStatus.message}</p>}
+        {!threeOn && <div className="notices"><SlowNotice loading={mapStatus.state === 'loading'} /><LiteNotice /></div>}
         {!covered && <p className="map-notice" role="status">No geographic coverage: {active?.name} has no data in this view.</p>}
         <Legend layer={shownLayer} references={references} />
         <div className="map-foot">
           <Credits layers={[terrain, shownLayer, ...references]} />
-          <p className="signature">Made by <strong>Team GAIA</strong> · <button className="link" onClick={() => { setStatusOpen(false); setProjectOpen(true) }}>Project &amp; NASA data</button></p>
+          <p className="signature">Made by <strong>Team GAIA</strong> · <button className="link" onClick={() => { setStatusOpen(false); setProjectOpen(true) }}>Project &amp; NASA data</button> · <LiteToggle /></p>
         </div>
       </main>
 

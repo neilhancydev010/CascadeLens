@@ -17,7 +17,7 @@ import webbrowser
 APP = pathlib.Path(__file__).resolve().parent / "app"
 if not APP.exists():  # Started from the project folder, where the build is in frontend/dist
     APP = APP.parent.parent / "frontend" / "dist"
-CSP = "default-src 'self'; connect-src 'self'; img-src 'self' data: blob:; worker-src 'self' blob:; style-src 'self' 'unsafe-inline'; script-src 'self' 'sha256-9RhnX3H62x9JK7C4XaHxPW59jwPE4LvvXZKk4OLX7dI=' 'wasm-unsafe-eval'"
+CSP = "default-src 'self'; connect-src 'self'; img-src 'self' data: blob:; worker-src 'self' blob:; style-src 'self' 'unsafe-inline'; script-src 'self' 'sha256-CIN9TmB8AQkNCIf/cEAUqgdyYnFycAPMnEdhSTvaAJ8=' 'wasm-unsafe-eval'"
 
 
 class Handler(http.server.SimpleHTTPRequestHandler):

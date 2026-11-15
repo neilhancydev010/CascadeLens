@@ -1,0 +1,406 @@
+{
+ "capability": "landslide.L2",
+ "generatedAt": "2026-11-13T14:05:24+00:00",
+ "script": "processing/scripts/run_rain_thresholds.py",
+ "inputs": {
+  "rainfall": "C5: IMERG Late V07 daily, 0.1 degree (data/reference/rainfall/GPM_3IMERGDL.07)",
+  "inventory": "C1: BIPAD landslide incidents (data/raw/hazard/bipad, licence not established)"
+ },
+ "needsDatasets": [
+  "C1",
+  "C5"
+ ],
+ "key": "landslide.L2.calibration",
+ "summary": "Exceedance level 20% and a corridor warning when 50% of cells is over the line, chosen on 2023-2024 (as published: CSI 0.285)",
+ "fittedOn": [
+  "2016-06-01",
+  "2022-12-31"
+ ],
+ "scoredOn": [
+  "2023-01-01",
+  "2024-12-31"
+ ],
+ "candidates": [
+  {
+   "level": 0.05,
+   "share": 0.0,
+   "alpha": 5.632,
+   "beta": 1.107,
+   "published": {
+    "hits": 68,
+    "misses": 3,
+    "falseAlarms": 416,
+    "correctNegatives": 197,
+    "pod": 0.958,
+    "far": 0.86,
+    "csi": 0.14,
+    "bias": 6.817,
+    "warningDays": 527,
+    "eventDays": 72,
+    "days": 731
+   }
+  },
+  {
+   "level": 0.05,
+   "share": 0.1,
+   "alpha": 5.632,
+   "beta": 1.107,
+   "published": {
+    "hits": 66,
+    "misses": 5,
+    "falseAlarms": 277,
+    "correctNegatives": 336,
+    "pod": 0.93,
+    "far": 0.808,
+    "csi": 0.19,
+    "bias": 4.831,
+    "warningDays": 384,
+    "eventDays": 72,
+    "days": 731
+   }
+  },
+  {
+   "level": 0.05,
+   "share": 0.25,
+   "alpha": 5.632,
+   "beta": 1.107,
+   "published": {
+    "hits": 64,
+    "misses": 7,
+    "falseAlarms": 213,
+    "correctNegatives": 400,
+    "pod": 0.901,
+    "far": 0.769,
+    "csi": 0.225,
+    "bias": 3.901,
+    "warningDays": 314,
+    "eventDays": 72,
+    "days": 731
+   }
+  },
+  {
+   "level": 0.05,
+   "share": 0.5,
+   "alpha": 5.632,
+   "beta": 1.107,
+   "published": {
+    "hits": 58,
+    "misses": 13,
+    "falseAlarms": 162,
+    "correctNegatives": 451,
+    "pod": 0.817,
+    "far": 0.736,
+    "csi": 0.249,
+    "bias": 3.099,
+    "warningDays": 251,
+    "eventDays": 72,
+    "days": 731
+   }
+  },
+  {
+   "level": 0.1,
+   "share": 0.0,
+   "alpha": 7.477,
+   "beta": 1.107,
+   "published": {
+    "hits": 68,
+    "misses": 3,
+    "falseAlarms": 385,
+    "correctNegatives": 228,
+    "pod": 0.958,
+    "far": 0.85,
+    "csi": 0.149,
+    "bias": 6.38,
+    "warningDays": 495,
+    "eventDays": 72,
+    "days": 731
+   }
+  },
+  {
+   "level": 0.1,
+   "share": 0.1,
+   "alpha": 7.477,
+   "beta": 1.107,
+   "published": {
+    "hits": 64,
+    "misses": 7,
+    "falseAlarms": 229,
+    "correctNegatives": 384,
+    "pod": 0.901,
+    "far": 0.782,
+    "csi": 0.213,
+    "bias": 4.127,
+    "warningDays": 330,
+    "eventDays": 72,
+    "days": 731
+   }
+  },
+  {
+   "level": 0.1,
+   "share": 0.25,
+   "alpha": 7.477,
+   "beta": 1.107,
+   "published": {
+    "hits": 61,
+    "misses": 10,
+    "falseAlarms": 184,
+    "correctNegatives": 429,
+    "pod": 0.859,
+    "far": 0.751,
+    "csi": 0.239,
+    "bias": 3.451,
+    "warningDays": 278,
+    "eventDays": 72,
+    "days": 731
+   }
+  },
+  {
+   "level": 0.1,
+   "share": 0.5,
+   "alpha": 7.477,
+   "beta": 1.107,
+   "published": {
+    "hits": 57,
+    "misses": 14,
+    "falseAlarms": 140,
+    "correctNegatives": 473,
+    "pod": 0.803,
+    "far": 0.711,
+    "csi": 0.27,
+    "bias": 2.775,
+    "warningDays": 227,
+    "eventDays": 72,
+    "days": 731
+   }
+  },
+  {
+   "level": 0.2,
+   "share": 0.0,
+   "alpha": 9.121,
+   "beta": 1.107,
+   "published": {
+    "hits": 65,
+    "misses": 6,
+    "falseAlarms": 308,
+    "correctNegatives": 305,
+    "pod": 0.915,
+    "far": 0.826,
+    "csi": 0.172,
+    "bias": 5.254,
+    "warningDays": 414,
+    "eventDays": 72,
+    "days": 731
+   }
+  },
+  {
+   "level": 0.2,
+   "share": 0.1,
+   "alpha": 9.121,
+   "beta": 1.107,
+   "published": {
+    "hits": 63,
+    "misses": 8,
+    "falseAlarms": 203,
+    "correctNegatives": 410,
+    "pod": 0.887,
+    "far": 0.763,
+    "csi": 0.23,
+    "bias": 3.746,
+    "warningDays": 302,
+    "eventDays": 72,
+    "days": 731
+   }
+  },
+  {
+   "level": 0.2,
+   "share": 0.25,
+   "alpha": 9.121,
+   "beta": 1.107,
+   "published": {
+    "hits": 60,
+    "misses": 11,
+    "falseAlarms": 154,
+    "correctNegatives": 459,
+    "pod": 0.845,
+    "far": 0.72,
+    "csi": 0.267,
+    "bias": 3.014,
+    "warningDays": 245,
+    "eventDays": 72,
+    "days": 731
+   }
+  },
+  {
+   "level": 0.2,
+   "share": 0.5,
+   "alpha": 9.121,
+   "beta": 1.107,
+   "published": {
+    "hits": 51,
+    "misses": 20,
+    "falseAlarms": 108,
+    "correctNegatives": 505,
+    "pod": 0.718,
+    "far": 0.679,
+    "csi": 0.285,
+    "bias": 2.239,
+    "warningDays": 185,
+    "eventDays": 72,
+    "days": 731
+   }
+  },
+  {
+   "level": 0.3,
+   "share": 0.0,
+   "alpha": 10.278,
+   "beta": 1.107,
+   "published": {
+    "hits": 65,
+    "misses": 6,
+    "falseAlarms": 282,
+    "correctNegatives": 331,
+    "pod": 0.915,
+    "far": 0.813,
+    "csi": 0.184,
+    "bias": 4.887,
+    "warningDays": 386,
+    "eventDays": 72,
+    "days": 731
+   }
+  },
+  {
+   "level": 0.3,
+   "share": 0.1,
+   "alpha": 10.278,
+   "beta": 1.107,
+   "published": {
+    "hits": 62,
+    "misses": 9,
+    "falseAlarms": 180,
+    "correctNegatives": 433,
+    "pod": 0.873,
+    "far": 0.744,
+    "csi": 0.247,
+    "bias": 3.408,
+    "warningDays": 277,
+    "eventDays": 72,
+    "days": 731
+   }
+  },
+  {
+   "level": 0.3,
+   "share": 0.25,
+   "alpha": 10.278,
+   "beta": 1.107,
+   "published": {
+    "hits": 52,
+    "misses": 19,
+    "falseAlarms": 126,
+    "correctNegatives": 487,
+    "pod": 0.732,
+    "far": 0.708,
+    "csi": 0.264,
+    "bias": 2.507,
+    "warningDays": 202,
+    "eventDays": 72,
+    "days": 731
+   }
+  },
+  {
+   "level": 0.3,
+   "share": 0.5,
+   "alpha": 10.278,
+   "beta": 1.107,
+   "published": {
+    "hits": 33,
+    "misses": 38,
+    "falseAlarms": 68,
+    "correctNegatives": 545,
+    "pod": 0.465,
+    "far": 0.673,
+    "csi": 0.237,
+    "bias": 1.423,
+    "warningDays": 120,
+    "eventDays": 72,
+    "days": 731
+   }
+  },
+  {
+   "level": 0.5,
+   "share": 0.0,
+   "alpha": 12.333,
+   "beta": 1.107,
+   "published": {
+    "hits": 60,
+    "misses": 11,
+    "falseAlarms": 226,
+    "correctNegatives": 387,
+    "pod": 0.845,
+    "far": 0.79,
+    "csi": 0.202,
+    "bias": 4.028,
+    "warningDays": 318,
+    "eventDays": 72,
+    "days": 731
+   }
+  },
+  {
+   "level": 0.5,
+   "share": 0.1,
+   "alpha": 12.333,
+   "beta": 1.107,
+   "published": {
+    "hits": 42,
+    "misses": 29,
+    "falseAlarms": 117,
+    "correctNegatives": 496,
+    "pod": 0.592,
+    "far": 0.736,
+    "csi": 0.223,
+    "bias": 2.239,
+    "warningDays": 181,
+    "eventDays": 72,
+    "days": 731
+   }
+  },
+  {
+   "level": 0.5,
+   "share": 0.25,
+   "alpha": 12.333,
+   "beta": 1.107,
+   "published": {
+    "hits": 37,
+    "misses": 34,
+    "falseAlarms": 82,
+    "correctNegatives": 531,
+    "pod": 0.521,
+    "far": 0.689,
+    "csi": 0.242,
+    "bias": 1.676,
+    "warningDays": 139,
+    "eventDays": 72,
+    "days": 731
+   }
+  },
+  {
+   "level": 0.5,
+   "share": 0.5,
+   "alpha": 12.333,
+   "beta": 1.107,
+   "published": {
+    "hits": 29,
+    "misses": 42,
+    "falseAlarms": 43,
+    "correctNegatives": 570,
+    "pod": 0.408,
+    "far": 0.597,
+    "csi": 0.254,
+    "bias": 1.014,
+    "warningDays": 86,
+    "eventDays": 72,
+    "days": 731
+   }
+  }
+ ],
+ "reportsWithoutRainInFit": 16
+}

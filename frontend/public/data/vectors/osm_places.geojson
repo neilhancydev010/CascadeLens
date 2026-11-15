@@ -1,0 +1,32 @@
+{
+"type": "FeatureCollection",
+"name": "osm_places",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"xy_coordinate_resolution": 1e-06,
+"features": [
+{ "type": "Feature", "properties": { "id": "node/4800345719", "label": "Silintar", "place": "village" }, "geometry": { "type": "Point", "coordinates": [ 84.590809, 27.882025 ] } },
+{ "type": "Feature", "properties": { "id": "node/14127413536", "label": "Shyaphru Bensi", "place": "hamlet" }, "geometry": { "type": "Point", "coordinates": [ 85.342743, 28.164569 ] } },
+{ "type": "Feature", "properties": { "id": "node/267564991", "label": "Shyaphru", "place": "village" }, "geometry": { "type": "Point", "coordinates": [ 85.337252, 28.163667 ] } },
+{ "type": "Feature", "properties": { "id": "node/992955542", "label": "Rasuwa Gadhi", "place": "hamlet" }, "geometry": { "type": "Point", "coordinates": [ 85.377779, 28.277775 ] } },
+{ "type": "Feature", "properties": { "id": "node/279374585", "label": "Adamghat", "place": "hamlet" }, "geometry": { "type": "Point", "coordinates": [ 84.942947, 27.806968 ] } },
+{ "type": "Feature", "properties": { "id": "node/11765507564", "label": "MaheshDovan", "place": "hamlet" }, "geometry": { "type": "Point", "coordinates": [ 84.980042, 27.801045 ] } },
+{ "type": "Feature", "properties": { "id": "node/2862517103", "label": "Ghatbesi", "place": "hamlet" }, "geometry": { "type": "Point", "coordinates": [ 84.905268, 27.804498 ] } },
+{ "type": "Feature", "properties": { "id": "node/3013890964", "label": "Purano Malekhu", "place": "hamlet" }, "geometry": { "type": "Point", "coordinates": [ 84.836209, 27.806219 ] } },
+{ "type": "Feature", "properties": { "id": "node/4894808470", "label": "Ghyalchok", "place": "village" }, "geometry": { "type": "Point", "coordinates": [ 84.772468, 27.810645 ] } },
+{ "type": "Feature", "properties": { "id": "node/13235260367", "label": "Benighat Rorang", "place": "village" }, "geometry": { "type": "Point", "coordinates": [ 84.769707, 27.80742 ] } },
+{ "type": "Feature", "properties": { "id": "node/4941661567", "label": "Dhussa", "place": "village" }, "geometry": { "type": "Point", "coordinates": [ 84.751626, 27.803861 ] } },
+{ "type": "Feature", "properties": { "id": "node/14144169212", "label": "Hugdi Bazar", "place": "hamlet" }, "geometry": { "type": "Point", "coordinates": [ 84.701009, 27.806331 ] } },
+{ "type": "Feature", "properties": { "id": "node/14144169213", "label": "Majhimtar", "place": "hamlet" }, "geometry": { "type": "Point", "coordinates": [ 84.703461, 27.805826 ] } },
+{ "type": "Feature", "properties": { "id": "node/3415533959", "label": "Mailung", "place": "hamlet" }, "geometry": { "type": "Point", "coordinates": [ 85.207003, 28.071774 ] } },
+{ "type": "Feature", "properties": { "id": "node/4156044161", "label": "Devighat", "place": "hamlet" }, "geometry": { "type": "Point", "coordinates": [ 85.110063, 27.860032 ] } },
+{ "type": "Feature", "properties": { "id": "node/567088223", "label": "Mugling", "place": "hamlet" }, "geometry": { "type": "Point", "coordinates": [ 84.560951, 27.856162 ] } },
+{ "type": "Feature", "properties": { "id": "node/3415525225", "label": "Simle", "place": "hamlet" }, "geometry": { "type": "Point", "coordinates": [ 85.191197, 28.0292 ] } },
+{ "type": "Feature", "properties": { "id": "node/3013890962", "label": "Malekhu", "place": "hamlet" }, "geometry": { "type": "Point", "coordinates": [ 84.82724, 27.813705 ] } },
+{ "type": "Feature", "properties": { "id": "node/1537553866", "label": "Salanghat", "place": "hamlet" }, "geometry": { "type": "Point", "coordinates": [ 84.808347, 27.816359 ] } },
+{ "type": "Feature", "properties": { "id": "node/2862498799", "label": "Phishling", "place": "hamlet" }, "geometry": { "type": "Point", "coordinates": [ 84.661724, 27.842805 ] } },
+{ "type": "Feature", "properties": { "id": "node/10603537479", "label": "Naubisephat", "place": "hamlet" }, "geometry": { "type": "Point", "coordinates": [ 85.182562, 27.984691 ] } },
+{ "type": "Feature", "properties": { "id": "node/268864226", "label": "Betrawati", "place": "hamlet" }, "geometry": { "type": "Point", "coordinates": [ 85.185953, 27.973108 ] } },
+{ "type": "Feature", "properties": { "id": "node/14137246821", "label": "Trishuli", "place": "town" }, "geometry": { "type": "Point", "coordinates": [ 85.147993, 27.92316 ] } },
+{ "type": "Feature", "properties": { "id": "node/2857852085", "label": "Bhainse", "place": "hamlet" }, "geometry": { "type": "Point", "coordinates": [ 85.170331, 27.960367 ] } }
+]
+}

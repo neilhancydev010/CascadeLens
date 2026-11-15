@@ -1,0 +1,1435 @@
+{
+ "file": "NISAR_L2_PR_GUNW_029_098_A_016_030_4000_SH_20260831T233918_20260831T233952_20260912T233918_20260912T233952_P05023_N_F_J_001.h5",
+ "product": "GUNW",
+ "identification": {
+  "productType": "GUNW",
+  "missionId": "NISAR",
+  "trackNumber": 98,
+  "frameNumber": 16,
+  "orbitPassDirection": "Ascending",
+  "lookDirection": "Left",
+  "compositeReleaseId": "P05023",
+  "productVersion": "1.0.11",
+  "productSpecificationVersion": "1.5.0",
+  "granuleId": "NISAR_L2_PR_GUNW_029_098_A_016_030_4000_SH_20260831T233918_20260831T233952_20260912T233918_20260912T233952_P05023_N_F_J_001",
+  "productDoi": "10.5067/NIL2GUNW-P1",
+  "referenceZeroDopplerStartTime": "2026-08-31T23:39:18.000000000",
+  "secondaryZeroDopplerStartTime": "2026-09-12T23:39:18.000000000",
+  "zeroDopplerStartTime": null,
+  "isFullFrame": "True",
+  "isUrgentObservation": "True",
+  "processingDateTime": "2026-09-15T10:32:39",
+  "processingType": "Nominal",
+  "boundingPolygon": "POLYGON ((86.6012137246537 27.9916546770744 4879.48557022227,86.5314076608591 28.1968759561275 5382.02261630323,86.4653886719996 28.403030210058 5611.80859451884,86.4142619687515 28.6127783357533 4822.22607536273,86.3582199745289 28.8213767994216 4350.95263671914,86.2868174028643 29.0263258175426 4891.09570315136,86.2294221418619 29.2346574456171 4478.48876953237,86.1577938898016 29.4396086214019 4998.18749999953,86.0833948237871 29.6439240566851 5685.07275313447,86.0222449211363 29.8514437617095 5470.52343749995,85.9559509851628 30.0577597759294 5581.34033186304,85.6639124178749 29.9876240304431 5122.46386718191,85.3652452467286 29.9151067844869 6113.38720707914,85.096762003873 29.8492669169884 5686.20019531248,84.8382395970917 29.7852734063899 5162.05078124991,84.5748532011208 29.7194589388919 5746.71533039182,84.3342835055442 29.6588290784785 4913.34043241536,84.094676913423 29.5979304130393 4522.55029297124,83.8508054990104 29.5354169012659 5105.38183596088,83.6186362239863 29.4754232617602 5022.59863281239,83.3856150679117 29.4147242394377 5526.19726585322,83.4541016901486 29.2092043419783 5645.61669921791,83.5266924739025 29.0047995703946 5273.24278320994,83.5933412927667 28.7988735186894 5528.91359729285,83.6757687708148 28.5971198172118 3989.07164224298,83.756228531159 28.3948808633925 2636.21533218783,83.8349509698977 28.1922188327331 1443.84570312292,83.9106113775605 27.9887884974026 558.235551075894,83.9730567340221 27.7819423810981 1106.03027343646,84.04938350117 27.5787528638036 79.321214336464,84.1158788609065 27.3730335005675 112.657418960309,84.3414976918518 27.4313236911915 177.658508469378,84.5691514327689 27.4897056042562 494.190950053182,84.8055110827911 27.5498661280855 423.340605745574,85.0280150875115 27.6060541246046 2197.41381836341,85.2846299219055 27.6703739981258 1307.72119053637,85.5388119599919 27.7335330710363 1324.81823730548,85.7992016612018 27.7976744152081 1505.47832289145,86.0528091275107 27.8595888113312 2917.49554377697,86.3188877262792 27.9239756847371 4074.32153320478,86.6012137246537 27.9916546770744 4879.48557022227))",
+  "radarBand": "L"
+ },
+ "polarizations": [
+  "HH"
+ ],
+ "datasets": {
+  "/science/LSAR/GUNW/grids/frequencyA/unwrappedInterferogram/HH/unwrappedPhase": {
+   "shape": [
+    4230,
+    4311
+   ],
+   "dtype": "float32",
+   "attrs": {
+    "units": "radians",
+    "_FillValue": "nan",
+    "description": "Unwrapped interferogram between HH layers",
+    "grid_mapping": "projection"
+   },
+   "measurement": "gunw-phase",
+   "epsg": 32645,
+   "posting_m": [
+    80.0,
+    -80.0
+   ],
+   "bounds": [
+    126760.0,
+    3008920.0,
+    471560.0,
+    3347240.0
+   ]
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/unwrappedInterferogram/HH/coherenceMagnitude": {
+   "shape": [
+    4230,
+    4311
+   ],
+   "dtype": "float32",
+   "attrs": {
+    "units": "1",
+    "_FillValue": "nan",
+    "description": "Coherence magnitude between HH layers",
+    "grid_mapping": "projection"
+   },
+   "measurement": "gunw-coherence",
+   "epsg": 32645,
+   "posting_m": [
+    80.0,
+    -80.0
+   ],
+   "bounds": [
+    126760.0,
+    3008920.0,
+    471560.0,
+    3347240.0
+   ]
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/unwrappedInterferogram/HH/connectedComponents": {
+   "shape": [
+    4230,
+    4311
+   ],
+   "dtype": "uint16",
+   "attrs": {
+    "units": "1",
+    "_FillValue": 65535,
+    "description": "Connected components for HH layer",
+    "grid_mapping": "projection"
+   },
+   "measurement": "gunw-cc",
+   "epsg": 32645,
+   "posting_m": [
+    80.0,
+    -80.0
+   ],
+   "bounds": [
+    126760.0,
+    3008920.0,
+    471560.0,
+    3347240.0
+   ]
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/unwrappedInterferogram/HH/ionospherePhaseScreen": {
+   "shape": [
+    4230,
+    4311
+   ],
+   "dtype": "float32",
+   "attrs": {
+    "units": "radians",
+    "_FillValue": "nan",
+    "description": "Ionosphere phase screen",
+    "grid_mapping": "projection"
+   },
+   "measurement": "gunw-iono",
+   "epsg": 32645,
+   "posting_m": [
+    80.0,
+    -80.0
+   ],
+   "bounds": [
+    126760.0,
+    3008920.0,
+    471560.0,
+    3347240.0
+   ]
+  }
+ },
+ "missing": [],
+ "unit_mismatch": [],
+ "mask_present": true,
+ "group_count": 33,
+ "dataset_count": 219,
+ "all_datasets": {
+  "/science/LSAR/GUNW/grids/frequencyA/centerFrequency": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "hertz"
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/listOfPolarizations": {
+   "shape": [
+    1
+   ],
+   "dtype": "|S2",
+   "units": null
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/pixelOffsets/HH/alongTrackOffset": {
+   "shape": [
+    4230,
+    4311
+   ],
+   "dtype": "float32",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/pixelOffsets/HH/correlationSurfacePeak": {
+   "shape": [
+    4230,
+    4311
+   ],
+   "dtype": "float32",
+   "units": "1"
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/pixelOffsets/HH/projection": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": null
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/pixelOffsets/HH/slantRangeOffset": {
+   "shape": [
+    4230,
+    4311
+   ],
+   "dtype": "float32",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/pixelOffsets/HH/xCoordinateSpacing": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/pixelOffsets/HH/xCoordinates": {
+   "shape": [
+    4311
+   ],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/pixelOffsets/HH/yCoordinateSpacing": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/pixelOffsets/HH/yCoordinates": {
+   "shape": [
+    4230
+   ],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/pixelOffsets/mask": {
+   "shape": [
+    4230,
+    4311
+   ],
+   "dtype": "uint32",
+   "units": null
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/pixelOffsets/projection": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": null
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/pixelOffsets/xCoordinateSpacing": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/pixelOffsets/xCoordinates": {
+   "shape": [
+    4311
+   ],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/pixelOffsets/yCoordinateSpacing": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/pixelOffsets/yCoordinates": {
+   "shape": [
+    4230
+   ],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/unwrappedInterferogram/HH/coherenceMagnitude": {
+   "shape": [
+    4230,
+    4311
+   ],
+   "dtype": "float32",
+   "units": "1"
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/unwrappedInterferogram/HH/connectedComponents": {
+   "shape": [
+    4230,
+    4311
+   ],
+   "dtype": "uint16",
+   "units": "1"
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/unwrappedInterferogram/HH/ionospherePhaseScreen": {
+   "shape": [
+    4230,
+    4311
+   ],
+   "dtype": "float32",
+   "units": "radians"
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/unwrappedInterferogram/HH/ionospherePhaseScreenUncertainty": {
+   "shape": [
+    4230,
+    4311
+   ],
+   "dtype": "float32",
+   "units": "radians"
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/unwrappedInterferogram/HH/projection": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": null
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/unwrappedInterferogram/HH/unwrappedPhase": {
+   "shape": [
+    4230,
+    4311
+   ],
+   "dtype": "float32",
+   "units": "radians"
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/unwrappedInterferogram/HH/xCoordinateSpacing": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/unwrappedInterferogram/HH/xCoordinates": {
+   "shape": [
+    4311
+   ],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/unwrappedInterferogram/HH/yCoordinateSpacing": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/unwrappedInterferogram/HH/yCoordinates": {
+   "shape": [
+    4230
+   ],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/unwrappedInterferogram/mask": {
+   "shape": [
+    4230,
+    4311
+   ],
+   "dtype": "uint32",
+   "units": null
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/unwrappedInterferogram/projection": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": null
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/unwrappedInterferogram/xCoordinateSpacing": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/unwrappedInterferogram/xCoordinates": {
+   "shape": [
+    4311
+   ],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/unwrappedInterferogram/yCoordinateSpacing": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/unwrappedInterferogram/yCoordinates": {
+   "shape": [
+    4230
+   ],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/wrappedInterferogram/HH/coherenceMagnitude": {
+   "shape": [
+    16920,
+    17244
+   ],
+   "dtype": "float32",
+   "units": "1"
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/wrappedInterferogram/HH/projection": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": null
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/wrappedInterferogram/HH/wrappedInterferogram": {
+   "shape": [
+    16920,
+    17244
+   ],
+   "dtype": "complex64",
+   "units": "1"
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/wrappedInterferogram/HH/xCoordinateSpacing": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/wrappedInterferogram/HH/xCoordinates": {
+   "shape": [
+    17244
+   ],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/wrappedInterferogram/HH/yCoordinateSpacing": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/wrappedInterferogram/HH/yCoordinates": {
+   "shape": [
+    16920
+   ],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/wrappedInterferogram/mask": {
+   "shape": [
+    16920,
+    17244
+   ],
+   "dtype": "uint32",
+   "units": null
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/wrappedInterferogram/projection": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": null
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/wrappedInterferogram/xCoordinateSpacing": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/wrappedInterferogram/xCoordinates": {
+   "shape": [
+    17244
+   ],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/wrappedInterferogram/yCoordinateSpacing": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/grids/frequencyA/wrappedInterferogram/yCoordinates": {
+   "shape": [
+    16920
+   ],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/metadata/attitude/reference/attitudeType": {
+   "shape": [],
+   "dtype": "|S10",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/attitude/reference/eulerAngles": {
+   "shape": [
+    265,
+    3
+   ],
+   "dtype": "float64",
+   "units": "degrees"
+  },
+  "/science/LSAR/GUNW/metadata/attitude/reference/quaternions": {
+   "shape": [
+    265,
+    4
+   ],
+   "dtype": "float64",
+   "units": "1"
+  },
+  "/science/LSAR/GUNW/metadata/attitude/reference/time": {
+   "shape": [
+    265
+   ],
+   "dtype": "float64",
+   "units": "seconds since 2026-08-31T00:00:00"
+  },
+  "/science/LSAR/GUNW/metadata/attitude/secondary/attitudeType": {
+   "shape": [],
+   "dtype": "|S10",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/attitude/secondary/eulerAngles": {
+   "shape": [
+    265,
+    3
+   ],
+   "dtype": "float64",
+   "units": "degrees"
+  },
+  "/science/LSAR/GUNW/metadata/attitude/secondary/quaternions": {
+   "shape": [
+    265,
+    4
+   ],
+   "dtype": "float64",
+   "units": "1"
+  },
+  "/science/LSAR/GUNW/metadata/attitude/secondary/time": {
+   "shape": [
+    265
+   ],
+   "dtype": "float64",
+   "units": "seconds since 2026-09-12T00:00:00"
+  },
+  "/science/LSAR/GUNW/metadata/orbit/reference/interpMethod": {
+   "shape": [],
+   "dtype": "|S7",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/orbit/reference/orbitType": {
+   "shape": [],
+   "dtype": "|S3",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/orbit/reference/position": {
+   "shape": [
+    34,
+    3
+   ],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/metadata/orbit/reference/time": {
+   "shape": [
+    34
+   ],
+   "dtype": "float64",
+   "units": "seconds since 2026-08-31T00:00:00"
+  },
+  "/science/LSAR/GUNW/metadata/orbit/reference/velocity": {
+   "shape": [
+    34,
+    3
+   ],
+   "dtype": "float64",
+   "units": "meters / second"
+  },
+  "/science/LSAR/GUNW/metadata/orbit/secondary/interpMethod": {
+   "shape": [],
+   "dtype": "|S7",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/orbit/secondary/orbitType": {
+   "shape": [],
+   "dtype": "|S3",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/orbit/secondary/position": {
+   "shape": [
+    34,
+    3
+   ],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/metadata/orbit/secondary/time": {
+   "shape": [
+    34
+   ],
+   "dtype": "float64",
+   "units": "seconds since 2026-09-12T00:00:00"
+  },
+  "/science/LSAR/GUNW/metadata/orbit/secondary/velocity": {
+   "shape": [
+    34,
+    3
+   ],
+   "dtype": "float64",
+   "units": "meters / second"
+  },
+  "/science/LSAR/GUNW/metadata/orbit/temporalBaseline": {
+   "shape": [],
+   "dtype": "uint16",
+   "units": "days"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/algorithms/coregistration/coregistrationMethod": {
+   "shape": [],
+   "dtype": "|S93",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/algorithms/coregistration/crossCorrelation": {
+   "shape": [],
+   "dtype": "|S9",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/algorithms/coregistration/crossCorrelationFilling": {
+   "shape": [],
+   "dtype": "|S13",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/algorithms/coregistration/crossCorrelationFilterKernel": {
+   "shape": [],
+   "dtype": "|S6",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/algorithms/coregistration/crossCorrelationOutliers": {
+   "shape": [],
+   "dtype": "|S13",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/algorithms/coregistration/geometryCoregistration": {
+   "shape": [],
+   "dtype": "|S54",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/algorithms/coregistration/resampling": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/algorithms/geocoding/complexGeocodingInterpolation": {
+   "shape": [],
+   "dtype": "|S8",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/algorithms/geocoding/demInterpolation": {
+   "shape": [],
+   "dtype": "|S9",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/algorithms/geocoding/floatingGeocodingInterpolation": {
+   "shape": [],
+   "dtype": "|S8",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/algorithms/geocoding/integerGeocodingInterpolation": {
+   "shape": [],
+   "dtype": "|S7",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/algorithms/interferogramFormation/flatteningMethod": {
+   "shape": [],
+   "dtype": "|S21",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/algorithms/interferogramFormation/multilooking": {
+   "shape": [],
+   "dtype": "|S38",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/algorithms/interferogramFormation/wrappedInterferogramFiltering": {
+   "shape": [],
+   "dtype": "|S9",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/algorithms/ionosphereEstimation/ionosphereAlgorithm": {
+   "shape": [],
+   "dtype": "|S132",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/algorithms/ionosphereEstimation/ionosphereFilling": {
+   "shape": [],
+   "dtype": "|S7",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/algorithms/ionosphereEstimation/ionosphereFiltering": {
+   "shape": [],
+   "dtype": "|S42",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/algorithms/ionosphereEstimation/ionosphereOutliers": {
+   "shape": [
+    2
+   ],
+   "dtype": "object",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/algorithms/ionosphereEstimation/unwrappingErrorCorrection": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/algorithms/softwareVersion": {
+   "shape": [],
+   "dtype": "|S7",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/algorithms/unwrapping/costMode": {
+   "shape": [],
+   "dtype": "|S6",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/algorithms/unwrapping/preprocessing/wrappedPhaseFilling": {
+   "shape": [],
+   "dtype": "|S21",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/algorithms/unwrapping/preprocessing/wrappedPhaseOutliers": {
+   "shape": [],
+   "dtype": "|S13",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/algorithms/unwrapping/unwrappingAlgorithm": {
+   "shape": [],
+   "dtype": "|S6",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/algorithms/unwrapping/unwrappingInitializer": {
+   "shape": [],
+   "dtype": "|S3",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/inputs/configFiles": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/inputs/demSource": {
+   "shape": [],
+   "dtype": "|S1120",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/inputs/l1ReferenceSlcGranules": {
+   "shape": [
+    1
+   ],
+   "dtype": "|S94",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/inputs/l1SecondarySlcGranules": {
+   "shape": [
+    1
+   ],
+   "dtype": "|S94",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/inputs/orbitFiles": {
+   "shape": [
+    2
+   ],
+   "dtype": "|S39",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/inputs/waterMaskSource": {
+   "shape": [],
+   "dtype": "|S824",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/common/frequencyA/dopplerBandwidth": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "hertz"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/common/frequencyA/dopplerCentroid": {
+   "shape": [
+    264,
+    111
+   ],
+   "dtype": "float64",
+   "units": "hertz"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/geocoding/azimuthIonosphericCorrectionApplied": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/geocoding/hydrostaticTroposphericCorrectionApplied": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/geocoding/rangeIonosphericCorrectionApplied": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/geocoding/wetTroposphericCorrectionApplied": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/ionosphere/highBandBandwidth": {
+   "shape": [],
+   "dtype": "float32",
+   "units": "hertz"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/ionosphere/lowBandBandwidth": {
+   "shape": [],
+   "dtype": "float32",
+   "units": "hertz"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/pixelOffsets/frequencyA/alongTrackSearchWindowSize": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": "1"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/pixelOffsets/frequencyA/alongTrackSkipWindowSize": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": "1"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/pixelOffsets/frequencyA/alongTrackWindowSize": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": "1"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/pixelOffsets/frequencyA/correlationSurfaceOversampling": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": "1"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/pixelOffsets/frequencyA/isOffsetsBlendingApplied": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/pixelOffsets/frequencyA/slantRangeSearchWindowSize": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": "1"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/pixelOffsets/frequencyA/slantRangeSkipWindowSize": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": "1"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/pixelOffsets/frequencyA/slantRangeWindowSize": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": "1"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/reference/frequencyA/azimuthBandwidth": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "hertz"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/reference/frequencyA/dopplerCentroid": {
+   "shape": [
+    264,
+    111
+   ],
+   "dtype": "float64",
+   "units": "hertz"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/reference/frequencyA/numberOfAzimuthLines": {
+   "shape": [],
+   "dtype": "uint64",
+   "units": "1"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/reference/frequencyA/numberOfRangeSamples": {
+   "shape": [],
+   "dtype": "uint64",
+   "units": "1"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/reference/frequencyA/rangeBandwidth": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "hertz"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/reference/frequencyA/slantRangeSpacing": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/reference/frequencyA/slantRangeStart": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/reference/frequencyA/zeroDopplerEndTime": {
+   "shape": [],
+   "dtype": "|S29",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/reference/frequencyA/zeroDopplerStartTime": {
+   "shape": [],
+   "dtype": "|S29",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/reference/frequencyA/zeroDopplerTimeSpacing": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "seconds"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/reference/isMixedMode": {
+   "shape": [],
+   "dtype": "|S5",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/reference/referenceTerrainHeight": {
+   "shape": [
+    264
+   ],
+   "dtype": "float32",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/reference/rfiMitigation": {
+   "shape": [],
+   "dtype": "|S9",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/reference/rfiMitigationApplied": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/runConfigurationContents": {
+   "shape": [],
+   "dtype": "|S21716",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/secondary/frequencyA/azimuthBandwidth": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "hertz"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/secondary/frequencyA/dopplerCentroid": {
+   "shape": [
+    264,
+    111
+   ],
+   "dtype": "float64",
+   "units": "hertz"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/secondary/frequencyA/numberOfAzimuthLines": {
+   "shape": [],
+   "dtype": "uint64",
+   "units": "1"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/secondary/frequencyA/numberOfRangeSamples": {
+   "shape": [],
+   "dtype": "uint64",
+   "units": "1"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/secondary/frequencyA/rangeBandwidth": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "hertz"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/secondary/frequencyA/slantRangeSpacing": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/secondary/frequencyA/slantRangeStart": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/secondary/frequencyA/zeroDopplerEndTime": {
+   "shape": [],
+   "dtype": "|S29",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/secondary/frequencyA/zeroDopplerStartTime": {
+   "shape": [],
+   "dtype": "|S29",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/secondary/frequencyA/zeroDopplerTimeSpacing": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "seconds"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/secondary/isMixedMode": {
+   "shape": [],
+   "dtype": "|S5",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/secondary/referenceTerrainHeight": {
+   "shape": [
+    264
+   ],
+   "dtype": "float32",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/secondary/rfiMitigation": {
+   "shape": [],
+   "dtype": "|S9",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/secondary/rfiMitigationApplied": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/unwrappedInterferogram/frequencyA/azimuthBandwidth": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "hertz"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/unwrappedInterferogram/frequencyA/commonBandAzimuthFilterApplied": {
+   "shape": [],
+   "dtype": "|S5",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/unwrappedInterferogram/frequencyA/commonBandRangeFilterApplied": {
+   "shape": [],
+   "dtype": "|S5",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/unwrappedInterferogram/frequencyA/ellipsoidalFlatteningApplied": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/unwrappedInterferogram/frequencyA/numberOfAzimuthLooks": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": "1"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/unwrappedInterferogram/frequencyA/numberOfRangeLooks": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": "1"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/unwrappedInterferogram/frequencyA/rangeBandwidth": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "hertz"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/unwrappedInterferogram/frequencyA/topographicFlatteningApplied": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/wrappedInterferogram/frequencyA/azimuthBandwidth": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "hertz"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/wrappedInterferogram/frequencyA/commonBandAzimuthFilterApplied": {
+   "shape": [],
+   "dtype": "|S5",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/wrappedInterferogram/frequencyA/commonBandRangeFilterApplied": {
+   "shape": [],
+   "dtype": "|S5",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/wrappedInterferogram/frequencyA/ellipsoidalFlatteningApplied": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/wrappedInterferogram/frequencyA/numberOfAzimuthLooks": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": "1"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/wrappedInterferogram/frequencyA/numberOfRangeLooks": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": "1"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/wrappedInterferogram/frequencyA/rangeBandwidth": {
+   "shape": [],
+   "dtype": "float64",
+   "units": "hertz"
+  },
+  "/science/LSAR/GUNW/metadata/processingInformation/parameters/wrappedInterferogram/frequencyA/topographicFlatteningApplied": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/radarGrid/alongTrackUnitVectorX": {
+   "shape": [
+    20,
+    689,
+    702
+   ],
+   "dtype": "float32",
+   "units": "1"
+  },
+  "/science/LSAR/GUNW/metadata/radarGrid/alongTrackUnitVectorY": {
+   "shape": [
+    20,
+    689,
+    702
+   ],
+   "dtype": "float32",
+   "units": "1"
+  },
+  "/science/LSAR/GUNW/metadata/radarGrid/elevationAngle": {
+   "shape": [
+    20,
+    689,
+    702
+   ],
+   "dtype": "float32",
+   "units": "degrees"
+  },
+  "/science/LSAR/GUNW/metadata/radarGrid/groundTrackVelocity": {
+   "shape": [
+    20,
+    689,
+    702
+   ],
+   "dtype": "float64",
+   "units": "meters / second"
+  },
+  "/science/LSAR/GUNW/metadata/radarGrid/heightAboveEllipsoid": {
+   "shape": [
+    20
+   ],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/metadata/radarGrid/hydrostaticTroposphericPhaseScreen": {
+   "shape": [
+    20,
+    689,
+    702
+   ],
+   "dtype": "float64",
+   "units": "radians"
+  },
+  "/science/LSAR/GUNW/metadata/radarGrid/incidenceAngle": {
+   "shape": [
+    20,
+    689,
+    702
+   ],
+   "dtype": "float32",
+   "units": "degrees"
+  },
+  "/science/LSAR/GUNW/metadata/radarGrid/losUnitVectorX": {
+   "shape": [
+    20,
+    689,
+    702
+   ],
+   "dtype": "float32",
+   "units": "1"
+  },
+  "/science/LSAR/GUNW/metadata/radarGrid/losUnitVectorY": {
+   "shape": [
+    20,
+    689,
+    702
+   ],
+   "dtype": "float32",
+   "units": "1"
+  },
+  "/science/LSAR/GUNW/metadata/radarGrid/parallelBaseline": {
+   "shape": [
+    20,
+    689,
+    702
+   ],
+   "dtype": "float32",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/metadata/radarGrid/perpendicularBaseline": {
+   "shape": [
+    20,
+    689,
+    702
+   ],
+   "dtype": "float32",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/metadata/radarGrid/projection": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": null
+  },
+  "/science/LSAR/GUNW/metadata/radarGrid/referenceSlantRange": {
+   "shape": [
+    20,
+    689,
+    702
+   ],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/metadata/radarGrid/referenceZeroDopplerAzimuthTime": {
+   "shape": [
+    20,
+    689,
+    702
+   ],
+   "dtype": "float64",
+   "units": "seconds since 2026-08-31T00:00:00"
+  },
+  "/science/LSAR/GUNW/metadata/radarGrid/secondarySlantRange": {
+   "shape": [
+    20,
+    689,
+    702
+   ],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/metadata/radarGrid/secondaryZeroDopplerAzimuthTime": {
+   "shape": [
+    20,
+    689,
+    702
+   ],
+   "dtype": "float64",
+   "units": "seconds since 2026-09-12T00:00:00"
+  },
+  "/science/LSAR/GUNW/metadata/radarGrid/slantRangeSolidEarthTidesPhase": {
+   "shape": [
+    20,
+    689,
+    702
+   ],
+   "dtype": "float64",
+   "units": "radians"
+  },
+  "/science/LSAR/GUNW/metadata/radarGrid/wetTroposphericPhaseScreen": {
+   "shape": [
+    20,
+    689,
+    702
+   ],
+   "dtype": "float64",
+   "units": "radians"
+  },
+  "/science/LSAR/GUNW/metadata/radarGrid/xCoordinates": {
+   "shape": [
+    702
+   ],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/GUNW/metadata/radarGrid/yCoordinates": {
+   "shape": [
+    689
+   ],
+   "dtype": "float64",
+   "units": "meters"
+  },
+  "/science/LSAR/identification/boundingPolygon": {
+   "shape": [],
+   "dtype": "|S2095",
+   "units": null
+  },
+  "/science/LSAR/identification/compositeReleaseId": {
+   "shape": [],
+   "dtype": "|S6",
+   "units": null
+  },
+  "/science/LSAR/identification/diagnosticModeFlag": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": null
+  },
+  "/science/LSAR/identification/frameNumber": {
+   "shape": [],
+   "dtype": "uint16",
+   "units": null
+  },
+  "/science/LSAR/identification/granuleId": {
+   "shape": [],
+   "dtype": "|S123",
+   "units": null
+  },
+  "/science/LSAR/identification/instrumentName": {
+   "shape": [],
+   "dtype": "|S5",
+   "units": null
+  },
+  "/science/LSAR/identification/isDithered": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/identification/isFullFrame": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/identification/isGeocoded": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/identification/isMixedMode": {
+   "shape": [],
+   "dtype": "|S5",
+   "units": null
+  },
+  "/science/LSAR/identification/isUrgentObservation": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/identification/listOfFrequencies": {
+   "shape": [
+    1
+   ],
+   "dtype": "|S1",
+   "units": null
+  },
+  "/science/LSAR/identification/lookDirection": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/identification/missionId": {
+   "shape": [],
+   "dtype": "|S5",
+   "units": null
+  },
+  "/science/LSAR/identification/orbitPassDirection": {
+   "shape": [],
+   "dtype": "|S9",
+   "units": null
+  },
+  "/science/LSAR/identification/platformName": {
+   "shape": [],
+   "dtype": "|S5",
+   "units": null
+  },
+  "/science/LSAR/identification/processingCenter": {
+   "shape": [],
+   "dtype": "|S3",
+   "units": null
+  },
+  "/science/LSAR/identification/processingDateTime": {
+   "shape": [],
+   "dtype": "|S19",
+   "units": null
+  },
+  "/science/LSAR/identification/processingType": {
+   "shape": [],
+   "dtype": "|S7",
+   "units": null
+  },
+  "/science/LSAR/identification/productDoi": {
+   "shape": [],
+   "dtype": "|S19",
+   "units": null
+  },
+  "/science/LSAR/identification/productLevel": {
+   "shape": [],
+   "dtype": "|S2",
+   "units": null
+  },
+  "/science/LSAR/identification/productSpecificationVersion": {
+   "shape": [],
+   "dtype": "|S5",
+   "units": null
+  },
+  "/science/LSAR/identification/productType": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/identification/productVersion": {
+   "shape": [],
+   "dtype": "|S6",
+   "units": null
+  },
+  "/science/LSAR/identification/radarBand": {
+   "shape": [],
+   "dtype": "|S1",
+   "units": null
+  },
+  "/science/LSAR/identification/referenceAbsoluteOrbitNumber": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": "unitless"
+  },
+  "/science/LSAR/identification/referenceHasInputDataException": {
+   "shape": [],
+   "dtype": "uint8",
+   "units": null
+  },
+  "/science/LSAR/identification/referenceIsJointObservation": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/identification/referenceListOfObservationModes": {
+   "shape": [
+    1
+   ],
+   "dtype": "|S15",
+   "units": null
+  },
+  "/science/LSAR/identification/referencePlannedDatatakeId": {
+   "shape": [
+    1
+   ],
+   "dtype": "|S18",
+   "units": null
+  },
+  "/science/LSAR/identification/referencePlannedObservationId": {
+   "shape": [
+    1
+   ],
+   "dtype": "|S17",
+   "units": null
+  },
+  "/science/LSAR/identification/referenceZeroDopplerEndTime": {
+   "shape": [],
+   "dtype": "|S29",
+   "units": null
+  },
+  "/science/LSAR/identification/referenceZeroDopplerStartTime": {
+   "shape": [],
+   "dtype": "|S29",
+   "units": null
+  },
+  "/science/LSAR/identification/secondaryAbsoluteOrbitNumber": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": "unitless"
+  },
+  "/science/LSAR/identification/secondaryHasInputDataException": {
+   "shape": [],
+   "dtype": "uint8",
+   "units": null
+  },
+  "/science/LSAR/identification/secondaryIsJointObservation": {
+   "shape": [],
+   "dtype": "|S4",
+   "units": null
+  },
+  "/science/LSAR/identification/secondaryListOfObservationModes": {
+   "shape": [
+    1
+   ],
+   "dtype": "|S15",
+   "units": null
+  },
+  "/science/LSAR/identification/secondaryPlannedDatatakeId": {
+   "shape": [
+    1
+   ],
+   "dtype": "|S18",
+   "units": null
+  },
+  "/science/LSAR/identification/secondaryPlannedObservationId": {
+   "shape": [
+    1
+   ],
+   "dtype": "|S17",
+   "units": null
+  },
+  "/science/LSAR/identification/secondaryZeroDopplerEndTime": {
+   "shape": [],
+   "dtype": "|S29",
+   "units": null
+  },
+  "/science/LSAR/identification/secondaryZeroDopplerStartTime": {
+   "shape": [],
+   "dtype": "|S29",
+   "units": null
+  },
+  "/science/LSAR/identification/staticLayersDataAccess": {
+   "shape": [],
+   "dtype": "|S193",
+   "units": null
+  },
+  "/science/LSAR/identification/trackNumber": {
+   "shape": [],
+   "dtype": "uint32",
+   "units": null
+  }
+ }
+}

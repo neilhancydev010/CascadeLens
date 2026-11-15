@@ -1,0 +1,35 @@
+{
+ "dataset": "A1",
+ "provider": "NASA/JPL, ISRO via ASF DAAC",
+ "product": "NISAR L2 GUNW and GOFF, prepared",
+ "version": "P05023",
+ "url_or_request_ref": "data/metadata/catalogue.json",
+ "licence": "NASA open data (attribution required)",
+ "retrieved_at": null,
+ "available_at": null,
+ "spatial_extent": [
+  84.3976,
+  27.732,
+  85.5508,
+  28.35
+ ],
+ "time_extent": [
+  "2026-08-16",
+  "2026-08-31"
+ ],
+ "variables": [
+  "unwrapped_phase",
+  "coherence",
+  "offsets"
+ ],
+ "units": {
+  "unwrapped_phase": "radians",
+  "coherence": "1"
+ },
+ "crs": "EPSG:32645",
+ "resolution_m": 80,
+ "missing_fraction": null,
+ "quality_flags": true,
+ "maturity": "Provisional",
+ "notes": "7 granules in the manifest"
+}

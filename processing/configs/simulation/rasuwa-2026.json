@@ -1,0 +1,12 @@
+{
+  "output": "vectors/simulation.json",
+  "dem": "sampling/context/copdem_glo30.tif",
+  "rivers": "vectors/osm_rivers.geojson",
+  "mainRivers": ["Lende Khola", "Bhote Koshi", "Trishuli River", "Trisuli Khola", "Trishuli Ganga River", "Trisuli", "त्रिशुली नदी"],
+  "start": "vectors/unosat_detachment_zone.geojson",
+  "via": "vectors/unosat_barrier_lakes.geojson",
+  "buildings": "vectors/unosat_affected_buildings.geojson",
+  "affectedRoads": "vectors/unosat_affected_roads.geojson",
+  "roads": "vectors/osm_roads.geojson",
+  "places": "vectors/osm_places.geojson"
+}

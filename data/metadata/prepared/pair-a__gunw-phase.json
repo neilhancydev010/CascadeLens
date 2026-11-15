@@ -1,0 +1,224 @@
+{
+ "layerId": "pair-a:gunw-phase",
+ "group": "pair-a",
+ "measurement": "gunw-phase",
+ "units": "radians",
+ "epsg": 32645,
+ "postingM": [
+  80.0,
+  80.0
+ ],
+ "polarization": [
+  "HH"
+ ],
+ "goffLayer": null,
+ "stats": {
+  "count": 824253,
+  "min": -40.723121643066406,
+  "max": 22.517333984375,
+  "mean": 0.132691890001297,
+  "median": 0.0,
+  "p2": -12.374571228027344,
+  "p98": 14.417098388671867,
+  "displayMin": -14.417098045349121,
+  "displayMax": 14.417098045349121,
+  "histogram": {
+   "edges": [
+    -14.4171,
+    -13.69624,
+    -12.97539,
+    -12.25453,
+    -11.53368,
+    -10.81282,
+    -10.09197,
+    -9.37111,
+    -8.65026,
+    -7.9294,
+    -7.20855,
+    -6.48769,
+    -5.76684,
+    -5.04598,
+    -4.32513,
+    -3.60427,
+    -2.88342,
+    -2.16256,
+    -1.44171,
+    -0.72085,
+    0.0,
+    0.72085,
+    1.44171,
+    2.16256,
+    2.88342,
+    3.60427,
+    4.32513,
+    5.04598,
+    5.76684,
+    6.48769,
+    7.20855,
+    7.9294,
+    8.65026,
+    9.37111,
+    10.09197,
+    10.81282,
+    11.53368,
+    12.25453,
+    12.97539,
+    13.69624,
+    14.4171
+   ],
+   "counts": [
+    2587,
+    3279,
+    6353,
+    11937,
+    15310,
+    17062,
+    19331,
+    20661,
+    21427,
+    20671,
+    20897,
+    22649,
+    23365,
+    27178,
+    27900,
+    28734,
+    29011,
+    30877,
+    29280,
+    27828,
+    27206,
+    27582,
+    29402,
+    26643,
+    28873,
+    25187,
+    26556,
+    26917,
+    27090,
+    23872,
+    21640,
+    21085,
+    19600,
+    17073,
+    14743,
+    10847,
+    7744,
+    5518,
+    4456,
+    3607
+   ]
+  }
+ },
+ "stops": [
+  "#2166ac",
+  "#67a9cf",
+  "#f7f7f7",
+  "#ef8a62",
+  "#b2182b"
+ ],
+ "displayDb": false,
+ "displayRelative": true,
+ "sources": [
+  {
+   "frame": 74,
+   "granule": "NISAR_L2_PR_GUNW_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001",
+   "sourceFilename": "NISAR_L2_PR_GUNW_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001.h5",
+   "sourceDataset": "/science/LSAR/GUNW/grids/frequencyA/unwrappedInterferogram/HH/unwrappedPhase",
+   "sha256": "aa18c396262052814a9901275cd88aee8a99c4425c83be3168aa4b6e24d5568a",
+   "bounds": [
+    84.53594788265075,
+    27.717578024937264,
+    85.55941176995117,
+    28.367079371567687
+   ],
+   "shape": [
+    880,
+    1244
+   ],
+   "validFraction": 0.38749543262204034,
+   "maskedFraction": 0.17966968722595733,
+   "sourceDtype": "float32",
+   "clipWindow": [
+    2616,
+    3496,
+    0,
+    1244
+   ],
+   "displayOffset": 76.04257202148438,
+   "sampling": "data/sampling/pair-a/gunw-phase_f074.tif",
+   "validity": "data/sampling/pair-a/gunw-phase_f074_validity.tif",
+   "tiles": {
+    "url": "data/tiles/pair-a/gunw-phase/f074/{z}/{x}/{y}.png",
+    "minzoom": 8,
+    "maxzoom": 11,
+    "count": 76
+   },
+   "maskTiles": "data/tiles/pair-a/gunw-phase/f074_mask/{z}/{x}/{y}.png"
+  },
+  {
+   "frame": 75,
+   "granule": "NISAR_L2_PR_GUNW_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001",
+   "sourceFilename": "NISAR_L2_PR_GUNW_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001.h5",
+   "sourceDataset": "/science/LSAR/GUNW/grids/frequencyA/unwrappedInterferogram/HH/unwrappedPhase",
+   "sha256": "933b71fa40b14cc2e61b0996ed04cacfde0be2c9d62a17168f63f39312f78e67",
+   "bounds": [
+    84.38475258192256,
+    27.714795075127526,
+    85.55941176995117,
+    28.28044921635347
+   ],
+   "shape": [
+    760,
+    1432
+   ],
+   "validFraction": 0.36758857688915025,
+   "maskedFraction": 0.17860647603645988,
+   "sourceDtype": "float32",
+   "clipWindow": [
+    0,
+    760,
+    604,
+    2036
+   ],
+   "displayOffset": 22.350086212158203,
+   "sampling": "data/sampling/pair-a/gunw-phase_f075.tif",
+   "validity": "data/sampling/pair-a/gunw-phase_f075_validity.tif",
+   "tiles": {
+    "url": "data/tiles/pair-a/gunw-phase/f075/{z}/{x}/{y}.png",
+    "minzoom": 8,
+    "maxzoom": 11,
+    "count": 58
+   },
+   "maskTiles": "data/tiles/pair-a/gunw-phase/f075_mask/{z}/{x}/{y}.png"
+  }
+ ],
+ "processedAt": "2026-11-13T06:54:20+00:00",
+ "parameters": {
+  "gross_outlier_mad_k": 10,
+  "snr_min": null,
+  "coherence_threshold": null,
+  "goff_layer": 3,
+  "crid": "P05023",
+  "aoi_bbox": [
+   84.3976,
+   27.732,
+   85.5508,
+   28.35
+  ]
+ },
+ "provenance": {
+  "pipelineVersion": "0.2.0",
+  "configSha256": "1da822203031c9bc5416e32c968466922bcd0b3c4785b39492469469fc31db70",
+  "outputDtype": "float32",
+  "validityClasses": {
+   "0": "no data",
+   "1": "valid",
+   "2": "masked"
+  },
+  "maskRule": "Mask: water or invalid subswath masked, 255 no data. Phase only: component label 0 masked, 65535 no data.",
+  "tileResampling": "nearest",
+  "nativeGridKept": true,
+  "displayTransform": "value minus frame median"
+ }
+}

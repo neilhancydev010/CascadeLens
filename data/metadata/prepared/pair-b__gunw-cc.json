@@ -1,0 +1,100 @@
+{
+ "layerId": "pair-b:gunw-cc",
+ "group": "pair-b",
+ "measurement": "gunw-cc",
+ "units": "1",
+ "epsg": 32645,
+ "postingM": [
+  80.0,
+  80.0
+ ],
+ "polarization": [
+  "HH"
+ ],
+ "goffLayer": null,
+ "stats": {
+  "count": 1257355,
+  "labels": [
+   0,
+   1
+  ]
+ },
+ "stops": [
+  "#4e79a7",
+  "#f28e2b",
+  "#59a14f",
+  "#b07aa1",
+  "#edc948",
+  "#76b7b2",
+  "#e15759",
+  "#9c755f"
+ ],
+ "displayDb": false,
+ "displayRelative": false,
+ "sources": [
+  {
+   "frame": 16,
+   "granule": "NISAR_L2_PR_GUNW_028_098_A_016_029_4000_SH_20260819T233918_20260819T233953_20260831T233918_20260831T233952_P05023_N_F_J_001",
+   "sourceFilename": "NISAR_L2_PR_GUNW_028_098_A_016_029_4000_SH_20260819T233918_20260819T233953_20260831T233918_20260831T233952_P05023_N_F_J_001.h5",
+   "sourceDataset": "/science/LSAR/GUNW/grids/frequencyA/unwrappedInterferogram/HH/connectedComponents",
+   "sha256": "2145937a9695f374128926c9a46118ba4a07700bb34e6fd3c08989af3ecc3a7f",
+   "bounds": [
+    84.38263314570466,
+    27.714795075127526,
+    85.55941176995117,
+    28.367079371567687
+   ],
+   "shape": [
+    880,
+    1432
+   ],
+   "validFraction": 0.997774092178771,
+   "maskedFraction": 0.00222590782122905,
+   "sourceDtype": "uint16",
+   "clipWindow": [
+    2607,
+    3487,
+    1459,
+    2891
+   ],
+   "displayOffset": 0.0,
+   "sampling": "data/sampling/pair-b/gunw-cc_f016.tif",
+   "validity": "data/sampling/pair-b/gunw-cc_f016_validity.tif",
+   "tiles": {
+    "url": "data/tiles/pair-b/gunw-cc/f016/{z}/{x}/{y}.png",
+    "minzoom": 8,
+    "maxzoom": 11,
+    "count": 97
+   },
+   "maskTiles": "data/tiles/pair-b/gunw-cc/f016_mask/{z}/{x}/{y}.png"
+  }
+ ],
+ "processedAt": "2026-11-13T08:10:40+00:00",
+ "parameters": {
+  "gross_outlier_mad_k": 10,
+  "snr_min": null,
+  "coherence_threshold": null,
+  "goff_layer": 3,
+  "crid": "P05023",
+  "aoi_bbox": [
+   84.3976,
+   27.732,
+   85.5508,
+   28.35
+  ]
+ },
+ "provenance": {
+  "pipelineVersion": "0.2.0",
+  "configSha256": "5ab9205af479988ce816fe438f998d256fa2667f9a4ba84b9b357e6635dc2744",
+  "outputDtype": "float32",
+  "validityClasses": {
+   "0": "no data",
+   "1": "valid",
+   "2": "masked"
+  },
+  "maskRule": "Mask: water or invalid subswath masked, 255 no data. Phase only: component label 0 masked, 65535 no data.",
+  "tileResampling": "nearest",
+  "nativeGridKept": true,
+  "displayTransform": null
+ }
+}

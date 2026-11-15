@@ -1,0 +1,486 @@
+{
+ "about": "Catalogue for the readiness engine (processing/src/cascade_lens/readiness.py). Dataset IDs, areas and windows follow the Stage 0 audit, sections 08 to 11. A dataset counts only when a SOURCE.json declaring its ID is on disk.",
+ "areas": {
+  "R1": [
+   84.3976,
+   27.732,
+   85.5508,
+   28.35
+  ],
+  "R2": [
+   84.0,
+   27.5,
+   86.5,
+   29.5
+  ]
+ },
+ "windows": {
+  "W1": [
+   "2026-07-23",
+   "2026-10-10"
+  ],
+  "W2": [
+   "2026-06-01",
+   "2026-10-10"
+  ],
+  "W3": [
+   "2016-06-01",
+   "2024-10-31"
+  ],
+  "W4": [
+   "2014-01-01",
+   "2026-10-31"
+  ]
+ },
+ "datasets": {
+  "A1": {
+   "name": "NISAR Pair A and Pair B, prepared",
+   "group": "A"
+  },
+  "A2": {
+   "name": "Copernicus DEM GLO-30, study area clip",
+   "group": "A"
+  },
+  "A3": {
+   "name": "UNOSAT 2026 event mapping",
+   "group": "A"
+  },
+  "A4": {
+   "name": "OpenStreetMap context and HOT post-event mapping",
+   "group": "A"
+  },
+  "B1": {
+   "name": "GPM IMERG V07 rainfall, Late or Final",
+   "group": "B",
+   "source": "NASA GES DISC (Earthdata login)"
+  },
+  "B2": {
+   "name": "DHM discharge and stage, with station metadata and danger levels",
+   "group": "B",
+   "source": "DHM Nepal, formal request"
+  },
+  "B3": {
+   "name": "Archived rainfall forecasts, as issued",
+   "group": "B",
+   "source": "ECMWF TIGGE or MARS (terms to verify)"
+  },
+  "B4": {
+   "name": "Live rainfall forecast",
+   "group": "B",
+   "source": "ECMWF open data, CC BY 4.0"
+  },
+  "B5": {
+   "name": "Copernicus DEM for the whole Trishuli catchment (R2)",
+   "group": "B",
+   "source": "Copernicus DEM"
+  },
+  "B6": {
+   "name": "GloFAS reforecasts and historical discharge",
+   "group": "B",
+   "source": "CEMS Early Warning Data Store (account)"
+  },
+  "B7": {
+   "name": "Cross-sections, bridges and roughness",
+   "group": "B",
+   "source": "Field survey, DHM, hydropower studies"
+  },
+  "C1": {
+   "name": "Dated landslide inventory with completeness notes",
+   "group": "C",
+   "source": "BIPAD; NASA GLC/COOLR; NSIDC HMA v2; published inventories"
+  },
+  "C2": {
+   "name": "Geological map: lithology, formations, faults",
+   "group": "C",
+   "source": "DMG Nepal; BGS simplified map"
+  },
+  "C3": {
+   "name": "Land cover",
+   "group": "C",
+   "source": "ESA WorldCover v200"
+  },
+  "C4": {
+   "name": "Soil properties",
+   "group": "C",
+   "source": "ISRIC SoilGrids"
+  },
+  "C5": {
+   "name": "Rainfall for thresholds: IMERG plus DHM daily gauges",
+   "group": "C",
+   "source": "NASA GES DISC; DHM"
+  },
+  "C6": {
+   "name": "Soil moisture, SMAP L4",
+   "group": "C",
+   "source": "NSIDC (Earthdata login)"
+  },
+  "C7": {
+   "name": "NISAR GUNW repeat series (Track 48 frames 74 and 75, Track 98 frame 16)",
+   "group": "C",
+   "source": "ASF (Earthdata login)"
+  },
+  "E1": {
+   "name": "Field reports or photos for named places",
+   "group": "E",
+   "source": "Partners, agencies"
+  },
+  "E3": {
+   "name": "Independently observed flood extents",
+   "group": "E",
+   "source": "OPERA DSWx-S1; Copernicus EMS"
+  },
+  "E4": {
+   "name": "Independently mapped landslides for the test period",
+   "group": "E",
+   "source": "Published or agency inventories"
+  },
+  "F10": {
+   "name": "Historical flood events with dates, extents and stage",
+   "group": "B",
+   "source": "BIPAD; DHM; UNOSAT; Copernicus EMS"
+  }
+ },
+ "capabilities": [
+  {
+   "id": "flood.F0",
+   "family": "flood",
+   "name": "F0 Geographic context: terrain, rivers, the mapped 2026 extent",
+   "needs": [
+    {
+     "dataset": "A2",
+     "area": "R1"
+    },
+    {
+     "dataset": "A3",
+     "area": "R1"
+    },
+    {
+     "dataset": "A4",
+     "area": "R1"
+    },
+    {
+     "dataset": "B5",
+     "area": "R2",
+     "essential": false
+    }
+   ],
+   "decision": "Context only: shows where things are, not what will happen",
+   "context": true
+  },
+  {
+   "id": "flood.F1",
+   "family": "flood",
+   "name": "F1 Flood susceptibility screening",
+   "needs": [
+    {
+     "dataset": "B5",
+     "area": "R2",
+     "maxResolutionM": 30
+    },
+    {
+     "dataset": "F10",
+     "area": "R1",
+     "window": "W4"
+    },
+    {
+     "dataset": "C3",
+     "area": "R2",
+     "maxResolutionM": 30
+    },
+    {
+     "dataset": "C4",
+     "area": "R2",
+     "essential": false
+    }
+   ],
+   "decision": "Start after data supply"
+  },
+  {
+   "id": "flood.F2",
+   "family": "flood",
+   "name": "F2 Rainfall monitoring against a documented threshold",
+   "needs": [
+    {
+     "dataset": "B1",
+     "area": "R2",
+     "window": "W2",
+     "variables": [
+      "precipitation"
+     ],
+     "units": {
+      "precipitation": "mm/h"
+     },
+     "maxResolutionM": 11200,
+     "qualityFlags": true
+    },
+    {
+     "dataset": "B2",
+     "area": "R1",
+     "window": "W4",
+     "variables": [
+      "discharge"
+     ],
+     "units": {
+      "discharge": "m3/s"
+     }
+    }
+   ],
+   "decision": "Start after data supply"
+  },
+  {
+   "id": "flood.F3",
+   "family": "flood",
+   "name": "F3 24-hour threshold forecast for the Trishuli main stem",
+   "needs": [
+    {
+     "dataset": "B1",
+     "area": "R2",
+     "window": "W4",
+     "variables": [
+      "precipitation"
+     ],
+     "units": {
+      "precipitation": "mm/h"
+     },
+     "qualityFlags": true
+    },
+    {
+     "dataset": "B2",
+     "area": "R1",
+     "window": "W4",
+     "variables": [
+      "discharge"
+     ],
+     "units": {
+      "discharge": "m3/s"
+     },
+     "maxMissingFraction": 0.2
+    },
+    {
+     "dataset": "B3",
+     "area": "R2",
+     "window": "W4",
+     "variables": [
+      "total_precipitation"
+     ]
+    },
+    {
+     "dataset": "B5",
+     "area": "R2",
+     "maxResolutionM": 30
+    },
+    {
+     "dataset": "B6",
+     "area": "R2",
+     "window": "W4",
+     "essential": false
+    }
+   ],
+   "next": {
+    "model": "A lumped conceptual model with a snow routine, forced by IMERG history",
+    "calibration": "Calibration up to 2021 against DHM discharge",
+    "validation": "Chronological validation 2022 to 2024 with POD, FAR and CSI",
+    "operational": "A full monsoon season evaluated with partners"
+   },
+   "decision": "Start after data supply, then after validation"
+  },
+  {
+   "id": "flood.F4",
+   "family": "flood",
+   "name": "F4 Inundation forecast",
+   "needs": [
+    {
+     "dataset": "B7",
+     "area": "R1"
+    },
+    {
+     "dataset": "E3",
+     "area": "R1"
+    }
+   ],
+   "ceiling": "VALIDATION REQUIRED",
+   "decision": "Not feasible with available data: no hydraulic inputs"
+  },
+  {
+   "id": "flood.F5",
+   "family": "flood",
+   "name": "F5 Infrastructure impact of a forecast flood",
+   "needs": [
+    {
+     "dataset": "A4",
+     "area": "R1"
+    },
+    {
+     "dataset": "B2",
+     "area": "R1",
+     "window": "W4"
+    },
+    {
+     "dataset": "B7",
+     "area": "R1"
+    }
+   ],
+   "decision": "Only after a validated flood output exists"
+  },
+  {
+   "id": "landslide.L0",
+   "family": "landslide",
+   "name": "L0 Terrain and geological context",
+   "needs": [
+    {
+     "dataset": "A2",
+     "area": "R1",
+     "maxResolutionM": 30
+    },
+    {
+     "dataset": "C2",
+     "area": "R1",
+     "essential": false
+    },
+    {
+     "dataset": "C3",
+     "area": "R1",
+     "essential": false
+    },
+    {
+     "dataset": "C4",
+     "area": "R1",
+     "essential": false
+    }
+   ],
+   "decision": "Context only; the terrain screen is experimental and terrain-only",
+   "context": true
+  },
+  {
+   "id": "landslide.L1",
+   "family": "landslide",
+   "name": "L1 Landslide susceptibility",
+   "needs": [
+    {
+     "dataset": "C1",
+     "area": "R1",
+     "window": "W3"
+    },
+    {
+     "dataset": "C2",
+     "area": "R1"
+    },
+    {
+     "dataset": "A2",
+     "area": "R1"
+    },
+    {
+     "dataset": "C3",
+     "area": "R1",
+     "essential": false
+    },
+    {
+     "dataset": "C4",
+     "area": "R1",
+     "essential": false
+    }
+   ],
+   "next": {
+    "model": "Logistic regression on terrain, geology and land cover",
+    "calibration": "Fitted on the training inventory",
+    "validation": "Spatial block cross-validation and a held-out valley (E4)",
+    "operational": "Field checks with partners"
+   },
+   "decision": "Start after data supply"
+  },
+  {
+   "id": "landslide.L2",
+   "family": "landslide",
+   "name": "L2 Rainfall-trigger monitoring",
+   "needs": [
+    {
+     "dataset": "C1",
+     "area": "R1",
+     "window": "W3"
+    },
+    {
+     "dataset": "C5",
+     "area": "R2",
+     "window": "W3",
+     "variables": [
+      "precipitation"
+     ],
+     "units": {
+      "precipitation": "mm/h"
+     }
+    },
+    {
+     "dataset": "C6",
+     "area": "R2",
+     "window": "W3",
+     "essential": false
+    }
+   ],
+   "next": {
+    "model": "Empirical intensity-duration thresholds with an antecedent term",
+    "calibration": "Thresholds fitted on 2016 to 2024",
+    "validation": "2025 to 2026 held out: POD, FAR, missed events",
+    "operational": "A monsoon season with partners"
+   },
+   "decision": "Start after data supply, then after validation"
+  },
+  {
+   "id": "landslide.L3",
+   "family": "landslide",
+   "name": "L3 24-hour threshold-based landslide forecast",
+   "needs": [
+    {
+     "dataset": "C1",
+     "area": "R1",
+     "window": "W3"
+    },
+    {
+     "dataset": "C5",
+     "area": "R2",
+     "window": "W3"
+    },
+    {
+     "dataset": "B3",
+     "area": "R2",
+     "window": "W4"
+    }
+   ],
+   "decision": "Start after data supply, then after validation"
+  },
+  {
+   "id": "landslide.L4",
+   "family": "landslide",
+   "name": "L4 Slope-movement monitoring from repeat InSAR",
+   "needs": [
+    {
+     "dataset": "C7",
+     "area": "R1",
+     "window": "W1"
+    }
+   ],
+   "ceiling": "VALIDATION REQUIRED",
+   "decision": "Start after scientific validation: the phase sign convention is unanswered and the series is short"
+  },
+  {
+   "id": "landslide.L5",
+   "family": "landslide",
+   "name": "L5 Infrastructure impact of a landslide outlook",
+   "needs": [
+    {
+     "dataset": "A4",
+     "area": "R1"
+    },
+    {
+     "dataset": "C1",
+     "area": "R1",
+     "window": "W3"
+    },
+    {
+     "dataset": "E1",
+     "area": "R1"
+    }
+   ],
+   "decision": "Only after a validated landslide output exists"
+  }
+ ]
+}

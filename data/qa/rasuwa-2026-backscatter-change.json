@@ -1,0 +1,131 @@
+{
+ "method": "10log10(second) - 10log10(first) on 40 m means of linear gamma-0; |change| > 3 dB counted; NaN (masked, outside the frame) left out",
+ "eventDate": "2026-08-26",
+ "pairs": [
+  {
+   "pair": "NISAR GCOV HH, Track 48",
+   "first": "gcov_20260816_t048_hh.tif",
+   "second": "gcov_20260828_t048_hh.tif",
+   "zones": {
+    "unosatExtent": {
+     "pixels40m": 37015,
+     "validShare": 0.325,
+     "medianDb": -0.57,
+     "shareOver3Db": 0.267
+    },
+    "ring1km": {
+     "pixels40m": 321968,
+     "validShare": 0.316,
+     "medianDb": -0.02,
+     "shareOver3Db": 0.095
+    },
+    "detachmentZone": {
+     "pixels40m": 1219,
+     "validShare": 0.0,
+     "medianDb": null,
+     "shareOver3Db": null
+    }
+   }
+  },
+  {
+   "pair": "OPERA RTC-S1 VV, track 19",
+   "first": "opera_20260812_t019_vv.tif",
+   "second": "opera_20260824_t019_vv.tif",
+   "zones": {
+    "unosatExtent": {
+     "pixels40m": 37015,
+     "validShare": 0.888,
+     "medianDb": -0.05,
+     "shareOver3Db": 0.062
+    },
+    "ring1km": {
+     "pixels40m": 321968,
+     "validShare": 0.892,
+     "medianDb": 0.04,
+     "shareOver3Db": 0.047
+    },
+    "detachmentZone": {
+     "pixels40m": 1219,
+     "validShare": 0.858,
+     "medianDb": 0.18,
+     "shareOver3Db": 0.019
+    }
+   }
+  },
+  {
+   "pair": "OPERA RTC-S1 VV, track 19",
+   "first": "opera_20260824_t019_vv.tif",
+   "second": "opera_20260905_t019_vv.tif",
+   "zones": {
+    "unosatExtent": {
+     "pixels40m": 37015,
+     "validShare": 0.883,
+     "medianDb": -0.16,
+     "shareOver3Db": 0.232
+    },
+    "ring1km": {
+     "pixels40m": 321968,
+     "validShare": 0.888,
+     "medianDb": 0.16,
+     "shareOver3Db": 0.059
+    },
+    "detachmentZone": {
+     "pixels40m": 1219,
+     "validShare": 0.858,
+     "medianDb": -0.07,
+     "shareOver3Db": 0.41
+    }
+   }
+  },
+  {
+   "pair": "OPERA RTC-S1 VV, track 85",
+   "first": "opera_20260816_t085_vv.tif",
+   "second": "opera_20260828_t085_vv.tif",
+   "zones": {
+    "unosatExtent": {
+     "pixels40m": 37015,
+     "validShare": 0.871,
+     "medianDb": -0.03,
+     "shareOver3Db": 0.24
+    },
+    "ring1km": {
+     "pixels40m": 321968,
+     "validShare": 0.888,
+     "medianDb": -0.06,
+     "shareOver3Db": 0.056
+    },
+    "detachmentZone": {
+     "pixels40m": 1219,
+     "validShare": 0.13,
+     "medianDb": 0.29,
+     "shareOver3Db": 0.392
+    }
+   }
+  },
+  {
+   "pair": "OPERA RTC-S1 VV, track 85",
+   "first": "opera_20260828_t085_vv.tif",
+   "second": "opera_20260909_t085_vv.tif",
+   "zones": {
+    "unosatExtent": {
+     "pixels40m": 37015,
+     "validShare": 0.869,
+     "medianDb": -0.25,
+     "shareOver3Db": 0.155
+    },
+    "ring1km": {
+     "pixels40m": 321968,
+     "validShare": 0.886,
+     "medianDb": -0.03,
+     "shareOver3Db": 0.054
+    },
+    "detachmentZone": {
+     "pixels40m": 1219,
+     "validShare": 0.12,
+     "medianDb": -0.22,
+     "shareOver3Db": 0.24
+    }
+   }
+  }
+ ]
+}

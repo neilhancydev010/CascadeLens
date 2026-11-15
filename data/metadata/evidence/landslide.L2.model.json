@@ -1,0 +1,26 @@
+{
+ "capability": "landslide.L2",
+ "generatedAt": "2026-11-13T14:05:24+00:00",
+ "script": "processing/scripts/run_rain_thresholds.py",
+ "inputs": {
+  "rainfall": "C5: IMERG Late V07 daily, 0.1 degree (data/reference/rainfall/GPM_3IMERGDL.07)",
+  "inventory": "C1: BIPAD landslide incidents (data/raw/hazard/bipad, licence not established)"
+ },
+ "needsDatasets": [
+  "C1",
+  "C5"
+ ],
+ "key": "landslide.L2.model",
+ "summary": "Rainfall event-duration threshold E = 6.7 x D^1.17 mm, fitted to 820 triggering events (20% below the line), BIPAD 2016-2024 with IMERG Late",
+ "threshold": {
+  "alpha": 6.6910503250881295,
+  "beta": 1.1732618910252282,
+  "level": 0.2,
+  "nEvents": 820
+ },
+ "rules": {
+  "dryDays": 2,
+  "wetMm": 1.0
+ },
+ "reportsWithoutRain": 25
+}

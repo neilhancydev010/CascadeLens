@@ -1,0 +1,1196 @@
+{
+ "generatedAt": "2026-11-13T14:05:31+00:00",
+ "states": [
+  "NOT AVAILABLE",
+  "DATA AVAILABLE, PROCESSING REQUIRED",
+  "MODEL REQUIRED",
+  "CALIBRATION REQUIRED",
+  "VALIDATION REQUIRED",
+  "EXPERIMENTAL",
+  "OPERATIONALLY EVALUATED",
+  "CONTEXT ONLY"
+ ],
+ "areas": {
+  "R1": [
+   84.3976,
+   27.732,
+   85.5508,
+   28.35
+  ],
+  "R2": [
+   84.0,
+   27.5,
+   86.5,
+   29.5
+  ]
+ },
+ "windows": {
+  "W1": [
+   "2026-07-23",
+   "2026-10-10"
+  ],
+  "W2": [
+   "2026-06-01",
+   "2026-10-10"
+  ],
+  "W3": [
+   "2016-06-01",
+   "2024-10-31"
+  ],
+  "W4": [
+   "2014-01-01",
+   "2026-10-31"
+  ]
+ },
+ "capabilities": [
+  {
+   "capability": "flood.F0",
+   "name": "F0 Geographic context: terrain, rivers, the mapped 2026 extent",
+   "family": "flood",
+   "state": "CONTEXT ONLY",
+   "checks": [
+    {
+     "id": "A2.present",
+     "ok": true,
+     "reason": "Found at data/metadata/sources/A2/SOURCE.json"
+    },
+    {
+     "id": "A2.variables",
+     "ok": true,
+     "reason": "All needed variables present"
+    },
+    {
+     "id": "A2.units",
+     "ok": true,
+     "reason": "Units as needed"
+    },
+    {
+     "id": "A2.space",
+     "ok": true,
+     "reason": "Extent [84.3976, 27.7319, 85.5509, 28.35] against area R1 [84.3976, 27.732, 85.5508, 28.35]"
+    },
+    {
+     "id": "A2.crs",
+     "ok": true,
+     "reason": "CRS EPSG:4326"
+    },
+    {
+     "id": "A2.licence",
+     "ok": true,
+     "reason": "Licence Copernicus DEM licence (free, with attribution)"
+    },
+    {
+     "id": "A3.present",
+     "ok": true,
+     "reason": "Found at data/metadata/sources/A3/SOURCE.json"
+    },
+    {
+     "id": "A3.variables",
+     "ok": true,
+     "reason": "All needed variables present"
+    },
+    {
+     "id": "A3.units",
+     "ok": true,
+     "reason": "Units as needed"
+    },
+    {
+     "id": "A3.space",
+     "ok": true,
+     "reason": "Extent [84.3558, 27.6776, 85.5299, 28.3405] against area R1 [84.3976, 27.732, 85.5508, 28.35]"
+    },
+    {
+     "id": "A3.crs",
+     "ok": true,
+     "reason": "CRS EPSG:4326"
+    },
+    {
+     "id": "A3.licence",
+     "ok": true,
+     "reason": "Licence CC BY-SA"
+    },
+    {
+     "id": "A4.present",
+     "ok": true,
+     "reason": "Found at data/metadata/sources/A4/SOURCE.json"
+    },
+    {
+     "id": "A4.variables",
+     "ok": true,
+     "reason": "All needed variables present"
+    },
+    {
+     "id": "A4.units",
+     "ok": true,
+     "reason": "Units as needed"
+    },
+    {
+     "id": "A4.space",
+     "ok": true,
+     "reason": "Extent [84.5514, 27.7681, 85.4079, 28.3064] against area R1 [84.3976, 27.732, 85.5508, 28.35]"
+    },
+    {
+     "id": "A4.crs",
+     "ok": true,
+     "reason": "CRS EPSG:4326"
+    },
+    {
+     "id": "A4.licence",
+     "ok": true,
+     "reason": "Licence ODbL"
+    },
+    {
+     "id": "B5.present",
+     "ok": false,
+     "reason": "B5 (Copernicus DEM for the whole Trishuli catchment (R2)) is not on disk"
+    }
+   ],
+   "partial": [
+    "B5: Copernicus DEM for the whole Trishuli catchment (R2)"
+   ],
+   "next_requirement": "B5: Copernicus DEM for the whole Trishuli catchment (R2)",
+   "decision": "Context only: shows where things are, not what will happen",
+   "ceiling": null
+  },
+  {
+   "capability": "flood.F1",
+   "name": "F1 Flood susceptibility screening",
+   "family": "flood",
+   "state": "NOT AVAILABLE",
+   "checks": [
+    {
+     "id": "B5.present",
+     "ok": false,
+     "reason": "B5 (Copernicus DEM for the whole Trishuli catchment (R2)) is not on disk"
+    },
+    {
+     "id": "F10.present",
+     "ok": false,
+     "reason": "F10 (Historical flood events with dates, extents and stage) is not on disk"
+    },
+    {
+     "id": "C3.present",
+     "ok": false,
+     "reason": "C3 (Land cover) is not on disk"
+    },
+    {
+     "id": "C4.present",
+     "ok": false,
+     "reason": "C4 (Soil properties) is not on disk"
+    },
+    {
+     "id": "flood.F1.model",
+     "ok": false,
+     "reason": "No model record"
+    },
+    {
+     "id": "flood.F1.calibration",
+     "ok": false,
+     "reason": "No calibration record"
+    },
+    {
+     "id": "flood.F1.validation",
+     "ok": false,
+     "reason": "No validation record"
+    },
+    {
+     "id": "flood.F1.operational",
+     "ok": false,
+     "reason": "No operational record"
+    }
+   ],
+   "partial": [
+    "C4: Soil properties"
+   ],
+   "next_requirement": "B5: Copernicus DEM for the whole Trishuli catchment (R2)",
+   "decision": "Start after data supply",
+   "ceiling": null
+  },
+  {
+   "capability": "flood.F2",
+   "name": "F2 Rainfall monitoring against a documented threshold",
+   "family": "flood",
+   "state": "NOT AVAILABLE",
+   "checks": [
+    {
+     "id": "B1.present",
+     "ok": true,
+     "reason": "Found at data/reference/rainfall/GPM_3IMERGDL.07/SOURCE.json"
+    },
+    {
+     "id": "B1.variables",
+     "ok": true,
+     "reason": "All needed variables present"
+    },
+    {
+     "id": "B1.units",
+     "ok": true,
+     "reason": "Units as needed"
+    },
+    {
+     "id": "B1.space",
+     "ok": true,
+     "reason": "Extent [84.0, 27.5, 86.5, 29.5] against area R2 [84.0, 27.5, 86.5, 29.5]"
+    },
+    {
+     "id": "B1.time",
+     "ok": true,
+     "reason": "Time ['2016-06-01', '2026-10-31'] against window W2 ['2026-06-01', '2026-10-10']"
+    },
+    {
+     "id": "B1.resolution",
+     "ok": true,
+     "reason": "Resolution 11132.0 m, needs 11200 m or finer"
+    },
+    {
+     "id": "B1.crs",
+     "ok": true,
+     "reason": "CRS EPSG:4326"
+    },
+    {
+     "id": "B1.quality",
+     "ok": true,
+     "reason": "Quality flags recorded"
+    },
+    {
+     "id": "B1.licence",
+     "ok": true,
+     "reason": "Licence NASA open data: no restrictions on reuse, cite the dataset DOI (EOSDIS data use guidance)"
+    },
+    {
+     "id": "B2.present",
+     "ok": false,
+     "reason": "B2 (DHM discharge and stage, with station metadata and danger levels) is not on disk"
+    },
+    {
+     "id": "flood.F2.model",
+     "ok": false,
+     "reason": "No model record"
+    },
+    {
+     "id": "flood.F2.calibration",
+     "ok": false,
+     "reason": "No calibration record"
+    },
+    {
+     "id": "flood.F2.validation",
+     "ok": false,
+     "reason": "No validation record"
+    },
+    {
+     "id": "flood.F2.operational",
+     "ok": false,
+     "reason": "No operational record"
+    }
+   ],
+   "partial": [],
+   "next_requirement": "B2: DHM discharge and stage, with station metadata and danger levels",
+   "decision": "Start after data supply",
+   "ceiling": null
+  },
+  {
+   "capability": "flood.F3",
+   "name": "F3 24-hour threshold forecast for the Trishuli main stem",
+   "family": "flood",
+   "state": "NOT AVAILABLE",
+   "checks": [
+    {
+     "id": "B1.present",
+     "ok": true,
+     "reason": "Found at data/reference/rainfall/GPM_3IMERGDL.07/SOURCE.json"
+    },
+    {
+     "id": "B1.variables",
+     "ok": true,
+     "reason": "All needed variables present"
+    },
+    {
+     "id": "B1.units",
+     "ok": true,
+     "reason": "Units as needed"
+    },
+    {
+     "id": "B1.space",
+     "ok": true,
+     "reason": "Extent [84.0, 27.5, 86.5, 29.5] against area R2 [84.0, 27.5, 86.5, 29.5]"
+    },
+    {
+     "id": "B1.time",
+     "ok": false,
+     "reason": "Time ['2016-06-01', '2026-10-31'] against window W4 ['2014-01-01', '2026-10-31']"
+    },
+    {
+     "id": "B1.crs",
+     "ok": true,
+     "reason": "CRS EPSG:4326"
+    },
+    {
+     "id": "B1.quality",
+     "ok": true,
+     "reason": "Quality flags recorded"
+    },
+    {
+     "id": "B1.licence",
+     "ok": true,
+     "reason": "Licence NASA open data: no restrictions on reuse, cite the dataset DOI (EOSDIS data use guidance)"
+    },
+    {
+     "id": "B2.present",
+     "ok": false,
+     "reason": "B2 (DHM discharge and stage, with station metadata and danger levels) is not on disk"
+    },
+    {
+     "id": "B3.present",
+     "ok": false,
+     "reason": "B3 (Archived rainfall forecasts, as issued) is not on disk"
+    },
+    {
+     "id": "B5.present",
+     "ok": false,
+     "reason": "B5 (Copernicus DEM for the whole Trishuli catchment (R2)) is not on disk"
+    },
+    {
+     "id": "B6.present",
+     "ok": false,
+     "reason": "B6 (GloFAS reforecasts and historical discharge) is not on disk"
+    },
+    {
+     "id": "flood.F3.model",
+     "ok": false,
+     "reason": "No model record"
+    },
+    {
+     "id": "flood.F3.calibration",
+     "ok": false,
+     "reason": "No calibration record"
+    },
+    {
+     "id": "flood.F3.validation",
+     "ok": false,
+     "reason": "No validation record"
+    },
+    {
+     "id": "flood.F3.operational",
+     "ok": false,
+     "reason": "No operational record"
+    }
+   ],
+   "partial": [
+    "B6: GloFAS reforecasts and historical discharge"
+   ],
+   "next_requirement": "B2: DHM discharge and stage, with station metadata and danger levels",
+   "decision": "Start after data supply, then after validation",
+   "ceiling": null
+  },
+  {
+   "capability": "flood.F4",
+   "name": "F4 Inundation forecast",
+   "family": "flood",
+   "state": "NOT AVAILABLE",
+   "checks": [
+    {
+     "id": "B7.present",
+     "ok": false,
+     "reason": "B7 (Cross-sections, bridges and roughness) is not on disk"
+    },
+    {
+     "id": "E3.present",
+     "ok": false,
+     "reason": "E3 (Independently observed flood extents) is not on disk"
+    },
+    {
+     "id": "flood.F4.model",
+     "ok": false,
+     "reason": "No model record"
+    },
+    {
+     "id": "flood.F4.calibration",
+     "ok": false,
+     "reason": "No calibration record"
+    },
+    {
+     "id": "flood.F4.validation",
+     "ok": false,
+     "reason": "No validation record"
+    },
+    {
+     "id": "flood.F4.operational",
+     "ok": false,
+     "reason": "No operational record"
+    }
+   ],
+   "partial": [],
+   "next_requirement": "B7: Cross-sections, bridges and roughness",
+   "decision": "Not feasible with available data: no hydraulic inputs",
+   "ceiling": "VALIDATION REQUIRED"
+  },
+  {
+   "capability": "flood.F5",
+   "name": "F5 Infrastructure impact of a forecast flood",
+   "family": "flood",
+   "state": "NOT AVAILABLE",
+   "checks": [
+    {
+     "id": "A4.present",
+     "ok": true,
+     "reason": "Found at data/metadata/sources/A4/SOURCE.json"
+    },
+    {
+     "id": "A4.variables",
+     "ok": true,
+     "reason": "All needed variables present"
+    },
+    {
+     "id": "A4.units",
+     "ok": true,
+     "reason": "Units as needed"
+    },
+    {
+     "id": "A4.space",
+     "ok": true,
+     "reason": "Extent [84.5514, 27.7681, 85.4079, 28.3064] against area R1 [84.3976, 27.732, 85.5508, 28.35]"
+    },
+    {
+     "id": "A4.crs",
+     "ok": true,
+     "reason": "CRS EPSG:4326"
+    },
+    {
+     "id": "A4.licence",
+     "ok": true,
+     "reason": "Licence ODbL"
+    },
+    {
+     "id": "B2.present",
+     "ok": false,
+     "reason": "B2 (DHM discharge and stage, with station metadata and danger levels) is not on disk"
+    },
+    {
+     "id": "B7.present",
+     "ok": false,
+     "reason": "B7 (Cross-sections, bridges and roughness) is not on disk"
+    },
+    {
+     "id": "flood.F5.model",
+     "ok": false,
+     "reason": "No model record"
+    },
+    {
+     "id": "flood.F5.calibration",
+     "ok": false,
+     "reason": "No calibration record"
+    },
+    {
+     "id": "flood.F5.validation",
+     "ok": false,
+     "reason": "No validation record"
+    },
+    {
+     "id": "flood.F5.operational",
+     "ok": false,
+     "reason": "No operational record"
+    }
+   ],
+   "partial": [],
+   "next_requirement": "B2: DHM discharge and stage, with station metadata and danger levels",
+   "decision": "Only after a validated flood output exists",
+   "ceiling": null
+  },
+  {
+   "capability": "landslide.L0",
+   "name": "L0 Terrain and geological context",
+   "family": "landslide",
+   "state": "CONTEXT ONLY",
+   "checks": [
+    {
+     "id": "A2.present",
+     "ok": true,
+     "reason": "Found at data/metadata/sources/A2/SOURCE.json"
+    },
+    {
+     "id": "A2.variables",
+     "ok": true,
+     "reason": "All needed variables present"
+    },
+    {
+     "id": "A2.units",
+     "ok": true,
+     "reason": "Units as needed"
+    },
+    {
+     "id": "A2.space",
+     "ok": true,
+     "reason": "Extent [84.3976, 27.7319, 85.5509, 28.35] against area R1 [84.3976, 27.732, 85.5508, 28.35]"
+    },
+    {
+     "id": "A2.resolution",
+     "ok": true,
+     "reason": "Resolution 30 m, needs 30 m or finer"
+    },
+    {
+     "id": "A2.crs",
+     "ok": true,
+     "reason": "CRS EPSG:4326"
+    },
+    {
+     "id": "A2.licence",
+     "ok": true,
+     "reason": "Licence Copernicus DEM licence (free, with attribution)"
+    },
+    {
+     "id": "C2.present",
+     "ok": false,
+     "reason": "C2 (Geological map: lithology, formations, faults) is not on disk"
+    },
+    {
+     "id": "C3.present",
+     "ok": false,
+     "reason": "C3 (Land cover) is not on disk"
+    },
+    {
+     "id": "C4.present",
+     "ok": false,
+     "reason": "C4 (Soil properties) is not on disk"
+    }
+   ],
+   "partial": [
+    "C2: Geological map: lithology, formations, faults",
+    "C3: Land cover",
+    "C4: Soil properties"
+   ],
+   "next_requirement": "C2: Geological map: lithology, formations, faults",
+   "decision": "Context only; the terrain screen is experimental and terrain-only",
+   "ceiling": null
+  },
+  {
+   "capability": "landslide.L1",
+   "name": "L1 Landslide susceptibility",
+   "family": "landslide",
+   "state": "NOT AVAILABLE",
+   "checks": [
+    {
+     "id": "C1.present",
+     "ok": true,
+     "reason": "Found at data/raw/hazard/bipad/SOURCE.json"
+    },
+    {
+     "id": "C1.variables",
+     "ok": true,
+     "reason": "All needed variables present"
+    },
+    {
+     "id": "C1.units",
+     "ok": true,
+     "reason": "Units as needed"
+    },
+    {
+     "id": "C1.space",
+     "ok": true,
+     "reason": "Extent [80.1645, 26.4178, 88.1516, 30.1012] against area R1 [84.3976, 27.732, 85.5508, 28.35]"
+    },
+    {
+     "id": "C1.time",
+     "ok": true,
+     "reason": "Time ['2011-05-14', '2026-11-11'] against window W3 ['2016-06-01', '2024-10-31']"
+    },
+    {
+     "id": "C1.crs",
+     "ok": true,
+     "reason": "CRS EPSG:4326"
+    },
+    {
+     "id": "C1.licence",
+     "ok": false,
+     "reason": "Licence not established (Not stated: no licence or terms of reuse found on bipadportal.gov.np or its API (checked 13 November 2026); confirm with NDRRMA before publishing or relying on it): confirm the terms before use"
+    },
+    {
+     "id": "C2.present",
+     "ok": false,
+     "reason": "C2 (Geological map: lithology, formations, faults) is not on disk"
+    },
+    {
+     "id": "A2.present",
+     "ok": true,
+     "reason": "Found at data/metadata/sources/A2/SOURCE.json"
+    },
+    {
+     "id": "A2.variables",
+     "ok": true,
+     "reason": "All needed variables present"
+    },
+    {
+     "id": "A2.units",
+     "ok": true,
+     "reason": "Units as needed"
+    },
+    {
+     "id": "A2.space",
+     "ok": true,
+     "reason": "Extent [84.3976, 27.7319, 85.5509, 28.35] against area R1 [84.3976, 27.732, 85.5508, 28.35]"
+    },
+    {
+     "id": "A2.crs",
+     "ok": true,
+     "reason": "CRS EPSG:4326"
+    },
+    {
+     "id": "A2.licence",
+     "ok": true,
+     "reason": "Licence Copernicus DEM licence (free, with attribution)"
+    },
+    {
+     "id": "C3.present",
+     "ok": false,
+     "reason": "C3 (Land cover) is not on disk"
+    },
+    {
+     "id": "C4.present",
+     "ok": false,
+     "reason": "C4 (Soil properties) is not on disk"
+    },
+    {
+     "id": "landslide.L1.model",
+     "ok": false,
+     "reason": "No model record"
+    },
+    {
+     "id": "landslide.L1.calibration",
+     "ok": false,
+     "reason": "No calibration record"
+    },
+    {
+     "id": "landslide.L1.validation",
+     "ok": false,
+     "reason": "No validation record"
+    },
+    {
+     "id": "landslide.L1.operational",
+     "ok": false,
+     "reason": "No operational record"
+    }
+   ],
+   "partial": [
+    "C3: Land cover",
+    "C4: Soil properties"
+   ],
+   "next_requirement": "C2: Geological map: lithology, formations, faults",
+   "decision": "Start after data supply",
+   "ceiling": null
+  },
+  {
+   "capability": "landslide.L2",
+   "name": "L2 Rainfall-trigger monitoring",
+   "family": "landslide",
+   "state": "DATA AVAILABLE, PROCESSING REQUIRED",
+   "checks": [
+    {
+     "id": "C1.present",
+     "ok": true,
+     "reason": "Found at data/raw/hazard/bipad/SOURCE.json"
+    },
+    {
+     "id": "C1.variables",
+     "ok": true,
+     "reason": "All needed variables present"
+    },
+    {
+     "id": "C1.units",
+     "ok": true,
+     "reason": "Units as needed"
+    },
+    {
+     "id": "C1.space",
+     "ok": true,
+     "reason": "Extent [80.1645, 26.4178, 88.1516, 30.1012] against area R1 [84.3976, 27.732, 85.5508, 28.35]"
+    },
+    {
+     "id": "C1.time",
+     "ok": true,
+     "reason": "Time ['2011-05-14', '2026-11-11'] against window W3 ['2016-06-01', '2024-10-31']"
+    },
+    {
+     "id": "C1.crs",
+     "ok": true,
+     "reason": "CRS EPSG:4326"
+    },
+    {
+     "id": "C1.licence",
+     "ok": false,
+     "reason": "Licence not established (Not stated: no licence or terms of reuse found on bipadportal.gov.np or its API (checked 13 November 2026); confirm with NDRRMA before publishing or relying on it): confirm the terms before use"
+    },
+    {
+     "id": "C5.present",
+     "ok": true,
+     "reason": "Found at data/metadata/sources/C5/SOURCE.json"
+    },
+    {
+     "id": "C5.variables",
+     "ok": true,
+     "reason": "All needed variables present"
+    },
+    {
+     "id": "C5.units",
+     "ok": true,
+     "reason": "Units as needed"
+    },
+    {
+     "id": "C5.space",
+     "ok": true,
+     "reason": "Extent [84.0, 27.5, 86.5, 29.5] against area R2 [84.0, 27.5, 86.5, 29.5]"
+    },
+    {
+     "id": "C5.time",
+     "ok": true,
+     "reason": "Time ['2016-06-01', '2026-10-31'] against window W3 ['2016-06-01', '2024-10-31']"
+    },
+    {
+     "id": "C5.crs",
+     "ok": true,
+     "reason": "CRS EPSG:4326"
+    },
+    {
+     "id": "C5.licence",
+     "ok": true,
+     "reason": "Licence NASA open data: no restrictions on reuse, cite the dataset DOI (EOSDIS data use guidance)"
+    },
+    {
+     "id": "C6.present",
+     "ok": false,
+     "reason": "C6 (Soil moisture, SMAP L4) is not on disk"
+    },
+    {
+     "id": "landslide.L2.model",
+     "ok": true,
+     "reason": "Rainfall event-duration threshold E = 6.7 x D^1.17 mm, fitted to 820 triggering events (20% below the line), BIPAD 2016-2024 with IMERG Late"
+    },
+    {
+     "id": "landslide.L2.calibration",
+     "ok": true,
+     "reason": "Exceedance level 20% and a corridor warning when 50% of cells is over the line, chosen on 2023-2024 (as published: CSI 0.285)"
+    },
+    {
+     "id": "landslide.L2.validation",
+     "ok": false,
+     "reason": "Ran, and missed its criterion: 2025-2026 held out, corridor (R1), as published: POD 0.346, FAR 0.669, CSI 0.203; chance CSI 95th percentile 0.2085 (p = 0.1209)"
+    },
+    {
+     "id": "landslide.L2.operational",
+     "ok": false,
+     "reason": "No operational record"
+    }
+   ],
+   "partial": [
+    "C6: Soil moisture, SMAP L4"
+   ],
+   "next_requirement": "C1: Dated landslide inventory with completeness notes",
+   "decision": "Start after data supply, then after validation",
+   "ceiling": null
+  },
+  {
+   "capability": "landslide.L3",
+   "name": "L3 24-hour threshold-based landslide forecast",
+   "family": "landslide",
+   "state": "NOT AVAILABLE",
+   "checks": [
+    {
+     "id": "C1.present",
+     "ok": true,
+     "reason": "Found at data/raw/hazard/bipad/SOURCE.json"
+    },
+    {
+     "id": "C1.variables",
+     "ok": true,
+     "reason": "All needed variables present"
+    },
+    {
+     "id": "C1.units",
+     "ok": true,
+     "reason": "Units as needed"
+    },
+    {
+     "id": "C1.space",
+     "ok": true,
+     "reason": "Extent [80.1645, 26.4178, 88.1516, 30.1012] against area R1 [84.3976, 27.732, 85.5508, 28.35]"
+    },
+    {
+     "id": "C1.time",
+     "ok": true,
+     "reason": "Time ['2011-05-14', '2026-11-11'] against window W3 ['2016-06-01', '2024-10-31']"
+    },
+    {
+     "id": "C1.crs",
+     "ok": true,
+     "reason": "CRS EPSG:4326"
+    },
+    {
+     "id": "C1.licence",
+     "ok": false,
+     "reason": "Licence not established (Not stated: no licence or terms of reuse found on bipadportal.gov.np or its API (checked 13 November 2026); confirm with NDRRMA before publishing or relying on it): confirm the terms before use"
+    },
+    {
+     "id": "C5.present",
+     "ok": true,
+     "reason": "Found at data/metadata/sources/C5/SOURCE.json"
+    },
+    {
+     "id": "C5.variables",
+     "ok": true,
+     "reason": "All needed variables present"
+    },
+    {
+     "id": "C5.units",
+     "ok": true,
+     "reason": "Units as needed"
+    },
+    {
+     "id": "C5.space",
+     "ok": true,
+     "reason": "Extent [84.0, 27.5, 86.5, 29.5] against area R2 [84.0, 27.5, 86.5, 29.5]"
+    },
+    {
+     "id": "C5.time",
+     "ok": true,
+     "reason": "Time ['2016-06-01', '2026-10-31'] against window W3 ['2016-06-01', '2024-10-31']"
+    },
+    {
+     "id": "C5.crs",
+     "ok": true,
+     "reason": "CRS EPSG:4326"
+    },
+    {
+     "id": "C5.licence",
+     "ok": true,
+     "reason": "Licence NASA open data: no restrictions on reuse, cite the dataset DOI (EOSDIS data use guidance)"
+    },
+    {
+     "id": "B3.present",
+     "ok": false,
+     "reason": "B3 (Archived rainfall forecasts, as issued) is not on disk"
+    },
+    {
+     "id": "landslide.L3.model",
+     "ok": false,
+     "reason": "No model record"
+    },
+    {
+     "id": "landslide.L3.calibration",
+     "ok": false,
+     "reason": "No calibration record"
+    },
+    {
+     "id": "landslide.L3.validation",
+     "ok": false,
+     "reason": "No validation record"
+    },
+    {
+     "id": "landslide.L3.operational",
+     "ok": false,
+     "reason": "No operational record"
+    }
+   ],
+   "partial": [],
+   "next_requirement": "B3: Archived rainfall forecasts, as issued",
+   "decision": "Start after data supply, then after validation",
+   "ceiling": null
+  },
+  {
+   "capability": "landslide.L4",
+   "name": "L4 Slope-movement monitoring from repeat InSAR",
+   "family": "landslide",
+   "state": "DATA AVAILABLE, PROCESSING REQUIRED",
+   "checks": [
+    {
+     "id": "C7.present",
+     "ok": true,
+     "reason": "Found at data/metadata/sources/C7/SOURCE.json"
+    },
+    {
+     "id": "C7.variables",
+     "ok": true,
+     "reason": "All needed variables present"
+    },
+    {
+     "id": "C7.units",
+     "ok": true,
+     "reason": "Units as needed"
+    },
+    {
+     "id": "C7.space",
+     "ok": true,
+     "reason": "Extent [84.3826, 27.7148, 85.5594, 28.3671] against area R1 [84.3976, 27.732, 85.5508, 28.35]"
+    },
+    {
+     "id": "C7.time",
+     "ok": false,
+     "reason": "Time ['2026-07-23', '2026-10-06'] against window W1 ['2026-07-23', '2026-10-10']"
+    },
+    {
+     "id": "C7.crs",
+     "ok": true,
+     "reason": "CRS EPSG:32645"
+    },
+    {
+     "id": "C7.licence",
+     "ok": true,
+     "reason": "Licence NASA open data (attribution required)"
+    },
+    {
+     "id": "landslide.L4.model",
+     "ok": false,
+     "reason": "No model record"
+    },
+    {
+     "id": "landslide.L4.calibration",
+     "ok": false,
+     "reason": "No calibration record"
+    },
+    {
+     "id": "landslide.L4.validation",
+     "ok": false,
+     "reason": "No validation record"
+    },
+    {
+     "id": "landslide.L4.operational",
+     "ok": false,
+     "reason": "No operational record"
+    }
+   ],
+   "partial": [],
+   "next_requirement": "C7: NISAR GUNW repeat series (Track 48 frames 74 and 75, Track 98 frame 16)",
+   "decision": "Start after scientific validation: the phase sign convention is unanswered and the series is short",
+   "ceiling": "VALIDATION REQUIRED"
+  },
+  {
+   "capability": "landslide.L5",
+   "name": "L5 Infrastructure impact of a landslide outlook",
+   "family": "landslide",
+   "state": "NOT AVAILABLE",
+   "checks": [
+    {
+     "id": "A4.present",
+     "ok": true,
+     "reason": "Found at data/metadata/sources/A4/SOURCE.json"
+    },
+    {
+     "id": "A4.variables",
+     "ok": true,
+     "reason": "All needed variables present"
+    },
+    {
+     "id": "A4.units",
+     "ok": true,
+     "reason": "Units as needed"
+    },
+    {
+     "id": "A4.space",
+     "ok": true,
+     "reason": "Extent [84.5514, 27.7681, 85.4079, 28.3064] against area R1 [84.3976, 27.732, 85.5508, 28.35]"
+    },
+    {
+     "id": "A4.crs",
+     "ok": true,
+     "reason": "CRS EPSG:4326"
+    },
+    {
+     "id": "A4.licence",
+     "ok": true,
+     "reason": "Licence ODbL"
+    },
+    {
+     "id": "C1.present",
+     "ok": true,
+     "reason": "Found at data/raw/hazard/bipad/SOURCE.json"
+    },
+    {
+     "id": "C1.variables",
+     "ok": true,
+     "reason": "All needed variables present"
+    },
+    {
+     "id": "C1.units",
+     "ok": true,
+     "reason": "Units as needed"
+    },
+    {
+     "id": "C1.space",
+     "ok": true,
+     "reason": "Extent [80.1645, 26.4178, 88.1516, 30.1012] against area R1 [84.3976, 27.732, 85.5508, 28.35]"
+    },
+    {
+     "id": "C1.time",
+     "ok": true,
+     "reason": "Time ['2011-05-14', '2026-11-11'] against window W3 ['2016-06-01', '2024-10-31']"
+    },
+    {
+     "id": "C1.crs",
+     "ok": true,
+     "reason": "CRS EPSG:4326"
+    },
+    {
+     "id": "C1.licence",
+     "ok": false,
+     "reason": "Licence not established (Not stated: no licence or terms of reuse found on bipadportal.gov.np or its API (checked 13 November 2026); confirm with NDRRMA before publishing or relying on it): confirm the terms before use"
+    },
+    {
+     "id": "E1.present",
+     "ok": false,
+     "reason": "E1 (Field reports or photos for named places) is not on disk"
+    },
+    {
+     "id": "landslide.L5.model",
+     "ok": false,
+     "reason": "No model record"
+    },
+    {
+     "id": "landslide.L5.calibration",
+     "ok": false,
+     "reason": "No calibration record"
+    },
+    {
+     "id": "landslide.L5.validation",
+     "ok": false,
+     "reason": "No validation record"
+    },
+    {
+     "id": "landslide.L5.operational",
+     "ok": false,
+     "reason": "No operational record"
+    }
+   ],
+   "partial": [],
+   "next_requirement": "E1: Field reports or photos for named places",
+   "decision": "Only after a validated landslide output exists",
+   "ceiling": null
+  }
+ ],
+ "datasets": {
+  "A1": {
+   "name": "NISAR Pair A and Pair B, prepared",
+   "group": "A",
+   "onDisk": true
+  },
+  "A2": {
+   "name": "Copernicus DEM GLO-30, study area clip",
+   "group": "A",
+   "onDisk": true
+  },
+  "A3": {
+   "name": "UNOSAT 2026 event mapping",
+   "group": "A",
+   "onDisk": true
+  },
+  "A4": {
+   "name": "OpenStreetMap context and HOT post-event mapping",
+   "group": "A",
+   "onDisk": true
+  },
+  "B1": {
+   "name": "GPM IMERG V07 rainfall, Late or Final",
+   "group": "B",
+   "source": "NASA GES DISC (Earthdata login)",
+   "onDisk": true
+  },
+  "B2": {
+   "name": "DHM discharge and stage, with station metadata and danger levels",
+   "group": "B",
+   "source": "DHM Nepal, formal request",
+   "onDisk": false
+  },
+  "B3": {
+   "name": "Archived rainfall forecasts, as issued",
+   "group": "B",
+   "source": "ECMWF TIGGE or MARS (terms to verify)",
+   "onDisk": false
+  },
+  "B4": {
+   "name": "Live rainfall forecast",
+   "group": "B",
+   "source": "ECMWF open data, CC BY 4.0",
+   "onDisk": false
+  },
+  "B5": {
+   "name": "Copernicus DEM for the whole Trishuli catchment (R2)",
+   "group": "B",
+   "source": "Copernicus DEM",
+   "onDisk": false
+  },
+  "B6": {
+   "name": "GloFAS reforecasts and historical discharge",
+   "group": "B",
+   "source": "CEMS Early Warning Data Store (account)",
+   "onDisk": false
+  },
+  "B7": {
+   "name": "Cross-sections, bridges and roughness",
+   "group": "B",
+   "source": "Field survey, DHM, hydropower studies",
+   "onDisk": false
+  },
+  "C1": {
+   "name": "Dated landslide inventory with completeness notes",
+   "group": "C",
+   "source": "BIPAD; NASA GLC/COOLR; NSIDC HMA v2; published inventories",
+   "onDisk": true
+  },
+  "C2": {
+   "name": "Geological map: lithology, formations, faults",
+   "group": "C",
+   "source": "DMG Nepal; BGS simplified map",
+   "onDisk": false
+  },
+  "C3": {
+   "name": "Land cover",
+   "group": "C",
+   "source": "ESA WorldCover v200",
+   "onDisk": false
+  },
+  "C4": {
+   "name": "Soil properties",
+   "group": "C",
+   "source": "ISRIC SoilGrids",
+   "onDisk": false
+  },
+  "C5": {
+   "name": "Rainfall for thresholds: IMERG plus DHM daily gauges",
+   "group": "C",
+   "source": "NASA GES DISC; DHM",
+   "onDisk": true
+  },
+  "C6": {
+   "name": "Soil moisture, SMAP L4",
+   "group": "C",
+   "source": "NSIDC (Earthdata login)",
+   "onDisk": false
+  },
+  "C7": {
+   "name": "NISAR GUNW repeat series (Track 48 frames 74 and 75, Track 98 frame 16)",
+   "group": "C",
+   "source": "ASF (Earthdata login)",
+   "onDisk": true
+  },
+  "E1": {
+   "name": "Field reports or photos for named places",
+   "group": "E",
+   "source": "Partners, agencies",
+   "onDisk": false
+  },
+  "E3": {
+   "name": "Independently observed flood extents",
+   "group": "E",
+   "source": "OPERA DSWx-S1; Copernicus EMS",
+   "onDisk": false
+  },
+  "E4": {
+   "name": "Independently mapped landslides for the test period",
+   "group": "E",
+   "source": "Published or agency inventories",
+   "onDisk": false
+  },
+  "F10": {
+   "name": "Historical flood events with dates, extents and stage",
+   "group": "B",
+   "source": "BIPAD; DHM; UNOSAT; Copernicus EMS",
+   "onDisk": false
+  }
+ }
+}

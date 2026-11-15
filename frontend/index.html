@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="GAIA CascadeLens: a scientific evidence explorer for NISAR radar observations of the August 2026 Rasuwa disaster." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>GAIA CascadeLens</title>
+    <style>
+      /* Everything here must work with no scripts and no stylesheet: browsers block both when this file is opened directly */
+      html { background: #0f1518; color: #e8ece8; font: 16px/1.5 system-ui, 'Segoe UI', Arial, sans-serif; }
+      .boot-note { max-width: 560px; margin: 12vh auto; padding: 0 20px; opacity: 0; animation: boot-show 0s 2s forwards; }
+      .boot-note h1 { font-size: 24px; }
+      .boot-note code { color: #7fd1c7; }
+      .boot-note.boot-loading { animation-delay: .6s; }
+      @keyframes boot-show { to { opacity: 1; } }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <!-- React replaces this as soon as it starts, so it is only seen when the app could not start -->
+      <main class="boot-note">
+        <h1>GAIA CascadeLens has not started</h1>
+        <p>This page cannot run by opening the file directly. Browsers block it from loading its scripts and data that way.</p>
+        <ol>
+          <li>Open the <strong>CascadeLens</strong> folder from <strong>CascadeLens.zip</strong>.</li>
+          <li>Double-click <strong>Start CascadeLens.bat</strong>.</li>
+          <li>Keep the black window open. To use Brave or another browser, paste the address it shows, usually <code>http://localhost:8765</code>.</li>
+        </ol>
+      </main>
+      <script>
+      // The note above is for someone who opened this file straight from the folder (file:), where browsers refuse the
+      // app's modules. On a web address the app is only still downloading, so say that instead. Inline, so it works
+      // before anything else arrives; its hash is allowed in the CSPs of vite.config.ts, serve.py and serve.ps1.
+      (function () {
+        if (location.protocol === 'file:') return
+        var n = document.querySelector('.boot-note')
+        if (!n) return
+        n.className = 'boot-note boot-loading'
+        n.setAttribute('role', 'status')
+        n.innerHTML = '<h1>Loading GAIA CascadeLens…</h1><p>The map and its satellite data are downloading. On a slow connection this can take a little while.</p>'
+        setTimeout(function () {
+          var m = document.querySelector('.boot-loading')
+          if (m) m.innerHTML = '<h1>GAIA CascadeLens is taking longer than usual</h1><p>The app has not finished loading. Check the internet connection, then reload the page. It needs a recent browser with WebGL, such as Chrome, Edge, Firefox or Safari.</p>'
+        }, 30000)
+      })()
+    </script>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

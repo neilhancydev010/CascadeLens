@@ -1,0 +1,244 @@
+import type { Bookmark, Layer, Manifest, ObservationGroup } from '../../types/manifest'
+import type { CSSProperties } from 'react'
+import { CASES, currentCase, formatDate, isUsable, STATUS_LABEL } from '../../services/manifest'
+import { evidenceOf } from '../../services/evidence'
+import { isObservability } from '../../services/observability'
+import { isTerrainScreen } from '../../services/hazards'
+import { AccessPanel } from '../hazards/AccessPanel'
+import { EvidenceTag } from '../explanations/EvidenceTag'
+import { missionStyle, splitName } from '../explanations/AboutSource'
+
+export type EvidenceView = 'gunw' | 'goff' | 'gcov'
+
+const VIEWS: { id: EvidenceView; label: string; hint: string }[] = [
+  { id: 'gunw', label: 'InSAR', hint: 'Phase and coherence' },
+  { id: 'goff', label: 'Pixel offsets', hint: 'Image-feature shifts' },
+  { id: 'gcov', label: 'Snapshots', hint: 'Single-date backscatter' },
+]
+
+interface Props {
+  manifest: Manifest
+  group: ObservationGroup | undefined
+  view: EvidenceView
+  activeId: string
+  step: number
+  onStep: (i: number) => void
+  hasStory: boolean
+  storySteps?: number
+  layerVisible: boolean
+  bookmarkId: string | null
+  opacity: number
+  showTerrain: boolean
+  showMask: boolean
+  overlayId: string
+  referenceIds: string[]
+  storyActive: boolean
+  simActive: boolean
+  canSimulate: boolean
+  onSimulate: () => void
+  canCompare?: boolean
+  compareActive?: boolean
+  onCompare?: () => void
+  can3d?: boolean
+  on3d?: () => void
+  canScenario?: boolean
+  scenarioActive?: boolean
+  onScenario?: () => void
+  onStatus?: () => void
+  onBookmark: (b: Bookmark) => void
+  onGroup: (id: string) => void
+  onView: (v: EvidenceView) => void
+  onLayer: (id: string) => void
+  onLayerVisible: (v: boolean) => void
+  onOpacity: (v: number) => void
+  onTerrain: (v: boolean) => void
+  onMask: (v: boolean) => void
+  onOverlay: (id: string) => void
+  onReference: (id: string, on: boolean) => void
+  onAbout: (id: string) => void
+  onStory: () => void
+}
+
+function GroupOption({ g, selected, onSelect }: { g: ObservationGroup; selected: boolean; onSelect: () => void }) {
+  // The primary pair stays selectable so its catalogue facts remain readable; others open only once validated.
+  const locked = !g.available && !selected
+  return (
+    <label className={`option ${selected ? 'on' : ''} ${locked ? 'locked' : ''}`}>
+      <input type="radio" name="observation" checked={selected} disabled={locked} onChange={onSelect} />
+      <span>
+        <strong>{g.label}</strong>
+        <small>{g.direction.toLowerCase()} · Track {g.track} · Frames {g.frames.join('/')}</small>
+        {!g.available && <small className="why">Not validated yet: {g.statusReason ?? 'no prepared data.'}</small>}
+      </span>
+    </label>
+  )
+}
+
+function LayerRow({ layer, active, onSelect }: { layer: Layer; active: boolean; onSelect: () => void }) {
+  const usable = isUsable(layer)
+  const stops = layer.legend?.stops
+  return (
+    <label className={`option compact ${active ? 'on' : ''} ${usable ? '' : 'locked'}`}>
+      <input type="radio" name="layer" checked={active} disabled={!usable} onChange={onSelect} />
+      <i className="swatch" style={stops ? { background: `linear-gradient(90deg, ${stops.join(',')})` } : undefined} />
+      <span>{layer.name}<small className={`status status-${layer.status}`}>{layer.category === 'gridded' && !usable ? layer.statusReason : STATUS_LABEL[layer.status]}{usable && <> · <EvidenceTag kind={evidenceOf(layer)} compact /></>}</small></span>
+    </label>
+  )
+}
+
+const Play = () => <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M4 2.5v11l9-5.5z" fill="currentColor" /></svg>
+
+export function LeftPanel(p: Props) {
+  const { manifest: m, group, view } = p
+  const pairs = m.groups.filter((g) => g.kind === 'pair')
+  const snaps = m.groups.filter((g) => g.kind === 'snapshot')
+  const shown = view === 'gcov' ? snaps : pairs
+  const layers = m.layers.filter((l) => group && l.groupId === group.id && (l.category === view || l.previewOf === view))
+  const gridded = m.layers.filter((l) => l.category === 'gridded' && !isObservability(l) && !isTerrainScreen(l))
+  const screens = m.layers.filter((l) => isTerrainScreen(l) && isUsable(l))
+  const roadScreen = m.layers.find((l) => l.measurementType === 'road-exposure' && isUsable(l))
+  const observability = m.layers.filter((l) => isObservability(l) && isUsable(l))
+  const terrain = m.layers.find((l) => l.category === 'terrain')
+  const refs = m.layers.filter((l) => l.category === 'reference' && isUsable(l))
+  const missions = [...new Set(refs.map((r) => r.mission))]
+  const active = m.layers.find((l) => l.id === p.activeId)
+  const overlays = (active?.qualityLayerIds ?? []).map((id) => m.layers.find((l) => l.id === id)).filter((l): l is Layer => Boolean(l && isUsable(l)))
+  const canMask = Boolean(active?.sources.some((s) => s.maskTiles))
+  const steps = active?.timeSteps
+  const stepName = steps?.every((s) => /^\d{4}-\d{2}-\d{2}$/.test(s.label)) ? 'Radar date' : 'Time of day'
+  return (
+    <div className="panel-body">
+      <section className="case-head">
+        <p className="label">Case study</p>
+        <h2 className="case">{m.caseStudy.name}</h2>
+        <p className="muted small">{p.hasStory && !m.lake ? 'Reported event' : 'Data date'}: {formatDate(m.caseStudy.eventDate)}. A retrospective evidence explorer, not a warning service.</p>
+        {(p.hasStory || p.canSimulate || p.canCompare) && (
+          <div className="story-cta">
+            {p.hasStory && <p><strong>New here?</strong> {m.lake ? `Follow the lake's story in ${p.storySteps ?? 4} short steps.` : `Walk through the event in ${p.storySteps ?? 4} steps.`}</p>}
+            {p.hasStory && <button className="primary" onClick={p.onStory} disabled={p.storyActive}><Play />Start the guided story</button>}
+            {!p.hasStory && p.canCompare && <p><strong>New here?</strong> Compare the lake on two radar dates.</p>}
+            {p.canCompare && <button className={p.hasStory ? '' : 'primary'} onClick={p.onCompare} disabled={p.compareActive}>{!p.hasStory && <Play />}Compare two dates</button>}
+            {p.can3d && <button onClick={p.on3d}>See it in 3D</button>}
+            {p.canScenario && <button onClick={p.onScenario} disabled={p.scenarioActive}>What if the dam failed?</button>}
+            {p.canSimulate && <button onClick={p.onSimulate} disabled={p.simActive}>Try the simulations</button>}
+          </div>
+        )}
+        {/* A phone has no room for the top bar's case menu and status button, so this sheet carries them. */}
+        <div className="phone-only phone-tools">
+          {CASES.length > 1 && (
+            <label className="select">Change case
+              <select value={currentCase().id} onChange={(e) => { window.location.search = `?case=${e.target.value}` }}>
+                {CASES.map((c) => <option key={c.id} value={c.id}>{c.label}</option>)}
+              </select>
+            </label>
+          )}
+          {p.onStatus && <button onClick={p.onStatus}>What is real here?</button>}
+        </div>
+      </section>
+
+      <section>
+        <h3 className="label">Jump to</h3>
+        <div className="chips places">
+          {m.bookmarks.map((b) => (
+            <button key={b.id} title={b.basis} aria-pressed={p.bookmarkId === b.id} className={p.bookmarkId === b.id ? 'on' : ''} onClick={() => p.onBookmark(b)}>{b.name}</button>
+          ))}
+        </div>
+      </section>
+
+      {observability.length > 0 && (
+        <section className="obs-section">
+          <h3 className="label">Can the radar see it?</h3>
+          <p className="muted small">Where NISAR can be trusted, and why not elsewhere. Grey is not "no change": it means the radar could not judge.</p>
+          {observability.map((l) => <LayerRow key={l.id} layer={l} active={l.id === p.activeId} onSelect={() => p.onLayer(l.id)} />)}
+        </section>
+      )}
+
+      {(screens.length > 0 || roadScreen) && (
+        <section className="obs-section">
+          <h3 className="label">Hazard screens <span className="exp">Experimental</span></h3>
+          <p className="muted small">Where terrain favours slope failure, and which road stretches are exposed. Screens, not forecasts.</p>
+          {screens.map((l) => <LayerRow key={l.id} layer={l} active={l.id === p.activeId} onSelect={() => p.onLayer(l.id)} />)}
+          {roadScreen && <label className="check"><input type="checkbox" checked={p.referenceIds.includes(roadScreen.id)} onChange={(e) => p.onReference(roadScreen.id, e.target.checked)} />Show road exposure</label>}
+          {m.access && <AccessPanel manifest={m} showStates={p.referenceIds.includes(`${m.caseStudy.id}:road-states`)} onShowStates={(on) => { p.onReference(`${m.caseStudy.id}:road-states`, on); p.onReference(`${m.caseStudy.id}:facilities`, on) }} />}
+        </section>
+      )}
+
+      {gridded.length > 0 && (
+        <section>
+          <h3 className="label">Variables</h3>
+          {gridded.map((l) => <LayerRow key={l.id} layer={l} active={l.id === p.activeId} onSelect={() => p.onLayer(l.id)} />)}
+        </section>
+      )}
+
+      {group && <section>
+        <h3 className="label">Radar evidence</h3>
+        <div className="tabs segmented" role="tablist" aria-label="Evidence view">
+          {VIEWS.map((v) => (
+            <button key={v.id} role="tab" aria-selected={view === v.id} title={v.hint} className={view === v.id ? 'on' : ''} onClick={() => p.onView(v.id)}>{v.label}</button>
+          ))}
+        </div>
+        <h4>{view === 'gcov' ? 'Observation snapshot' : 'Observation pair'}</h4>
+        {shown.map((g) => <GroupOption key={g.id} g={g} selected={g.id === group.id} onSelect={() => p.onGroup(g.id)} />)}
+        <h4>Measurement</h4>
+        {layers.length ? layers.map((l) => <LayerRow key={l.id} layer={l} active={l.id === p.activeId} onSelect={() => p.onLayer(l.id)} />)
+          : <p className="muted">This observation has no {VIEWS.find((v) => v.id === view)?.label} product.</p>}
+      </section>}
+
+      <section>
+        <h3 className="label">Display</h3>
+        {terrain && <LayerRow layer={terrain} active={terrain.id === p.activeId} onSelect={() => p.onLayer(terrain.id)} />}
+        <label className="check switch"><input type="checkbox" checked={p.showTerrain} onChange={(e) => p.onTerrain(e.target.checked)} />Terrain background</label>
+        {active && active.id !== terrain?.id && <label className="check"><input type="checkbox" checked={p.layerVisible} onChange={(e) => p.onLayerVisible(e.target.checked)} />Show {active.name}</label>}
+        {active && active.id !== terrain?.id && (
+          <label className="slider">Layer opacity <span>{Math.round(p.opacity * 100)}%</span>
+            <input type="range" min={0} max={1} step={0.05} value={p.opacity} onChange={(e) => p.onOpacity(Number(e.target.value))} />
+          </label>
+        )}
+        {steps && steps.length > 1 && (
+          <label className="slider">{stepName} <span>{steps[Math.min(p.step, steps.length - 1)].label}</span>
+            <input type="range" aria-label={stepName} min={0} max={steps.length - 1} step={1} value={p.step} onChange={(e) => p.onStep(Number(e.target.value))} />
+          </label>
+        )}
+        {canMask && <label className="check"><input type="checkbox" checked={p.showMask} onChange={(e) => p.onMask(e.target.checked)} />Show masked pixels</label>}
+        {overlays.length > 0 && (
+          <label className="select">Quality overlay
+            <select value={p.overlayId} onChange={(e) => p.onOverlay(e.target.value)}>
+              <option value="">None</option>
+              {overlays.map((o) => <option key={o.id} value={o.id}>{o.name}</option>)}
+            </select>
+          </label>
+        )}
+      </section>
+
+      {refs.length > 0 && <section>
+        <details className="refs" open>
+        <summary><span className="label">Reference layers</span><span className="count">{p.referenceIds.filter((id) => refs.some((r) => r.id === id)).length} of {refs.length} on</span></summary>
+        <p className="muted small">Independent sources, not NISAR measurements. Each keeps its own source and limits.</p>
+        {missions.map((mission) => {
+          const ms = missionStyle(mission)
+          const list = refs.filter((r) => r.mission === mission)
+          return (
+            <div className="ref-group" key={mission} style={{ '--mission': ms.color } as CSSProperties}>
+              <h4 className="ref-group-head"><span className="avatar sm" aria-hidden="true">{ms.short}</span>{mission}<span className="count">{list.filter((r) => p.referenceIds.includes(r.id)).length}/{list.length}</span></h4>
+              {list.map((r) => {
+                const { title, figure } = splitName(r)
+                const on = p.referenceIds.includes(r.id)
+                return (
+                  <div className={`ref-row ${on ? 'on' : ''}`} key={r.id}>
+                    <label className="ref-check">
+                      <input type="checkbox" aria-label={r.name} checked={on} onChange={(e) => p.onReference(r.id, e.target.checked)} />
+                      <i className="ref-key" style={r.vector?.color ? { background: r.vector.color } : undefined} />
+                      <span className="ref-name">{title}{figure && <em>{figure}</em>}</span>
+                    </label>
+                    <button className="info" aria-label={`About ${r.name}`} title="About this source" onClick={() => p.onAbout(r.id)}>i</button>
+                  </div>
+                )
+              })}
+            </div>
+          )
+        })}
+        </details>
+      </section>}
+    </div>
+  )
+}

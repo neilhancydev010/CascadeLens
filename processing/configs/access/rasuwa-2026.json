@@ -1,0 +1,26 @@
+{
+ "case": "rasuwa-2026",
+ "epsg": 32645,
+ "snapM": 500,
+ "bridgeMatchM": 60,
+ "bridgeStatus": {
+  "Washed out": "closed",
+  "Damaged": "uncertain",
+  "Intact": "open"
+ },
+ "sources": {
+  "roads": "osm_roads",
+  "destroyed": "osm_destroyed",
+  "bridges": "hot_bridge_damage",
+  "places": "osm_places",
+  "health": "osm_health",
+  "helipads": "osm_helipads"
+ },
+ "healthAmenities": [
+  "hospital",
+  "clinic",
+  "doctors",
+  "health_post"
+ ],
+ "healthWhy": "Places where care is given. Pharmacies are left out: they sell medicine but do not treat."
+}

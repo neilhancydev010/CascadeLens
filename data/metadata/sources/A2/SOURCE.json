@@ -1,0 +1,32 @@
+{
+ "dataset": "A2",
+ "provider": "ESA / Airbus, Copernicus DEM",
+ "product": "GLO-30, study area clip",
+ "version": "2021 release",
+ "url_or_request_ref": "https://copernicus-dem-30m.s3.amazonaws.com",
+ "licence": "Copernicus DEM licence (free, with attribution)",
+ "retrieved_at": null,
+ "available_at": null,
+ "spatial_extent": [
+  84.3976,
+  27.7319,
+  85.5509,
+  28.35
+ ],
+ "time_extent": [
+  "2011-01-01",
+  "2015-12-31"
+ ],
+ "variables": [
+  "elevation"
+ ],
+ "units": {
+  "elevation": "m"
+ },
+ "crs": "EPSG:4326",
+ "resolution_m": 30,
+ "missing_fraction": 0.0,
+ "quality_flags": false,
+ "maturity": "Released",
+ "notes": "Clip to the search envelope only; the upstream Trishuli catchment in Tibet is not covered"
+}

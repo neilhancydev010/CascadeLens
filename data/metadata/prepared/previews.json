@@ -1,0 +1,224 @@
+[
+ {
+  "id": "preview:pair-a:gunw",
+  "groupId": "pair-a",
+  "name": "GUNW browse preview",
+  "category": "preview",
+  "previewOf": "gunw",
+  "mission": "NISAR",
+  "instrument": "L-SAR",
+  "productType": "GUNW",
+  "measurementClass": "derived",
+  "measurementType": "preview",
+  "kind": "continuous",
+  "units": null,
+  "acquisition": {
+   "reference": "2026-08-16",
+   "secondary": "2026-08-28"
+  },
+  "orbitDirection": "DESCENDING",
+  "track": 48,
+  "frames": [
+   74,
+   75
+  ],
+  "qualityLayerIds": [],
+  "status": "renderable",
+  "statusReason": null,
+  "sources": [
+   {
+    "frame": 74,
+    "granule": "NISAR_L2_PR_GUNW_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001",
+    "sourceFilename": "NISAR_L2_PR_GUNW_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001_LATLON.png",
+    "bounds": [
+     84.4893420967274,
+     27.15688310687065,
+     88.11203220623372,
+     30.264366807465812
+    ],
+    "tiles": {
+     "url": "data/tiles/previews/pair-a/gunw/f074/{z}/{x}/{y}.png",
+     "minzoom": 8,
+     "maxzoom": 11,
+     "count": 344
+    }
+   },
+   {
+    "frame": 75,
+    "granule": "NISAR_L2_PR_GUNW_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001",
+    "sourceFilename": "NISAR_L2_PR_GUNW_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001_LATLON.png",
+    "bounds": [
+     83.89191293886574,
+     25.17100809959197,
+     87.43709219905804,
+     28.288835874109775
+    ],
+    "tiles": {
+     "url": "data/tiles/previews/pair-a/gunw/f075/{z}/{x}/{y}.png",
+     "minzoom": 8,
+     "maxzoom": 11,
+     "count": 353
+    }
+   }
+  ],
+  "productMaturity": "Provisional per catalogue (P05023)",
+  "sourceGranules": [
+   "NISAR_L2_PR_GUNW_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001",
+   "NISAR_L2_PR_GUNW_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001"
+  ],
+  "attribution": "NASA/JPL-Caltech/ISRO, NISAR; distributed by ASF DAAC",
+  "limitations": [
+   "A browse picture only: it holds colours, not measurements, so nothing here can be sampled or interpreted quantitatively.",
+   "Placed from the four corners in its KML, so its position is approximate.",
+   "Not quality checked. It stands in for a science file that could not be retrieved."
+  ]
+ },
+ {
+  "id": "preview:pair-a:goff",
+  "groupId": "pair-a",
+  "name": "GOFF browse preview",
+  "category": "preview",
+  "previewOf": "goff",
+  "mission": "NISAR",
+  "instrument": "L-SAR",
+  "productType": "GOFF",
+  "measurementClass": "derived",
+  "measurementType": "preview",
+  "kind": "continuous",
+  "units": null,
+  "acquisition": {
+   "reference": "2026-08-16",
+   "secondary": "2026-08-28"
+  },
+  "orbitDirection": "DESCENDING",
+  "track": 48,
+  "frames": [
+   74,
+   75
+  ],
+  "qualityLayerIds": [],
+  "status": "renderable",
+  "statusReason": null,
+  "sources": [
+   {
+    "frame": 74,
+    "granule": "NISAR_L2_PR_GOFF_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001",
+    "sourceFilename": "NISAR_L2_PR_GOFF_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001_LATLON.png",
+    "bounds": [
+     84.4893420967274,
+     27.15688310687065,
+     88.11203220623372,
+     30.264366807465812
+    ],
+    "tiles": {
+     "url": "data/tiles/previews/pair-a/goff/f074/{z}/{x}/{y}.png",
+     "minzoom": 8,
+     "maxzoom": 11,
+     "count": 347
+    }
+   },
+   {
+    "frame": 75,
+    "granule": "NISAR_L2_PR_GOFF_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001",
+    "sourceFilename": "NISAR_L2_PR_GOFF_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001_LATLON.png",
+    "bounds": [
+     83.89191293886574,
+     25.17100809959197,
+     87.43709219905804,
+     28.288835874109775
+    ],
+    "tiles": {
+     "url": "data/tiles/previews/pair-a/goff/f075/{z}/{x}/{y}.png",
+     "minzoom": 8,
+     "maxzoom": 11,
+     "count": 376
+    }
+   }
+  ],
+  "productMaturity": "Provisional per catalogue (P05023)",
+  "sourceGranules": [
+   "NISAR_L2_PR_GOFF_028_048_D_074_029_2000_SH_20260816T125812_20260816T125846_20260828T125812_20260828T125846_P05023_N_F_J_001",
+   "NISAR_L2_PR_GOFF_028_048_D_075_029_2000_SH_20260816T125845_20260816T125920_20260828T125845_20260828T125920_P05023_N_F_J_001"
+  ],
+  "attribution": "NASA/JPL-Caltech/ISRO, NISAR; distributed by ASF DAAC",
+  "limitations": [
+   "A browse picture only: it holds colours, not measurements, so nothing here can be sampled or interpreted quantitatively.",
+   "Placed from the four corners in its KML, so its position is approximate.",
+   "Not quality checked. It stands in for a science file that could not be retrieved."
+  ]
+ },
+ {
+  "id": "preview:pair-b:goff",
+  "groupId": "pair-b",
+  "name": "GOFF browse preview",
+  "category": "preview",
+  "previewOf": "goff",
+  "mission": "NISAR",
+  "instrument": "L-SAR",
+  "productType": "GOFF",
+  "measurementClass": "derived",
+  "measurementType": "preview",
+  "kind": "continuous",
+  "units": null,
+  "acquisition": {
+   "reference": "2026-08-19",
+   "secondary": "2026-08-31"
+  },
+  "orbitDirection": "ASCENDING",
+  "track": 98,
+  "frames": [
+   15,
+   16
+  ],
+  "qualityLayerIds": [],
+  "status": "renderable",
+  "statusReason": null,
+  "sources": [
+   {
+    "frame": 15,
+    "granule": "NISAR_L2_PR_GOFF_028_098_A_015_029_4000_SH_20260819T233844_20260819T233919_20260831T233844_20260831T233919_P05023_N_F_J_001",
+    "sourceFilename": "NISAR_L2_PR_GOFF_028_098_A_015_029_4000_SH_20260819T233844_20260819T233919_20260831T233844_20260831T233919_P05023_N_F_J_001_LATLON.png",
+    "bounds": [
+     83.79722022580489,
+     25.187736860004847,
+     87.30394830719843,
+     28.26933735617042
+    ],
+    "tiles": {
+     "url": "data/tiles/previews/pair-b/goff/f015/{z}/{x}/{y}.png",
+     "minzoom": 8,
+     "maxzoom": 11,
+     "count": 374
+    }
+   },
+   {
+    "frame": 16,
+    "granule": "NISAR_L2_PR_GOFF_028_098_A_016_029_4000_SH_20260819T233918_20260819T233953_20260831T233918_20260831T233952_P05023_N_F_J_001",
+    "sourceFilename": "NISAR_L2_PR_GOFF_028_098_A_016_029_4000_SH_20260819T233918_20260819T233953_20260831T233918_20260831T233952_P05023_N_F_J_001_LATLON.png",
+    "bounds": [
+     83.12253861605485,
+     27.151683758711208,
+     86.71157438425183,
+     30.257535423487514
+    ],
+    "tiles": {
+     "url": "data/tiles/previews/pair-b/goff/f016/{z}/{x}/{y}.png",
+     "minzoom": 8,
+     "maxzoom": 11,
+     "count": 362
+    }
+   }
+  ],
+  "productMaturity": "Provisional per catalogue (P05023)",
+  "sourceGranules": [
+   "NISAR_L2_PR_GOFF_028_098_A_015_029_4000_SH_20260819T233844_20260819T233919_20260831T233844_20260831T233919_P05023_N_F_J_001",
+   "NISAR_L2_PR_GOFF_028_098_A_016_029_4000_SH_20260819T233918_20260819T233953_20260831T233918_20260831T233952_P05023_N_F_J_001"
+  ],
+  "attribution": "NASA/JPL-Caltech/ISRO, NISAR; distributed by ASF DAAC",
+  "limitations": [
+   "A browse picture only: it holds colours, not measurements, so nothing here can be sampled or interpreted quantitatively.",
+   "Placed from the four corners in its KML, so its position is approximate.",
+   "Not quality checked. It stands in for a science file that could not be retrieved."
+  ]
+ }
+]

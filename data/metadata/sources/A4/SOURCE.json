@@ -1,0 +1,35 @@
+{
+ "dataset": "A4",
+ "provider": "OpenStreetMap contributors via HOT",
+ "product": "Roads, rivers, places, facilities, destroyed features, bridge reports",
+ "version": "HOT export, 2026",
+ "url_or_request_ref": "https://data.humdata.org/dataset/hot_flood_npl",
+ "licence": "ODbL",
+ "retrieved_at": null,
+ "available_at": null,
+ "spatial_extent": [
+  84.5514,
+  27.7681,
+  85.4079,
+  28.3064
+ ],
+ "time_extent": [
+  "2026-08-26",
+  "2026-11-13"
+ ],
+ "variables": [
+  "roads",
+  "rivers",
+  "places",
+  "health_facilities",
+  "helipads",
+  "road_states"
+ ],
+ "units": {},
+ "crs": "EPSG:4326",
+ "resolution_m": null,
+ "missing_fraction": null,
+ "quality_flags": false,
+ "maturity": "Community-maintained",
+ "notes": "Post-event mapping; incomplete"
+}

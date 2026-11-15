@@ -1,0 +1,188 @@
+{
+ "layerId": "pair-b:gunw-coherence",
+ "group": "pair-b",
+ "measurement": "gunw-coherence",
+ "units": "1",
+ "epsg": 32645,
+ "postingM": [
+  80.0,
+  80.0
+ ],
+ "polarization": [
+  "HH"
+ ],
+ "goffLayer": null,
+ "stats": {
+  "count": 1257339,
+  "min": 0.006981258280575275,
+  "max": 0.9921859502792358,
+  "mean": 0.5331977009773254,
+  "median": 0.5435924530029297,
+  "p2": 0.10729804873466492,
+  "p98": 0.9255571174621582,
+  "displayMin": 0.0,
+  "displayMax": 1.0,
+  "histogram": {
+   "edges": [
+    0.0,
+    0.025,
+    0.05,
+    0.075,
+    0.1,
+    0.125,
+    0.15,
+    0.175,
+    0.2,
+    0.225,
+    0.25,
+    0.275,
+    0.3,
+    0.325,
+    0.35,
+    0.375,
+    0.4,
+    0.425,
+    0.45,
+    0.475,
+    0.5,
+    0.525,
+    0.55,
+    0.575,
+    0.6,
+    0.625,
+    0.65,
+    0.675,
+    0.7,
+    0.725,
+    0.75,
+    0.775,
+    0.8,
+    0.825,
+    0.85,
+    0.875,
+    0.9,
+    0.925,
+    0.95,
+    0.975,
+    1.0
+   ],
+   "counts": [
+    145,
+    2156,
+    7063,
+    11865,
+    14034,
+    14985,
+    16229,
+    17688,
+    20169,
+    22822,
+    25473,
+    28692,
+    32038,
+    35334,
+    38813,
+    42655,
+    45213,
+    48649,
+    51842,
+    54145,
+    56176,
+    57464,
+    58527,
+    58433,
+    57674,
+    56631,
+    54230,
+    50579,
+    46919,
+    41672,
+    36444,
+    31259,
+    26572,
+    21789,
+    18003,
+    15493,
+    14013,
+    12683,
+    10501,
+    2267
+   ]
+  }
+ },
+ "stops": [
+  "#000004",
+  "#51127c",
+  "#b73779",
+  "#fc8961",
+  "#fcfdbf"
+ ],
+ "displayDb": false,
+ "displayRelative": false,
+ "sources": [
+  {
+   "frame": 16,
+   "granule": "NISAR_L2_PR_GUNW_028_098_A_016_029_4000_SH_20260819T233918_20260819T233953_20260831T233918_20260831T233952_P05023_N_F_J_001",
+   "sourceFilename": "NISAR_L2_PR_GUNW_028_098_A_016_029_4000_SH_20260819T233918_20260819T233953_20260831T233918_20260831T233952_P05023_N_F_J_001.h5",
+   "sourceDataset": "/science/LSAR/GUNW/grids/frequencyA/unwrappedInterferogram/HH/coherenceMagnitude",
+   "sha256": "2145937a9695f374128926c9a46118ba4a07700bb34e6fd3c08989af3ecc3a7f",
+   "bounds": [
+    84.38263314570466,
+    27.714795075127526,
+    85.55941176995117,
+    28.367079371567687
+   ],
+   "shape": [
+    880,
+    1432
+   ],
+   "validFraction": 0.9977613953783646,
+   "maskedFraction": 0.0020981462671406806,
+   "sourceDtype": "float32",
+   "clipWindow": [
+    2607,
+    3487,
+    1459,
+    2891
+   ],
+   "displayOffset": 0.0,
+   "sampling": "data/sampling/pair-b/gunw-coherence_f016.tif",
+   "validity": "data/sampling/pair-b/gunw-coherence_f016_validity.tif",
+   "tiles": {
+    "url": "data/tiles/pair-b/gunw-coherence/f016/{z}/{x}/{y}.png",
+    "minzoom": 8,
+    "maxzoom": 11,
+    "count": 95
+   },
+   "maskTiles": "data/tiles/pair-b/gunw-coherence/f016_mask/{z}/{x}/{y}.png"
+  }
+ ],
+ "processedAt": "2026-11-13T08:10:39+00:00",
+ "parameters": {
+  "gross_outlier_mad_k": 10,
+  "snr_min": null,
+  "coherence_threshold": null,
+  "goff_layer": 3,
+  "crid": "P05023",
+  "aoi_bbox": [
+   84.3976,
+   27.732,
+   85.5508,
+   28.35
+  ]
+ },
+ "provenance": {
+  "pipelineVersion": "0.2.0",
+  "configSha256": "5ab9205af479988ce816fe438f998d256fa2667f9a4ba84b9b357e6635dc2744",
+  "outputDtype": "float32",
+  "validityClasses": {
+   "0": "no data",
+   "1": "valid",
+   "2": "masked"
+  },
+  "maskRule": "Mask: water or invalid subswath masked, 255 no data. Phase only: component label 0 masked, 65535 no data.",
+  "tileResampling": "nearest",
+  "nativeGridKept": true,
+  "displayTransform": null
+ }
+}

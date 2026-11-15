@@ -1,0 +1,33 @@
+{
+ "dataset": "A3",
+ "provider": "UNOSAT / UNITAR",
+ "product": "FL20260826NPL event mapping",
+ "version": "Preliminary",
+ "url_or_request_ref": "https://data.humdata.org/dataset/mudflow-rockflow-impact-assessment-in-rasuwa-nuwakot-districts-bagmati-province-nepal-as-o",
+ "licence": "CC BY-SA",
+ "retrieved_at": null,
+ "available_at": null,
+ "spatial_extent": [
+  84.3558,
+  27.6776,
+  85.5299,
+  28.3405
+ ],
+ "time_extent": [
+  "2026-08-26",
+  "2026-08-28"
+ ],
+ "variables": [
+  "mudflow_extent",
+  "detachment_zone",
+  "affected_roads",
+  "affected_buildings"
+ ],
+ "units": {},
+ "crs": "EPSG:4326",
+ "resolution_m": null,
+ "missing_fraction": null,
+ "quality_flags": true,
+ "maturity": "Preliminary",
+ "notes": "FieldValidation = 0: not field validated"
+}

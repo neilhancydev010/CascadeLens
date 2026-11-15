@@ -1,0 +1,97 @@
+{
+ "capability": "landslide.L2",
+ "generatedAt": "2026-11-13T14:05:24+00:00",
+ "script": "processing/scripts/run_rain_thresholds.py",
+ "inputs": {
+  "rainfall": "C5: IMERG Late V07 daily, 0.1 degree (data/reference/rainfall/GPM_3IMERGDL.07)",
+  "inventory": "C1: BIPAD landslide incidents (data/raw/hazard/bipad, licence not established)"
+ },
+ "needsDatasets": [
+  "C1",
+  "C5"
+ ],
+ "key": "landslide.L2.validation",
+ "criterionMet": false,
+ "summary": "2025-2026 held out, corridor (R1), as published: POD 0.346, FAR 0.669, CSI 0.203; chance CSI 95th percentile 0.2085 (p = 0.1209)",
+ "criterion": "The corridor's (R1) CSI as published, a warning counting for reports 2 to 3 days after the rainfall day, must exceed the 95th percentile of 1000 shuffles that keep the number of warning days in each calendar month",
+ "testPeriod": [
+  "2025-01-01",
+  "2026-10-31"
+ ],
+ "results": {
+  "R1": {
+   "cells": 72,
+   "published": {
+    "hits": 47,
+    "misses": 89,
+    "falseAlarms": 95,
+    "correctNegatives": 373,
+    "pod": 0.346,
+    "far": 0.669,
+    "csi": 0.203,
+    "bias": 1.044,
+    "warningDays": 170,
+    "eventDays": 136,
+    "days": 669
+   },
+   "diagnosticNoDelay": {
+    "hits": 52,
+    "misses": 84,
+    "falseAlarms": 90,
+    "correctNegatives": 380,
+    "pod": 0.382,
+    "far": 0.634,
+    "csi": 0.23,
+    "bias": 1.044,
+    "warningDays": 170,
+    "eventDays": 136,
+    "days": 669
+   },
+   "chanceCsi": {
+    "median": 0.1901,
+    "p95": 0.2085
+   },
+   "pValue": 0.1209
+  },
+  "R2": {
+   "cells": 500,
+   "published": {
+    "hits": 17,
+    "misses": 189,
+    "falseAlarms": 5,
+    "correctNegatives": 378,
+    "pod": 0.083,
+    "far": 0.227,
+    "csi": 0.081,
+    "bias": 0.107,
+    "warningDays": 28,
+    "eventDays": 206,
+    "days": 669
+   },
+   "diagnosticNoDelay": {
+    "hits": 20,
+    "misses": 186,
+    "falseAlarms": 6,
+    "correctNegatives": 379,
+    "pod": 0.097,
+    "far": 0.231,
+    "csi": 0.094,
+    "bias": 0.126,
+    "warningDays": 28,
+    "eventDays": 206,
+    "days": 669
+   },
+   "chanceCsi": {
+    "median": 0.108,
+    "p95": 0.1274
+   },
+   "pValue": 0.994
+  }
+ },
+ "caveats": [
+  "Reports, not landslides: a day with no BIPAD report is not a day without a landslide",
+  "Report points are ward or municipality reference points, so a cell can be off by one",
+  "Reporting grew strongly after 2023, so the test period has more reports than the training years",
+  "IMERG history is the V07 reprocessing, not the values issued at the time"
+ ]
+}
